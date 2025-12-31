@@ -244,6 +244,7 @@ a:hover {
 .language-dot.go { background-color: #00ADD8; }
 .language-dot.html { background-color: #e34c26; }
 .language-dot.javascript { background-color: #f1e05a; }
+.language-dot.typescript { background-color: #3178c6; }
 
 /* Stars indicator */
 .stars-indicator {
