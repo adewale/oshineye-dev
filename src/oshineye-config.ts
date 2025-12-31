@@ -56,6 +56,7 @@ const EVENTS: CalendarEvent[] = [
   { start: "10-01", end: "10-31", accent: "#e4b61a" }, // Black History Month UK
   { start: "11-05", end: "11-05", accent: "#ff5722" }, // Bonfire Night
   { start: "11-09", end: "11-11", accent: "#b71c1c" }, // Remembrance
+  { start: "12-08", end: "12-08", accent: "#3f51b5" }, // Royal Blue
   { start: "12-24", end: "12-24", accent: "#2e7d32" }, // Christmas Eve
   { start: "12-25", end: "12-25", accent: "#c62828" }, // Christmas Day
   { start: "12-26", end: "12-26", accent: "#1565c0" }, // Boxing Day
