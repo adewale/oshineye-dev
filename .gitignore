@@ -1,6 +1,7 @@
 node_modules/
 site/oshineye-config.js
 site/oshineye-config.js.map
+site/garten.js
 .wrangler/
 .claude/
 test-results/
