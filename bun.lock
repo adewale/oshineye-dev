@@ -4,12 +4,17 @@
   "workspaces": {
     "": {
       "name": "oshineye-dev",
+      "dependencies": {
+        "garten": "^1.0.0",
+      },
       "devDependencies": {
         "typescript": "^5.3.0",
       },
     },
   },
   "packages": {
+    "garten": ["garten@1.0.0", "", {}, "sha512-pOmN7Zi3INTYAQhLdyA8n3nFHj7MKOd5oaJH5xSrYDk68UZOxy2UXscVuVdlwqYqKua9tHj9PL4N1C6ud699/Q=="],
+
     "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
   }
 }

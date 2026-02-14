@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external && cp ../orange_garden/garten/dist/index.global.js site/garten.js",
+    "build": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external && cp node_modules/garten/dist/index.global.js site/garten.js",
     "dev": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external --watch",
     "typecheck": "bunx tsc --noEmit",
     "deploy": "bun run build && wrangler pages deploy site --project-name=oshineye-dev"
   },
   "devDependencies": {
     "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "garten": "^1.0.0"
   }
 }
