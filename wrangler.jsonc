@@ -1,0 +1,8 @@
+// wrangler.jsonc
+{
+  "name": "oshineye-dev",
+  "compatibility_date": "2026-02-15",
+  "assets": {
+    "directory": "./site"
+  }
+}

@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build & Development Commands
 
-- **Build**: `bun run build` — compiles `src/oshineye-config.ts` to IIFE in `site/` and copies `garten.js` from sibling repo `../orange_garden/garten/dist/`
+- **Build**: `bun run build` — compiles `src/oshineye-config.ts` to IIFE in `site/` and copies `garten.js` from npm
 - **Dev (watch)**: `bun run dev` — watch mode for the TypeScript source (does not copy garten.js)
 - **Type check**: `bun run typecheck` (runs `bunx tsc --noEmit`)
-- **Deploy**: `bun run deploy` — builds then deploys `site/` to Cloudflare Pages (`oshineye-dev` project) via Wrangler
+- **Deploy**: `bun run deploy` — builds then deploys via `wrangler deploy` (Workers Static Assets)
 
 ## Architecture
 
-This is a static portfolio site deployed to Cloudflare Pages. There is no server-side code or framework.
+This is a static portfolio site deployed via Cloudflare Workers Static Assets (configured in `wrangler.jsonc`). There is no server-side code or framework.
 
 **`src/oshineye-config.ts`** — The only TypeScript source file. It provides a `getGartenConfig()` function exposed on `window.OshineyeConfig` that configures the Garten animated canvas garden. The accent color is determined by a priority chain: calendar events (UK/Swiss cultural dates) > time of day > season fallback.
 
