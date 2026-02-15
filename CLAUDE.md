@@ -6,6 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **Build**: `bun run build` — compiles `src/oshineye-config.ts` to IIFE in `site/` and copies `garten.js` from npm
 - **Dev (watch)**: `bun run dev` — watch mode for the TypeScript source (does not copy garten.js)
+- **Preview**: `bun run preview` — builds then serves locally via `wrangler dev`
 - **Type check**: `bun run typecheck` (runs `bunx tsc --noEmit`)
 - **Deploy**: `bun run deploy` — builds then deploys via `wrangler deploy` (Workers Static Assets)
 
