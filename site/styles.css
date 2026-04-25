@@ -65,9 +65,16 @@ body {
     background: var(--paper);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern", "liga", "onum";
+    font-synthesis: none;
+    font-variant-numeric: tabular-nums;
 }
+
+/* Polish: balance headings, smooth body wrap. */
+h1, h2, h3, .section-head h2, .post-title, .talk-title { text-wrap: balance; }
+.prose, .repo-desc, .post-excerpt, .entry-desc { text-wrap: pretty; }
 
 ::selection { background: var(--selection); color: var(--ink); }
 
@@ -83,6 +90,7 @@ a {
 }
 
 a:hover { color: var(--accent); background-size: 100% 1px; }
+a:active { transform: translateY(1px); }
 a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
@@ -114,13 +122,125 @@ a:focus-visible {
    Masthead — bolder. The surname is the anchor.
    ============================================================= */
 
-.masthead {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 1 / -1;
-    column-gap: var(--col-gap);
-    row-gap: 0;
+/* =============================================================
+   Masthead plate — full-bleed drenched maroon, reversed out.
+   The "aspirational" graphic statement at the top of the page.
+   ============================================================= */
+
+.masthead-plate {
+    background: var(--brand);
+    color: var(--paper);
+    padding-block: clamp(2.5rem, 5vw, 4.5rem);
+    padding-inline: max(calc((100vw - 78rem) / 2 + 1.25rem), 1.25rem);
     margin-bottom: var(--space-2xl);
+    position: relative;
+    will-change: filter;
+}
+
+.masthead-plate > .masthead {
+    --col-gap: clamp(0.75rem, 1.4vw, 1.5rem);
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--col-gap);
+    max-width: 78rem;
+    margin: 0 auto;
+}
+
+/* Reversed colour context inside the plate. */
+.masthead-plate .eyebrow-row {
+    border-top-color:    oklch(0.984 0.003 90 / 0.22);
+    border-bottom-color: oklch(0.984 0.003 90 / 0.22);
+    color:               oklch(0.984 0.003 90 / 0.65);
+}
+
+.masthead-plate .title {
+    border-bottom-color: oklch(0.984 0.003 90 / 0.22);
+}
+
+.masthead-plate .name .first { color: oklch(0.984 0.003 90 / 0.75); }
+.masthead-plate .name .last  { color: var(--paper); }
+.masthead-plate .role        { color: oklch(0.984 0.003 90 / 0.85); }
+.masthead-plate .role .at    { color: oklch(0.984 0.003 90 / 0.6); }
+
+.masthead-plate .journey-arrow { color: oklch(0.984 0.003 90 / 0.3); }
+
+.masthead-plate .journey-stop {
+    animation-name: journey-light-on-plate;
+}
+
+@keyframes journey-light-on-plate {
+    0%, 22%, 100% { color: oklch(0.984 0.003 90 / 0.55); }
+    6%, 16%       { color: var(--paper); }
+}
+
+/* The cloudflare link keeps its hue — orange against maroon reads well. */
+.masthead-plate .cloudflare-link { color: oklch(0.78 0.18 50); }
+.masthead-plate .cloudflare-link:hover { color: oklch(0.85 0.16 55); }
+
+/* Aspirational scale for the surname. */
+.masthead-plate .name {
+    font-size: clamp(3rem, 2rem + 7vw, 8.5rem);
+    letter-spacing: -0.045em;
+}
+
+/* Per-letter type-specimen reveal (Direction C). */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.4em) scale(0.95);
+    filter: blur(3px);
+    animation: letter-in 900ms var(--ease-out-quart) forwards;
+    animation-delay: calc(220ms + var(--i, 0) * 35ms);
+    will-change: transform, filter, opacity;
+}
+
+@keyframes letter-in {
+    to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* Scan line — sweeps top to bottom on initial load. */
+.scan-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--brand);
+    z-index: 100;
+    pointer-events: none;
+    transform: translateY(0);
+    animation: scan 1100ms var(--ease-out-expo) forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes scan {
+    0%   { opacity: 0.9; transform: translateY(0); }
+    85%  { opacity: 0.9; }
+    100% { opacity: 0;   transform: translateY(100vh); }
+}
+
+/* Scroll-driven plate desaturation — Chrome/Edge/Safari; CSS-only fallback elsewhere. */
+@supports (animation-timeline: scroll()) {
+    .masthead-plate {
+        animation: plate-fade linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 90vh;
+    }
+}
+
+@keyframes plate-fade {
+    to { filter: saturate(0.55) brightness(0.92); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .letter {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        animation: none;
+    }
+    .scan-line { display: none; }
+    .masthead-plate { animation: none; }
 }
 
 .masthead .eyebrow-row {
@@ -331,8 +451,7 @@ a:focus-visible {
 .work-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
 
 .work-list li:hover {
-    --row-bg: color-mix(in oklch, var(--accent) 5%, var(--paper));
-    box-shadow: inset 2px 0 0 var(--accent);
+    --row-bg: color-mix(in oklch, var(--accent) 7%, var(--paper));
 }
 
 .work-list .repo-title {
@@ -697,7 +816,8 @@ a:focus-visible {
 
 .talk:hover .frame {
     border-color: var(--accent);
-    box-shadow: 0 0 0 2px color-mix(in oklch, var(--accent) 15%, transparent);
+    box-shadow: 0 1px 2px color-mix(in oklch, var(--accent) 22%, transparent),
+                0 8px 24px color-mix(in oklch, var(--accent) 12%, transparent);
 }
 
 .talk .frame iframe {
@@ -831,6 +951,8 @@ a:focus-visible {
     z-index: -1;
     pointer-events: none;
     opacity: 0.92;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 35%);
+    mask-image:         linear-gradient(to bottom, transparent 0%, black 35%);
 }
 
 /* =============================================================
@@ -843,11 +965,12 @@ a:focus-visible {
         transform: translateY(0.5rem);
         animation: reveal 720ms var(--ease-out-expo) forwards;
     }
-    .reveal:nth-child(1) { animation-delay: 100ms; }
-    .reveal:nth-child(2) { animation-delay: 220ms; }
-    .reveal:nth-child(3) { animation-delay: 340ms; }
-    .reveal:nth-child(4) { animation-delay: 460ms; }
-    .reveal:nth-child(5) { animation-delay: 580ms; }
+    /* Sections start revealing as the per-letter masthead reveal completes (~720ms). */
+    .reveal:nth-child(1) { animation-delay: 700ms; }
+    .reveal:nth-child(2) { animation-delay: 820ms; }
+    .reveal:nth-child(3) { animation-delay: 940ms; }
+    .reveal:nth-child(4) { animation-delay: 1060ms; }
+    .reveal:nth-child(5) { animation-delay: 1180ms; }
 }
 
 @keyframes reveal { to { opacity: 1; transform: none; } }

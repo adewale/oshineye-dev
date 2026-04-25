@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="page">
+    <div class="scan-line" aria-hidden="true"></div>
 
-        <header class="masthead reveal">
+    <header class="masthead-plate">
+        <div class="masthead">
             <div class="eyebrow-row">
                 <span>Portfolio · 2026</span>
                 <span class="journey" aria-label="London to Zurich to London">
@@ -27,14 +28,22 @@
 
             <div class="title">
                 <h1 class="name">
-                    <span class="first">Adewale</span><span class="last">Oshineye</span>
+                    <span class="first" aria-label="Adewale">
+                        <span class="letter" style="--i:0">A</span><span class="letter" style="--i:1">d</span><span class="letter" style="--i:2">e</span><span class="letter" style="--i:3">w</span><span class="letter" style="--i:4">a</span><span class="letter" style="--i:5">l</span><span class="letter" style="--i:6">e</span>
+                    </span>
+                    <span class="last" aria-label="Oshineye">
+                        <span class="letter" style="--i:8">O</span><span class="letter" style="--i:9">s</span><span class="letter" style="--i:10">h</span><span class="letter" style="--i:11">i</span><span class="letter" style="--i:12">n</span><span class="letter" style="--i:13">e</span><span class="letter" style="--i:14">y</span><span class="letter" style="--i:15">e</span>
+                    </span>
                 </h1>
                 <p class="role">
                     <span class="at">Developer Advocacy at</span>
                     <a href="https://www.cloudflare.com" class="cloudflare-link">Cloudflare</a>
                 </p>
             </div>
-        </header>
+        </div>
+    </header>
+
+    <div class="page">
 
         <section class="prose reveal" aria-label="About">
             <p>A small, hand-tended corner of the internet. Notes from the blog up top, then everything I've shipped since January 2025, then talks. Stop a while, watch the garden grow.</p>
