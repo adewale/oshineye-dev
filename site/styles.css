@@ -387,8 +387,95 @@ a:focus-visible {
 .lang-skill      { --accent: var(--lang-skill); }
 
 /* =============================================================
-   Talks — featured + auto-fit grid. Scales to N.
+   Writing — featured editorial post + compact list. Scales to N.
+   Chaparral italic for hero post: a deliberate shift in texture
+   so this section reads as writing, not UI.
    ============================================================= */
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum";
+    margin-bottom: var(--space-s);
+}
+
+.post-eyebrow time {
+    color: var(--brand);
+    font-weight: 600;
+}
+
+.post-eyebrow .tag {
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-size: 0.72rem;
+    padding: 0.15rem 0.55rem;
+}
+
+.post-title {
+    font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, serif;
+    font-size: var(--step-1);
+    line-height: 1.25;
+    font-weight: 400;
+    color: var(--ink);
+    background-image: none;
+    letter-spacing: -0.005em;
+    display: block;
+    max-width: 32ch;
+    transition: color 280ms var(--ease-out-quart);
+}
+
+.post-title:hover { color: var(--brand); }
+
+.post--featured {
+    padding-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--rule-soft);
+}
+
+.post--featured .post-title {
+    font-style: italic;
+    font-size: clamp(var(--step-2), 1.5rem + 1.4vw, var(--step-4));
+    line-height: 1.15;
+    max-width: 22ch;
+}
+
+.post-excerpt {
+    margin-top: var(--space-m);
+    color: var(--ink-soft);
+    font-size: var(--step-0);
+    line-height: 1.55;
+    max-width: 60ch;
+}
+
+.post-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.post-list .post {
+    padding-top: var(--space-m);
+    border-top: 1px solid var(--rule-soft);
+}
+
+@media (max-width: 600px) {
+    .post-list .post:first-child { border-top: 0; padding-top: 0; }
+}
+
+
 
 .talks-grid {
     display: grid;
