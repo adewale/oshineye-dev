@@ -43,14 +43,6 @@
 
     --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
-
-    /* Per-language hues — slightly desaturated for restraint */
-    --lang-typescript: oklch(0.50 0.130 255);
-    --lang-python:     oklch(0.50 0.110 245);
-    --lang-go:         oklch(0.60 0.100 215);
-    --lang-html:       oklch(0.54 0.140  35);
-    --lang-javascript: oklch(0.62 0.110  90);
-    --lang-skill:      oklch(0.42 0.080 205);  /* slate teal — replaces warm coral */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -146,30 +138,33 @@ a:focus-visible {
     margin: 0 auto;
 }
 
-/* Reversed colour context inside the plate. */
+/* Reversed colour context inside the plate.
+   Per /colorize: text on coloured backgrounds uses the surface
+   tint at varying alpha rather than a separate gray. Alpha values
+   tuned for WCAG AA contrast against the maroon (L≈0.36). */
 .masthead-plate .eyebrow-row {
-    border-top-color:    oklch(0.984 0.003 90 / 0.22);
-    border-bottom-color: oklch(0.984 0.003 90 / 0.22);
-    color:               oklch(0.984 0.003 90 / 0.65);
+    border-top-color:    oklch(0.984 0.003 90 / 0.28);
+    border-bottom-color: oklch(0.984 0.003 90 / 0.28);
+    color:               oklch(0.984 0.003 90 / 0.78);
 }
 
 .masthead-plate .title {
-    border-bottom-color: oklch(0.984 0.003 90 / 0.22);
+    border-bottom-color: oklch(0.984 0.003 90 / 0.28);
 }
 
-.masthead-plate .name .first { color: oklch(0.984 0.003 90 / 0.75); }
+.masthead-plate .name .first { color: oklch(0.984 0.003 90 / 0.78); }
 .masthead-plate .name .last  { color: var(--paper); }
-.masthead-plate .role        { color: oklch(0.984 0.003 90 / 0.85); }
-.masthead-plate .role .at    { color: oklch(0.984 0.003 90 / 0.6); }
+.masthead-plate .role        { color: oklch(0.984 0.003 90 / 0.92); }
+.masthead-plate .role .at    { color: oklch(0.984 0.003 90 / 0.72); }
 
-.masthead-plate .journey-arrow { color: oklch(0.984 0.003 90 / 0.3); }
+.masthead-plate .journey-arrow { color: oklch(0.984 0.003 90 / 0.4); }
 
 .masthead-plate .journey-stop {
     animation-name: journey-light-on-plate;
 }
 
 @keyframes journey-light-on-plate {
-    0%, 22%, 100% { color: oklch(0.984 0.003 90 / 0.55); }
+    0%, 22%, 100% { color: oklch(0.984 0.003 90 / 0.7); }
     6%, 16%       { color: var(--paper); }
 }
 
@@ -198,27 +193,6 @@ a:focus-visible {
     to { opacity: 1; transform: none; filter: blur(0); }
 }
 
-/* Scan line — sweeps top to bottom on initial load. */
-.scan-line {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--brand);
-    z-index: 100;
-    pointer-events: none;
-    transform: translateY(0);
-    animation: scan 1100ms var(--ease-out-expo) forwards;
-    will-change: transform, opacity;
-}
-
-@keyframes scan {
-    0%   { opacity: 0.9; transform: translateY(0); }
-    85%  { opacity: 0.9; }
-    100% { opacity: 0;   transform: translateY(100vh); }
-}
-
 /* Scroll-driven plate desaturation — Chrome/Edge/Safari; CSS-only fallback elsewhere. */
 @supports (animation-timeline: scroll()) {
     .masthead-plate {
@@ -239,7 +213,6 @@ a:focus-visible {
         filter: none;
         animation: none;
     }
-    .scan-line { display: none; }
     .masthead-plate { animation: none; }
 }
 
@@ -416,174 +389,20 @@ a:focus-visible {
 
 .prose p + p { margin-top: var(--space-s); }
 
-/* =============================================================
-   Work — editorial repo list. Per-row accent. Scales to N.
-   ============================================================= */
-
-.work-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: subgrid;
-    column-gap: var(--col-gap);
-    gap: 0;
-}
-
-.work-list li {
-    --row-bg: transparent;
-    position: relative;
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: subgrid;
-    column-gap: var(--col-gap);
-    align-items: baseline;
-    padding: var(--space-m) var(--space-s);
-    margin: 0 calc(-1 * var(--space-s));
-    border-top: 1px solid var(--rule-soft);
-    background-color: var(--row-bg);
-    transition: background-color 420ms var(--ease-out-quart),
-                box-shadow 420ms var(--ease-out-quart);
-}
-
-.work-list .repo-title { grid-column: 1 / 4; }
-.work-list .repo-desc  { grid-column: 4 / 9; }
-.work-list .repo-meta  { grid-column: 9 / -1; }
-
-.work-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
-
-.work-list li:hover {
-    --row-bg: color-mix(in oklch, var(--accent) 7%, var(--paper));
-}
-
-.work-list .repo-title {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.4rem;
-    font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-size: var(--step-1);
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: -0.005em;
-    background-image: none;
-}
-
-.work-list .repo-title::after {
-    content: "→";
-    display: inline-block;
-    color: var(--accent);
-    opacity: 0;
-    transform: translateX(-0.4rem);
-    transition: opacity 320ms var(--ease-out-quart),
-                transform 320ms var(--ease-out-quart);
-    font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-weight: 400;
-}
-
-.work-list li:hover .repo-title { color: var(--accent); }
-.work-list li:hover .repo-title::after { opacity: 1; transform: translateX(0); }
-
-.work-list .repo-desc {
-    color: var(--ink-soft);
-    font-size: var(--step-0);
-    line-height: 1.45;
-    max-width: 52ch;
-}
-
-.work-list .repo-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-feature-settings: "tnum";
-    max-width: 22rem;
-}
-
-/* Tag pills — first one filled in the row's accent, rest outlined. */
+/* Tag pill — outlined only. Used inside post-eyebrow.
+   Per /colorize: stick to one palette, no per-language hue rainbow. */
 .tag {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.55rem;
     border-radius: 999px;
     border: 1px solid color-mix(in oklch, var(--ink-muted) 35%, transparent);
     color: var(--ink-muted);
     white-space: nowrap;
-    transition: border-color 280ms var(--ease-out-quart),
-                color 280ms var(--ease-out-quart);
-}
-
-.tag-primary {
-    background: var(--accent);
-    color: var(--paper);
-    border-color: var(--accent);
-}
-
-.work-list li:hover .tag {
-    border-color: color-mix(in oklch, var(--accent) 50%, transparent);
-    color: var(--ink);
-}
-
-.work-list li:hover .tag-primary {
-    color: var(--paper);
-    border-color: var(--accent);
-}
-
-.stars {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    padding: 0.2rem 0.5rem;
-}
-
-.stars svg { width: 0.85em; height: 0.85em; color: var(--accent); }
-
-/* Per-language accent — drop new ones on the <li>. */
-.lang-typescript { --accent: var(--lang-typescript); }
-.lang-python     { --accent: var(--lang-python); }
-.lang-go         { --accent: var(--lang-go); }
-.lang-html       { --accent: var(--lang-html); }
-.lang-javascript { --accent: var(--lang-javascript); }
-.lang-skill      { --accent: var(--lang-skill); }
-.lang-vue        { --accent: oklch(0.60 0.10 150); }
-.lang-shell      { --accent: oklch(0.55 0.08 140); }
-
-/* =============================================================
-   Subheads — sectional dividers within a section
-   ============================================================= */
-
-.subhead {
-    font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-size: var(--step--1);
-    font-weight: 600;
-    color: var(--brand);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-feature-settings: "tnum";
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-m);
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-m);
-}
-
-.subhead::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--rule-soft);
-}
-
-.subhead-count {
-    color: var(--ink-muted);
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    font-size: 0.78em;
+    text-transform: none;
 }
 
 /* =============================================================
@@ -700,6 +519,59 @@ a:focus-visible {
     flex-direction: column;
 }
 
+/* Hero image on the featured post — large, sits at the top.
+   Subtle 1px outline per the polish ref so the image edge reads
+   on the warm-paper background without a literal border. */
+.post-hero {
+    display: block;
+    grid-column: 1 / -1;
+    margin-bottom: var(--space-l);
+    background: var(--paper-deep);
+    overflow: hidden;
+    background-image: none;
+}
+
+.post-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    outline: 1px solid rgba(0, 0, 0, 0.08);
+    outline-offset: -1px;
+    transition: transform 600ms var(--ease-out-quart);
+}
+
+.post-hero:hover img { transform: scale(1.015); }
+
+/* Compact thumb on post-list items. Sits left of the text. */
+.post-thumb {
+    display: block;
+    width: 9rem;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    background: var(--paper-deep);
+    overflow: hidden;
+    background-image: none;
+}
+
+.post-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: 1px solid rgba(0, 0, 0, 0.08);
+    outline-offset: -1px;
+    transition: transform 600ms var(--ease-out-quart);
+}
+
+.post-thumb:hover img { transform: scale(1.03); }
+
+.post-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .post-eyebrow {
     display: flex;
     align-items: center;
@@ -764,18 +636,30 @@ a:focus-visible {
 
 .post-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .post-list .post {
-    padding-top: var(--space-m);
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-m);
+    padding: var(--space-m) 0;
     border-top: 1px solid var(--rule-soft);
 }
 
+.post-list .post:last-child { border-bottom: 1px solid var(--rule-soft); }
+
+.post-list .post-title {
+    font-size: var(--step-1);
+    line-height: 1.25;
+    max-width: 40ch;
+}
+
 @media (max-width: 600px) {
-    .post-list .post:first-child { border-top: 0; padding-top: 0; }
+    .post-list .post { flex-direction: column; gap: var(--space-s); }
+    .post-list .post-thumb { width: 100%; }
 }
 
 
@@ -992,12 +876,6 @@ a:focus-visible {
     .section-head { grid-template-columns: 1fr; row-gap: 0.25rem; }
     .section-head .folio,
     .section-head h2 { grid-column: 1 / -1; }
-
-    .work-list li { grid-template-columns: 1fr; row-gap: var(--space-xs); }
-    .work-list .repo-title,
-    .work-list .repo-desc,
-    .work-list .repo-meta { grid-column: 1 / -1; }
-    .work-list .repo-meta { justify-content: flex-start; margin-top: 0.4rem; }
 
     .work-compact li { grid-template-columns: 4.5rem minmax(0, 1fr) auto; }
     .work-compact time      { grid-column: 1; }
