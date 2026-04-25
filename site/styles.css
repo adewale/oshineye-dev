@@ -4,21 +4,20 @@
    ============================================================= */
 
 :root {
-    --paper:        oklch(0.972 0.008 80);
-    --paper-deep:   oklch(0.945 0.012 78);
-    --paper-sunk:   oklch(0.92  0.014 76);
-    --ink:          oklch(0.215 0.018 40);
-    --ink-soft:     oklch(0.36  0.022 38);
-    --ink-muted:    oklch(0.52  0.018 40);
-    --rule:         oklch(0.86  0.012 60);
-    --rule-soft:    oklch(0.92  0.010 60);
+    --paper:        oklch(0.984 0.003 90);   /* near-neutral ivory, whisper of warm */
+    --paper-deep:   oklch(0.960 0.004 90);
+    --paper-sunk:   oklch(0.935 0.005 90);
+    --ink:          oklch(0.205 0.010 60);   /* neutral dark, faintly warm */
+    --ink-soft:     oklch(0.380 0.010 60);
+    --ink-muted:    oklch(0.555 0.008 60);
+    --rule:         oklch(0.880 0.005 70);
+    --rule-soft:    oklch(0.935 0.004 70);
 
-    --brand:        oklch(0.36  0.130 28);
-    --brand-soft:   oklch(0.48  0.120 28);
-    --ochre:        oklch(0.66  0.130 52);
-    --cloudflare:   oklch(0.70  0.180 45);
+    --brand:        oklch(0.36  0.130 28);   /* anchor: maroon ≈ #7f0000 */
+    --brand-soft:   oklch(0.48  0.110 28);
+    --cloudflare:   oklch(0.72  0.180 45);
 
-    --selection:    oklch(0.90  0.060 78);
+    --selection:    oklch(0.93  0.020 70);   /* cool, quiet */
 
     /* Per-row accent. Default brand; each row may override. */
     --accent:       var(--brand);
@@ -45,12 +44,13 @@
     --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
 
-    --lang-typescript: oklch(0.55 0.16 255);
-    --lang-python:     oklch(0.55 0.13 250);
-    --lang-go:         oklch(0.72 0.13 215);
-    --lang-html:       oklch(0.62 0.18 35);
-    --lang-javascript: oklch(0.78 0.16 95);
-    --lang-skill:      oklch(0.62 0.15 32);
+    /* Per-language hues — slightly desaturated for restraint */
+    --lang-typescript: oklch(0.50 0.130 255);
+    --lang-python:     oklch(0.50 0.110 245);
+    --lang-go:         oklch(0.60 0.100 215);
+    --lang-html:       oklch(0.54 0.140  35);
+    --lang-javascript: oklch(0.62 0.110  90);
+    --lang-skill:      oklch(0.42 0.080 205);  /* slate teal — replaces warm coral */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -151,7 +151,7 @@ a:focus-visible {
 
 @keyframes journey-light {
     0%, 22%, 100% { color: var(--ink-muted); }
-    6%, 16%       { color: var(--brand); }
+    6%, 16%       { color: var(--brand-soft); }
 }
 
 .masthead .title {
@@ -285,8 +285,8 @@ a:focus-visible {
 .work-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
 
 .work-list li:hover {
-    --row-bg: color-mix(in oklch, var(--accent) 7%, var(--paper));
-    box-shadow: inset 3px 0 0 var(--accent);
+    --row-bg: color-mix(in oklch, var(--accent) 5%, var(--paper));
+    box-shadow: inset 2px 0 0 var(--accent);
 }
 
 .work-list .repo-title {
@@ -426,7 +426,7 @@ a:focus-visible {
 
 .talk:hover .frame {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 25%, transparent);
+    box-shadow: 0 0 0 2px color-mix(in oklch, var(--accent) 15%, transparent);
 }
 
 .talk .frame iframe {
