@@ -31,7 +31,6 @@
     --step-4:  2.441rem;
     --step-5:  3.815rem;
     --step-6:  5.96rem;
-    --step-7:  8.5rem;
 
     --space-xs: 0.375rem;
     --space-s:  0.75rem;
@@ -124,73 +123,79 @@ a:focus-visible {
     font-feature-settings: "tnum";
 }
 
-.masthead .eyebrow-row .status::before {
-    content: "";
+/* Journey relay — each city lights to brand in sequence,
+   tracing London → Zurich → London. */
+.journey {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    font-feature-settings: "tnum";
+}
+
+.journey-stop {
+    color: var(--ink-muted);
+    transition: color 800ms var(--ease-out-quart);
+}
+
+.journey-arrow {
+    color: var(--rule);
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
-    margin-right: 0.55rem;
-    background: var(--brand);
-    border-radius: 999px;
-    transform: translateY(-1px);
-    animation: pulse 2.4s var(--ease-out-quart) infinite;
+    transform: translateY(-0.05em);
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50%      { opacity: 0.35; }
+@media (prefers-reduced-motion: no-preference) {
+    .journey-stop {
+        animation: journey-light 9s ease-in-out var(--delay, 0s) infinite;
+    }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .masthead .eyebrow-row .status::before { animation: none; }
+@keyframes journey-light {
+    0%, 22%, 100% { color: var(--ink-muted); }
+    6%, 16%       { color: var(--brand); }
 }
 
 .masthead .title {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    gap: var(--space-l);
-    margin-bottom: var(--space-l);
+    align-items: baseline;
+    gap: clamp(1rem, 4vw, 3rem);
+    padding-bottom: var(--space-l);
+    border-bottom: 1px solid var(--rule);
 }
 
 .masthead .name {
-    display: block;
     font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
-    line-height: 0.9;
+    font-size: clamp(2rem, 1rem + 4.5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25em;
 }
 
-.masthead .given {
-    display: block;
-    font-size: clamp(1.5rem, 1rem + 2.5vw, 2.75rem);
+.masthead .name .first {
     font-style: italic;
     font-weight: 400;
     color: var(--ink-soft);
-    letter-spacing: -0.005em;
-    margin-bottom: 0.05em;
-    padding-left: 0.08em;
 }
 
-.masthead .surname {
-    display: block;
-    font-size: clamp(3.25rem, 1.5rem + 11vw, var(--step-7));
+.masthead .name .last {
     font-weight: 700;
     color: var(--brand);
-    letter-spacing: -0.045em;
-    text-rendering: geometricPrecision;
 }
 
 .masthead .role {
-    font-family: "chaparral-pro-1", serif;
-    font-size: var(--step-1);
-    line-height: 1.25;
+    font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, serif;
+    font-size: clamp(1rem, 0.9rem + 0.6vw, 1.375rem);
+    line-height: 1.3;
     color: var(--ink-soft);
     text-align: right;
     max-width: 18ch;
-    align-self: end;
-    padding-bottom: 0.4rem;
+    font-style: italic;
 }
 
-.masthead .role .at { display: block; color: var(--ink-muted); font-style: italic; font-size: 0.85em; margin-bottom: 0.1em; }
+.masthead .role .at { display: block; color: var(--ink-muted); font-style: normal; font-size: 0.82em; letter-spacing: 0.02em; margin-bottom: 0.15em; }
 
 .cloudflare-link {
     color: var(--cloudflare);
@@ -577,7 +582,6 @@ a:focus-visible {
     .masthead .role {
         text-align: left;
         max-width: none;
-        padding-bottom: 0;
     }
     .work-list li {
         grid-template-columns: 1fr;
