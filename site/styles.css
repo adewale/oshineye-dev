@@ -385,6 +385,138 @@ a:focus-visible {
 .lang-html       { --accent: var(--lang-html); }
 .lang-javascript { --accent: var(--lang-javascript); }
 .lang-skill      { --accent: var(--lang-skill); }
+.lang-vue        { --accent: oklch(0.60 0.10 150); }
+.lang-shell      { --accent: oklch(0.55 0.08 140); }
+
+/* =============================================================
+   Subheads — sectional dividers within a section
+   ============================================================= */
+
+.subhead {
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--brand);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum";
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-m);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-m);
+}
+
+.subhead::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule-soft);
+}
+
+.subhead-count {
+    color: var(--ink-muted);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    font-size: 0.78em;
+}
+
+/* =============================================================
+   Work — compact list. Dense, scannable, scales to N.
+   ============================================================= */
+
+.work-compact {
+    list-style: none;
+    display: grid;
+    gap: 0;
+}
+
+.work-compact li {
+    --accent: var(--brand);
+    display: grid;
+    grid-template-columns: 4.25rem minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: clamp(0.6rem, 1.5vw, 1.25rem);
+    padding: 0.45rem var(--space-s);
+    margin: 0 calc(-1 * var(--space-s));
+    border-top: 1px solid var(--rule-soft);
+    transition: background-color 280ms var(--ease-out-quart);
+}
+
+.work-compact li:last-child { border-bottom: 1px solid var(--rule-soft); }
+
+.work-compact li:hover {
+    background-color: color-mix(in oklch, var(--accent) 4%, var(--paper));
+}
+
+.work-compact time {
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: 0.74rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum";
+    white-space: nowrap;
+}
+
+.work-compact .entry {
+    background-image: none;
+    color: var(--ink);
+    line-height: 1.45;
+    transition: color 200ms var(--ease-out-quart);
+    min-width: 0;
+}
+
+.work-compact .entry-name {
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    transition: color 200ms var(--ease-out-quart);
+}
+
+.work-compact li:hover .entry-name { color: var(--accent); }
+
+.work-compact .entry-desc {
+    color: var(--ink-muted);
+    font-size: 0.96em;
+}
+
+.work-compact .entry-desc::before {
+    content: " · ";
+    color: var(--rule);
+    margin: 0 0.25em;
+}
+
+.work-compact .entry-lang {
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .work-compact li {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        row-gap: 0.15rem;
+    }
+    .work-compact time {
+        grid-row: 1;
+        grid-column: 1 / -1;
+        font-size: 0.7rem;
+    }
+    .work-compact .entry {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .work-compact .entry-lang {
+        grid-row: 2;
+        grid-column: 2;
+    }
+}
 
 /* =============================================================
    Writing — featured editorial post + compact list. Scales to N.
