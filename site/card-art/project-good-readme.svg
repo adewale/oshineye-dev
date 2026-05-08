@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" role="img" aria-label="Abstract illustration for good-readme">
+<rect width="360" height="160" fill="#e6d6b3"/>
+<rect x="10.0" y="10.0" width="340.0" height="140.0" fill="none" opacity="1.000" stroke="#393833" stroke-width="1.1"/>
+<line x1="46.0" y1="34.0" x2="336.0" y2="34.0" stroke="#393833" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="62.0" x2="336.0" y2="62.0" stroke="#393833" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="90.0" x2="336.0" y2="90.0" stroke="#393833" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="118.0" x2="336.0" y2="118.0" stroke="#393833" stroke-width="0.9" opacity="0.160"/>
+<rect x="58.0" y="30.0" width="82.0" height="84.0" fill="#514f49" opacity="0.680" stroke="#37342d" stroke-width="1.1"/>
+<rect x="158.0" y="34.0" width="107.0" height="38.0" fill="#5b5750" opacity="0.760"/>
+<line x1="62.0" y1="122.0" x2="210.8" y2="48.0" stroke="#37342d" stroke-width="1.6" opacity="0.720"/>
+<ellipse cx="91.8" cy="107.2" rx="14" ry="4" fill="#48453f" opacity="0.28" transform="rotate(-16 91.8 107.2)"/>
+<ellipse cx="121.5" cy="92.4" rx="14" ry="4" fill="#48453f" opacity="0.28" transform="rotate(-4 121.5 92.4)"/>
+<ellipse cx="151.3" cy="77.6" rx="14" ry="4" fill="#48453f" opacity="0.28" transform="rotate(8 151.3 77.6)"/>
+<circle cx="210.8" cy="48.0" r="12.5" fill="#48453f" opacity="0.640"/>
+<line x1="46.0" y1="137.0" x2="330.0" y2="137.0" stroke="#37342d" stroke-width="1.2" opacity="0.340"/>
+<line x1="46.0" y1="145.0" x2="229.7" y2="145.0" stroke="#7f0000" stroke-width="3.0" opacity="0.920"/>
+<line x1="229.7" y1="128.0" x2="229.7" y2="150.0" stroke="#48453f" stroke-width="1.5" opacity="0.700"/>
+</svg>

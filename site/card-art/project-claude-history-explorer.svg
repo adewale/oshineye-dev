@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" role="img" aria-label="Abstract illustration for claude-history-explorer">
+<rect width="360" height="160" fill="#e7d9b9"/>
+<rect x="10.0" y="10.0" width="340.0" height="140.0" fill="none" opacity="1.000" stroke="#38464e" stroke-width="1.1"/>
+<line x1="46.0" y1="34.0" x2="336.0" y2="34.0" stroke="#38464e" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="62.0" x2="336.0" y2="62.0" stroke="#38464e" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="90.0" x2="336.0" y2="90.0" stroke="#38464e" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="118.0" x2="336.0" y2="118.0" stroke="#38464e" stroke-width="0.9" opacity="0.160"/>
+<rect x="58.0" y="30.0" width="82.0" height="84.0" fill="#4f82ac" opacity="0.680" stroke="#37352f" stroke-width="1.1"/>
+<rect x="158.0" y="34.0" width="140.0" height="38.0" fill="#5786a8" opacity="0.760"/>
+<line x1="62.0" y1="122.0" x2="122.4" y2="53.0" stroke="#37352f" stroke-width="1.6" opacity="0.720"/>
+<ellipse cx="74.1" cy="108.2" rx="14" ry="4" fill="#576c8b" opacity="0.28" transform="rotate(-16 74.1 108.2)"/>
+<ellipse cx="86.1" cy="94.4" rx="14" ry="4" fill="#576c8b" opacity="0.28" transform="rotate(-4 86.1 94.4)"/>
+<circle cx="122.4" cy="53.0" r="8.6" fill="#576c8b" opacity="0.640"/>
+<line x1="46.0" y1="137.0" x2="330.0" y2="137.0" stroke="#37352f" stroke-width="1.2" opacity="0.340"/>
+<line x1="46.0" y1="145.0" x2="120.5" y2="145.0" stroke="#7f0000" stroke-width="3.0" opacity="0.920"/>
+<line x1="120.5" y1="128.0" x2="120.5" y2="150.0" stroke="#576c8b" stroke-width="1.5" opacity="0.700"/>
+</svg>

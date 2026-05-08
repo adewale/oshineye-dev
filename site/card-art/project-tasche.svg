@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" role="img" aria-label="Abstract illustration for tasche">
+<rect width="360" height="160" fill="#f4e3b7"/>
+<rect x="10.0" y="10.0" width="340.0" height="140.0" fill="none" opacity="1.000" stroke="#3c3932" stroke-width="1.1"/>
+<line x1="46.0" y1="34.0" x2="336.0" y2="34.0" stroke="#3c3932" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="62.0" x2="336.0" y2="62.0" stroke="#3c3932" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="90.0" x2="336.0" y2="90.0" stroke="#3c3932" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="118.0" x2="336.0" y2="118.0" stroke="#3c3932" stroke-width="0.9" opacity="0.160"/>
+<rect x="58.0" y="30.0" width="82.0" height="84.0" fill="#5f5446" opacity="0.680" stroke="#443c36" stroke-width="1.1"/>
+<rect x="158.0" y="34.0" width="141.0" height="38.0" fill="#7b5a4e" opacity="0.760"/>
+<line x1="62.0" y1="122.0" x2="186.5" y2="52.0" stroke="#443c36" stroke-width="1.6" opacity="0.720"/>
+<ellipse cx="86.9" cy="108.0" rx="14" ry="4" fill="#f0e173" opacity="0.28" transform="rotate(-16 86.9 108.0)"/>
+<ellipse cx="111.8" cy="94.0" rx="14" ry="4" fill="#f0e173" opacity="0.28" transform="rotate(-4 111.8 94.0)"/>
+<ellipse cx="136.7" cy="80.0" rx="14" ry="4" fill="#f0e173" opacity="0.28" transform="rotate(8 136.7 80.0)"/>
+<circle cx="186.5" cy="52.0" r="11.4" fill="#f0e173" opacity="0.640"/>
+<line x1="46.0" y1="137.0" x2="330.0" y2="137.0" stroke="#443c36" stroke-width="1.2" opacity="0.340"/>
+<line x1="46.0" y1="145.0" x2="199.8" y2="145.0" stroke="#7f0000" stroke-width="3.0" opacity="0.920"/>
+<line x1="199.8" y1="128.0" x2="199.8" y2="150.0" stroke="#f0e173" stroke-width="1.5" opacity="0.700"/>
+</svg>

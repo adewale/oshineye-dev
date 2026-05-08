@@ -1,0 +1,200 @@
+{
+  "blog-planet-cloudflare": {
+    "title": "This is Planet Cloudflare",
+    "kind": "blog",
+    "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUhFH4s7iwqnzpxAV_a-SSWmpe5XFXmsOS8ZaeM1l363WDe19Idqg932-Dl1KCI9ISt5J-cqkpqNu07SAaMrkgTAhHRyGqOh3qNKOEvnl13rSAf90i8SR63a7EXfhMkp6qrGjpsN-lNpcuMR5YGi_EKqYty3y7CfCRTtIeAzG1CKZRea1bJYhsvA-7LVg/s800/CleanShot%202026-03-24%20at%2014.21.38@2x.png",
+    "asset": "/card-art/blog-planet-cloudflare.svg"
+  },
+  "blog-geistfabrik-aria": {
+    "title": "GeistFabrik and AI-augmented software development at ARIA",
+    "kind": "blog",
+    "source": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjao6ZW9rg3IDSjhiIoY7YDeczSuTEhLQhdotUaMMGbI6heYziRVD6ns2QFj0uIyJOU-5r-XDBirOuXIYne0UU8UiJBpo_PgPiLyJvEyKlUeNinQjwjNrZ2j6pURH1Ko8JEfsTLzslv8EDIO4xs0dJxRwkYYJRXIgNTWiCF3Jcy5TIse4wXLpwEnXW-sv0/w800-h450/IMG_5413.HEIC",
+    "asset": "/card-art/blog-geistfabrik-aria.svg"
+  },
+  "blog-better-keynote-export": {
+    "title": "Exporting PDFs from Keynote with Better Keynote Export",
+    "kind": "blog",
+    "source": "https://farm5.staticflickr.com/4596/38879461112_c48b496f63.jpg",
+    "asset": "/card-art/blog-better-keynote-export.svg"
+  },
+  "blog-keynote-notes": {
+    "title": "Why are the presenter notes ugly when I export them as PDFs from Keynote?",
+    "kind": "blog",
+    "source": "https://farm5.staticflickr.com/4596/38879461112_c48b496f63.jpg",
+    "asset": "/card-art/blog-keynote-notes.svg"
+  },
+  "project-bobbin": {
+    "title": "bobbin",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/bobbin",
+    "asset": "/card-art/project-bobbin.svg"
+  },
+  "project-demoscene": {
+    "title": "demoscene",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/demoscene",
+    "asset": "/card-art/project-demoscene.svg"
+  },
+  "project-embed-oshineye-dev": {
+    "title": "embed.oshineye.dev",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/embed.oshineye.dev",
+    "asset": "/card-art/project-embed-oshineye-dev.svg"
+  },
+  "project-yaket": {
+    "title": "yaket",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/yaket",
+    "asset": "/card-art/project-yaket.svg"
+  },
+  "project-cf-workers-design-system": {
+    "title": "cf-workers-design-system",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/cf-workers-design-system",
+    "asset": "/card-art/project-cf-workers-design-system.svg"
+  },
+  "project-vaders": {
+    "title": "vaders",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/vaders",
+    "asset": "/card-art/project-vaders.svg"
+  },
+  "project-atlas": {
+    "title": "atlas",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/atlas",
+    "asset": "/card-art/project-atlas.svg"
+  },
+  "project-planet-cf": {
+    "title": "planet_cf",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/planet_cf",
+    "asset": "/card-art/project-planet-cf.svg"
+  },
+  "project-slide-maker": {
+    "title": "slide-maker",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/slide-maker",
+    "asset": "/card-art/project-slide-maker.svg"
+  },
+  "project-testing-best-practices": {
+    "title": "testing-best-practices",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/testing-best-practices",
+    "asset": "/card-art/project-testing-best-practices.svg"
+  },
+  "project-tasche": {
+    "title": "tasche",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/tasche",
+    "asset": "/card-art/project-tasche.svg"
+  },
+  "project-good-readme": {
+    "title": "good-readme",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/good-readme",
+    "asset": "/card-art/project-good-readme.svg"
+  },
+  "project-good-pr": {
+    "title": "good-pr",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/good-pr",
+    "asset": "/card-art/project-good-pr.svg"
+  },
+  "project-python-workers-skill": {
+    "title": "python-workers-skill",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/python-workers-skill",
+    "asset": "/card-art/project-python-workers-skill.svg"
+  },
+  "project-audit-skill": {
+    "title": "audit-skill",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/audit-skill",
+    "asset": "/card-art/project-audit-skill.svg"
+  },
+  "project-geist-fabrik": {
+    "title": "geist_fabrik",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/geist_fabrik",
+    "asset": "/card-art/project-geist-fabrik.svg"
+  },
+  "project-web2kindle": {
+    "title": "web2kindle",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/web2kindle",
+    "asset": "/card-art/project-web2kindle.svg"
+  },
+  "project-keyboardia": {
+    "title": "keyboardia",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/keyboardia",
+    "asset": "/card-art/project-keyboardia.svg"
+  },
+  "project-guardrails-skill": {
+    "title": "guardrails-skill",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/guardrails-skill",
+    "asset": "/card-art/project-guardrails-skill.svg"
+  },
+  "project-claude-history-explorer": {
+    "title": "claude-history-explorer",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/claude-history-explorer",
+    "asset": "/card-art/project-claude-history-explorer.svg"
+  },
+  "project-python-workers-issues": {
+    "title": "python-workers-issues",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/python-workers-issues",
+    "asset": "/card-art/project-python-workers-issues.svg"
+  },
+  "project-rogue-planet": {
+    "title": "rogue_planet",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/rogue_planet",
+    "asset": "/card-art/project-rogue-planet.svg"
+  },
+  "project-garten": {
+    "title": "garten",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/garten",
+    "asset": "/card-art/project-garten.svg"
+  },
+  "project-skill-scanner": {
+    "title": "skill_scanner",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/skill_scanner",
+    "asset": "/card-art/project-skill-scanner.svg"
+  },
+  "project-cf-advisor-skill": {
+    "title": "cf-advisor-skill",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/cf-advisor-skill",
+    "asset": "/card-art/project-cf-advisor-skill.svg"
+  },
+  "project-fibonacci-durable-object": {
+    "title": "fibonacci_durable_object",
+    "kind": "project",
+    "source": "https://opengraph.githubassets.com/oshineye-card/adewale/fibonacci_durable_object",
+    "asset": "/card-art/project-fibonacci-durable-object.svg"
+  },
+  "talk-tools-for-thought": {
+    "title": "Tools For Thought: from the Memex to index cards",
+    "kind": "talk",
+    "source": "https://files.speakerdeck.com/presentations/1b9e91c591374614b23b00f5be641514/preview_slide_0.jpg?18287716",
+    "asset": "/card-art/talk-tools-for-thought.svg"
+  },
+  "talk-geistfabrik": {
+    "title": "GeistFabrik and AI-augmented software development",
+    "kind": "talk",
+    "source": "https://files.speakerdeck.com/presentations/a6d1a4054b4a4c5fb13ebc0efbd2d26c/preview_slide_0.jpg?37429569",
+    "asset": "/card-art/talk-geistfabrik.svg"
+  },
+  "talk-devrel-leadership": {
+    "title": "DevRel Leadership: all the pieces matter",
+    "kind": "talk",
+    "source": "https://files.speakerdeck.com/presentations/9dd386863ff740fc8261ce3c4614a875/preview_slide_0.jpg?9131415",
+    "asset": "/card-art/talk-devrel-leadership.svg"
+  }
+}
