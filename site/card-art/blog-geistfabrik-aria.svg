@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160" role="img" aria-label="Abstract illustration for GeistFabrik and AI-augmented software development at ARIA">
+<rect width="360" height="160" fill="#f1e1bc"/>
+<rect x="10.0" y="10.0" width="340.0" height="140.0" fill="none" opacity="1.000" stroke="#423f37" stroke-width="1.1"/>
+<line x1="46.0" y1="34.0" x2="336.0" y2="34.0" stroke="#423f37" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="62.0" x2="336.0" y2="62.0" stroke="#423f37" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="90.0" x2="336.0" y2="90.0" stroke="#423f37" stroke-width="0.9" opacity="0.160"/>
+<line x1="46.0" y1="118.0" x2="336.0" y2="118.0" stroke="#423f37" stroke-width="0.9" opacity="0.160"/>
+<rect x="58.0" y="32.0" width="122.0" height="75.0" fill="#736758" opacity="0.780" stroke="#36342e" stroke-width="1.1"/>
+<rect x="178.0" y="42.0" width="92.0" height="59.0" fill="#5e6069" opacity="0.700"/>
+<circle cx="294.0" cy="52.0" r="20.0" fill="#cfc4ac" opacity="0.720"/>
+<ellipse cx="78.0" cy="122.9" rx="16" ry="5" fill="#36342e" opacity="0.24" transform="rotate(-10 78.0 122.9)"/>
+<ellipse cx="106.0" cy="127.0" rx="16" ry="5" fill="#36342e" opacity="0.24" transform="rotate(-3 106.0 127.0)"/>
+<ellipse cx="134.0" cy="122.8" rx="16" ry="5" fill="#36342e" opacity="0.24" transform="rotate(4 134.0 122.8)"/>
+<ellipse cx="162.0" cy="114.2" rx="16" ry="5" fill="#36342e" opacity="0.24" transform="rotate(11 162.0 114.2)"/>
+<ellipse cx="190.0" cy="109.1" rx="16" ry="5" fill="#36342e" opacity="0.24" transform="rotate(18 190.0 109.1)"/>
+<line x1="46.0" y1="137.0" x2="330.0" y2="137.0" stroke="#36342e" stroke-width="1.2" opacity="0.340"/>
+<line x1="46.0" y1="145.0" x2="219.1" y2="145.0" stroke="#7f0000" stroke-width="3.0" opacity="0.920"/>
+<line x1="219.1" y1="128.0" x2="219.1" y2="150.0" stroke="#cfc4ac" stroke-width="1.5" opacity="0.700"/>
+</svg>
