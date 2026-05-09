@@ -229,20 +229,20 @@ a:focus-visible {
 .name {
     grid-column: 1 / 9;
     font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
-    font-size: clamp(2.4rem, 1.4rem + 4vw, 5.4rem);
-    font-weight: 700;
-    line-height: 0.92;
-    letter-spacing: -0.035em;
+    font-size: clamp(2.8rem, 1.5rem + 5.6vw, 7.25rem);
+    font-weight: 800;
+    line-height: 0.86;
+    letter-spacing: -0.045em;
     color: var(--brand);
     text-rendering: geometricPrecision;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    column-gap: 0.28em;
+    column-gap: 0.22em;
     text-transform: uppercase;
 }
-.name .first { color: var(--brand-soft); font-weight: 500; }
-.name .last { color: var(--brand); font-weight: 800; }
+.name .first { color: var(--brand-soft); font-weight: 600; }
+.name .last { color: var(--brand); font-weight: 900; }
 
 .role {
     grid-column: 9 / -1;
@@ -348,7 +348,7 @@ a:focus-visible {
 .page > * { grid-column: 1 / -1; }
 
 /* =============================================================
-   Section head — folio + title
+   Section head — folio + title (asymmetric, brand-red rule)
    ============================================================= */
 
 .section {
@@ -356,8 +356,9 @@ a:focus-visible {
     grid-template-columns: subgrid;
     column-gap: var(--col-gap);
     grid-column: 1 / -1;
-    margin-top: clamp(2.5rem, 5vw, 4.5rem);
+    margin-top: clamp(3.5rem, 7vw, 6.5rem);
     position: relative;
+    isolation: isolate;
 }
 
 .section-head {
@@ -366,9 +367,10 @@ a:focus-visible {
     grid-template-columns: subgrid;
     column-gap: var(--col-gap);
     align-items: baseline;
-    padding: 0.75rem 0 1.25rem;
+    padding: 1rem 0 1.6rem;
     margin-bottom: var(--space-m);
-    border-top: 2px solid var(--ink);
+    border-top: 3px solid var(--brand);
+    position: relative;
 }
 
 .folio {
@@ -377,42 +379,78 @@ a:focus-visible {
     font-size: var(--step--2);
     font-weight: 600;
     color: var(--brand);
-    letter-spacing: 0.28em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     font-feature-settings: "tnum";
     line-height: 1;
     align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.folio-num {
+    font-size: 1.6em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--brand);
+}
+
+.folio-rule {
+    width: 1.5rem;
+    height: 1px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.folio-label {
+    color: var(--ink-muted);
+    font-weight: 600;
 }
 
 .section-head h2 {
     grid-column: 4 / -1;
     font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
-    font-size: clamp(2rem, 1.4rem + 2.4vw, 3.5rem);
-    font-weight: 700;
+    font-size: clamp(2.4rem, 1.6rem + 3.2vw, 4.5rem);
+    font-weight: 800;
     color: var(--ink);
-    letter-spacing: -0.02em;
-    line-height: 1;
+    letter-spacing: -0.04em;
+    line-height: 0.94;
+    text-rendering: geometricPrecision;
+    /* slight asymmetric pull-out to break the column rhythm */
+    margin-left: -0.04em;
 }
 
-/* Code section gets a ghost word */
-.section--code {
-    position: relative;
-    isolation: isolate;
-}
-.section--code::before {
-    content: "CODE";
+/* Ghost word behind every section — type as graphic */
+.section[data-ghost]::before {
+    content: attr(data-ghost);
     position: absolute;
-    top: -0.3em;
+    inset: -0.18em auto auto auto;
     right: -0.04em;
     z-index: -1;
     font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
-    font-size: clamp(7rem, 22vw, 22rem);
+    font-size: clamp(7rem, 24vw, 24rem);
     font-weight: 800;
-    line-height: 0.78;
-    letter-spacing: -0.06em;
-    color: color-mix(in oklch, var(--brand) 11%, transparent);
+    line-height: 0.8;
+    letter-spacing: -0.07em;
+    color: color-mix(in oklch, var(--brand) 9%, transparent);
     pointer-events: none;
     user-select: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Make Code's ghost sit on the left for variety */
+.section--code[data-ghost]::before {
+    right: auto;
+    left: -0.06em;
+    color: color-mix(in oklch, var(--brand) 11%, transparent);
+}
+
+/* Talks ghost goes lighter and sits right */
+.section--talks[data-ghost]::before {
+    color: color-mix(in oklch, var(--brand) 7%, transparent);
 }
 
 /* =============================================================
@@ -608,10 +646,10 @@ a:focus-visible {
     grid-column: 2 / -1;
     grid-row: 2;
     font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-size: clamp(1.05rem, 0.94rem + 0.55vw, 1.4rem);
-    line-height: 1.05;
-    font-weight: 700;
-    letter-spacing: -0.022em;
+    font-size: clamp(1.2rem, 1rem + 0.85vw, 1.7rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.032em;
     color: var(--ink);
     transition: color 200ms var(--ease-out-quart);
 }
@@ -638,7 +676,7 @@ a:focus-visible {
 
 .work-compact {
     grid-column: 1 / -1;
-    border-top: 1.5px solid var(--ink);
+    border-top: 2px solid var(--brand);
     margin-bottom: var(--space-m);
 }
 
@@ -684,10 +722,10 @@ a:focus-visible {
 
 .work-compact .entry-name {
     font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-size: clamp(1rem, 0.94rem + 0.2vw, 1.15rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.018em;
+    font-size: clamp(1.05rem, 0.96rem + 0.35vw, 1.32rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
     color: inherit;
     display: block;
 }
@@ -764,7 +802,7 @@ a:focus-visible {
     grid-column: 1 / -1;
     display: grid;
     gap: 0;
-    border-top: 1.5px solid var(--ink);
+    border-top: 2px solid var(--brand);
 }
 
 .talk {
@@ -829,13 +867,14 @@ a:focus-visible {
 
 .talk-title {
     font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
-    font-size: clamp(1.3rem, 1rem + 1.2vw, 2.1rem);
-    font-weight: 700;
-    line-height: 1.08;
+    font-size: clamp(1.45rem, 1rem + 1.6vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1;
     color: var(--ink);
-    letter-spacing: -0.018em;
+    letter-spacing: -0.032em;
     transition: color 200ms var(--ease-out-quart);
-    max-width: 30ch;
+    max-width: 24ch;
+    text-rendering: geometricPrecision;
 }
 .talk:hover .talk-title { color: var(--brand); }
 
