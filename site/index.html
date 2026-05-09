@@ -5,181 +5,391 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
     <title>Ade Oshineye — Developer Advocacy at Cloudflare</title>
-    <meta name="description" content="Selected work and talks by Ade Oshineye. Developer Advocacy at Cloudflare.">
+    <meta name="description" content="Writing, code, and talks by Ade Oshineye. Developer Advocacy at Cloudflare.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://use.typekit.net">
     <link rel="preconnect" href="https://p.typekit.net" crossorigin>
     <script src="https://use.typekit.net/dbg2jxe.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      try {
+        if (localStorage.getItem('oshineye-motion-seen')) {
+          document.documentElement.classList.add('seen-motion');
+        } else {
+          localStorage.setItem('oshineye-motion-seen', '1');
+        }
+      } catch (e) {}
+    </script>
 </head>
 <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-    <div class="page">
-        <header class="hero" role="banner">
-            <p class="eyebrow">
-                <span>Portfolio</span>
-                <span class="eyebrow-rule" aria-hidden="true"></span>
-                <span>MMXXVI</span>
+    <header class="masthead-plate" style="--masthead-progress: 0; --masthead-inverse: 1;">
+        <div class="masthead">
+            <p class="eyebrow-row" aria-hidden="true">
+                <span class="eyebrow-mark">Portfolio</span>
+                <span class="eyebrow-rule"></span>
+                <span class="eyebrow-year">MMXXVI</span>
+                <span class="eyebrow-place">London &middot; Z&uuml;rich</span>
             </p>
-            <h1 class="hero-title"><span class="hero-title-line">Ade</span><span class="hero-title-line">Oshineye</span></h1>
-            <p class="hero-tag">
-                Developer Advocacy at <a class="cloudflare-link" href="https://www.cloudflare.com">Cloudflare</a>.
-            </p>
-        </header>
+            <div class="title">
+                <h1 class="name">
+                    <span class="first" aria-label="Adewale">
+                        <span class="letter" style="--i:0">A</span><span class="letter" style="--i:1">d</span><span class="letter" style="--i:2">e</span><span class="letter" style="--i:3">w</span><span class="letter" style="--i:4">a</span><span class="letter" style="--i:5">l</span><span class="letter" style="--i:6">e</span>
+                    </span>
+                    <span class="last" aria-label="Oshineye">
+                        <span class="letter" style="--i:8">O</span><span class="letter" style="--i:9">s</span><span class="letter" style="--i:10">h</span><span class="letter" style="--i:11">i</span><span class="letter" style="--i:12">n</span><span class="letter" style="--i:13">e</span><span class="letter" style="--i:14">y</span><span class="letter" style="--i:15">e</span>
+                    </span>
+                </h1>
+                <p class="role">
+                    <span class="at">Developer Advocacy at</span>
+                    <a href="https://www.cloudflare.com" class="cloudflare-link">Cloudflare</a>
+                </p>
+            </div>
+            <div class="compact-title" aria-hidden="true">
+                <span class="compact-name">Adewale Oshineye</span>
+                <span class="compact-role">Developer Advocacy at Cloudflare</span>
+            </div>
+        </div>
+    </header>
 
-        <main id="main">
-            <section class="section" aria-labelledby="repos-title">
-                <header class="section-head">
-                    <p class="section-number" aria-hidden="true">01</p>
-                    <h2 class="section-title" id="repos-title">Code</h2>
-                    <a class="section-link" href="https://github.com/adewale" target="_blank" rel="noopener">
-                        All repositories <span class="arrow" aria-hidden="true">↗</span>
+    <main id="content" class="page">
+
+        <section class="section section--writing reveal" aria-labelledby="writing">
+            <div class="section-head">
+                <p class="folio">Folio &mdash; 01</p>
+                <h2 id="writing">Writing</h2>
+            </div>
+
+            <div class="post-cards">
+                <article class="post-card">
+                    <a class="frame" href="http://blog.oshineye.com/2026/03/this-is-planet-cloudflare.html" target="_blank" rel="noopener" aria-label="Read This is Planet Cloudflare">
+                        <img class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUhFH4s7iwqnzpxAV_a-SSWmpe5XFXmsOS8ZaeM1l363WDe19Idqg932-Dl1KCI9ISt5J-cqkpqNu07SAaMrkgTAhHRyGqOh3qNKOEvnl13rSAf90i8SR63a7EXfhMkp6qrGjpsN-lNpcuMR5YGi_EKqYty3y7CfCRTtIeAzG1CKZRea1bJYhsvA-7LVg/s800/CleanShot%202026-03-24%20at%2014.21.38@2x.png" alt="Screenshot of the Planet Cloudflare RSS aggregator" loading="lazy">
                     </a>
-                    <p class="section-meta">Selected repositories from GitHub</p>
-                </header>
+                    <p class="post-eyebrow"><time datetime="2026-03">Mar 26</time><span class="dot">&middot;</span><span class="tag">Cloudflare</span><span class="dot">&middot;</span><span class="tag">Python</span></p>
+                    <a href="http://blog.oshineye.com/2026/03/this-is-planet-cloudflare.html" target="_blank" rel="noopener" class="post-title">This is Planet Cloudflare</a>
+                    <p class="post-excerpt">An RSS aggregator on Python Workers, queues, D1, and search &mdash; a long-running demo of the Cloudflare platform.</p>
+                </article>
 
-                <ol class="repo-list">
-                    <li class="repo-item">
-                        <a class="repo-link" href="https://github.com/adewale/keyboardia" target="_blank" rel="noopener">
-                            <span class="repo-index" aria-hidden="true">01</span>
-                            <span class="repo-meta">
-                                <span class="lang"><span class="lang-dot lang-typescript" aria-hidden="true"></span>TypeScript</span>
-                            </span>
-                            <span class="repo-name">keyboardia</span>
-                            <span class="repo-desc">Multiplayer step sequencer in the browser.</span>
-                        </a>
-                    </li>
-                    <li class="repo-item">
-                        <a class="repo-link" href="https://github.com/adewale/garten" target="_blank" rel="noopener">
-                            <span class="repo-index" aria-hidden="true">02</span>
-                            <span class="repo-meta">
-                                <span class="lang"><span class="lang-dot lang-typescript" aria-hidden="true"></span>TypeScript</span>
-                            </span>
-                            <span class="repo-name">garten</span>
-                            <span class="repo-desc">Animated canvas garden that grows over time.</span>
-                        </a>
-                    </li>
-                    <li class="repo-item">
-                        <a class="repo-link" href="https://github.com/adewale/claude-history-explorer" target="_blank" rel="noopener">
-                            <span class="repo-index" aria-hidden="true">03</span>
-                            <span class="repo-meta">
-                                <span class="stars" aria-label="13 stars">
-                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-                                    13
-                                </span>
-                                <span class="lang"><span class="lang-dot lang-python" aria-hidden="true"></span>Python</span>
-                            </span>
-                            <span class="repo-name">claude-history-explorer</span>
-                            <span class="repo-desc">CLI to explore, search and visualise your Claude Code conversation history.</span>
-                        </a>
-                    </li>
-                    <li class="repo-item">
-                        <a class="repo-link" href="https://github.com/adewale/cf-advisor-skill" target="_blank" rel="noopener">
-                            <span class="repo-index" aria-hidden="true">04</span>
-                            <span class="repo-meta">
-                                <span class="updated">Nov 2025</span>
-                            </span>
-                            <span class="repo-name">cf-advisor-skill</span>
-                        </a>
-                    </li>
-                    <li class="repo-item">
-                        <a class="repo-link" href="https://github.com/adewale/geist_fabrik" target="_blank" rel="noopener">
-                            <span class="repo-index" aria-hidden="true">05</span>
-                            <span class="repo-meta">
-                                <span class="stars" aria-label="7 stars">
-                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-                                    7
-                                </span>
-                                <span class="lang"><span class="lang-dot lang-python" aria-hidden="true"></span>Python</span>
-                            </span>
-                            <span class="repo-name">geist_fabrik</span>
-                            <span class="repo-desc">Python divergence engine for Obsidian vaults.</span>
-                        </a>
-                    </li>
-                    <li class="repo-item">
-                        <a class="repo-link" href="https://github.com/adewale/rogue_planet" target="_blank" rel="noopener">
-                            <span class="repo-index" aria-hidden="true">06</span>
-                            <span class="repo-meta">
-                                <span class="stars" aria-label="1 star">
-                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-                                    1
-                                </span>
-                                <span class="lang"><span class="lang-dot lang-go" aria-hidden="true"></span>Go</span>
-                            </span>
-                            <span class="repo-name">rogue_planet</span>
-                            <span class="repo-desc">Modern feed aggregator written in Go.</span>
-                        </a>
-                    </li>
-                </ol>
-            </section>
-
-            <section class="section" aria-labelledby="talks-title">
-                <header class="section-head">
-                    <p class="section-number" aria-hidden="true">02</p>
-                    <h2 class="section-title" id="talks-title">Talks</h2>
-                    <a class="section-link" href="https://speakerdeck.com/adewale" target="_blank" rel="noopener">
-                        All presentations <span class="arrow" aria-hidden="true">↗</span>
+                <article class="post-card">
+                    <a class="frame" href="http://blog.oshineye.com/2025/11/geistfabrik-and-ai-augmented-software.html" target="_blank" rel="noopener" aria-label="Read GeistFabrik and AI-augmented software development at ARIA">
+                        <img class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjao6ZW9rg3IDSjhiIoY7YDeczSuTEhLQhdotUaMMGbI6heYziRVD6ns2QFj0uIyJOU-5r-XDBirOuXIYne0UU8UiJBpo_PgPiLyJvEyKlUeNinQjwjNrZ2j6pURH1Ko8JEfsTLzslv8EDIO4xs0dJxRwkYYJRXIgNTWiCF3Jcy5TIse4wXLpwEnXW-sv0/w800-h450/IMG_5413.HEIC" alt="Photo from the GeistFabrik presentation at ARIA" loading="lazy">
                     </a>
-                    <p class="section-meta">Recent presentations</p>
-                </header>
+                    <p class="post-eyebrow"><time datetime="2025-11">Nov 25</time><span class="dot">&middot;</span><span class="tag">AI</span></p>
+                    <a href="http://blog.oshineye.com/2025/11/geistfabrik-and-ai-augmented-software.html" target="_blank" rel="noopener" class="post-title">GeistFabrik and AI-augmented software development at ARIA</a>
+                    <p class="post-excerpt">Using LLMs to explore unexpected adjacencies and new ways of building software.</p>
+                </article>
 
-                <ol class="talk-list">
-                    <li class="talk-item">
-                        <a class="talk-link" href="https://speakerdeck.com/adewale/geistfabrik-and-ai-augmented-software-development" target="_blank" rel="noopener">
-                            <div class="talk-thumb">
-                                <iframe src="https://speakerdeck.com/player/a6d1a4054b4a4c5fb13ebc0efbd2d26c" loading="lazy" scrolling="no" title="GeistFabrik and AI-augmented software development"></iframe>
-                            </div>
-                            <div class="talk-body">
-                                <span class="talk-index" aria-hidden="true">01</span>
-                                <h3 class="talk-title">GeistFabrik and AI-augmented software development</h3>
-                                <span class="talk-meta">3 views</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="talk-item">
-                        <a class="talk-link" href="https://speakerdeck.com/adewale/tools-for-thought-from-the-memex-to-index-cards" target="_blank" rel="noopener">
-                            <div class="talk-thumb">
-                                <iframe src="https://speakerdeck.com/player/1b9e91c591374614b23b00f5be641514" loading="lazy" scrolling="no" title="Tools For Thought: From the Memex to index cards"></iframe>
-                            </div>
-                            <div class="talk-body">
-                                <span class="talk-index" aria-hidden="true">02</span>
-                                <h3 class="talk-title">Tools For Thought: From the Memex to index cards</h3>
-                                <span class="talk-meta">1.1k views</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="talk-item">
-                        <a class="talk-link" href="https://speakerdeck.com/adewale/devrel-leadership-all-the-pieces-matter" target="_blank" rel="noopener">
-                            <div class="talk-thumb">
-                                <iframe src="https://speakerdeck.com/player/9dd386863ff740fc8261ce3c4614a875" loading="lazy" scrolling="no" title="DevRel Leadership: all the pieces matter"></iframe>
-                            </div>
-                            <div class="talk-body">
-                                <span class="talk-index" aria-hidden="true">03</span>
-                                <h3 class="talk-title">DevRel Leadership: all the pieces matter</h3>
-                                <span class="talk-meta">140 views</span>
-                            </div>
-                        </a>
-                    </li>
-                </ol>
-            </section>
-        </main>
+                <article class="post-card">
+                    <a class="frame frame--type" href="http://blog.oshineye.com/2025/11/exporting-pdfs-from-keynote-with-better.html" target="_blank" rel="noopener" aria-label="Read Exporting PDFs from Keynote with Better Keynote Export">
+                        <span class="frame-type" aria-hidden="true">PDF</span>
+                    </a>
+                    <p class="post-eyebrow"><time datetime="2025-11">Nov 25</time><span class="dot">&middot;</span><span class="tag">Apple</span></p>
+                    <a href="http://blog.oshineye.com/2025/11/exporting-pdfs-from-keynote-with-better.html" target="_blank" rel="noopener" class="post-title">Exporting PDFs from Keynote with Better Keynote Export</a>
+                    <p class="post-excerpt">A practical fix for getting readable speaker notes out of Keynote again.</p>
+                </article>
 
-        <footer class="page-foot">
-            <p class="foot-mark">© MMXXVI · Ade Oshineye</p>
-            <ul class="foot-links">
-                <li><a href="https://github.com/adewale" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://speakerdeck.com/adewale" target="_blank" rel="noopener">SpeakerDeck</a></li>
+                <article class="post-card">
+                    <a class="frame" href="http://blog.oshineye.com/2017/12/why-are-keynote-pdfs-ugly.html" target="_blank" rel="noopener" aria-label="Read Why are the presenter notes ugly when I export them as PDFs from Keynote?">
+                        <img class="post-image" src="https://farm5.staticflickr.com/4596/38879461112_c48b496f63.jpg" alt="Ugly PDF export from Keynote with presenter notes" loading="lazy">
+                    </a>
+                    <p class="post-eyebrow"><time datetime="2017-12">Dec 17</time><span class="dot">&middot;</span><span class="tag">Apple</span><span class="dot">&middot;</span><span class="tag">DevRel</span></p>
+                    <a href="http://blog.oshineye.com/2017/12/why-are-keynote-pdfs-ugly.html" target="_blank" rel="noopener" class="post-title">Why are the presenter notes ugly when I export them as PDFs from Keynote?</a>
+                    <p class="post-excerpt">The older complaint that made the newer Better Keynote Export fix worth celebrating.</p>
+                </article>
+            </div>
+
+            <p class="outbound"><a href="http://blog.oshineye.com/" target="_blank" rel="noopener">Heuristic Outcomes blog</a></p>
+        </section>
+
+        <section class="section section--code reveal" aria-labelledby="code">
+            <div class="section-head">
+                <p class="folio">Folio &mdash; 02</p>
+                <h2 id="code">Code</h2>
+            </div>
+
+            <div class="project-highlights" aria-label="Code highlights">
+                <article class="project-card" style="--growth: 0.34">
+                    <span class="project-growth" aria-hidden="true"></span>
+                    <time datetime="2026-04">Apr 26</time>
+                    <span class="entry-lang">HTML</span>
+                    <a href="https://github.com/adewale/bobbin" target="_blank" rel="noopener" class="project-title">bobbin</a>
+                    <p>Searchable archive of Alex Komoroske&rsquo;s weekly Bits and Bobs observations.</p>
+                </article>
+                <article class="project-card" style="--growth: 0.48">
+                    <span class="project-growth" aria-hidden="true"></span>
+                    <time datetime="2026-04">Apr 26</time>
+                    <span class="entry-lang">TS</span>
+                    <a href="https://github.com/adewale/yaket" target="_blank" rel="noopener" class="project-title">yaket</a>
+                    <p>TypeScript port of the YAKE keyword pipeline for Workers, Node, and browsers.</p>
+                </article>
+                <article class="project-card" style="--growth: 0.68">
+                    <span class="project-growth" aria-hidden="true"></span>
+                    <time datetime="2026-04">Apr 26</time>
+                    <span class="entry-lang">Py</span>
+                    <a href="https://github.com/adewale/planet_cf" target="_blank" rel="noopener" class="project-title">planet_cf</a>
+                    <p>Edge RSS and Atom aggregator with searchable feed output on Workers.</p>
+                </article>
+                <article class="project-card" style="--growth: 0.78">
+                    <span class="project-growth" aria-hidden="true"></span>
+                    <time datetime="2026-04">Apr 26</time>
+                    <span class="entry-lang">TS</span>
+                    <a href="https://github.com/adewale/atlas" target="_blank" rel="noopener" class="project-title">atlas</a>
+                    <p>A periodic table as navigable atlas, graph, folio, and visual mark system.</p>
+                </article>
+                <article class="project-card" style="--growth: 0.56">
+                    <span class="project-growth" aria-hidden="true"></span>
+                    <time datetime="2026-03">Mar 26</time>
+                    <span class="entry-lang">TS</span>
+                    <a href="https://github.com/adewale/keyboardia" target="_blank" rel="noopener" class="project-title">keyboardia</a>
+                    <p>Real-time collaborative step sequencer for up to ten players.</p>
+                </article>
+                <article class="project-card" style="--growth: 0.92">
+                    <span class="project-growth" aria-hidden="true"></span>
+                    <time datetime="2026-03">Mar 26</time>
+                    <span class="entry-lang">TS</span>
+                    <a href="https://github.com/adewale/garten" target="_blank" rel="noopener" class="project-title">garten</a>
+                    <p>Zero-dependency animated canvas garden of flowers, grasses, and foliage.</p>
+                </article>
+            </div>
+
+            <ul class="work-compact">
+                <li>
+                    <time datetime="2026-04">Apr 26</time>
+                    <a href="https://github.com/adewale/demoscene" target="_blank" rel="noopener" class="entry"><span class="entry-name">demoscene</span></a>
+                    <span class="entry-desc">Scans curated GitHub accounts for public Cloudflare DevRel Workers projects.</span>
+                    <span class="entry-lang">TS</span>
+                </li>
+                <li>
+                    <time datetime="2026-04" class="repeat-date" aria-label="April 2026"></time>
+                    <a href="https://github.com/adewale/embed.oshineye.dev" target="_blank" rel="noopener" class="entry"><span class="entry-name">embed.oshineye.dev</span></a>
+                    <span class="entry-desc">Self-contained interactive visualisations for Blogger posts and other embeds.</span>
+                    <span class="entry-lang">TS</span>
+                </li>
+                <li>
+                    <time datetime="2026-04" class="repeat-date" aria-label="April 2026"></time>
+                    <a href="https://github.com/adewale/cf-workers-design-system" target="_blank" rel="noopener" class="entry"><span class="entry-name">cf-workers-design-system</span></a>
+                    <span class="entry-desc">Agent-first Workers design tokens published as JSON, CSS, and Markdown.</span>
+                    <span class="entry-lang">HTML</span>
+                </li>
+                <li>
+                    <time datetime="2026-04" class="repeat-date" aria-label="April 2026"></time>
+                    <a href="https://github.com/adewale/vaders" target="_blank" rel="noopener" class="entry"><span class="entry-name">vaders</span></a>
+                    <span class="entry-desc">Multiplayer Space Invaders for terminal and browser on Durable Objects.</span>
+                    <span class="entry-lang">TS</span>
+                </li>
+                <li>
+                    <time datetime="2026-04" class="repeat-date" aria-label="April 2026"></time>
+                    <a href="https://github.com/adewale/slide-maker" target="_blank" rel="noopener" class="entry"><span class="entry-name">slide-maker</span></a>
+                    <span class="entry-desc">Claude skill that reads repos and produces grounded Slidev decks.</span>
+                    <span class="entry-lang">Vue</span>
+                </li>
+                <li>
+                    <time datetime="2026-04" class="repeat-date" aria-label="April 2026"></time>
+                    <a href="https://github.com/adewale/testing-best-practices" target="_blank" rel="noopener" class="entry"><span class="entry-name">testing-best-practices</span></a>
+                    <span class="entry-desc">Agent skill grounded in real testing patterns and TDD practitioners.</span>
+                    <span class="entry-lang">Skill</span>
+                </li>
+                <li>
+                    <time datetime="2026-04" class="repeat-date" aria-label="April 2026"></time>
+                    <a href="https://github.com/adewale/tasche" target="_blank" rel="noopener" class="entry"><span class="entry-name">tasche</span></a>
+                    <span class="entry-desc">Self-hosted read-it-later service with extraction, archive, and audio.</span>
+                    <span class="entry-lang">Py</span>
+                </li>
+                <li>
+                    <time datetime="2026-03">Mar 26</time>
+                    <a href="https://github.com/adewale/good-readme" target="_blank" rel="noopener" class="entry"><span class="entry-name">good-readme</span></a>
+                    <span class="entry-desc">Claude skill that writes READMEs from source analysis, not templates.</span>
+                    <span class="entry-lang">Skill</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/good-pr" target="_blank" rel="noopener" class="entry"><span class="entry-name">good-pr</span></a>
+                    <span class="entry-desc">Claude skill for shaping pull requests maintainers want to review.</span>
+                    <span class="entry-lang">Sh</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/python-workers-skill" target="_blank" rel="noopener" class="entry"><span class="entry-name">python-workers-skill</span></a>
+                    <span class="entry-desc">Guidance for Pyodide, JS/Python FFI, and Python Workers constraints.</span>
+                    <span class="entry-lang">Skill</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/audit-skill" target="_blank" rel="noopener" class="entry"><span class="entry-name">audit-skill</span></a>
+                    <span class="entry-desc">Audit toolkit with branch verdicts and focused deep-dive review modes.</span>
+                    <span class="entry-lang">Py</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/geist_fabrik" target="_blank" rel="noopener" class="entry"><span class="entry-name">geist_fabrik</span></a>
+                    <span class="entry-desc">Python divergence engine for Obsidian; a muse, not an oracle.</span>
+                    <span class="entry-stars" aria-label="7 GitHub stars">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+                        7
+                    </span>
+                    <span class="entry-lang">Py</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/web2kindle" target="_blank" rel="noopener" class="entry"><span class="entry-name">web2kindle</span></a>
+                    <span class="entry-desc">Chrome extension that turns web articles into Kindle-ready ebooks.</span>
+                    <span class="entry-lang">HTML</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/guardrails-skill" target="_blank" rel="noopener" class="entry"><span class="entry-name">guardrails-skill</span></a>
+                    <span class="entry-desc">Lifecycle quality gates that agents run instead of merely remembering.</span>
+                    <span class="entry-lang">Sh</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/claude-history-explorer" target="_blank" rel="noopener" class="entry"><span class="entry-name">claude-history-explorer</span></a>
+                    <span class="entry-desc">CLI that turns local Claude JSONL history into searchable conversations.</span>
+                    <span class="entry-stars" aria-label="13 GitHub stars">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+                        13
+                    </span>
+                    <span class="entry-lang">Py</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/python-workers-issues" target="_blank" rel="noopener" class="entry"><span class="entry-name">python-workers-issues</span></a>
+                    <span class="entry-desc">Independent reproductions and workarounds for Python Workers bugs.</span>
+                    <span class="entry-lang">Py</span>
+                </li>
+                <li>
+                    <time datetime="2026-03" class="repeat-date" aria-label="March 2026"></time>
+                    <a href="https://github.com/adewale/rogue_planet" target="_blank" rel="noopener" class="entry"><span class="entry-name">rogue_planet</span></a>
+                    <span class="entry-desc">Modern Planet-style feed aggregator with production HTTP handling.</span>
+                    <span class="entry-stars" aria-label="1 GitHub star">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+                        1
+                    </span>
+                    <span class="entry-lang">Go</span>
+                </li>
+                <li>
+                    <time datetime="2026-02">Feb 26</time>
+                    <a href="https://github.com/adewale/skill_scanner" target="_blank" rel="noopener" class="entry"><span class="entry-name">skill_scanner</span></a>
+                    <span class="entry-desc">Simple scanner for malware and security antipatterns in agent skills.</span>
+                    <span class="entry-lang">Py</span>
+                </li>
+                <li>
+                    <time datetime="2025-12">Dec 25</time>
+                    <a href="https://github.com/adewale/cf-advisor-skill" target="_blank" rel="noopener" class="entry"><span class="entry-name">cf-advisor-skill</span></a>
+                    <span class="entry-desc">Progressive-disclosure Cloudflare platform guidance for Claude Code.</span>
+                    <span class="entry-lang">Skill</span>
+                </li>
+                <li>
+                    <time datetime="2025-12" class="repeat-date" aria-label="December 2025"></time>
+                    <a href="https://github.com/adewale/fibonacci_durable_object" target="_blank" rel="noopener" class="entry"><span class="entry-name">fibonacci_durable_object</span></a>
+                    <span class="entry-desc">A simple demonstration of a Cloudflare Durable Object.</span>
+                    <span class="entry-lang">HTML</span>
+                </li>
             </ul>
-            <p class="foot-colophon">Set in Cronos Pro &amp; Chaparral Pro. Garden grown by <a href="https://github.com/adewale/garten" target="_blank" rel="noopener">Garten</a>.</p>
+
+            <p class="outbound"><a href="https://github.com/adewale" target="_blank" rel="noopener">Everything on GitHub</a></p>
+        </section>
+
+        <section class="section section--talks reveal" aria-labelledby="talks">
+            <div class="section-head">
+                <p class="folio">Folio &mdash; 03</p>
+                <h2 id="talks">Talks</h2>
+            </div>
+
+            <div class="talk-cards">
+                <article class="talk">
+                    <a href="https://speakerdeck.com/adewale/tools-for-thought-from-the-memex-to-index-cards" target="_blank" rel="noopener" class="frame" aria-label="Tools For Thought presentation">
+                        <img src="https://files.speakerdeck.com/presentations/1b9e91c591374614b23b00f5be641514/preview_slide_0.jpg?18287716" alt="Title slide for Tools For Thought: from the Memex to index cards" loading="lazy">
+                    </a>
+                    <div class="talk-body">
+                        <p class="talk-meta"><span>2024</span><span class="dot">&middot;</span><span>1.1k views</span></p>
+                        <a href="https://speakerdeck.com/adewale/tools-for-thought-from-the-memex-to-index-cards" target="_blank" rel="noopener" class="talk-title">Tools For Thought: from the Memex to index cards</a>
+                    </div>
+                </article>
+
+                <article class="talk">
+                    <a href="https://speakerdeck.com/adewale/geistfabrik-and-ai-augmented-software-development" target="_blank" rel="noopener" class="frame" aria-label="GeistFabrik presentation">
+                        <img src="https://files.speakerdeck.com/presentations/a6d1a4054b4a4c5fb13ebc0efbd2d26c/preview_slide_0.jpg?37429569" alt="Title slide for GeistFabrik and AI-augmented software development" loading="lazy">
+                    </a>
+                    <div class="talk-body">
+                        <p class="talk-meta"><span>2025</span><span class="dot">&middot;</span><span>3 views</span></p>
+                        <a href="https://speakerdeck.com/adewale/geistfabrik-and-ai-augmented-software-development" target="_blank" rel="noopener" class="talk-title">GeistFabrik and AI-augmented software development</a>
+                    </div>
+                </article>
+
+                <article class="talk">
+                    <a href="https://speakerdeck.com/adewale/devrel-leadership-all-the-pieces-matter" target="_blank" rel="noopener" class="frame" aria-label="DevRel Leadership presentation">
+                        <img src="https://files.speakerdeck.com/presentations/9dd386863ff740fc8261ce3c4614a875/preview_slide_0.jpg?9131415" alt="Title slide for DevRel Leadership: all the pieces matter" loading="lazy">
+                    </a>
+                    <div class="talk-body">
+                        <p class="talk-meta"><span>2024</span><span class="dot">&middot;</span><span>140 views</span></p>
+                        <a href="https://speakerdeck.com/adewale/devrel-leadership-all-the-pieces-matter" target="_blank" rel="noopener" class="talk-title">DevRel Leadership: all the pieces matter</a>
+                    </div>
+                </article>
+            </div>
+
+            <p class="outbound"><a href="https://speakerdeck.com/adewale" target="_blank" rel="noopener">All presentations on Speaker Deck</a></p>
+        </section>
+
+        <footer class="colophon">
+            <span>&copy; MMXXVI Ade Oshineye</span>
+            <span class="colophon-sep" aria-hidden="true"></span>
+            <span>Set in Cronos Pro &amp; Chaparral Pro</span>
+            <span class="colophon-sep" aria-hidden="true"></span>
+            <span>Garden grown by <a href="https://github.com/adewale/garten" target="_blank" rel="noopener">Garten</a></span>
         </footer>
-    </div>
+
+    </main>
 
     <div id="garden" aria-hidden="true"></div>
     <script src="garten.js"></script>
     <script src="oshineye-config.js"></script>
     <script>
-      new Garten.Garten(OshineyeConfig.getGartenConfig('#garden'));
+      const gartenConfig = OshineyeConfig.getGartenConfig('#garden');
+      document.documentElement.style.setProperty('--garden-accent', gartenConfig.colors.accent);
+      new Garten.Garten(gartenConfig);
+    </script>
+    <script>
+      (() => {
+        const masthead = document.querySelector('.masthead-plate');
+        if (!masthead) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const collapseAt = 180;
+        const expandAt = 80;
+        const progressRange = 150;
+        let compact = false;
+        let ticking = false;
+
+        function updateMasthead() {
+          const y = window.scrollY;
+          const raw = reduceMotion.matches ? (y >= collapseAt ? 1 : 0) : y / progressRange;
+          const progress = Math.min(Math.max(raw, 0), 1);
+          masthead.style.setProperty('--masthead-progress', progress.toFixed(3));
+          masthead.style.setProperty('--masthead-inverse', (1 - progress).toFixed(3));
+
+          let nextCompact = compact;
+          if (!compact && y >= collapseAt) nextCompact = true;
+          if (compact && y <= expandAt) nextCompact = false;
+          if (nextCompact !== compact) {
+            compact = nextCompact;
+            masthead.classList.toggle('is-compact', compact);
+          }
+          ticking = false;
+        }
+
+        function requestUpdate() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateMasthead);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        reduceMotion.addEventListener?.('change', requestUpdate);
+        updateMasthead();
+      })();
     </script>
 </body>
 </html>
