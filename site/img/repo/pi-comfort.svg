@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="pi-comfort">
+  <rect width="400" height="300" fill="#f4ecd8"/>
+  <g transform="translate(60 50)">
+    <rect x="0" y="0" width="280" height="190" rx="6" fill="#1a1f2e"/>
+    <rect x="10" y="10" width="260" height="170" rx="3" fill="#0f1320" stroke="#2a3148" stroke-width="0.6"/>
+    <g transform="translate(22 28)">
+      <text x="0" y="0" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#d49431">good morning, ade</text>
+      <line x1="0" y1="8" x2="120" y2="8" stroke="#d49431" stroke-width="1" opacity="0.5"/>
+      <g font-family="Georgia, serif" font-size="10" fill="#f4ecd8" opacity="0.75">
+        <text y="28">17 °C · partly cloudy</text>
+        <text y="46">3 trains to Zürich HB</text>
+        <text y="64">first standup in 42 min</text>
+        <text y="82">tasks: 4 due today</text>
+      </g>
+      <g transform="translate(168 14)">
+        <rect x="0" y="0" width="40" height="40" fill="#7f0000"/>
+        <text x="20" y="16" font-family="Georgia, serif" font-size="8" fill="#f4ecd8" text-anchor="middle" font-weight="700">EXPORT</text>
+        <text x="20" y="30" font-family="Georgia, serif" font-size="8" fill="#f4ecd8" text-anchor="middle">.html</text>
+      </g>
+    </g>
+    <g transform="translate(132 168)" fill="#d49431">
+      <rect x="0" y="0" width="24" height="6"/>
+      <rect x="0" y="-4" width="6" height="10"/>
+      <rect x="18" y="-4" width="6" height="10"/>
+    </g>
+  </g>
+  <g transform="translate(176 250)" font-family="Georgia, serif" font-size="11" fill="#1a1f2e" opacity="0.55" text-anchor="middle">
+    <text>raspberry pi · reduce friction</text>
+  </g>
+</svg>
