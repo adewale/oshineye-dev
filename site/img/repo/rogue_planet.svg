@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="rogue_planet">
+  <defs>
+    <radialGradient id="rgp-bg" cx="0.3" cy="0.7" r="0.9">
+      <stop offset="0" stop-color="#22264a"/>
+      <stop offset="1" stop-color="#0a0c1c"/>
+    </radialGradient>
+    <radialGradient id="rgp-planet" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#a83838"/>
+      <stop offset="0.7" stop-color="#7f0000"/>
+      <stop offset="1" stop-color="#3b0000"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#rgp-bg)"/>
+  <g fill="#f4ecd8" opacity="0.55">
+    <circle cx="34" cy="42" r="0.8"/>
+    <circle cx="86" cy="26" r="1"/>
+    <circle cx="142" cy="58" r="0.8"/>
+    <circle cx="208" cy="22" r="1.2"/>
+    <circle cx="294" cy="48" r="0.8"/>
+    <circle cx="356" cy="32" r="1"/>
+    <circle cx="64" cy="220" r="0.8"/>
+    <circle cx="128" cy="252" r="1"/>
+    <circle cx="220" cy="244" r="0.8"/>
+    <circle cx="318" cy="252" r="0.8"/>
+    <circle cx="378" cy="208" r="1"/>
+  </g>
+  <g opacity="0.4" stroke="#d49431" stroke-width="1" fill="none">
+    <path d="M 80 230 Q 130 200 180 184 Q 240 164 290 132"/>
+  </g>
+  <circle cx="290" cy="132" r="48" fill="url(#rgp-planet)"/>
+  <ellipse cx="276" cy="118" rx="14" ry="6" fill="#3b0000" opacity="0.6"/>
+  <ellipse cx="298" cy="148" rx="10" ry="4" fill="#3b0000" opacity="0.5"/>
+  <g transform="translate(200 156)" font-family="Georgia, serif">
+    <text x="0" y="-100" font-size="9" fill="#f4ecd8" opacity="0.6" font-style="italic" text-anchor="middle">no orbit. no host star.</text>
+  </g>
+  <g transform="translate(40 240)">
+    <rect x="0" y="0" width="80" height="14" fill="#0a0c1c" stroke="#d49431" stroke-width="0.6"/>
+    <text x="40" y="10" font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#d49431" text-anchor="middle">go run ./...</text>
+  </g>
+  <text x="40" y="278" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#f4ecd8" opacity="0.5">a planet, in go</text>
+</svg>

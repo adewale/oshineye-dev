@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="dotfiles">
+  <rect width="400" height="300" fill="#1a1f2e"/>
+  <g transform="translate(40 50)">
+    <text font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#d49431">$</text>
+    <text x="18" y="0" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#f4ecd8">ls -la ~/</text>
+  </g>
+  <g transform="translate(40 86)" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#f4ecd8" opacity="0.8">
+    <text y="0">.<tspan fill="#7f0000" font-weight="700">vimrc</tspan>          1872  Apr 12  2026</text>
+    <text y="20">.<tspan fill="#7f0000" font-weight="700">zshrc</tspan>           924  Apr 12  2026</text>
+    <text y="40">.<tspan fill="#7f0000" font-weight="700">gitconfig</tspan>       412  Apr 12  2026</text>
+    <text y="60">.<tspan fill="#7f0000" font-weight="700">tmux.conf</tspan>       298  Apr 12  2026</text>
+    <text y="80">.<tspan fill="#7f0000" font-weight="700">ssh/</tspan>            ---   Apr 12  2026</text>
+    <text y="100">.<tspan fill="#7f0000" font-weight="700">claude/</tspan>         ---   Apr 12  2026</text>
+    <text y="120">.<tspan fill="#7f0000" font-weight="700">profile</tspan>          76  Apr 12  2026</text>
+  </g>
+  <g transform="translate(40 240)">
+    <text font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#d49431">$</text>
+    <text x="18" y="0" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#f4ecd8">_</text>
+    <rect x="30" y="-12" width="2" height="14" fill="#f4ecd8">
+      <animate attributeName="opacity" values="0;0;1;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="40" y="278" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#f4ecd8" opacity="0.45">stowed across every mac</text>
+</svg>

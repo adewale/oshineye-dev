@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="sunrise">
+  <defs>
+    <linearGradient id="sun-sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8b76b"/>
+      <stop offset="0.5" stop-color="#f4ecd8"/>
+      <stop offset="1" stop-color="#faf3e0"/>
+    </linearGradient>
+    <radialGradient id="sun-glow" cx="0.5" cy="1" r="0.7">
+      <stop offset="0" stop-color="#d49431"/>
+      <stop offset="1" stop-color="#7f0000"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#sun-sky)"/>
+  <g>
+    <circle cx="200" cy="190" r="76" fill="url(#sun-glow)"/>
+    <rect x="0" y="190" width="400" height="110" fill="#1a1f2e" opacity="0.06"/>
+    <line x1="0" y1="190" x2="400" y2="190" stroke="#1a1f2e" stroke-width="0.8" opacity="0.35"/>
+  </g>
+  <g transform="translate(36 30)">
+    <rect x="0" y="0" width="120" height="32" fill="#faf3e0" stroke="#1a1f2e" stroke-width="0.8" opacity="0.92"/>
+    <circle cx="14" cy="16" r="4" fill="#7f0000"/>
+    <text x="26" y="14" font-family="Georgia, serif" font-size="10" fill="#1a1f2e">PR #142</text>
+    <text x="26" y="26" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.55">3 reviewers</text>
+  </g>
+  <g transform="translate(36 70)">
+    <rect x="0" y="0" width="120" height="32" fill="#faf3e0" stroke="#1a1f2e" stroke-width="0.8" opacity="0.92"/>
+    <circle cx="14" cy="16" r="4" fill="#d49431"/>
+    <text x="26" y="14" font-family="Georgia, serif" font-size="10" fill="#1a1f2e">issue #88</text>
+    <text x="26" y="26" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.55">stale 4 days</text>
+  </g>
+  <g transform="translate(244 30)">
+    <rect x="0" y="0" width="120" height="32" fill="#faf3e0" stroke="#1a1f2e" stroke-width="0.8" opacity="0.92"/>
+    <circle cx="14" cy="16" r="4" fill="#6e8855"/>
+    <text x="26" y="14" font-family="Georgia, serif" font-size="10" fill="#1a1f2e">CI green</text>
+    <text x="26" y="26" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.55">main · oshineye-dev</text>
+  </g>
+  <g transform="translate(244 70)">
+    <rect x="0" y="0" width="120" height="32" fill="#faf3e0" stroke="#1a1f2e" stroke-width="0.8" opacity="0.92"/>
+    <circle cx="14" cy="16" r="4" fill="#7f0000"/>
+    <text x="26" y="14" font-family="Georgia, serif" font-size="10" fill="#1a1f2e">review req'd</text>
+    <text x="26" y="26" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.55">2 mentions</text>
+  </g>
+  <text x="200" y="282" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#1a1f2e" opacity="0.55" text-anchor="middle">your morning, before the meetings</text>
+</svg>
