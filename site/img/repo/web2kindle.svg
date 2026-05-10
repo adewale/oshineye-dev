@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="web2kindle">
+  <rect width="400" height="300" fill="#f4ecd8"/>
+  <g transform="translate(60 30)">
+    <rect x="0" y="0" width="160" height="220" fill="#ddc89c" stroke="#1a1f2e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="14" fill="#1a1f2e"/>
+    <text x="8" y="10" font-family="Georgia, serif" font-size="9" fill="#f4ecd8" opacity="0.85">web</text>
+    <g font-family="Georgia, serif" font-size="9" fill="#1a1f2e">
+      <rect x="14" y="32" width="120" height="2" opacity="0.6"/>
+      <rect x="14" y="44" width="100" height="2" opacity="0.6"/>
+      <rect x="14" y="56" width="120" height="2" opacity="0.4"/>
+      <rect x="14" y="68" width="110" height="2" opacity="0.4"/>
+      <rect x="14" y="80" width="130" height="2" opacity="0.4"/>
+      <rect x="14" y="92" width="90" height="2" opacity="0.4"/>
+      <rect x="14" y="120" width="120" height="2" opacity="0.4"/>
+      <rect x="14" y="132" width="100" height="2" opacity="0.4"/>
+      <rect x="14" y="144" width="60" height="2" opacity="0.4"/>
+    </g>
+  </g>
+  <g transform="translate(230 28)">
+    <rect x="0" y="0" width="120" height="160" fill="#faf3e0" stroke="#1a1f2e" stroke-width="2"/>
+    <rect x="0" y="0" width="120" height="22" fill="#7f0000"/>
+    <text x="6" y="16" font-family="Georgia, serif" font-size="10" fill="#f4ecd8" font-weight="700">kindle</text>
+    <g font-family="Georgia, serif" font-size="9" fill="#1a1f2e">
+      <rect x="10" y="36" width="100" height="2" opacity="0.6"/>
+      <rect x="10" y="46" width="86" height="2" opacity="0.6"/>
+      <rect x="10" y="56" width="100" height="2" opacity="0.4"/>
+      <rect x="10" y="66" width="92" height="2" opacity="0.4"/>
+      <rect x="10" y="76" width="100" height="2" opacity="0.4"/>
+      <rect x="10" y="86" width="88" height="2" opacity="0.4"/>
+      <rect x="10" y="98" width="100" height="2" opacity="0.4"/>
+      <rect x="10" y="108" width="74" height="2" opacity="0.4"/>
+      <rect x="10" y="118" width="100" height="2" opacity="0.4"/>
+      <rect x="10" y="128" width="80" height="2" opacity="0.4"/>
+      <rect x="10" y="138" width="60" height="2" opacity="0.4"/>
+    </g>
+    <rect x="40" y="148" width="40" height="6" fill="#1a1f2e"/>
+  </g>
+  <g transform="translate(206 100)" stroke="#1a1f2e" stroke-width="2" fill="none">
+    <line x1="0" y1="6" x2="18" y2="6"/>
+    <polyline points="14,2 18,6 14,10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(206 110)" font-family="Georgia, serif" font-style="italic" font-size="9" fill="#1a1f2e" opacity="0.6">
+    <text x="0" y="14">extract</text>
+  </g>
+</svg>

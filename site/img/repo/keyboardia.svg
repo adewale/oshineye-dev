@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Keyboardia">
+  <rect width="400" height="300" fill="#1a1f2e"/>
+  <g transform="translate(28 130)">
+    <rect x="0" y="0" width="344" height="56" rx="3" fill="#0f1320" stroke="#2a3148" stroke-width="1"/>
+    <g>
+      <rect x="6" y="6" width="36" height="44" fill="#7f0000"/>
+      <rect x="48" y="6" width="36" height="44" fill="#2a3148"/>
+      <rect x="90" y="6" width="36" height="44" fill="#d49431"/>
+      <rect x="132" y="6" width="36" height="44" fill="#2a3148"/>
+      <rect x="174" y="6" width="36" height="44" fill="#7f0000"/>
+      <rect x="216" y="6" width="36" height="44" fill="#d49431"/>
+      <rect x="258" y="6" width="36" height="44" fill="#2a3148"/>
+      <rect x="300" y="6" width="36" height="44" fill="#7f0000"/>
+    </g>
+  </g>
+  <g>
+    <polygon points="62,108 74,124 50,124" fill="#d49431"/>
+    <polygon points="170,98 182,114 158,114" fill="#7f0000"/>
+    <polygon points="280,118 292,134 268,134" fill="#c79090"/>
+    <polygon points="338,108 350,124 326,124" fill="#6e8855"/>
+  </g>
+  <g font-family="Georgia, serif" font-size="9" fill="#f4ecd8">
+    <text x="62" y="100" text-anchor="middle" opacity="0.85">P1</text>
+    <text x="170" y="90" text-anchor="middle" opacity="0.85">P2</text>
+    <text x="280" y="110" text-anchor="middle" opacity="0.85">P3</text>
+    <text x="338" y="100" text-anchor="middle" opacity="0.85">P4</text>
+  </g>
+  <line x1="40" y1="222" x2="360" y2="222" stroke="#7f0000" stroke-width="2"/>
+  <text x="40" y="248" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#f4ecd8" opacity="0.6">10 players · 1 grid</text>
+</svg>

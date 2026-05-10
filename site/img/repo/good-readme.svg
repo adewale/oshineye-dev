@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="good-readme">
+  <rect width="400" height="300" fill="#f4ecd8"/>
+  <g transform="translate(70 36)">
+    <rect x="0" y="0" width="200" height="234" fill="#faf3e0" stroke="#1a1f2e" stroke-width="1"/>
+    <text x="14" y="32" font-family="Georgia, serif" font-size="18" font-weight="800" fill="#7f0000"># project</text>
+    <line x1="14" y1="42" x2="100" y2="42" stroke="#7f0000" stroke-width="2"/>
+    <g font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.7">
+      <rect x="14" y="58" width="130" height="2" opacity="0.5"/>
+      <rect x="14" y="68" width="170" height="2" opacity="0.5"/>
+      <rect x="14" y="78" width="150" height="2" opacity="0.5"/>
+    </g>
+    <text x="14" y="108" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#1a1f2e">## why</text>
+    <g font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.7">
+      <rect x="14" y="120" width="170" height="2" opacity="0.5"/>
+      <rect x="14" y="130" width="150" height="2" opacity="0.5"/>
+    </g>
+    <text x="14" y="156" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#1a1f2e">## install</text>
+    <rect x="14" y="166" width="170" height="20" fill="#1a1f2e"/>
+    <text x="20" y="180" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#d49431">$ bun install</text>
+    <text x="14" y="208" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#1a1f2e">## use</text>
+    <g font-family="Georgia, serif" font-size="9" fill="#1a1f2e" opacity="0.7">
+      <rect x="14" y="220" width="160" height="2" opacity="0.5"/>
+    </g>
+  </g>
+  <g transform="translate(298 100)" stroke="#7f0000" stroke-width="2" fill="none">
+    <polyline points="0,0 -8,8 -16,0" stroke-linecap="round"/>
+  </g>
+  <text x="298" y="146" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#1a1f2e" opacity="0.6">grounded in</text>
+  <text x="298" y="160" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#1a1f2e" opacity="0.6">the source</text>
+</svg>

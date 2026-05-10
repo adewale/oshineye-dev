@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Garten">
+  <defs>
+    <linearGradient id="grt-sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4ecd8"/>
+      <stop offset="1" stop-color="#e8d5a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grt-sky)"/>
+  <rect x="0" y="232" width="400" height="68" fill="#6e8855" opacity="0.18"/>
+  <g stroke="#6e8855" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M 56 240 Q 60 200 58 168"/>
+    <path d="M 78 240 Q 80 210 82 188"/>
+    <path d="M 322 240 Q 318 220 320 200"/>
+    <path d="M 342 240 Q 348 218 346 196"/>
+    <path d="M 360 240 Q 358 222 362 202"/>
+  </g>
+  <g stroke="#7f0000" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M 200 240 L 200 168"/>
+  </g>
+  <g transform="translate(200 156)">
+    <ellipse cx="0" cy="-12" rx="14" ry="20" fill="#7f0000"/>
+    <ellipse cx="-18" cy="0" rx="20" ry="14" fill="#7f0000"/>
+    <ellipse cx="18" cy="0" rx="20" ry="14" fill="#7f0000"/>
+    <ellipse cx="-10" cy="14" rx="18" ry="14" fill="#7f0000"/>
+    <ellipse cx="10" cy="14" rx="18" ry="14" fill="#7f0000"/>
+    <circle cx="0" cy="0" r="9" fill="#d49431"/>
+  </g>
+  <g fill="#d49431">
+    <circle cx="124" cy="206" r="5"/>
+    <circle cx="124" cy="206" r="2" fill="#7f0000"/>
+  </g>
+  <g fill="#c79090">
+    <circle cx="276" cy="194" r="4"/>
+    <circle cx="276" cy="194" r="1.5" fill="#7f0000"/>
+  </g>
+</svg>
