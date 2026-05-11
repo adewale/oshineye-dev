@@ -1,0 +1,59 @@
+name: Cloudflare Preview - redesign website
+
+on:
+  push:
+    branches:
+      - claude/redesign-website-elevate-Gz0H7
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-preview-redesign-website
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    name: Deploy Cloudflare Preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Verify Cloudflare token secret
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "Missing required GitHub secret: CLOUDFLARE_API_TOKEN" >&2
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build static assets
+        run: bun run build
+
+      - name: Deploy branch Preview
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 8837d43caf5a2ab3df5143eb3e2f1b96
+        run: |
+          bunx wrangler preview \
+            --worker-name oshineye-dev \
+            --name "claude/redesign-website-elevate-Gz0H7" \
+            --message "GitHub Actions preview for ${{ github.ref_name }} @ ${{ github.sha }}" \
+            --tag "${{ github.sha }}" \
+            --json
+
+          echo "Preview URL: https://claude-redesign-website-elevate-gz0h7.oshineye.dev" >> "$GITHUB_STEP_SUMMARY"
