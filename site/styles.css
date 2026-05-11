@@ -547,7 +547,7 @@ a:focus-visible {
     padding: 0.65rem;
     border: 2px solid var(--ink);
     background: color-mix(in oklch, var(--paper) 92%, transparent);
-    box-shadow: 8px 8px 0 0 var(--brand);
+    box-shadow: 8px 8px 0 0 var(--ink);
     transition: transform 240ms var(--ease-out-quart),
                 box-shadow 240ms var(--ease-out-quart);
 }
@@ -555,7 +555,7 @@ a:focus-visible {
 .project-card:hover,
 .project-card:focus-within {
     transform: translateY(-3px);
-    box-shadow: 12px 12px 0 0 var(--brand);
+    box-shadow: 12px 12px 0 0 var(--ink);
 }
 
 .project-growth {
@@ -862,7 +862,7 @@ a:focus-visible {
     border: 2px solid var(--ink);
     background: var(--card-bg);
     color: var(--card-fg);
-    box-shadow: 8px 8px 0 0 var(--brand);
+    box-shadow: 8px 8px 0 0 var(--ink);
     transition: transform 240ms var(--ease-out-quart),
                 box-shadow 240ms var(--ease-out-quart);
 }
@@ -870,7 +870,7 @@ a:focus-visible {
 .post-card:hover,
 .post-card:focus-within {
     transform: translateY(-3px);
-    box-shadow: 12px 12px 0 0 var(--brand);
+    box-shadow: 12px 12px 0 0 var(--ink);
 }
 
 .post-link {
@@ -1039,7 +1039,7 @@ a:focus-visible {
     overflow: hidden;
     background: var(--paper-deep);
     border: 2px solid var(--ink);
-    box-shadow: 8px 8px 0 0 var(--brand);
+    box-shadow: 8px 8px 0 0 var(--ink);
     transition: transform 240ms var(--ease-out-quart),
                 box-shadow 240ms var(--ease-out-quart);
     display: block;
@@ -1048,7 +1048,7 @@ a:focus-visible {
 .talk:hover .frame,
 .talk:focus-within .frame {
     transform: translateY(-3px);
-    box-shadow: 12px 12px 0 0 var(--brand);
+    box-shadow: 12px 12px 0 0 var(--ink);
 }
 
 .talk .frame img {
