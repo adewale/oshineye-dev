@@ -856,7 +856,6 @@ a:focus-visible {
 .post-card {
     --card-bg: oklch(0.40 0.12 30);
     --card-fg: oklch(0.96 0.04 80);
-    --card-art: none;
     min-width: 0;
     position: relative;
     overflow: hidden;
@@ -943,32 +942,6 @@ a:focus-visible {
     letter-spacing: -0.018em;
     text-wrap: balance;
     max-width: 14ch;
-    text-shadow: 0 1px 2px color-mix(in oklch, var(--card-bg) 35%, transparent);
-}
-
-/* Image dissolves up from the bottom of the card into the
-   surrounding colour. Sits behind the title (z-index 1 vs 2). */
-.post-card-art {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    aspect-ratio: 2.25 / 1;
-    background-image: var(--card-art);
-    background-size: cover;
-    background-position: center;
-    -webkit-mask-image: linear-gradient(to top, black 62%, transparent 100%);
-    mask-image: linear-gradient(to top, black 62%, transparent 100%);
-    pointer-events: none;
-    z-index: 1;
-    transition: transform 600ms var(--ease-out-quart),
-                filter 600ms var(--ease-out-quart);
-    transform-origin: bottom center;
-}
-
-.post-card:hover .post-card-art {
-    transform: scale(1.04);
-    filter: saturate(1.06);
 }
 
 /* Per-card palettes — distinct lush worlds. All fg/bg pairs
@@ -976,25 +949,21 @@ a:focus-visible {
 .post-card--planet {
     --card-bg: oklch(0.42 0.13 32);   /* deep rust / cinnamon */
     --card-fg: oklch(0.96 0.04 80);   /* warm cream */
-    --card-art: url('/card-art/blog-planet-cloudflare.svg');
 }
 
 .post-card--geist {
     --card-bg: oklch(0.30 0.08 220);  /* petrol midnight */
     --card-fg: oklch(0.94 0.03 80);   /* paper */
-    --card-art: url('/card-art/blog-geistfabrik-aria.svg');
 }
 
 .post-card--keynote {
     --card-bg: oklch(0.38 0.07 130);  /* deep moss */
     --card-fg: oklch(0.96 0.03 100);  /* warm bone */
-    --card-art: url('/card-art/blog-better-keynote-export.svg');
 }
 
 .post-card--notes {
     --card-bg: oklch(0.33 0.10 350);  /* aubergine */
     --card-fg: oklch(0.96 0.04 350);  /* pale rose */
-    --card-art: url('/card-art/blog-keynote-notes.svg');
 }
 
 
