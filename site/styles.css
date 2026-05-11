@@ -914,20 +914,11 @@ a:focus-visible {
     margin-right: 0.25rem;
 }
 
-.post-card-pill {
-    padding: 0.18rem 0.55rem;
-    border-radius: 0;
-    background: var(--card-fg);
-    color: var(--card-bg);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-}
-
 .post-card-tag {
-    padding: 0.18rem 0.55rem;
+    padding: 0.2rem 0.55rem;
     border-radius: 0;
-    border: 1px solid color-mix(in oklch, var(--card-fg) 32%, transparent);
-    color: color-mix(in oklch, var(--card-fg) 88%, transparent);
+    border: 1px solid color-mix(in oklch, var(--card-fg) 36%, transparent);
+    color: color-mix(in oklch, var(--card-fg) 92%, transparent);
     font-weight: 600;
     letter-spacing: 0.06em;
 }
