@@ -840,136 +840,170 @@ a:focus-visible {
    ============================================================= */
 
 /* =============================================================
-   Post cards — paper-background cards with the existing
-   /card-art/blog-*.svg illustrations as a top swatch. Each
-   card carries its own --accent (used for hover, time eyebrow,
-   title hover, border tint). Rhymes with the project-card and
-   talk-card paradigm: art on one side, text on the other,
-   paper between.
+   Post cards — code.charliegleason.com pattern: each card is a
+   saturated colour world, image fades into the bottom, primary
+   tag pill inverted (card-fg-on-card-bg), title in inverted text
+   at the top half, hover halo in the card's own colour with a
+   1px paper offset.
    ============================================================= */
 
 .post-grid {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
-    gap: clamp(0.875rem, 1.6vw, 1.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr));
+    gap: clamp(0.625rem, 1.2vw, 1rem);
 }
 
 .post-card {
-    --accent: var(--brand);
+    --card-bg: oklch(0.40 0.12 30);
+    --card-fg: oklch(0.96 0.04 80);
     --card-art: none;
     min-width: 0;
-    background: color-mix(in oklch, var(--paper) 92%, transparent);
-    border: 1px solid var(--rule);
+    position: relative;
     overflow: hidden;
+    border-radius: 6px;
+    background: var(--card-bg);
+    color: var(--card-fg);
+    box-shadow: 0 1px 2px color-mix(in oklch, var(--card-bg) 35%, transparent),
+                0 8px 18px color-mix(in oklch, var(--card-bg) 14%, transparent);
     transition: transform 320ms var(--ease-out-quart),
-                border-color 320ms var(--ease-out-quart),
                 box-shadow 320ms var(--ease-out-quart);
 }
 
 .post-card:hover {
     transform: translateY(-3px);
-    border-color: color-mix(in oklch, var(--accent) 40%, var(--rule));
     box-shadow:
-        0 1px 2px color-mix(in oklch, var(--accent) 14%, transparent),
-        0 14px 30px color-mix(in oklch, var(--accent) 10%, transparent);
+        0 0 0 1px var(--paper),
+        0 0 0 4px var(--card-bg),
+        0 18px 36px color-mix(in oklch, var(--card-bg) 35%, transparent);
 }
 
 .post-card:focus-within {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 18%, transparent);
+    box-shadow:
+        0 0 0 1px var(--paper),
+        0 0 0 4px var(--card-bg);
 }
 
 .post-link {
-    display: block;
-    text-decoration: none;
-    color: var(--ink);
-    background-image: none;
-}
-
-.post-link:hover { color: var(--ink); }
-.post-link:hover .post-card-title { color: var(--accent); }
-.post-link:active { transform: scale(0.98); }
-
-.post-swatch {
-    display: block;
-    aspect-ratio: 2.25 / 1;
-    background-color: var(--paper-deep);
-    background-image: var(--card-art);
-    background-size: cover;
-    background-position: center;
-    border-bottom: 1px solid var(--rule);
-    transition: transform 480ms var(--ease-out-quart),
-                filter 480ms var(--ease-out-quart);
-    transform-origin: center;
-}
-
-.post-card:hover .post-swatch {
-    transform: scale(1.035);
-    filter: saturate(1.06);
-}
-
-.post-card-body {
-    padding: var(--space-m);
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    aspect-ratio: 4 / 5;
+    padding: 1.1rem 1.1rem 0.9rem;
+    color: var(--card-fg);
+    text-decoration: none;
+    background-image: none;
+    position: relative;
+    z-index: 1;
 }
 
-.post-card-eyebrow {
+.post-link:hover { color: var(--card-fg); }
+.post-link:active { transform: scale(0.98); }
+
+.post-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+    z-index: 2;
+}
+
+.post-card-meta {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.35rem;
     flex-wrap: wrap;
     font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     font-feature-settings: "tnum";
     font-weight: 600;
-    color: var(--ink-muted);
 }
 
-.post-card-eyebrow time { color: var(--accent); }
+.post-card-meta time {
+    color: color-mix(in oklch, var(--card-fg) 78%, transparent);
+    margin-right: 0.25rem;
+}
+
+.post-card-pill {
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: var(--card-fg);
+    color: var(--card-bg);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
 
 .post-card-tag {
-    color: var(--ink-soft);
-}
-
-.post-card-tag::before {
-    content: "·";
-    margin-right: 0.5rem;
-    color: var(--rule);
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid color-mix(in oklch, var(--card-fg) 32%, transparent);
+    color: color-mix(in oklch, var(--card-fg) 88%, transparent);
+    font-weight: 600;
+    letter-spacing: 0.06em;
 }
 
 .post-card-title {
     font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, serif;
     font-style: italic;
-    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
-    line-height: 1.2;
+    font-size: clamp(1.3rem, 1rem + 1vw, 1.85rem);
+    line-height: 1.04;
     font-weight: 400;
-    color: var(--ink);
-    letter-spacing: -0.005em;
+    color: var(--card-fg);
+    letter-spacing: -0.018em;
     text-wrap: balance;
-    transition: color 280ms var(--ease-out-quart);
+    max-width: 14ch;
+    text-shadow: 0 1px 2px color-mix(in oklch, var(--card-bg) 35%, transparent);
 }
 
-/* Per-card accent + SVG art. Accents pulled from the dominant
-   hue of each illustration so hover tint stays sympathetic. */
+/* Image dissolves up from the bottom of the card into the
+   surrounding colour. Sits behind the title (z-index 1 vs 2). */
+.post-card-art {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    aspect-ratio: 2.25 / 1;
+    background-image: var(--card-art);
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(to top, black 62%, transparent 100%);
+    mask-image: linear-gradient(to top, black 62%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 600ms var(--ease-out-quart),
+                filter 600ms var(--ease-out-quart);
+    transform-origin: bottom center;
+}
+
+.post-card:hover .post-card-art {
+    transform: scale(1.04);
+    filter: saturate(1.06);
+}
+
+/* Per-card palettes — distinct lush worlds. All fg/bg pairs
+   clear WCAG AA on the saturated background. */
 .post-card--planet {
-    --accent: oklch(0.45 0.13 30);
+    --card-bg: oklch(0.42 0.13 32);   /* deep rust / cinnamon */
+    --card-fg: oklch(0.96 0.04 80);   /* warm cream */
     --card-art: url('/card-art/blog-planet-cloudflare.svg');
 }
+
 .post-card--geist {
-    --accent: oklch(0.40 0.10 220);
+    --card-bg: oklch(0.30 0.08 220);  /* petrol midnight */
+    --card-fg: oklch(0.94 0.03 80);   /* paper */
     --card-art: url('/card-art/blog-geistfabrik-aria.svg');
 }
+
 .post-card--keynote {
-    --accent: oklch(0.42 0.08 110);
+    --card-bg: oklch(0.38 0.07 130);  /* deep moss */
+    --card-fg: oklch(0.96 0.03 100);  /* warm bone */
     --card-art: url('/card-art/blog-better-keynote-export.svg');
 }
+
 .post-card--notes {
-    --accent: oklch(0.40 0.10 350);
+    --card-bg: oklch(0.33 0.10 350);  /* aubergine */
+    --card-fg: oklch(0.96 0.04 350);  /* pale rose */
     --card-art: url('/card-art/blog-keynote-notes.svg');
 }
 
