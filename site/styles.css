@@ -530,8 +530,8 @@ a:focus-visible {
 .project-highlights {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(0.6rem, 1vw, 0.85rem);
-    margin-bottom: var(--space-m);
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+    margin-bottom: var(--space-l);
 }
 
 .project-card {
@@ -544,19 +544,18 @@ a:focus-visible {
     grid-template-columns: minmax(7rem, 24%) minmax(0, 1fr) auto;
     align-items: start;
     gap: 0.35rem var(--space-s);
-    padding: 0.5rem;
-    border: 1px solid var(--rule);
-    background: color-mix(in oklch, var(--paper) 88%, transparent);
-    transition: transform 280ms var(--ease-out-quart), border-color 280ms var(--ease-out-quart), box-shadow 280ms var(--ease-out-quart);
+    padding: 0.65rem;
+    border: 2px solid var(--ink);
+    background: color-mix(in oklch, var(--paper) 92%, transparent);
+    box-shadow: 8px 8px 0 0 var(--brand);
+    transition: transform 240ms var(--ease-out-quart),
+                box-shadow 240ms var(--ease-out-quart);
 }
 
 .project-card:hover,
 .project-card:focus-within {
-    transform: translateY(-0.14rem);
-    border-color: color-mix(in oklch, var(--accent) 50%, var(--rule));
-    box-shadow:
-        0 1px 2px color-mix(in oklch, var(--accent) 10%, transparent),
-        0 10px 26px color-mix(in oklch, var(--accent) 8%, transparent);
+    transform: translateY(-3px);
+    box-shadow: 12px 12px 0 0 var(--brand);
 }
 
 .project-growth {
@@ -851,7 +850,7 @@ a:focus-visible {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr));
-    gap: clamp(0.625rem, 1.2vw, 1rem);
+    gap: clamp(1.25rem, 2vw, 1.75rem);
 }
 
 .post-card {
@@ -861,27 +860,18 @@ a:focus-visible {
     min-width: 0;
     position: relative;
     overflow: hidden;
-    border-radius: 6px;
+    border: 2px solid var(--ink);
     background: var(--card-bg);
     color: var(--card-fg);
-    box-shadow: 0 1px 2px color-mix(in oklch, var(--card-bg) 35%, transparent),
-                0 8px 18px color-mix(in oklch, var(--card-bg) 14%, transparent);
-    transition: transform 320ms var(--ease-out-quart),
-                box-shadow 320ms var(--ease-out-quart);
+    box-shadow: 8px 8px 0 0 var(--brand);
+    transition: transform 240ms var(--ease-out-quart),
+                box-shadow 240ms var(--ease-out-quart);
 }
 
-.post-card:hover {
-    transform: translateY(-3px);
-    box-shadow:
-        0 0 0 1px var(--paper),
-        0 0 0 4px var(--card-bg),
-        0 18px 36px color-mix(in oklch, var(--card-bg) 35%, transparent);
-}
-
+.post-card:hover,
 .post-card:focus-within {
-    box-shadow:
-        0 0 0 1px var(--paper),
-        0 0 0 4px var(--card-bg);
+    transform: translateY(-3px);
+    box-shadow: 12px 12px 0 0 var(--brand);
 }
 
 .post-link {
@@ -927,7 +917,7 @@ a:focus-visible {
 
 .post-card-pill {
     padding: 0.18rem 0.55rem;
-    border-radius: 999px;
+    border-radius: 0;
     background: var(--card-fg);
     color: var(--card-bg);
     font-weight: 700;
@@ -936,7 +926,7 @@ a:focus-visible {
 
 .post-card-tag {
     padding: 0.18rem 0.55rem;
-    border-radius: 999px;
+    border-radius: 0;
     border: 1px solid color-mix(in oklch, var(--card-fg) 32%, transparent);
     color: color-mix(in oklch, var(--card-fg) 88%, transparent);
     font-weight: 600;
@@ -1079,26 +1069,17 @@ a:focus-visible {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: var(--paper-deep);
-    border: 1px solid var(--rule);
-    transition: border-color 320ms var(--ease-out-quart),
-                box-shadow 320ms var(--ease-out-quart),
-                transform 420ms var(--ease-out-quart);
+    border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 0 var(--brand);
+    transition: transform 240ms var(--ease-out-quart),
+                box-shadow 240ms var(--ease-out-quart);
     display: block;
-}
-
-.talk:hover,
-.talk:focus-within {
-    transform: translateX(0.25rem);
-    background-color: color-mix(in oklch, var(--accent) 5%, transparent);
-    box-shadow:
-        0 1px 2px color-mix(in oklch, var(--accent) 12%, transparent),
-        0 8px 22px color-mix(in oklch, var(--accent) 8%, transparent);
 }
 
 .talk:hover .frame,
 .talk:focus-within .frame {
-    border-color: var(--accent);
-    transform: scale(1.04);
+    transform: translateY(-3px);
+    box-shadow: 12px 12px 0 0 var(--brand);
 }
 
 .talk .frame img {
