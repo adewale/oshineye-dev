@@ -1,5 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bobbin">
   <defs>
+    <pattern id="riso-dots" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#7f0000"/>
+    </pattern>
+    <pattern id="riso-dots-warm" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#e8b76b"/>
+    </pattern>
+    <radialGradient id="riso-bloom" cx="0.5" cy="0.42" r="0.7">
+      <stop offset="0" stop-color="#e8b76b" stop-opacity="0.34"/>
+      <stop offset="0.7" stop-color="#a83838" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#7f0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="riso-vignette" cx="0.5" cy="0.55" r="0.88">
+      <stop offset="0.5" stop-color="#1a0a0a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a0a0a" stop-opacity="0.38"/>
+    </radialGradient>
+  </defs>
+  <defs>
     <linearGradient id="bbn-paper" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0" stop-color="#f7efde"/>
       <stop offset="1" stop-color="#ecdfbe"/>
@@ -24,4 +41,10 @@
     <line x1="40" y1="278" x2="80" y2="278"/>
   </g>
   <text x="340" y="282" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#1a1f2e" opacity="0.45" text-anchor="end">B/B</text>
+  <g aria-hidden="true" style="pointer-events:none">
+    <rect width="400" height="300" fill="url(#riso-bloom)" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-dots)" opacity="0.16" style="mix-blend-mode:multiply"/>
+    <rect width="400" height="300" fill="url(#riso-dots-warm)" opacity="0.08" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-vignette)" style="mix-blend-mode:multiply"/>
+  </g>
 </svg>
