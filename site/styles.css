@@ -46,6 +46,26 @@
     --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Dark mode — swap paper/ink while keeping brand and saturated
+   card palettes. Brutalist border + offset shadow continue to use
+   var(--ink), which becomes a cream that contrasts against the
+   dark body. The brand maroon brightens so it stays visible. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper:        oklch(0.180 0.012 35);   /* deep charcoal */
+        --paper-deep:   oklch(0.225 0.013 35);
+        --paper-sunk:   oklch(0.270 0.014 35);
+        --ink:          oklch(0.940 0.008 35);   /* warm cream */
+        --ink-soft:     oklch(0.820 0.008 35);
+        --ink-muted:    oklch(0.660 0.008 35);
+        --rule:         oklch(0.340 0.012 35);
+        --rule-soft:    oklch(0.260 0.010 35);
+        --brand:        oklch(0.620 0.140 28);   /* brighter maroon for visibility */
+        --brand-soft:   oklch(0.740 0.110 28);
+        --selection:    oklch(0.40 0.10 30);
+    }
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { background: var(--paper); scroll-behavior: smooth; }
@@ -164,7 +184,7 @@ a:focus-visible {
     --masthead-progress: 0;
     --masthead-inverse: 1;
     background:
-        linear-gradient(135deg, oklch(0.982 0.002 35 / 0.76), oklch(0.945 0.004 35 / 0.76));
+        linear-gradient(135deg, color-mix(in oklch, var(--paper) 76%, transparent), color-mix(in oklch, var(--paper-deep) 76%, transparent));
     color: var(--ink);
     padding-block: 0.62rem;
     padding-inline: max(calc((100vw - 78rem) / 2 + 1.25rem), 1.25rem);
@@ -180,7 +200,7 @@ a:focus-visible {
 
 .masthead-plate.is-compact {
     background:
-        linear-gradient(135deg, oklch(0.982 0.002 35 / 0.76), oklch(0.945 0.004 35 / 0.76));
+        linear-gradient(135deg, color-mix(in oklch, var(--paper) 76%, transparent), color-mix(in oklch, var(--paper-deep) 76%, transparent));
 }
 
 .masthead-plate::after {
@@ -504,18 +524,6 @@ a:focus-visible {
 .prose p + p { margin-top: var(--space-s); }
 
 /* Tags reuse the metadata separator language rather than adding pills. */
-.tag {
-    display: inline;
-    font-size: inherit;
-    font-weight: 600;
-    letter-spacing: inherit;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    color: var(--ink-muted);
-    white-space: nowrap;
-    text-transform: uppercase;
-}
 
 .tag::before {
     content: "/";
@@ -714,7 +722,7 @@ a:focus-visible {
 .outbound a::before {
     content: "";
     position: absolute;
-    inset: -0.65rem;
+    inset: -0.75rem;
 }
 
 .work-compact .entry-name {
@@ -918,7 +926,7 @@ a:focus-visible {
     padding: 0.2rem 0.55rem;
     border-radius: 0;
     border: 1px solid color-mix(in oklch, var(--card-fg) 36%, transparent);
-    color: color-mix(in oklch, var(--card-fg) 92%, transparent);
+    color: var(--card-fg);
     font-weight: 600;
     letter-spacing: 0.06em;
 }
@@ -1048,7 +1056,7 @@ a:focus-visible {
     display: block;
     object-fit: cover;
     background: var(--paper-deep);
-    outline: 1px solid rgba(0, 0, 0, 0.1);
+    outline: 1px solid color-mix(in oklch, var(--ink) 10%, transparent);
     outline-offset: -1px;
     transition: transform 420ms var(--ease-out-quart), filter 420ms var(--ease-out-quart);
 }
