@@ -17,33 +17,34 @@
     </radialGradient>
   </defs>
   <rect width="400" height="300" fill="#f4ecd8"/>
-  <g transform="translate(60 50)">
-    <rect x="0" y="0" width="280" height="190" rx="6" fill="#1a1f2e"/>
-    <rect x="10" y="10" width="260" height="170" rx="3" fill="#0f1320" stroke="#2a3148" stroke-width="0.6"/>
-    <g transform="translate(22 28)">
-      <text x="0" y="0" font-family="Georgia, serif" font-size="11" font-weight="700" fill="#d49431">good morning, ade</text>
-      <line x1="0" y1="8" x2="120" y2="8" stroke="#d49431" stroke-width="1" opacity="0.5"/>
-      <g font-family="Georgia, serif" font-size="10" fill="#f4ecd8" opacity="0.75">
-        <text y="28">17 °C · partly cloudy</text>
-        <text y="46">3 trains to Zürich HB</text>
-        <text y="64">first standup in 42 min</text>
-        <text y="82">tasks: 4 due today</text>
-      </g>
-      <g transform="translate(168 14)">
-        <rect x="0" y="0" width="40" height="40" fill="#7f0000"/>
-        <text x="20" y="16" font-family="Georgia, serif" font-size="8" fill="#f4ecd8" text-anchor="middle" font-weight="700">EXPORT</text>
-        <text x="20" y="30" font-family="Georgia, serif" font-size="8" fill="#f4ecd8" text-anchor="middle">.html</text>
-      </g>
-    </g>
-    <g transform="translate(132 168)" fill="#d49431">
-      <rect x="0" y="0" width="24" height="6"/>
-      <rect x="0" y="-4" width="6" height="10"/>
-      <rect x="18" y="-4" width="6" height="10"/>
-    </g>
+  <!-- user message, right side -->
+  <g transform="translate(186 38)">
+    <path d="M 0 0 L 168 0 Q 180 0 180 12 L 180 38 Q 180 50 168 50 L 28 50 L 14 64 L 14 50 Q 0 50 0 38 Z" fill="#2d6377"/>
+    <text x="14" y="20" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#f4ecd8" opacity="0.85">you</text>
+    <line x1="14" y1="26" x2="166" y2="26" stroke="#f4ecd8" stroke-width="1" opacity="0.4"/>
+    <text x="14" y="44" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">help me draft that intro</text>
   </g>
-  <g transform="translate(176 250)" font-family="Georgia, serif" font-size="11" fill="#1a1f2e" opacity="0.55" text-anchor="middle">
-    <text>raspberry pi · reduce friction</text>
+  <!-- pi response, left side -->
+  <g transform="translate(34 116)">
+    <path d="M 0 0 L 222 0 Q 236 0 236 14 L 236 100 Q 236 114 222 114 L 36 114 L 22 134 L 22 114 Q 0 114 0 100 Z" fill="#7f0000"/>
+    <g transform="translate(14 18)">
+      <circle cx="6" cy="0" r="7" fill="#f4ecd8"/>
+      <text x="6" y="3" font-family="Georgia, serif" font-size="9" font-weight="900" fill="#7f0000" text-anchor="middle">π</text>
+    </g>
+    <text x="34" y="22" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#f4ecd8" opacity="0.85">pi</text>
+    <line x1="14" y1="30" x2="222" y2="30" stroke="#f4ecd8" stroke-width="1" opacity="0.4"/>
+    <text x="14" y="48" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">Sure! Here's a draft —</text>
+    <text x="14" y="64" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">try opening with the tension</text>
+    <text x="14" y="80" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">between presence and noise,</text>
+    <text x="14" y="96" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">then move into the why…</text>
   </g>
+  <!-- export action chip pinned to the Pi response -->
+  <g transform="translate(270 156)">
+    <rect x="0" y="0" width="76" height="32" fill="#d49431" stroke="#1a1f2e" stroke-width="1"/>
+    <text x="38" y="14" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" font-weight="800" text-anchor="middle">EXPORT</text>
+    <text x="38" y="26" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" text-anchor="middle">.html</text>
+  </g>
+  <text x="36" y="280" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#1a1f2e" opacity="0.55">save the reply · share the session</text>
   <g aria-hidden="true" style="pointer-events:none">
     <rect width="400" height="300" fill="url(#riso-bloom)" style="mix-blend-mode:screen"/>
     <rect width="400" height="300" fill="url(#riso-dots)" opacity="0.16" style="mix-blend-mode:multiply"/>
