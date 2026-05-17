@@ -17,34 +17,43 @@
     </radialGradient>
   </defs>
   <rect width="400" height="300" fill="#f4ecd8"/>
-  <!-- user message, right side -->
-  <g transform="translate(186 38)">
-    <path d="M 0 0 L 168 0 Q 180 0 180 12 L 180 38 Q 180 50 168 50 L 28 50 L 14 64 L 14 50 Q 0 50 0 38 Z" fill="#2d6377"/>
-    <text x="14" y="20" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#f4ecd8" opacity="0.85">you</text>
-    <line x1="14" y1="26" x2="166" y2="26" stroke="#f4ecd8" stroke-width="1" opacity="0.4"/>
-    <text x="14" y="44" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">help me draft that intro</text>
-  </g>
-  <!-- pi response, left side -->
-  <g transform="translate(34 116)">
-    <path d="M 0 0 L 222 0 Q 236 0 236 14 L 236 100 Q 236 114 222 114 L 36 114 L 22 134 L 22 114 Q 0 114 0 100 Z" fill="#7f0000"/>
-    <g transform="translate(14 18)">
-      <circle cx="6" cy="0" r="7" fill="#f4ecd8"/>
-      <text x="6" y="3" font-family="Georgia, serif" font-size="9" font-weight="900" fill="#7f0000" text-anchor="middle">π</text>
+  <!-- terminal window (Pi is a terminal coding harness) -->
+  <g transform="translate(28 32)">
+    <rect x="0" y="0" width="296" height="212" rx="4" fill="#1a1f2e"/>
+    <rect x="0" y="0" width="296" height="22" rx="4" fill="#0f1320"/>
+    <rect x="0" y="14" width="296" height="8" fill="#0f1320"/>
+    <circle cx="14" cy="11" r="3.2" fill="#7f0000"/>
+    <circle cx="28" cy="11" r="3.2" fill="#d49431"/>
+    <circle cx="42" cy="11" r="3.2" fill="#6e8855"/>
+    <text x="148" y="15" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#f4ecd8" opacity="0.55" text-anchor="middle">~ pi</text>
+    <g font-family="ui-monospace, Menlo, monospace" font-size="10" transform="translate(14 42)">
+      <!-- user prompt -->
+      <text y="0"><tspan fill="#d49431" font-weight="700">π&gt;</tspan> <tspan fill="#f4ecd8">draft an intro for my essay</tspan></text>
+      <!-- response, muted -->
+      <text y="20" fill="#f4ecd8" opacity="0.7">Try opening with the tension</text>
+      <text y="34" fill="#f4ecd8" opacity="0.7">between presence and noise,</text>
+      <text y="48" fill="#f4ecd8" opacity="0.7">then move into the why…</text>
+      <!-- pi-comfort command in action -->
+      <text y="78"><tspan fill="#d49431" font-weight="700">π&gt;</tspan> <tspan fill="#a83838">/comfort-export-html</tspan></text>
+      <text y="98" fill="#6e8855">  &#8594; session-2026-05.html  &#10003;</text>
+      <text y="112" fill="#f4ecd8" opacity="0.5">  opens in browser</text>
+      <text y="142"><tspan fill="#d49431" font-weight="700">π&gt;</tspan> <tspan fill="#f4ecd8">_</tspan></text>
     </g>
-    <text x="34" y="22" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#f4ecd8" opacity="0.85">pi</text>
-    <line x1="14" y1="30" x2="222" y2="30" stroke="#f4ecd8" stroke-width="1" opacity="0.4"/>
-    <text x="14" y="48" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">Sure! Here's a draft —</text>
-    <text x="14" y="64" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">try opening with the tension</text>
-    <text x="14" y="80" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">between presence and noise,</text>
-    <text x="14" y="96" font-family="Georgia, serif" font-size="11" fill="#f4ecd8">then move into the why…</text>
   </g>
-  <!-- export action chip pinned to the Pi response -->
-  <g transform="translate(270 156)">
-    <rect x="0" y="0" width="76" height="32" fill="#d49431" stroke="#1a1f2e" stroke-width="1"/>
-    <text x="38" y="14" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" font-weight="800" text-anchor="middle">EXPORT</text>
-    <text x="38" y="26" font-family="Georgia, serif" font-size="9" fill="#1a1f2e" text-anchor="middle">.html</text>
+  <!-- HTML file artifact, popped out to the right -->
+  <g transform="translate(326 100)">
+    <rect x="0" y="0" width="56" height="68" fill="#faf3e0" stroke="#1a1f2e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="56" height="14" fill="#7f0000"/>
+    <text x="28" y="10" font-family="Georgia, serif" font-size="8" font-weight="800" fill="#f4ecd8" text-anchor="middle">.html</text>
+    <g stroke="#1a1f2e" stroke-width="0.6" opacity="0.55">
+      <line x1="8" y1="24" x2="48" y2="24"/>
+      <line x1="8" y1="32" x2="44" y2="32"/>
+      <line x1="8" y1="40" x2="48" y2="40"/>
+      <line x1="8" y1="48" x2="38" y2="48"/>
+      <line x1="8" y1="56" x2="46" y2="56"/>
+    </g>
   </g>
-  <text x="36" y="280" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#1a1f2e" opacity="0.55">save the reply · share the session</text>
+  <text x="36" y="280" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#1a1f2e" opacity="0.55">small commands · UI affordances · reduces friction</text>
   <g aria-hidden="true" style="pointer-events:none">
     <rect width="400" height="300" fill="url(#riso-bloom)" style="mix-blend-mode:screen"/>
     <rect width="400" height="300" fill="url(#riso-dots)" opacity="0.16" style="mix-blend-mode:multiply"/>
