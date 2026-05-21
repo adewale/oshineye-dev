@@ -1,0 +1,146 @@
+{
+  "run": "since-oct-2025-oshineye-v6-normalized",
+  "source": "/Users/adewale/Documents/projects/code/imagemaker/outputs/eval-runs/since-oct-2025-oshineye-v6-normalized",
+  "cards": [
+    {
+      "slug": "vaders",
+      "colour": "vaders/colour.jpg",
+      "source_file": "23-vaders.png",
+      "animation": "vaders/animation.mp4",
+      "animation_source_file": "23-vaders.mp4"
+    },
+    {
+      "slug": "keyboardia",
+      "colour": "keyboardia/colour.jpg",
+      "source_file": "26-keyboardia.png",
+      "animation": "keyboardia/animation.mp4",
+      "animation_source_file": "26-keyboardia.mp4"
+    },
+    {
+      "slug": "sunrise",
+      "colour": "sunrise/colour.jpg",
+      "source_file": "07-sunrise.png",
+      "animation": "sunrise/animation.mp4",
+      "animation_source_file": "07-sunrise.mp4"
+    },
+    {
+      "slug": "testing-best-practices",
+      "colour": "testing-best-practices/colour.jpg",
+      "source_file": "02-testing-best-practices.png",
+      "animation": "testing-best-practices/animation.mp4",
+      "animation_source_file": "02-testing-best-practices.mp4"
+    },
+    {
+      "slug": "flux-search",
+      "colour": "flux-search/colour.jpg",
+      "source_file": "22-flux-search.png",
+      "animation": "flux-search/animation.mp4",
+      "animation_source_file": "22-flux-search.mp4"
+    },
+    {
+      "slug": "swiss-poster-skill",
+      "colour": "swiss-poster-skill/colour.jpg",
+      "source_file": "06-swiss-poster-skill.png",
+      "animation": "swiss-poster-skill/animation.mp4",
+      "animation_source_file": "06-swiss-poster-skill.mp4"
+    },
+    {
+      "slug": "pythonbyexample",
+      "colour": "pythonbyexample/colour.jpg",
+      "source_file": "11-pythonbyexample.png",
+      "animation": "pythonbyexample/animation.mp4",
+      "animation_source_file": "11-pythonbyexample.mp4"
+    },
+    {
+      "slug": "pi-comfort",
+      "colour": "pi-comfort/colour.jpg",
+      "source_file": "12-pi-comfort.png",
+      "animation": "pi-comfort/animation.mp4",
+      "animation_source_file": "12-pi-comfort.mp4"
+    },
+    {
+      "slug": "MaintainerBot",
+      "colour": "MaintainerBot/colour.jpg",
+      "source_file": "05-MaintainerBot.png",
+      "animation": "MaintainerBot/animation.mp4",
+      "animation_source_file": "05-MaintainerBot.mp4"
+    },
+    {
+      "slug": "bobbin",
+      "colour": "bobbin/colour.jpg",
+      "source_file": "13-bobbin.png",
+      "animation": "bobbin/animation.mp4",
+      "animation_source_file": "13-bobbin.mp4"
+    },
+    {
+      "slug": "demoscene",
+      "colour": "demoscene/colour.jpg",
+      "source_file": "14-demoscene.png",
+      "animation": "demoscene/animation.mp4",
+      "animation_source_file": "14-demoscene.mp4"
+    },
+    {
+      "slug": "cf-workers-design-system",
+      "colour": "cf-workers-design-system/colour.jpg",
+      "source_file": "17-cf-workers-design-system.png",
+      "animation": "cf-workers-design-system/animation.mp4",
+      "animation_source_file": "17-cf-workers-design-system.mp4"
+    },
+    {
+      "slug": "xampler",
+      "colour": "xampler/colour.jpg",
+      "source_file": "03-xampler.png",
+      "animation": "xampler/animation.mp4",
+      "animation_source_file": "03-xampler.mp4"
+    },
+    {
+      "slug": "sunrise-deploy",
+      "colour": "sunrise-deploy/colour.jpg",
+      "source_file": "18-sunrise-deploy.png",
+      "animation": "sunrise-deploy/animation.mp4",
+      "animation_source_file": "18-sunrise-deploy.mp4"
+    },
+    {
+      "slug": "python-workers-skill",
+      "colour": "python-workers-skill/colour.jpg",
+      "source_file": "08-python-workers-skill.png",
+      "animation": "python-workers-skill/animation.mp4",
+      "animation_source_file": "08-python-workers-skill.mp4"
+    },
+    {
+      "slug": "cfboundary",
+      "colour": "cfboundary/colour.jpg",
+      "source_file": "20-cfboundary.png",
+      "animation": "cfboundary/animation.mp4",
+      "animation_source_file": "20-cfboundary.mp4"
+    },
+    {
+      "slug": "python-workers-issues",
+      "colour": "python-workers-issues/colour.jpg",
+      "source_file": "21-python-workers-issues.png",
+      "animation": "python-workers-issues/animation.mp4",
+      "animation_source_file": "21-python-workers-issues.mp4"
+    },
+    {
+      "slug": "yaket",
+      "colour": "yaket/colour.jpg",
+      "source_file": "24-yaket.png",
+      "animation": "yaket/animation.mp4",
+      "animation_source_file": "24-yaket.mp4"
+    },
+    {
+      "slug": "atlas",
+      "colour": "atlas/colour.jpg",
+      "source_file": "25-atlas.png",
+      "animation": "atlas/animation.mp4",
+      "animation_source_file": "25-atlas.mp4"
+    },
+    {
+      "slug": "planet_cf",
+      "colour": "planet_cf/colour.jpg",
+      "source_file": "27-planet_cf.png",
+      "animation": "planet_cf/animation.mp4",
+      "animation_source_file": "27-planet_cf.mp4"
+    }
+  ]
+}

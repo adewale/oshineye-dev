@@ -597,13 +597,27 @@ a:focus-visible {
     transition: opacity 260ms var(--ease-out-quart);
 }
 
-.repo-frame img {
+.repo-frame img,
+.repo-frame video {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
+}
+
+.repo-frame img {
     filter: grayscale(1) saturate(0) contrast(1.35) brightness(0.92);
     transition: filter 260ms var(--ease-out-quart),
+                transform 600ms var(--ease-out-quart);
+}
+
+.repo-motion {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms var(--ease-out-quart),
                 transform 600ms var(--ease-out-quart);
 }
 
@@ -613,9 +627,19 @@ a:focus-visible {
     transform: scale(1.04);
 }
 
+.repo-card:hover .repo-motion,
+.repo-card:focus-within .repo-motion {
+    opacity: 1;
+    transform: scale(1.04);
+}
+
 .repo-card:hover .repo-frame::after,
 .repo-card:focus-within .repo-frame::after {
     opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .repo-motion { display: none; }
 }
 
 .repo-meta {
