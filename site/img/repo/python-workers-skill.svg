@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Python Workers skill">
+  <defs>
+    <pattern id="riso-dots" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#7f0000"/>
+    </pattern>
+    <pattern id="riso-dots-warm" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#e8b76b"/>
+    </pattern>
+    <radialGradient id="riso-bloom" cx="0.5" cy="0.42" r="0.7">
+      <stop offset="0" stop-color="#e8b76b" stop-opacity="0.34"/>
+      <stop offset="0.7" stop-color="#a83838" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#7f0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="riso-vignette" cx="0.5" cy="0.55" r="0.88">
+      <stop offset="0.5" stop-color="#1a0a0a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a0a0a" stop-opacity="0.38"/>
+    </radialGradient>
+  </defs>
+  <defs>
+    <linearGradient id="pys-bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4ecd8"/>
+      <stop offset="1" stop-color="#ecd9b3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#pys-bg)"/>
+  <g transform="translate(56 60)">
+    <rect x="160" y="0" width="140" height="180" fill="#d49431" opacity="0.45"/>
+    <rect x="160" y="0" width="140" height="32" fill="#d49431"/>
+    <text x="172" y="22" font-family="Georgia, serif" font-size="12" font-weight="700" fill="#1a1f2e">cf workers</text>
+    <line x1="172" y1="48" x2="280" y2="48" stroke="#1a1f2e" stroke-width="1" opacity="0.5"/>
+    <line x1="172" y1="62" x2="270" y2="62" stroke="#1a1f2e" stroke-width="1" opacity="0.4"/>
+    <line x1="172" y1="76" x2="280" y2="76" stroke="#1a1f2e" stroke-width="1" opacity="0.4"/>
+  </g>
+  <g fill="none" stroke="#5b3149" stroke-width="14" stroke-linecap="round">
+    <path d="M 64 110 Q 110 76 168 96 Q 226 116 270 84"/>
+  </g>
+  <circle cx="270" cy="84" r="8" fill="#5b3149"/>
+  <circle cx="262" cy="80" r="2" fill="#f4ecd8"/>
+  <g fill="#7f0000">
+    <circle cx="216" cy="106" r="6"/>
+  </g>
+  <text x="56" y="240" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#1a1f2e" opacity="0.7">python · pyodide · ffi</text>
+  <line x1="56" y1="248" x2="220" y2="248" stroke="#7f0000" stroke-width="1.5"/>
+  <g aria-hidden="true" style="pointer-events:none">
+    <rect width="400" height="300" fill="url(#riso-bloom)" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-dots)" opacity="0.16" style="mix-blend-mode:multiply"/>
+    <rect width="400" height="300" fill="url(#riso-dots-warm)" opacity="0.08" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-vignette)" style="mix-blend-mode:multiply"/>
+  </g>
+</svg>
