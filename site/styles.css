@@ -462,11 +462,33 @@ a:focus-visible {
     overflow: hidden;
     background: var(--paper-deep);
     border: 1.5px solid var(--ink);
-    transition: transform 420ms var(--ease-out-quart);
+    transition: transform 420ms var(--ease-out-quart),
+                filter 260ms var(--ease-out-quart);
+    isolation: isolate;
 }
+
+.post-card .frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 45%, transparent 34%, rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(115deg, rgba(255, 255, 255, 0.12), transparent 34%, rgba(0, 0, 0, 0.12));
+    mix-blend-mode: multiply;
+    opacity: 0.58;
+    transition: opacity 260ms var(--ease-out-quart);
+}
+
 .post-card:hover .frame,
 .post-card:focus-within .frame {
     transform: scale(1.012);
+}
+
+.post-card:hover .frame::after,
+.post-card:focus-within .frame::after {
+    opacity: 0;
 }
 
 .post-image {
@@ -474,6 +496,15 @@ a:focus-visible {
     height: 100%;
     object-fit: cover;
     background: var(--paper-deep);
+    filter: grayscale(1) saturate(0) contrast(1.35) brightness(0.92);
+    transition: filter 260ms var(--ease-out-quart),
+                transform 600ms var(--ease-out-quart);
+}
+
+.post-card:hover .post-image,
+.post-card:focus-within .post-image {
+    filter: grayscale(0) saturate(1) contrast(1) brightness(1);
+    transform: scale(1.04);
 }
 
 .frame--type {
@@ -481,8 +512,16 @@ a:focus-visible {
         linear-gradient(135deg, color-mix(in oklch, var(--brand) 18%, var(--paper)), color-mix(in oklch, var(--paper-sunk) 80%, var(--paper)));
     display: grid;
     place-items: center;
+    filter: grayscale(1) saturate(0) contrast(1.35) brightness(0.92);
+}
+
+.post-card:hover .frame--type,
+.post-card:focus-within .frame--type {
+    filter: grayscale(0) saturate(1) contrast(1) brightness(1);
 }
 .frame-type {
+    position: relative;
+    z-index: 2;
     font-family: "cronos-pro-1", system-ui, sans-serif;
     font-weight: 800;
     font-size: clamp(2.5rem, 6vw, 4rem);
