@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="swiss-poster-skill">
+  <defs>
+    <pattern id="riso-dots" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#7f0000"/>
+    </pattern>
+    <pattern id="riso-dots-warm" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#e8b76b"/>
+    </pattern>
+    <radialGradient id="riso-bloom" cx="0.5" cy="0.42" r="0.7">
+      <stop offset="0" stop-color="#e8b76b" stop-opacity="0.34"/>
+      <stop offset="0.7" stop-color="#a83838" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#7f0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="riso-vignette" cx="0.5" cy="0.55" r="0.88">
+      <stop offset="0.5" stop-color="#1a0a0a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a0a0a" stop-opacity="0.38"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="#f4ecd8"/>
+  <g stroke="#1a1f2e" stroke-width="0.4" opacity="0.18">
+    <line x1="40" y1="20" x2="40" y2="280"/>
+    <line x1="100" y1="20" x2="100" y2="280"/>
+    <line x1="200" y1="20" x2="200" y2="280"/>
+    <line x1="300" y1="20" x2="300" y2="280"/>
+    <line x1="360" y1="20" x2="360" y2="280"/>
+    <line x1="20" y1="60" x2="380" y2="60"/>
+    <line x1="20" y1="150" x2="380" y2="150"/>
+    <line x1="20" y1="240" x2="380" y2="240"/>
+  </g>
+  <g>
+    <rect x="40" y="60" width="160" height="90" fill="#d49431"/>
+    <rect x="200" y="60" width="160" height="90" fill="#7f0000"/>
+    <rect x="40" y="150" width="200" height="90" fill="#2d6377"/>
+  </g>
+  <text x="44" y="170" font-family="cronos-pro-1, system-ui, sans-serif" font-weight="900" font-size="124" fill="#f4ecd8" letter-spacing="-0.06em">A</text>
+  <text x="232" y="140" font-family="cronos-pro-1, system-ui, sans-serif" font-weight="900" font-size="124" fill="#f4ecd8" letter-spacing="-0.06em" transform="rotate(-6 232 140)">G</text>
+  <g transform="translate(250 184)">
+    <rect x="0" y="0" width="120" height="40" fill="#f4ecd8" stroke="#1a1f2e" stroke-width="1"/>
+    <text x="60" y="14" font-family="Georgia, serif" font-size="8" fill="#1a1f2e" opacity="0.7" text-anchor="middle">tailwind</text>
+    <text x="60" y="30" font-family="Georgia, serif" font-size="11" font-weight="800" fill="#7f0000" text-anchor="middle">SKILL</text>
+  </g>
+  <line x1="40" y1="252" x2="160" y2="252" stroke="#7f0000" stroke-width="3"/>
+  <text x="40" y="274" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#1a1f2e" opacity="0.65">grid · bleed · overlap</text>
+  <g aria-hidden="true" style="pointer-events:none">
+    <rect width="400" height="300" fill="url(#riso-bloom)" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-dots)" opacity="0.16" style="mix-blend-mode:multiply"/>
+    <rect width="400" height="300" fill="url(#riso-dots-warm)" opacity="0.08" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-vignette)" style="mix-blend-mode:multiply"/>
+  </g>
+</svg>

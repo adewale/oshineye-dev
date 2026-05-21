@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="xampler">
+  <defs>
+    <pattern id="riso-dots" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#7f0000"/>
+    </pattern>
+    <pattern id="riso-dots-warm" x="0" y="0" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+      <circle cx="1.7" cy="1.7" r="0.75" fill="#e8b76b"/>
+    </pattern>
+    <radialGradient id="riso-bloom" cx="0.5" cy="0.42" r="0.7">
+      <stop offset="0" stop-color="#e8b76b" stop-opacity="0.34"/>
+      <stop offset="0.7" stop-color="#a83838" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#7f0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="riso-vignette" cx="0.5" cy="0.55" r="0.88">
+      <stop offset="0.5" stop-color="#1a0a0a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a0a0a" stop-opacity="0.38"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="#f4ecd8"/>
+  <g transform="translate(40 38)">
+    <g transform="translate(30 30) rotate(-4)">
+      <rect x="0" y="0" width="140" height="180" fill="#ede1c8" stroke="#1a1f2e" stroke-width="1"/>
+      <rect x="0" y="0" width="140" height="22" fill="#1a1f2e"/>
+      <text x="8" y="15" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#d49431">queue.py</text>
+      <g font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#1a1f2e" opacity="0.7" transform="translate(8 36)">
+        <text y="0">queue.send(...)</text>
+        <text y="14">env.QUEUE.send</text>
+        <text y="28">batch &amp; defer</text>
+      </g>
+    </g>
+    <g transform="translate(70 6) rotate(2)">
+      <rect x="0" y="0" width="140" height="180" fill="#faf3e0" stroke="#1a1f2e" stroke-width="1"/>
+      <rect x="0" y="0" width="140" height="22" fill="#1a1f2e"/>
+      <text x="8" y="15" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#d49431">d1.py</text>
+      <g font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#1a1f2e" opacity="0.7" transform="translate(8 36)">
+        <text y="0">db.prepare(...)</text>
+        <text y="14">await .run()</text>
+        <text y="28">SELECT * FROM</text>
+      </g>
+    </g>
+    <g transform="translate(132 0)">
+      <rect x="0" y="0" width="180" height="200" fill="#7f0000" stroke="#1a1f2e" stroke-width="1"/>
+      <rect x="0" y="0" width="180" height="22" fill="#1a1f2e"/>
+      <text x="8" y="15" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#d49431">durable.py</text>
+      <g font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#f4ecd8" transform="translate(10 40)">
+        <text y="0">class Counter(</text>
+        <text y="16">  DurableObject):</text>
+        <text y="40">  async def fetch():</text>
+        <text y="56">    n = await</text>
+        <text y="72">      storage.get("n")</text>
+        <text y="88">    n += 1</text>
+        <text y="104">    return Response(n)</text>
+      </g>
+    </g>
+  </g>
+  <text x="40" y="280" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#1a1f2e" opacity="0.55">primitives, by example</text>
+  <g aria-hidden="true" style="pointer-events:none">
+    <rect width="400" height="300" fill="url(#riso-bloom)" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-dots)" opacity="0.16" style="mix-blend-mode:multiply"/>
+    <rect width="400" height="300" fill="url(#riso-dots-warm)" opacity="0.08" style="mix-blend-mode:screen"/>
+    <rect width="400" height="300" fill="url(#riso-vignette)" style="mix-blend-mode:multiply"/>
+  </g>
+</svg>
