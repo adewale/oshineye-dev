@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: cloudflare-preview-${{ github.ref_name }}
+  group: cloudflare-preview-redesign
   cancel-in-progress: true
 
 jobs:
@@ -44,18 +44,17 @@ jobs:
       - name: Build static assets
         run: bun run build
 
-      - name: Deploy branch Preview
+      - name: Deploy redesign Preview
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 8837d43caf5a2ab3df5143eb3e2f1b96
-          PREVIEW_NAME: ${{ github.ref_name }}
+          PREVIEW_NAME: redesign
         run: |
           bunx wrangler@4.90.0 preview \
             --worker-name oshineye-dev \
             --name "$PREVIEW_NAME" \
-            --message "GitHub Actions preview for $PREVIEW_NAME @ ${{ github.sha }}" \
+            --message "GitHub Actions preview for ${{ github.ref_name }} @ ${{ github.sha }}" \
             --tag "${{ github.sha }}" \
             --json
 
-          PREVIEW_SLUG=$(printf '%s' "$PREVIEW_NAME" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//')
-          echo "Preview URL: https://${PREVIEW_SLUG}.oshineye.dev" >> "$GITHUB_STEP_SUMMARY"
+          echo "Preview URL: https://redesign.oshineye.dev" >> "$GITHUB_STEP_SUMMARY"
