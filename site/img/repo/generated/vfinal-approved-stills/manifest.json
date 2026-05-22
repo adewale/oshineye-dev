@@ -1,0 +1,166 @@
+{
+  "run": "vfinal-approved-stills",
+  "source": "/Users/adewale/Documents/projects/code/imagemaker/outputs/eval-runs/vfinal-approved-stills",
+  "cards": [
+    {
+      "slug": "autowiki",
+      "repo": "adewale/autowiki",
+      "title": "autowiki",
+      "subtitle": "",
+      "colour": "autowiki/colour.jpg",
+      "animation": "autowiki/animation.mp4"
+    },
+    {
+      "slug": "oshineye-dev",
+      "repo": "adewale/oshineye-dev",
+      "title": "oshineye-dev",
+      "subtitle": "",
+      "colour": "oshineye-dev/colour.jpg",
+      "animation": "oshineye-dev/animation.mp4"
+    },
+    {
+      "slug": "skill_scanner",
+      "repo": "adewale/skill_scanner",
+      "title": "skill_scanner",
+      "subtitle": "A _very_ simple tool to detect malware and security antipatterns in AI agent skills",
+      "colour": "skill_scanner/colour.jpg",
+      "animation": "skill_scanner/animation.mp4"
+    },
+    {
+      "slug": "sunrise",
+      "repo": "adewale/sunrise",
+      "title": "sunrise",
+      "subtitle": "",
+      "colour": "sunrise/colour.jpg",
+      "animation": "sunrise/animation.mp4"
+    },
+    {
+      "slug": "testing-best-practices",
+      "repo": "adewale/testing-best-practices",
+      "title": "testing-best-practices",
+      "subtitle": "A Claude Code skill for enforcing testing best practices: TDD, property-based testing, real objects over mocks, test quality assessment, and anti-pattern detection",
+      "colour": "testing-best-practices/colour.jpg",
+      "animation": "testing-best-practices/animation.mp4"
+    },
+    {
+      "slug": "MaintainerBot",
+      "repo": "adewale/MaintainerBot",
+      "title": "MaintainerBot",
+      "subtitle": "",
+      "colour": "MaintainerBot/colour.jpg",
+      "animation": "MaintainerBot/animation.mp4"
+    },
+    {
+      "slug": "swiss-poster-skill",
+      "repo": "adewale/swiss-poster-skill",
+      "title": "swiss-poster-skill",
+      "subtitle": "A Swiss Poster design system skill for AI agents. Expressive typography, grid-breaking compositions, overlap, bleed, and bold geometric tension \u2014 expressed through Tailwind CSS.",
+      "colour": "swiss-poster-skill/colour.jpg",
+      "animation": "swiss-poster-skill/animation.mp4"
+    },
+    {
+      "slug": "python-workers-skill",
+      "repo": "adewale/python-workers-skill",
+      "title": "python-workers-skill",
+      "subtitle": "Claude Code skill for building Cloudflare Workers in Python (Pyodide runtime)",
+      "colour": "python-workers-skill/colour.jpg",
+      "animation": "python-workers-skill/animation.mp4"
+    },
+    {
+      "slug": "visivotab",
+      "repo": "adewale/visivotab",
+      "title": "visivotab",
+      "subtitle": "Beautiful photos hand-selected by Flickr's visivo for your New Tab",
+      "colour": "visivotab/colour.jpg",
+      "animation": "visivotab/animation.mp4"
+    },
+    {
+      "slug": "kirby_tarot",
+      "repo": "adewale/kirby_tarot",
+      "title": "kirby_tarot",
+      "subtitle": "https://kirby-tarot-worker-prod.adewale-883.workers.dev/",
+      "colour": "kirby_tarot/colour.jpg",
+      "animation": "kirby_tarot/animation.mp4"
+    },
+    {
+      "slug": "pi-comfort",
+      "repo": "adewale/pi-comfort",
+      "title": "pi-comfort",
+      "subtitle": "",
+      "colour": "pi-comfort/colour.jpg",
+      "animation": "pi-comfort/animation.mp4"
+    },
+    {
+      "slug": "bobbin",
+      "repo": "adewale/bobbin",
+      "title": "bobbin",
+      "subtitle": "",
+      "colour": "bobbin/colour.jpg",
+      "animation": "bobbin/animation.mp4"
+    },
+    {
+      "slug": "demoscene",
+      "repo": "adewale/demoscene",
+      "title": "demoscene",
+      "subtitle": "Reverse-chronological feed of new Cloudflare DevRel GitHub projects",
+      "colour": "demoscene/colour.jpg",
+      "animation": "demoscene/animation.mp4"
+    },
+    {
+      "slug": "spa",
+      "repo": "adewale/spa",
+      "title": "spa",
+      "subtitle": "",
+      "colour": "spa/colour.jpg",
+      "animation": "spa/animation.mp4"
+    },
+    {
+      "slug": "garten",
+      "repo": "adewale/garten",
+      "title": "garten",
+      "subtitle": "Animated canvas garden that grows over time",
+      "colour": "garten/colour.jpg",
+      "animation": "garten/animation.mp4"
+    },
+    {
+      "slug": "sunrise-deploy",
+      "repo": "adewale/sunrise-deploy",
+      "title": "sunrise-deploy",
+      "subtitle": "",
+      "colour": "sunrise-deploy/colour.jpg",
+      "animation": "sunrise-deploy/animation.mp4"
+    },
+    {
+      "slug": "cfboundary",
+      "repo": "adewale/cfboundary",
+      "title": "cfboundary",
+      "subtitle": "Boundary wrappers for Cloudflare Python Workers",
+      "colour": "cfboundary/colour.jpg",
+      "animation": "cfboundary/animation.mp4"
+    },
+    {
+      "slug": "yaket",
+      "repo": "adewale/yaket",
+      "title": "yaket",
+      "subtitle": "TypeScript YAKE-compatible keyword extraction library for Node and Cloudflare Workers",
+      "colour": "yaket/colour.jpg",
+      "animation": "yaket/animation.mp4"
+    },
+    {
+      "slug": "atlas",
+      "repo": "adewale/atlas",
+      "title": "atlas",
+      "subtitle": "",
+      "colour": "atlas/colour.jpg",
+      "animation": "atlas/animation.mp4"
+    },
+    {
+      "slug": "keyboardia",
+      "repo": "adewale/keyboardia",
+      "title": "keyboardia",
+      "subtitle": "Multiplayer step sequencer with polyrhythmic patterns for real-time collaboration",
+      "colour": "keyboardia/colour.jpg",
+      "animation": "keyboardia/animation.mp4"
+    }
+  ]
+}
