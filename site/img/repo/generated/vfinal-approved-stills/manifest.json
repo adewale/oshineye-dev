@@ -161,6 +161,134 @@
       "subtitle": "Multiplayer step sequencer with polyrhythmic patterns for real-time collaboration",
       "colour": "keyboardia/colour.jpg",
       "animation": "keyboardia/animation.mp4"
+    },
+    {
+      "slug": "planet_cf",
+      "repo": "adewale/planet_cf",
+      "title": "planet_cf",
+      "subtitle": "A Planet for Cloudflare-adjacent blogs",
+      "colour": "planet_cf/colour.jpg",
+      "animation": "planet_cf/animation.mp4"
+    },
+    {
+      "slug": "tasche",
+      "repo": "adewale/tasche",
+      "title": "tasche",
+      "subtitle": "A self-hosted read-it-later service built on Cloudflare Python Workers. Save articles, read them offline, and listen to them as audio -- all running in your own Cloudflare account.",
+      "colour": "tasche/colour.jpg",
+      "animation": "tasche/animation.mp4"
+    },
+    {
+      "slug": "embed.oshineye.dev",
+      "repo": "adewale/embed.oshineye.dev",
+      "title": "embed.oshineye.dev",
+      "subtitle": "The source code for the various embeds hosted on: https://embed.oshineye.dev/",
+      "colour": "embed.oshineye.dev/colour.jpg",
+      "animation": "embed.oshineye.dev/animation.mp4"
+    },
+    {
+      "slug": "small-app-gardener",
+      "repo": "adewale/small-app-gardener",
+      "title": "small-app-gardener",
+      "subtitle": "",
+      "colour": "small-app-gardener/colour.jpg",
+      "animation": "small-app-gardener/animation.mp4"
+    },
+    {
+      "slug": "olsen",
+      "repo": "adewale/olsen",
+      "title": "olsen",
+      "subtitle": "A local-first CLI tool for faceted browsing of photographs in DNG (and other file formats)",
+      "colour": "olsen/colour.jpg",
+      "animation": "olsen/animation.mp4"
+    },
+    {
+      "slug": "rogue_planet",
+      "repo": "adewale/rogue_planet",
+      "title": "rogue_planet",
+      "subtitle": "A modern feed aggregator written in Go, inspired by Planet Planet, Planet Venus and friends.",
+      "colour": "rogue_planet/colour.jpg",
+      "animation": "rogue_planet/animation.mp4"
+    },
+    {
+      "slug": "kite",
+      "repo": "adewale/kite",
+      "title": "kite",
+      "subtitle": "Personal agent research and design",
+      "colour": "kite/colour.jpg",
+      "animation": "kite/animation.mp4"
+    },
+    {
+      "slug": "tts-playground",
+      "repo": "adewale/tts-playground",
+      "title": "tts-playground",
+      "subtitle": "Cloudflare Workers TTS playground for browsing and running text-to-speech models from Cloudflare Workers AI and Replicate",
+      "colour": "tts-playground/colour.jpg",
+      "animation": "tts-playground/animation.mp4"
+    },
+    {
+      "slug": "beautiful-mermaid",
+      "repo": "adewale/beautiful-mermaid",
+      "title": "beautiful-mermaid",
+      "subtitle": "",
+      "colour": "beautiful-mermaid/colour.jpg",
+      "animation": "beautiful-mermaid/animation.mp4"
+    },
+    {
+      "slug": "good-readme",
+      "repo": "adewale/good-readme",
+      "title": "good-readme",
+      "subtitle": "A Claude Code skill for writing and improving GitHub README documents",
+      "colour": "good-readme/colour.jpg",
+      "animation": "good-readme/animation.mp4"
+    },
+    {
+      "slug": "good-pr",
+      "repo": "adewale/good-pr",
+      "title": "good-pr",
+      "subtitle": "A Claude Code skill that helps you craft pull requests maintainers actually want to merge",
+      "colour": "good-pr/colour.jpg",
+      "animation": "good-pr/animation.mp4"
+    },
+    {
+      "slug": "geist_fabrik",
+      "repo": "adewale/geist_fabrik",
+      "title": "geist_fabrik",
+      "subtitle": "GeistFabrik is a Python-based divergence engine for Obsidian vaults that generates creative suggestions through both code and Tracery grammars.",
+      "colour": "geist_fabrik/colour.jpg",
+      "animation": "geist_fabrik/animation.mp4"
+    },
+    {
+      "slug": "web2kindle",
+      "repo": "adewale/web2kindle",
+      "title": "web2kindle",
+      "subtitle": "",
+      "colour": "web2kindle/colour.jpg",
+      "animation": "web2kindle/animation.mp4"
+    },
+    {
+      "slug": "next-starter-template",
+      "repo": "adewale/next-starter-template",
+      "title": "next-starter-template",
+      "subtitle": "",
+      "colour": "next-starter-template/colour.jpg",
+      "animation": "next-starter-template/animation.mp4"
+    },
+    {
+      "slug": "wwwoshineye",
+      "repo": "adewale/wwwoshineye",
+      "title": "wwwoshineye",
+      "subtitle": "My personal website",
+      "colour": "wwwoshineye/colour.jpg",
+      "animation": "wwwoshineye/animation.mp4"
+    },
+    {
+      "slug": "livecore",
+      "repo": "adewale/livecore",
+      "title": "livecore",
+      "subtitle": "Linux low-pause core file dumper from an existing running process",
+      "colour": "livecore/colour.jpg",
+      "animation": "livecore/animation.mp4"
     }
   ]
 }
