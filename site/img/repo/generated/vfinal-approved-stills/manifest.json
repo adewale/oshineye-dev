@@ -11,6 +11,46 @@
       "animation": "autowiki/animation.mp4"
     },
     {
+      "slug": "sunrise",
+      "repo": "adewale/sunrise",
+      "title": "sunrise",
+      "subtitle": "",
+      "colour": "sunrise/colour.jpg",
+      "animation": "sunrise/animation.mp4"
+    },
+    {
+      "slug": "slide-maker",
+      "repo": "adewale/slide-maker",
+      "title": "slide-maker",
+      "subtitle": "A Claude Code skill that turns GitHub repositories into Slidev presentation decks",
+      "colour": "slide-maker/colour.jpg",
+      "animation": "slide-maker/animation.mp4"
+    },
+    {
+      "slug": "visivotab",
+      "repo": "adewale/visivotab",
+      "title": "visivotab",
+      "subtitle": "Beautiful photos hand-selected by Flickr's visivo for your New Tab",
+      "colour": "visivotab/colour.jpg",
+      "animation": "visivotab/animation.mp4"
+    },
+    {
+      "slug": "atlas",
+      "repo": "adewale/atlas",
+      "title": "atlas",
+      "subtitle": "",
+      "colour": "atlas/colour.jpg",
+      "animation": "atlas/animation.mp4"
+    },
+    {
+      "slug": "good-pr",
+      "repo": "adewale/good-pr",
+      "title": "good-pr",
+      "subtitle": "A Claude Code skill that helps you craft pull requests maintainers actually want to merge",
+      "colour": "good-pr/colour.jpg",
+      "animation": "good-pr/animation.mp4"
+    },
+    {
       "slug": "oshineye-dev",
       "repo": "adewale/oshineye-dev",
       "title": "oshineye-dev",
@@ -27,20 +67,20 @@
       "animation": "skill_scanner/animation.mp4"
     },
     {
-      "slug": "sunrise",
-      "repo": "adewale/sunrise",
-      "title": "sunrise",
-      "subtitle": "",
-      "colour": "sunrise/colour.jpg",
-      "animation": "sunrise/animation.mp4"
-    },
-    {
       "slug": "testing-best-practices",
       "repo": "adewale/testing-best-practices",
       "title": "testing-best-practices",
       "subtitle": "A Claude Code skill for enforcing testing best practices: TDD, property-based testing, real objects over mocks, test quality assessment, and anti-pattern detection",
       "colour": "testing-best-practices/colour.jpg",
       "animation": "testing-best-practices/animation.mp4"
+    },
+    {
+      "slug": "xampler",
+      "repo": "adewale/xampler",
+      "title": "xampler",
+      "subtitle": "",
+      "colour": "xampler/colour.jpg",
+      "animation": "xampler/animation.mp4"
     },
     {
       "slug": "MaintainerBot",
@@ -67,12 +107,12 @@
       "animation": "python-workers-skill/animation.mp4"
     },
     {
-      "slug": "visivotab",
-      "repo": "adewale/visivotab",
-      "title": "visivotab",
-      "subtitle": "Beautiful photos hand-selected by Flickr's visivo for your New Tab",
-      "colour": "visivotab/colour.jpg",
-      "animation": "visivotab/animation.mp4"
+      "slug": "pythonbyexample",
+      "repo": "adewale/pythonbyexample",
+      "title": "pythonbyexample",
+      "subtitle": "Learn Python 3.13 by example, with editable Cloudflare Python Worker examples.",
+      "colour": "pythonbyexample/colour.jpg",
+      "animation": "pythonbyexample/animation.mp4"
     },
     {
       "slug": "kirby_tarot",
@@ -81,6 +121,14 @@
       "subtitle": "https://kirby-tarot-worker-prod.adewale-883.workers.dev/",
       "colour": "kirby_tarot/colour.jpg",
       "animation": "kirby_tarot/animation.mp4"
+    },
+    {
+      "slug": "flux-search",
+      "repo": "adewale/flux-search",
+      "title": "flux-search",
+      "subtitle": "",
+      "colour": "flux-search/colour.jpg",
+      "animation": "flux-search/animation.mp4"
     },
     {
       "slug": "pi-comfort",
@@ -115,6 +163,14 @@
       "animation": "spa/animation.mp4"
     },
     {
+      "slug": "cf-workers-design-system",
+      "repo": "adewale/cf-workers-design-system",
+      "title": "cf-workers-design-system",
+      "subtitle": "Agent-first Cloudflare Workers design system site, tokens, docs, and reusable skill.",
+      "colour": "cf-workers-design-system/colour.jpg",
+      "animation": "cf-workers-design-system/animation.mp4"
+    },
+    {
       "slug": "garten",
       "repo": "adewale/garten",
       "title": "garten",
@@ -131,6 +187,14 @@
       "animation": "sunrise-deploy/animation.mp4"
     },
     {
+      "slug": "python-workers-examples",
+      "repo": "adewale/python-workers-examples",
+      "title": "python-workers-examples",
+      "subtitle": "",
+      "colour": "python-workers-examples/colour.jpg",
+      "animation": "python-workers-examples/animation.mp4"
+    },
+    {
       "slug": "cfboundary",
       "repo": "adewale/cfboundary",
       "title": "cfboundary",
@@ -139,20 +203,28 @@
       "animation": "cfboundary/animation.mp4"
     },
     {
+      "slug": "python-workers-issues",
+      "repo": "adewale/python-workers-issues",
+      "title": "python-workers-issues",
+      "subtitle": "Self-contained reproductions of Python Workers bugs",
+      "colour": "python-workers-issues/colour.jpg",
+      "animation": "python-workers-issues/animation.mp4"
+    },
+    {
+      "slug": "vaders",
+      "repo": "adewale/vaders",
+      "title": "vaders",
+      "subtitle": "An OpenTUI Space Invaders clone (with elements of Galaga and Galaxian) supporting solo play or 2-4 player co-op, synchronised via Cloudflare Durable Objects.",
+      "colour": "vaders/colour.jpg",
+      "animation": "vaders/animation.mp4"
+    },
+    {
       "slug": "yaket",
       "repo": "adewale/yaket",
       "title": "yaket",
       "subtitle": "TypeScript YAKE-compatible keyword extraction library for Node and Cloudflare Workers",
       "colour": "yaket/colour.jpg",
       "animation": "yaket/animation.mp4"
-    },
-    {
-      "slug": "atlas",
-      "repo": "adewale/atlas",
-      "title": "atlas",
-      "subtitle": "",
-      "colour": "atlas/colour.jpg",
-      "animation": "atlas/animation.mp4"
     },
     {
       "slug": "keyboardia",
@@ -177,6 +249,14 @@
       "subtitle": "A self-hosted read-it-later service built on Cloudflare Python Workers. Save articles, read them offline, and listen to them as audio -- all running in your own Cloudflare account.",
       "colour": "tasche/colour.jpg",
       "animation": "tasche/animation.mp4"
+    },
+    {
+      "slug": "skills",
+      "repo": "adewale/skills",
+      "title": "skills",
+      "subtitle": "Skills for teaching agents how to build on Cloudflare.",
+      "colour": "skills/colour.jpg",
+      "animation": "skills/animation.mp4"
     },
     {
       "slug": "embed.oshineye.dev",
@@ -243,12 +323,12 @@
       "animation": "good-readme/animation.mp4"
     },
     {
-      "slug": "good-pr",
-      "repo": "adewale/good-pr",
-      "title": "good-pr",
-      "subtitle": "A Claude Code skill that helps you craft pull requests maintainers actually want to merge",
-      "colour": "good-pr/colour.jpg",
-      "animation": "good-pr/animation.mp4"
+      "slug": "audit-skill",
+      "repo": "adewale/audit-skill",
+      "title": "audit-skill",
+      "subtitle": "Comprehensive audit toolkit with 14 audit types for Claude Code \u2014 branch audits with Clean/Minor/Blocking verdicts plus deep-dive audits for concurrency, security, performance, and more",
+      "colour": "audit-skill/colour.jpg",
+      "animation": "audit-skill/animation.mp4"
     },
     {
       "slug": "geist_fabrik",
@@ -265,6 +345,54 @@
       "subtitle": "",
       "colour": "web2kindle/colour.jpg",
       "animation": "web2kindle/animation.mp4"
+    },
+    {
+      "slug": "awesome-claude-skills",
+      "repo": "adewale/awesome-claude-skills",
+      "title": "awesome-claude-skills",
+      "subtitle": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "colour": "awesome-claude-skills/colour.jpg",
+      "animation": "awesome-claude-skills/animation.mp4"
+    },
+    {
+      "slug": "guardrails-skill",
+      "repo": "adewale/guardrails-skill",
+      "title": "guardrails-skill",
+      "subtitle": "Quality gates wired into the Claude Code agent lifecycle",
+      "colour": "guardrails-skill/colour.jpg",
+      "animation": "guardrails-skill/animation.mp4"
+    },
+    {
+      "slug": "claude-history-explorer",
+      "repo": "adewale/claude-history-explorer",
+      "title": "claude-history-explorer",
+      "subtitle": "Python CLI tool to explore, search and visualise your Claude Code conversation history",
+      "colour": "claude-history-explorer/colour.jpg",
+      "animation": "claude-history-explorer/animation.mp4"
+    },
+    {
+      "slug": "who-to-bother-at-on-x",
+      "repo": "adewale/who-to-bother-at-on-x",
+      "title": "who-to-bother-at-on-x",
+      "subtitle": "Find the right people to reach out to at your favorite tech companies",
+      "colour": "who-to-bother-at-on-x/colour.jpg",
+      "animation": "who-to-bother-at-on-x/animation.mp4"
+    },
+    {
+      "slug": "cf-advisor-skill",
+      "repo": "adewale/cf-advisor-skill",
+      "title": "cf-advisor-skill",
+      "subtitle": "",
+      "colour": "cf-advisor-skill/colour.jpg",
+      "animation": "cf-advisor-skill/animation.mp4"
+    },
+    {
+      "slug": "fibonacci_durable_object",
+      "repo": "adewale/fibonacci_durable_object",
+      "title": "fibonacci_durable_object",
+      "subtitle": "A very simple demonstration of a Durable Object",
+      "colour": "fibonacci_durable_object/colour.jpg",
+      "animation": "fibonacci_durable_object/animation.mp4"
     },
     {
       "slug": "next-starter-template",
