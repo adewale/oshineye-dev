@@ -30,7 +30,7 @@
       "slug": "visivotab",
       "repo": "adewale/visivotab",
       "title": "visivotab",
-      "subtitle": "Beautiful photos hand-selected by Flickr's visivo for your New Tab",
+      "subtitle": "A Chrome new-tab extension showing Ade's Flickr photos, evolved from the original GPlusTab/visivo lineage.",
       "colour": "visivotab/colour.jpg",
       "animation": "visivotab/animation.mp4"
     },
@@ -78,7 +78,7 @@
       "slug": "xampler",
       "repo": "adewale/xampler",
       "title": "xampler",
-      "subtitle": "",
+      "subtitle": "Python Workers examples for people who know Python and are learning the Cloudflare Developer Platform.",
       "colour": "xampler/colour.jpg",
       "animation": "xampler/animation.mp4"
     },
@@ -118,7 +118,7 @@
       "slug": "kirby_tarot",
       "repo": "adewale/kirby_tarot",
       "title": "kirby_tarot",
-      "subtitle": "https://kirby-tarot-worker-prod.adewale-883.workers.dev/",
+      "subtitle": "A 78-card Kirby-style tarot deck with a Cloudflare Worker API for generating and sharing tarot spreads.",
       "colour": "kirby_tarot/colour.jpg",
       "animation": "kirby_tarot/animation.mp4"
     },
@@ -126,7 +126,7 @@
       "slug": "flux-search",
       "repo": "adewale/flux-search",
       "title": "flux-search",
-      "subtitle": "",
+      "subtitle": "Hybrid lexical and semantic search across every issue of The FLUX Review newsletter.",
       "colour": "flux-search/colour.jpg",
       "animation": "flux-search/animation.mp4"
     },
@@ -158,7 +158,7 @@
       "slug": "spa",
       "repo": "adewale/spa",
       "title": "spa",
-      "subtitle": "",
+      "subtitle": "Simple Proactive Agent.",
       "colour": "spa/colour.jpg",
       "animation": "spa/animation.mp4"
     },
@@ -190,7 +190,7 @@
       "slug": "python-workers-examples",
       "repo": "adewale/python-workers-examples",
       "title": "python-workers-examples",
-      "subtitle": "",
+      "subtitle": "A collection of examples for writing Cloudflare Workers in Python.",
       "colour": "python-workers-examples/colour.jpg",
       "animation": "python-workers-examples/animation.mp4"
     },
@@ -270,7 +270,7 @@
       "slug": "small-app-gardener",
       "repo": "adewale/small-app-gardener",
       "title": "small-app-gardener",
-      "subtitle": "",
+      "subtitle": "A leaderboard for Cloudflare's small app garden.",
       "colour": "small-app-gardener/colour.jpg",
       "animation": "small-app-gardener/animation.mp4"
     },
@@ -310,7 +310,7 @@
       "slug": "beautiful-mermaid",
       "repo": "adewale/beautiful-mermaid",
       "title": "beautiful-mermaid",
-      "subtitle": "",
+      "subtitle": "Render Mermaid diagrams as beautiful SVGs or ASCII art, with themeable zero-DOM rendering.",
       "colour": "beautiful-mermaid/colour.jpg",
       "animation": "beautiful-mermaid/animation.mp4"
     },
@@ -382,7 +382,7 @@
       "slug": "cf-advisor-skill",
       "repo": "adewale/cf-advisor-skill",
       "title": "cf-advisor-skill",
-      "subtitle": "",
+      "subtitle": "Comprehensive Cloudflare Developer Platform knowledge for Claude Code.",
       "colour": "cf-advisor-skill/colour.jpg",
       "animation": "cf-advisor-skill/animation.mp4"
     },
