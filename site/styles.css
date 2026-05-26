@@ -389,38 +389,6 @@ a:focus-visible {
     margin-left: -0.04em;
 }
 
-/* Ghost word behind every section — type as graphic */
-.section[data-ghost]::before {
-    content: attr(data-ghost);
-    position: absolute;
-    inset: -0.18em auto auto auto;
-    right: -0.04em;
-    z-index: -1;
-    font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
-    font-size: clamp(7rem, 24vw, 24rem);
-    font-weight: 800;
-    line-height: 0.8;
-    letter-spacing: -0.07em;
-    color: color-mix(in oklch, var(--brand) 9%, transparent);
-    pointer-events: none;
-    user-select: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-/* Make Code's ghost sit on the left for variety */
-.section--code[data-ghost]::before {
-    right: auto;
-    left: -0.06em;
-    color: color-mix(in oklch, var(--brand) 11%, transparent);
-}
-
-/* Talks ghost goes lighter and sits right */
-.section--talks[data-ghost]::before {
-    color: color-mix(in oklch, var(--brand) 7%, transparent);
-}
-
 /* =============================================================
    Writing — post cards
    ============================================================= */
@@ -877,11 +845,6 @@ a:focus-visible {
 
 .project-page .section:first-of-type {
     margin-top: clamp(2.25rem, 5vw, 4.5rem);
-}
-
-.section--project-hero[data-ghost]::before {
-    right: -0.08em;
-    color: color-mix(in oklch, var(--brand) 8%, transparent);
 }
 
 .project-hero-grid {
