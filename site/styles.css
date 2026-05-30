@@ -62,10 +62,7 @@ body {
     font-size: clamp(1.0625rem, 0.98rem + 0.35vw, 1.1875rem);
     line-height: 1.55;
     color: var(--ink);
-    background:
-        linear-gradient(90deg, color-mix(in oklch, var(--ink) 3%, transparent) 1px, transparent 1px) 0 0 / 4rem 4rem,
-        linear-gradient(180deg, color-mix(in oklch, var(--ink) 2%, transparent) 1px, transparent 1px) 0 0 / 4rem 4rem,
-        var(--paper);
+    background: var(--paper);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -308,15 +305,18 @@ a:focus-visible {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--col-gap);
     max-width: var(--max-w);
-    margin: 0 auto;
-    padding: clamp(1rem, 2.4vw, 2rem) clamp(1.25rem, 3vw, 2rem) 56vh;
+    margin: 0 auto 56vh;
+    padding: 0.75rem clamp(1.25rem, 3vw, 2rem) clamp(2rem, 4vw, 3rem);
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-top: 3px solid var(--brand);
     position: relative;
     z-index: 1;
 }
 .page > * { grid-column: 1 / -1; }
 
 /* =============================================================
-   Section head — folio + title (asymmetric, brand-red rule)
+   Section head — title + brand-red rule
    ============================================================= */
 
 .section {
@@ -324,9 +324,12 @@ a:focus-visible {
     grid-template-columns: subgrid;
     column-gap: var(--col-gap);
     grid-column: 1 / -1;
-    margin-top: clamp(3.5rem, 7vw, 6.5rem);
+    margin-top: 0;
     position: relative;
     isolation: isolate;
+}
+.section + .section {
+    margin-top: clamp(1.75rem, 4vw, 3rem);
 }
 
 .section-head {
@@ -335,49 +338,14 @@ a:focus-visible {
     grid-template-columns: subgrid;
     column-gap: var(--col-gap);
     align-items: baseline;
-    padding: 1rem 0 1.6rem;
+    padding: 0 0 0.45rem;
     margin-bottom: var(--space-m);
-    border-top: 3px solid var(--brand);
+    border-bottom: 3px solid var(--brand);
     position: relative;
 }
 
-.folio {
-    grid-column: 1 / 4;
-    font-family: "cronos-pro-1", system-ui, sans-serif;
-    font-size: var(--step--2);
-    font-weight: 600;
-    color: var(--brand);
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    font-feature-settings: "tnum";
-    line-height: 1;
-    align-self: center;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.folio-num {
-    font-size: 1.6em;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    color: var(--brand);
-}
-
-.folio-rule {
-    width: 1.5rem;
-    height: 1px;
-    background: currentColor;
-    flex: 0 0 auto;
-}
-
-.folio-label {
-    color: var(--ink-muted);
-    font-weight: 600;
-}
-
 .section-head h2 {
-    grid-column: 4 / -1;
+    grid-column: 1 / -1;
     font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
     font-size: clamp(2.4rem, 1.6rem + 3.2vw, 4.5rem);
     font-weight: 800;
@@ -385,8 +353,6 @@ a:focus-visible {
     letter-spacing: -0.04em;
     line-height: 0.94;
     text-rendering: geometricPrecision;
-    /* slight asymmetric pull-out to break the column rhythm */
-    margin-left: -0.04em;
 }
 
 /* =============================================================
@@ -411,16 +377,15 @@ a:focus-visible {
     padding: 0.8rem 0.85rem 1rem;
     background: var(--paper);
     border: 2px solid var(--ink);
-    box-shadow: 6px 6px 0 0 var(--brand);
     position: relative;
     isolation: isolate;
     transition: transform 240ms var(--ease-out-quart),
-                box-shadow 240ms var(--ease-out-quart);
+                border-color 240ms var(--ease-out-quart);
 }
 .post-card:hover,
 .post-card:focus-within {
     transform: translate(-2px, -2px);
-    box-shadow: 9px 9px 0 0 var(--brand);
+    border-color: var(--brand);
 }
 
 .post-card .frame {
@@ -565,9 +530,8 @@ a:focus-visible {
     padding: 0.85rem 0.95rem 1.1rem;
     background: var(--paper);
     border: 2px solid var(--ink);
-    box-shadow: 8px 8px 0 0 var(--brand);
     transition: transform 240ms var(--ease-out-quart),
-                box-shadow 240ms var(--ease-out-quart);
+                border-color 240ms var(--ease-out-quart);
     isolation: isolate;
     position: relative;
 }
@@ -575,7 +539,7 @@ a:focus-visible {
 .repo-card:hover,
 .repo-card:focus-within {
     transform: translate(-3px, -3px);
-    box-shadow: 12px 12px 0 0 var(--brand);
+    border-color: var(--brand);
 }
 
 .repo-frame {
@@ -709,13 +673,9 @@ a:focus-visible {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2.25rem 1.6rem;
     }
-    .repo-card { box-shadow: 6px 6px 0 0 var(--brand); }
-    .repo-card:hover,
-    .repo-card:focus-within { box-shadow: 9px 9px 0 0 var(--brand); }
 }
 @media (max-width: 560px) {
     .repo-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .repo-card { box-shadow: 5px 5px 0 0 var(--brand); }
 }
 
 /* =============================================================
@@ -738,16 +698,15 @@ a:focus-visible {
     padding: 0.85rem 1rem;
     background: var(--paper);
     border: 2px solid var(--ink);
-    box-shadow: 8px 8px 0 0 var(--brand);
     isolation: isolate;
     transition: transform 240ms var(--ease-out-quart),
-                box-shadow 240ms var(--ease-out-quart);
+                border-color 240ms var(--ease-out-quart);
     position: relative;
 }
 .talk:hover,
 .talk:focus-within {
     transform: translate(-3px, -3px);
-    box-shadow: 12px 12px 0 0 var(--brand);
+    border-color: var(--brand);
 }
 
 .talk .frame {
@@ -840,11 +799,11 @@ a:focus-visible {
    ============================================================= */
 
 .project-page {
-    padding-bottom: 54vh;
+    padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .project-page .section:first-of-type {
-    margin-top: clamp(2.25rem, 5vw, 4.5rem);
+    margin-top: 0;
 }
 
 .project-hero-grid {
@@ -906,13 +865,11 @@ a:focus-visible {
     background: var(--brand);
     color: var(--paper);
     border: 2px solid var(--ink);
-    box-shadow: 6px 6px 0 0 var(--ink);
     font-family: "cronos-pro-1", system-ui, sans-serif;
     font-weight: 900;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     transition: transform 240ms var(--ease-out-quart),
-                box-shadow 240ms var(--ease-out-quart),
                 background 200ms var(--ease-out-quart);
 }
 .github-cta::after {
@@ -922,7 +879,6 @@ a:focus-visible {
 .github-cta:hover,
 .github-cta:focus-visible {
     transform: translate(-2px, -2px);
-    box-shadow: 9px 9px 0 0 var(--ink);
     background: var(--brand-soft);
     color: var(--paper);
 }
@@ -932,7 +888,6 @@ a:focus-visible {
 .example-card {
     background: var(--paper);
     border: 2px solid var(--ink);
-    box-shadow: 8px 8px 0 0 var(--brand);
     position: relative;
     isolation: isolate;
 }
@@ -1113,7 +1068,6 @@ a:focus-visible {
     border-collapse: collapse;
     background: var(--paper);
     border: 2px solid var(--ink);
-    box-shadow: 8px 8px 0 0 var(--brand);
     font-size: 0.98rem;
 }
 .eval-table th,
@@ -1315,13 +1269,15 @@ a:focus-visible {
     }
 
     .section-head { grid-template-columns: 1fr; row-gap: 0.4rem; }
-    .folio { grid-column: 1; }
     .section-head h2 { grid-column: 1; }
 }
 
 @media (max-width: 540px) {
-    .page { padding-bottom: 50vh; padding-inline: 1.1rem; }
-    body { background-size: 3rem 3rem, 3rem 3rem, cover; }
+    .page {
+        margin-inline: 0.6rem;
+        margin-bottom: 50vh;
+        padding-inline: 0.9rem;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

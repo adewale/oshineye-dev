@@ -7,6 +7,8 @@ interface GartenConfig {
   container: string;
   seed: number;
   maxHeight: number;
+  opacity: number;
+  zIndex: number;
   colors: {
     accent: string;
     palette: string;
@@ -114,7 +116,11 @@ export function getGartenConfig(container: string): GartenConfig {
   return {
     container,
     seed: 123,
+    // Keep the full-height plants delightful. Readability comes from paper
+    // surfaces behind prose; opacity is just a secondary visual tuning knob.
     maxHeight: 1.0,
+    opacity: 0.72,
+    zIndex: 0,
     colors: {
       accent: getAccent(),
       palette: "monotone",

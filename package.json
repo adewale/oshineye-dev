@@ -6,6 +6,7 @@
     "build": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external && cp node_modules/garten/dist/index.global.js site/garten.js",
     "dev": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external --watch",
     "preview": "bun run build && wrangler dev",
+    "test:garten-legibility": "node tools/screenshot-garten-legibility.mjs",
     "typecheck": "bunx tsc --noEmit",
     "deploy": "bun run build && wrangler deploy"
   },

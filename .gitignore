@@ -5,3 +5,4 @@ site/garten.js
 .wrangler/
 .claude/
 test-results/
+test-artifacts/
