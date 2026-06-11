@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboardia — Ade Oshineye</title>
+    <meta name="description" content="Keyboardia is a multiplayer step sequencer with polyrhythmic patterns, real-time collaboration, and shareable Jamuary tracks.">
+    <meta name="color-scheme" content="light">
+    <meta property="og:title" content="Keyboardia — Ade Oshineye">
+    <meta property="og:description" content="A multiplayer step sequencer with polyrhythmic patterns, real-time collaboration, and GitHub-style remixing.">
+    <meta property="og:image" content="https://keyboardia.dev/og-image.png">
+    <script src="https://use.typekit.net/dbg2jxe.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+      try {
+        if (localStorage.getItem('oshineye-motion-seen')) {
+          document.documentElement.classList.add('seen-motion');
+        } else {
+          localStorage.setItem('oshineye-motion-seen', '1');
+        }
+      } catch (e) {}
+    </script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="masthead-plate">
+        <div class="masthead">
+            <div class="title">
+                <h1 class="name">
+                    <span class="first" aria-label="Adewale">
+                        <span class="letter" style="--i:0">A</span><span class="letter" style="--i:1">d</span><span class="letter" style="--i:2">e</span><span class="letter" style="--i:3">w</span><span class="letter" style="--i:4">a</span><span class="letter" style="--i:5">l</span><span class="letter" style="--i:6">e</span>
+                    </span>
+                    <span class="last" aria-label="Oshineye">
+                        <span class="letter" style="--i:8">O</span><span class="letter" style="--i:9">s</span><span class="letter" style="--i:10">h</span><span class="letter" style="--i:11">i</span><span class="letter" style="--i:12">n</span><span class="letter" style="--i:13">e</span><span class="letter" style="--i:14">y</span><span class="letter" style="--i:15">e</span>
+                    </span>
+                </h1>
+                <p class="role">
+                    <span class="at"><a href="/" class="cloudflare-link">Back to oshineye.dev</a></span>
+                </p>
+            </div>
+
+            <div class="compact-title" aria-hidden="true">
+                <span class="compact-name">Adewale Oshineye</span>
+                <span class="compact-role">Keyboardia</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="page project-page keyboardia-page">
+        <section class="section section--project-hero reveal" aria-labelledby="project-title">
+            <div class="section-head">
+                <h2 id="project-title">Keyboardia</h2>
+            </div>
+
+            <div class="project-hero-grid">
+                <div class="project-copy">
+                    <p class="project-kicker">Collaborative music app</p>
+                    <p class="project-lede">Keyboardia is a browser-based multiplayer step sequencer for making polyrhythmic patterns together in real time.</p>
+                    <blockquote class="project-rulequote">
+                        <p>Create beats together, then remix the session.</p>
+                    </blockquote>
+                    <p>It combines instant session creation, Web Audio synthesis, sampled instruments, per-step automation, and WebSocket collaboration. The result is a small playable instrument that also behaves like a shareable web artifact.</p>
+                    <p class="project-actions">
+                        <a class="github-cta" href="https://keyboardia.dev/" target="_blank" rel="noopener">Launch Keyboardia</a>
+                        <a class="github-cta github-cta--secondary" href="https://github.com/adewale/keyboardia" target="_blank" rel="noopener">View source</a>
+                    </p>
+                </div>
+
+                <aside class="project-panel" aria-labelledby="project-facts-title">
+                    <a class="project-motion-frame" href="https://keyboardia.dev/" target="_blank" rel="noopener" aria-label="Launch Keyboardia">
+                        <img class="project-panel-image" src="/img/repo/generated/vfinal-approved-stills/keyboardia/colour.jpg" alt="Generated project artwork for Keyboardia" loading="lazy" width="400" height="300">
+                        <video class="project-motion-media" muted loop playsinline preload="none" poster="/img/repo/generated/vfinal-approved-stills/keyboardia/colour.jpg" aria-hidden="true">
+                            <source src="/img/repo/generated/vfinal-approved-stills/keyboardia/animation.mp4" type="video/mp4">
+                        </video>
+                    </a>
+                    <h3 id="project-facts-title">Project facts</h3>
+                    <p>A React and Cloudflare Workers app for collaborative sequencing, publishing, and remixing.</p>
+                    <dl class="project-facts">
+                        <div><dt>Live app</dt><dd><a href="https://keyboardia.dev/" target="_blank" rel="noopener"><code>keyboardia.dev</code></a></dd></div>
+                        <div><dt>Repository</dt><dd><a href="https://github.com/adewale/keyboardia" target="_blank" rel="noopener"><code>adewale/keyboardia</code></a></dd></div>
+                        <div><dt>Frontend</dt><dd>React 19, TypeScript, Vite</dd></div>
+                        <div><dt>Audio</dt><dd>Web Audio API, Tone.js</dd></div>
+                        <div><dt>Backend</dt><dd>Cloudflare Workers, Durable Objects, KV, WebSockets</dd></div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section reveal" aria-labelledby="what-it-does">
+            <div class="section-head">
+                <h2 id="what-it-does">What it does</h2>
+            </div>
+
+            <ul class="feature-list">
+                <li>Lets up to 10 players jam together in the same session.</li>
+                <li>Supports per-track step counts from 3 to 128 for polyrhythmic patterns.</li>
+                <li>Offers 64 sound generators: Web Audio synths, Tone.js FM/AM synths, and sampled instruments.</li>
+                <li>Adds parameter locks for per-step pitch, volume, and tied-note automation.</li>
+                <li>Synchronizes effects, swing, patterns, and session state across collaborators.</li>
+                <li>Creates share links, remixes, immutable published sessions, and QR-code handoffs.</li>
+            </ul>
+        </section>
+
+        <section class="section reveal" aria-labelledby="technical-shape">
+            <div class="section-head">
+                <h2 id="technical-shape">Technical shape</h2>
+            </div>
+
+            <div class="install-grid">
+                <div class="code-panel">
+                    <h3>Audio signal chain</h3>
+                    <pre><code>Source
+  → Track Gain
+  → Master Gain
+  → Reverb / Delay / Chorus / Distortion
+  → Limiter
+  → Compressor
+  → Destination</code></pre>
+                </div>
+                <div class="code-panel">
+                    <h3>Realtime sessions</h3>
+                    <pre><code>Client A ←→ Durable Object ←→ Client B
+              ↓
+        DO Storage
+              ↓
+          KV Storage</code></pre>
+                </div>
+                <div class="code-panel code-panel--wide">
+                    <h3>Local development</h3>
+                    <pre><code>cd app
+npm install
+npm run dev
+npm run test:all
+npm run build</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" aria-labelledby="jamuary">
+            <div class="section-head">
+                <h2 id="jamuary">Jamuary 2026 tracks</h2>
+            </div>
+
+            <p class="section-intro">All 31 authored Jamuary tracks were made and shared through Keyboardia. Each title opens the track; the secondary link opens the original tweet.</p>
+
+            <ol class="track-list">
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 1</span><time datetime="2026-01-01">2026-01-01</time><span class="track-note">misspelled “Jamaury”</span></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/f866cf39-994b-4139-be4b-3a1a0623f055" target="_blank" rel="noopener">Dreaming of 2026</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/f866cf39-994b-4139-be4b-3a1a0623f055" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2006784986763219136" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 2</span><time datetime="2026-01-02">2026-01-02</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/993cc37a-5b4f-4295-8975-c52a726b13bb" target="_blank" rel="noopener">Orbital bliss</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/993cc37a-5b4f-4295-8975-c52a726b13bb" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2007201138765115509" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 3</span><time datetime="2026-01-03">2026-01-03</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/416f1658-77a5-4a9e-be5c-22c0315936b1" target="_blank" rel="noopener">Refrain</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/416f1658-77a5-4a9e-be5c-22c0315936b1" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2007583501621592517" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 4</span><time datetime="2026-01-04">2026-01-04</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/587fc187-b196-48ee-b810-0488f2b078b9" target="_blank" rel="noopener">Talking Bass Line</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/587fc187-b196-48ee-b810-0488f2b078b9" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2007922380585500893" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 5</span><time datetime="2026-01-05">2026-01-05</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/bf985d92-ce5e-40c2-abb3-80db5019dc8d" target="_blank" rel="noopener">Colorado remix</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/bf985d92-ce5e-40c2-abb3-80db5019dc8d" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2008276593483931940" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 6</span><time datetime="2026-01-06">2026-01-06</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/50835489-1d93-4f0e-a0a9-f166a45eedb2" target="_blank" rel="noopener">Starting with Alto Sax</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/50835489-1d93-4f0e-a0a9-f166a45eedb2" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2008668303716479177" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 7</span><time datetime="2026-01-07">2026-01-07</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/27e5d72e-7929-4949-996f-ae3682b7083f" target="_blank" rel="noopener">Trying Techno Anxiety</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/27e5d72e-7929-4949-996f-ae3682b7083f" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2008987718697800175" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 8</span><time datetime="2026-01-08">2026-01-08</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/04eb77d6-16b0-4832-af24-750ba0b007ba" target="_blank" rel="noopener">Miami keytar vibes</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/04eb77d6-16b0-4832-af24-750ba0b007ba" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2009327844380541068" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 9</span><time datetime="2026-01-09">2026-01-09</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/f89c8da5-1528-4b38-8567-03adecaf533e" target="_blank" rel="noopener">Rotations</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/f89c8da5-1528-4b38-8567-03adecaf533e" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2009759610698187243" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 10</span><time datetime="2026-01-10">2026-01-10</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/b636f56c-5e5d-4cc8-a3b6-fd0bf2dfa37d" target="_blank" rel="noopener">808</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/b636f56c-5e5d-4cc8-a3b6-fd0bf2dfa37d" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2010111714268774509" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 11</span><time datetime="2026-01-11">2026-01-11</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/fbcc6f35-6c09-4618-8902-1b3e09a196a4" target="_blank" rel="noopener">Plot armour</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/fbcc6f35-6c09-4618-8902-1b3e09a196a4" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2010422262206443705" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 12</span><time datetime="2026-01-12">2026-01-12</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/4dfcb449-c553-4fd0-8871-cefa58645f53" target="_blank" rel="noopener">Lush layered FX</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/4dfcb449-c553-4fd0-8871-cefa58645f53" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2010852248209772949" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 13</span><time datetime="2026-01-13">2026-01-13</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/25805456-9eaf-466d-84c9-ae1f02a401e2" target="_blank" rel="noopener">Whirl</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/25805456-9eaf-466d-84c9-ae1f02a401e2" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2011190340204527700" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 14</span><time datetime="2026-01-14">2026-01-14</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/ad6d8bb7-93e4-475e-98b9-3f2e7f69c297" target="_blank" rel="noopener">Showing up</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/ad6d8bb7-93e4-475e-98b9-3f2e7f69c297" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2011578414118158545" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 15</span><time datetime="2026-01-15">2026-01-15</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/2b4519f4-19c9-4764-8f2d-f49c01b005b1" target="_blank" rel="noopener">Kobayashi</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/2b4519f4-19c9-4764-8f2d-f49c01b005b1" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2011950626842853414" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 16</span><time datetime="2026-01-16">2026-01-16</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/b5332834-042b-459e-a067-cb7d7ae3fd50" target="_blank" rel="noopener">Observability groove</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/b5332834-042b-459e-a067-cb7d7ae3fd50" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2012270289355206852" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 17</span><time datetime="2026-01-17">2026-01-17</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/d4ded993-0052-4b3c-a13f-ff1b2d37eb87" target="_blank" rel="noopener">Strength in the broken places</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/d4ded993-0052-4b3c-a13f-ff1b2d37eb87" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2012650917175197993" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 18</span><time datetime="2026-01-18">2026-01-18</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/cc6acc4b-a83e-4391-8ca9-27cd9f23445e" target="_blank" rel="noopener">Jam</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/cc6acc4b-a83e-4391-8ca9-27cd9f23445e" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2013037787902095672" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 19</span><time datetime="2026-01-20">2026-01-20</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/03194b85-adcb-4437-b36d-6f80f6aadda8" target="_blank" rel="noopener">Soho Cafe</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/03194b85-adcb-4437-b36d-6f80f6aadda8" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2013401097411379537" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 20</span><time datetime="2026-01-20">2026-01-20</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/cfdfc640-8175-413c-8a2a-16ecf9b01bfe" target="_blank" rel="noopener">Shaker groove - stirred</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/cfdfc640-8175-413c-8a2a-16ecf9b01bfe" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2013759707563880928" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 21</span><time datetime="2026-01-22">2026-01-22</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/b5c6d9c9-17d5-4c8f-bbf6-ede211d0a5a6" target="_blank" rel="noopener">Plinky polyrhythms</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/b5c6d9c9-17d5-4c8f-bbf6-ede211d0a5a6" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2014127334584991911" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 22</span><time datetime="2026-01-22">2026-01-22</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/ffc59354-7109-42e6-8452-600fd6581b79" target="_blank" rel="noopener">Plush</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/ffc59354-7109-42e6-8452-600fd6581b79" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2014484473912467609" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 23</span><time datetime="2026-01-23">2026-01-23</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/caf585c9-9672-4ff0-a7b8-a37b1e9eb4ea" target="_blank" rel="noopener">Soho Piano trio</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/caf585c9-9672-4ff0-a7b8-a37b1e9eb4ea" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2014813853490512199" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 24</span><time datetime="2026-01-25">2026-01-25</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/27b3fdf8-b68a-443a-b6ac-dc185754754f" target="_blank" rel="noopener">Soho Piano trio - redux</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/27b3fdf8-b68a-443a-b6ac-dc185754754f" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2015213913302856123" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 25</span><time datetime="2026-01-25">2026-01-25</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/65d5287e-9a5a-4a7c-add3-11df1ee425de" target="_blank" rel="noopener">Rumble</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/65d5287e-9a5a-4a7c-add3-11df1ee425de" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2015567397466333663" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 26</span><time datetime="2026-01-26">2026-01-26</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/7992c643-c401-4b10-b952-be136c7c11ca" target="_blank" rel="noopener">Melodic</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/7992c643-c401-4b10-b952-be136c7c11ca" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2015927979482742814" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 27</span><time datetime="2026-01-27">2026-01-27</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/025b47fa-36b8-4de3-b2cb-bc6c8c678da8" target="_blank" rel="noopener">Alias</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/025b47fa-36b8-4de3-b2cb-bc6c8c678da8" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2016295823873650975" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 28</span><time datetime="2026-01-29">2026-01-29</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/c1e2256a-3b5d-46b6-bd24-82a786ea34da" target="_blank" rel="noopener">Demo Daze</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/c1e2256a-3b5d-46b6-bd24-82a786ea34da" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2016665833582272939" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 29</span><time datetime="2026-01-30">2026-01-30</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/a2cebef8-5a34-41d7-a008-13d1bfc2cdec" target="_blank" rel="noopener">29</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/a2cebef8-5a34-41d7-a008-13d1bfc2cdec" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2017044563253219356" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 30</span><time datetime="2026-01-31">2026-01-31</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/a3574a7a-8b91-47b1-ad14-f0da78885920" target="_blank" rel="noopener">30 (derived from 29)</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/a3574a7a-8b91-47b1-ad14-f0da78885920" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2017404904214601935" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+                    <li class="track-card">
+                        <p class="track-card-meta"><span>Day 31</span><time datetime="2026-01-31">2026-01-31</time></p>
+                        <a class="track-title" href="https://keyboardia.dev/s/9cbc2a35-8585-4d3b-973c-02bae7f3db85" target="_blank" rel="noopener">Last Samurai. Standing</a>
+                        <p class="track-links"><a href="https://keyboardia.dev/s/9cbc2a35-8585-4d3b-973c-02bae7f3db85" target="_blank" rel="noopener">Play track</a><a href="https://x.com/ade_oshineye/status/2017655137599143940" target="_blank" rel="noopener">Tweet</a></p>
+                    </li>
+            </ol>
+        </section>
+
+        <section class="section reveal" aria-labelledby="links">
+            <div class="section-head">
+                <h2 id="links">Project links</h2>
+            </div>
+
+            <div class="link-card-grid">
+                <article class="link-card">
+                    <h3>Play</h3>
+                    <p>Open the live sequencer, start a session, and share the link with collaborators.</p>
+                    <p class="outbound"><a href="https://keyboardia.dev/" target="_blank" rel="noopener">keyboardia.dev</a></p>
+                </article>
+                <article class="link-card">
+                    <h3>Read</h3>
+                    <p>Browse the React, Web Audio, Durable Objects, and synchronization code.</p>
+                    <p class="outbound"><a href="https://github.com/adewale/keyboardia" target="_blank" rel="noopener">GitHub: adewale/keyboardia</a></p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="colophon">
+            <span>&copy; 2026 Ade Oshineye</span>
+            <span class="colophon-sep" aria-hidden="true"></span>
+            <a href="/">oshineye.dev</a>
+        </footer>
+    </main>
+
+    <div id="garden" aria-hidden="true"></div>
+    <script src="/garten.js"></script>
+    <script src="/oshineye-config.js"></script>
+    <script>
+      const gartenConfig = OshineyeConfig.getGartenConfig('#garden');
+      document.documentElement.style.setProperty('--garden-accent', gartenConfig.colors.accent);
+      new Garten.Garten(gartenConfig);
+    </script>
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        document.querySelectorAll('video.project-motion-media').forEach((video) => {
+          const frame = video.closest('.project-motion-frame');
+          if (!frame) return;
+
+          const play = () => video.play().catch(() => {});
+          const stop = () => {
+            video.pause();
+            video.currentTime = 0;
+          };
+
+          frame.addEventListener('mouseenter', play);
+          frame.addEventListener('mouseleave', stop);
+          frame.addEventListener('focusin', play);
+          frame.addEventListener('focusout', stop);
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const masthead = document.querySelector('.masthead-plate');
+        const title = document.querySelector('.masthead .title');
+        const hiddenFocusables = title.querySelectorAll('a, button, input, textarea, select, [tabindex]');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const collapseAt = 180;
+        const expandAt = 80;
+        const progressRange = 150;
+        let compact = false;
+        let ticking = false;
+
+        function setHiddenFocusability(isCompact) {
+          hiddenFocusables.forEach((el) => {
+            if (isCompact) {
+              el.dataset.prevTabindex = el.getAttribute('tabindex') || '';
+              el.setAttribute('tabindex', '-1');
+            } else {
+              const previous = el.dataset.prevTabindex;
+              if (previous === '') el.removeAttribute('tabindex');
+              else if (previous != null) el.setAttribute('tabindex', previous);
+            }
+          });
+        }
+
+        function updateMasthead() {
+          const y = window.scrollY;
+          const raw = reduceMotion.matches ? (y >= collapseAt ? 1 : 0) : y / progressRange;
+          const progress = Math.min(Math.max(raw, 0), 1);
+          const inverse = 1 - progress;
+
+          masthead.style.setProperty('--masthead-progress', progress.toFixed(3));
+          masthead.style.setProperty('--masthead-inverse', inverse.toFixed(3));
+
+          let nextCompact = compact;
+          if (!compact && y >= collapseAt) nextCompact = true;
+          if (compact && y <= expandAt) nextCompact = false;
+
+          if (nextCompact !== compact) {
+            compact = nextCompact;
+            masthead.classList.toggle('is-compact', compact);
+            setHiddenFocusability(compact);
+          }
+          ticking = false;
+        }
+
+        function requestUpdate() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateMasthead);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        reduceMotion.addEventListener?.('change', requestUpdate);
+        updateMasthead();
+      })();
+    </script>
+</body>
+</html>

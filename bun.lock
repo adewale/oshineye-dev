@@ -5,7 +5,7 @@
     "": {
       "name": "oshineye-dev",
       "dependencies": {
-        "garten": "^1.0.0",
+        "garten": "^1.1.0",
       },
       "devDependencies": {
         "typescript": "^5.3.0",
@@ -162,7 +162,7 @@
 
     "fsevents": ["fsevents@2.3.3", "", { "os": "darwin" }, "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="],
 
-    "garten": ["garten@1.0.0", "", {}, "sha512-pOmN7Zi3INTYAQhLdyA8n3nFHj7MKOd5oaJH5xSrYDk68UZOxy2UXscVuVdlwqYqKua9tHj9PL4N1C6ud699/Q=="],
+    "garten": ["garten@1.1.0", "", {}, "sha512-DMzT2msO9W+UDfwNazX/N4cXRlG7DCjvof+LHvoUGlmJInbGLpjgrgevkRkzlwS2Su0XZ6rwUbHugKSKsQVrKw=="],
 
     "kleur": ["kleur@4.1.5", "", {}, "sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ=="],
 

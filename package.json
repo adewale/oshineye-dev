@@ -15,6 +15,6 @@
     "wrangler": "^4.65.0"
   },
   "dependencies": {
-    "garten": "^1.0.0"
+    "garten": "^1.1.0"
   }
 }

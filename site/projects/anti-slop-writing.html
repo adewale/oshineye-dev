@@ -66,6 +66,10 @@
                 </div>
 
                 <aside class="project-panel" aria-labelledby="installable-unit">
+                    <a class="project-motion-frame" href="https://github.com/adewale/anti-slop-writing" target="_blank" rel="noopener" aria-label="View anti-slop-writing on GitHub">
+                        <img class="project-panel-image" src="/img/repo/generated/vfinal-approved-stills/anti-slop-writing/colour.jpg" alt="Poster-style artwork for Anti-Slop Writing" loading="lazy" width="400" height="300">
+                        <img class="project-motion-media" src="/img/repo/generated/vfinal-approved-stills/anti-slop-writing/animation.gif" alt="" aria-hidden="true" loading="lazy" width="400" height="300">
+                    </a>
                     <h3 id="installable-unit">Installable unit</h3>
                     <p>The skill is instruction-only: it does not run scripts, install packages, call the network, or require a runtime.</p>
                     <dl class="project-facts">
@@ -205,6 +209,28 @@ cp -R skills/anti-slop-writing ~/.agents/skills/</code></pre>
       const gartenConfig = OshineyeConfig.getGartenConfig('#garden');
       document.documentElement.style.setProperty('--garden-accent', gartenConfig.colors.accent);
       new Garten.Garten(gartenConfig);
+    </script>
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        document.querySelectorAll('video.project-motion-media').forEach((video) => {
+          const frame = video.closest('.project-motion-frame');
+          if (!frame) return;
+
+          const play = () => video.play().catch(() => {});
+          const stop = () => {
+            video.pause();
+            video.currentTime = 0;
+          };
+
+          frame.addEventListener('mouseenter', play);
+          frame.addEventListener('mouseleave', stop);
+          frame.addEventListener('focusin', play);
+          frame.addEventListener('focusout', stop);
+        });
+      })();
     </script>
     <script>
       (() => {

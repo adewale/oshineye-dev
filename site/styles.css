@@ -855,6 +855,10 @@ a:focus-visible {
 
 .project-actions {
     margin-top: var(--space-xs);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
 }
 
 .github-cta {
@@ -882,6 +886,15 @@ a:focus-visible {
     background: var(--brand-soft);
     color: var(--paper);
 }
+.github-cta--secondary {
+    background: var(--paper);
+    color: var(--brand);
+}
+.github-cta--secondary:hover,
+.github-cta--secondary:focus-visible {
+    background: var(--ink);
+    color: var(--paper);
+}
 
 .project-panel,
 .code-panel,
@@ -895,6 +908,68 @@ a:focus-visible {
 .project-panel {
     grid-column: 8 / -1;
     padding: 1rem 1.1rem 1.2rem;
+}
+.project-motion-frame {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1.5px solid var(--ink);
+    background: var(--paper-deep);
+    margin-bottom: var(--space-m);
+    position: relative;
+    isolation: isolate;
+}
+.project-motion-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 45%, transparent 34%, rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(115deg, rgba(255, 255, 255, 0.12), transparent 34%, rgba(0, 0, 0, 0.12));
+    mix-blend-mode: multiply;
+    opacity: 0.52;
+    transition: opacity 260ms var(--ease-out-quart);
+}
+.project-panel-image,
+.project-motion-media {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.project-panel-image {
+    filter: grayscale(1) saturate(0) contrast(1.25) brightness(0.95);
+    transition: filter 260ms var(--ease-out-quart),
+                transform 600ms var(--ease-out-quart);
+}
+.project-motion-media {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms var(--ease-out-quart),
+                transform 600ms var(--ease-out-quart);
+}
+.project-motion-frame:hover .project-panel-image,
+.project-motion-frame:focus-visible .project-panel-image {
+    filter: grayscale(0) saturate(1) contrast(1) brightness(1);
+    transform: scale(1.04);
+}
+.project-motion-frame:hover .project-motion-media,
+.project-motion-frame:focus-visible .project-motion-media {
+    opacity: 1;
+    transform: scale(1.04);
+}
+.project-motion-frame:hover::after,
+.project-motion-frame:focus-visible::after {
+    opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+    .project-motion-media { display: none; }
 }
 
 .project-panel h3,
@@ -1097,30 +1172,142 @@ a:focus-visible {
     line-height: 1.45;
 }
 
+.track-list {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+.track-card {
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    padding: 0.85rem 0.9rem 0.95rem;
+    display: grid;
+    gap: 0.55rem;
+    transition: transform 220ms var(--ease-out-quart),
+                border-color 220ms var(--ease-out-quart),
+                background 220ms var(--ease-out-quart);
+}
+.track-card:hover,
+.track-card:focus-within {
+    transform: translate(-2px, -2px);
+    border-color: var(--brand);
+    background: color-mix(in oklch, var(--brand) 4%, var(--paper));
+}
+.track-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    align-items: center;
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: var(--step--2);
+    color: var(--ink-muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-feature-settings: "tnum";
+}
+.track-card-meta span:first-child {
+    color: var(--brand);
+}
+.track-note {
+    letter-spacing: 0.08em;
+    color: var(--brand);
+}
+.track-title {
+    font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
+    font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+}
+.track-title:hover,
+.track-title:focus-visible {
+    color: var(--brand);
+}
+.track-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: var(--step--1);
+    font-weight: 800;
+}
+.track-links a {
+    color: var(--brand);
+    border-bottom: 1px solid currentColor;
+}
+.track-links a:hover {
+    color: var(--brand-soft);
+}
+
+.link-card-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.25rem, 2vw, 2rem);
+    position: relative;
+    z-index: 2;
+}
+.link-card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 1rem 1.05rem 1.15rem;
+}
+.link-card h3 {
+    font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
+    font-size: clamp(1.25rem, 1rem + 0.9vw, 1.8rem);
+    line-height: 0.98;
+    color: var(--ink);
+    letter-spacing: -0.035em;
+    margin-bottom: var(--space-s);
+}
+.link-card p:not(.outbound) {
+    color: var(--ink-soft);
+    line-height: 1.45;
+}
+.link-card .outbound {
+    grid-column: auto;
+    margin-top: var(--space-s);
+    font-size: var(--step--1);
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .reveal .example-card,
     .reveal .project-panel,
     .reveal .feature-list li,
-    .reveal .code-panel {
+    .reveal .code-panel,
+    .reveal .track-card,
+    .reveal .link-card {
         opacity: 0;
         transform: translateY(0.35rem);
         animation: reveal 420ms var(--ease-out-expo) forwards;
     }
     .reveal .example-card:nth-child(1),
     .reveal .feature-list li:nth-child(1),
-    .reveal .code-panel:nth-child(1) { animation-delay: 80ms; }
+    .reveal .code-panel:nth-child(1),
+    .reveal .track-card:nth-child(3n + 1),
+    .reveal .link-card:nth-child(1) { animation-delay: 80ms; }
     .reveal .example-card:nth-child(2),
     .reveal .feature-list li:nth-child(2),
-    .reveal .code-panel:nth-child(2) { animation-delay: 150ms; }
+    .reveal .code-panel:nth-child(2),
+    .reveal .track-card:nth-child(3n + 2),
+    .reveal .link-card:nth-child(2) { animation-delay: 150ms; }
     .reveal .example-card:nth-child(3),
     .reveal .feature-list li:nth-child(3),
-    .reveal .code-panel:nth-child(3) { animation-delay: 220ms; }
+    .reveal .code-panel:nth-child(3),
+    .reveal .track-card:nth-child(3n) { animation-delay: 220ms; }
 }
 
 .seen-motion .reveal .example-card,
 .seen-motion .reveal .project-panel,
 .seen-motion .reveal .feature-list li,
-.seen-motion .reveal .code-panel {
+.seen-motion .reveal .code-panel,
+.seen-motion .reveal .track-card,
+.seen-motion .reveal .link-card {
     opacity: 1;
     transform: none;
     animation: none;
@@ -1135,7 +1322,9 @@ a:focus-visible {
     .feature-list,
     .example-grid,
     .install-grid,
-    .eval-layout { grid-template-columns: 1fr; }
+    .eval-layout,
+    .link-card-grid { grid-template-columns: 1fr; }
+    .track-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .example-card--wide,
     .code-panel--wide { grid-column: auto; }
 }
@@ -1145,6 +1334,7 @@ a:focus-visible {
     .example-pair { grid-template-columns: 1fr; }
     .example-box { min-height: 0; }
     .github-cta { width: 100%; justify-content: center; text-align: center; }
+    .track-list { grid-template-columns: 1fr; }
 }
 
 /* =============================================================
