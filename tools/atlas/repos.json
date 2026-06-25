@@ -64,7 +64,7 @@
     { "id": "audit-skill",             "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Audit toolkit with 14 audit types and branch verdicts." },
     { "id": "geist_fabrik",            "lang": "TS",     "cat": "thought",    "parents": [],                                  "featured": true, "blurb": "Divergence engine for Obsidian vaults via code and Tracery." },
     { "id": "web2kindle",              "lang": "TS",     "cat": "reading",    "parents": [],                                  "exclude": true, "blurb": "Tools for reading web content on Kindle." },
-    { "id": "awesome-claude-skills",   "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Curated list of Claude Skills, resources, and tools." },
+    { "id": "awesome-claude-skills",   "lang": "Skill",  "cat": "skills",     "parents": [],                                  "exclude": true, "blurb": "Curated list of Claude Skills, resources, and tools." },
     { "id": "guardrails-skill",        "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Quality gates wired into the Claude Code agent lifecycle." },
     { "id": "claude-history-explorer", "lang": "TS",     "cat": "thought",    "parents": [],                                  "featured": true, "blurb": "Explore, search, and visualise your Claude Code history." },
     { "id": "who-to-bother-at-on-x",   "lang": "TS",     "cat": "workflow",   "parents": [],                                  "blurb": "Find the right people to reach out to at tech companies." },
