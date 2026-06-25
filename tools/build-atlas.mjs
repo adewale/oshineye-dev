@@ -91,7 +91,11 @@ ringCats.forEach((cat, i) => {
   anchor[cat] = { x: CX + Math.cos(a) * RX, y: CY + Math.sin(a) * RY };
 });
 
-const nodes = data.repos.map((r) => {
+// Excluded repos drop out of the atlas entirely (set "exclude": true in repos.json).
+const repos = data.repos.filter((r) => !r.exclude);
+const excludedCount = data.repos.length - repos.length;
+
+const nodes = repos.map((r) => {
   const a = anchor[r.cat] || { x: CX, y: CY };
   // seed each node near its category anchor with a little deterministic scatter
   return {
@@ -379,10 +383,14 @@ function linkLayer(skin) {
 function nodeSkin(n, skin) {
   const r = radius(n);
   const hue = HUE[n.lang] || "#7f0000";
+  const feature = n.featured
+    ? `<circle class="node-feature" cx="${f(n.x)}" cy="${f(n.y)}" r="${f(r)}" style="fill:${hue}"/>`
+    : "";
   if (skin === "engraved") {
     return (
       `<g class="skin-engraved">` +
       `<circle class="node-disc" cx="${f(n.x)}" cy="${f(n.y)}" r="${f(r)}"/>` +
+      feature +
       `<circle class="node-ring" cx="${f(n.x)}" cy="${f(n.y)}" r="${f(r)}" style="stroke:${hue}"/>` +
       `<circle class="node-core" cx="${f(n.x)}" cy="${f(n.y)}" r="${f(Math.max(1.6, r * 0.22))}" style="fill:${hue}"/>` +
       `</g>`
@@ -401,6 +409,7 @@ function nodeSkin(n, skin) {
   }
   return (
     `<g class="skin-sketchy">` +
+    feature +
     hatch +
     `<path class="node-ring-rough" d="${roughRing(n.x, n.y, r, 1.6, seed)}" style="stroke:${hue}"/>` +
     `<path class="node-ring-rough" d="${roughRing(n.x, n.y, r, 2.1, seed ^ 0x55)}" style="stroke:${hue}"/>` +
@@ -423,9 +432,9 @@ function nodeLayer() {
     const labelX = f(n.x + r + 5);
     const labelY = f(n.y + 3.5);
     out +=
-      `<a class="node" href="${esc(url)}" target="_blank" rel="noopener" ` +
-      `data-id="${esc(n.id)}" data-adj="${esc(nbrs)}" ` +
-      `aria-label="${esc(n.id)} — ${esc(langLabel[n.lang] || n.lang)}, ${esc(catLabel[n.cat])}. ${esc(n.blurb)}">` +
+      `<a class="node${n.featured ? " is-featured" : ""}" href="${esc(url)}" target="_blank" rel="noopener" ` +
+      `data-id="${esc(n.id)}" data-adj="${esc(nbrs)}" data-cf="${n.cloudflare ? "1" : "0"}" ` +
+      `aria-label="${esc(n.id)} — ${esc(langLabel[n.lang] || n.lang)}, ${esc(catLabel[n.cat])}${n.cloudflare ? ", on Cloudflare" : ""}${n.featured ? ", currently featured" : ""}. ${esc(n.blurb)}">` +
       `<title>${esc(n.id)} — ${esc(catLabel[n.cat])} · ${esc(langLabel[n.lang] || n.lang)}\n${esc(n.blurb)}</title>` +
       nodeSkin(n, "engraved") +
       nodeSkin(n, "sketchy") +
@@ -453,24 +462,28 @@ function svgEl(extraAttrs = "") {
 // Data table (canonical accessible alternative)
 // ---------------------------------------------------------------------------
 function table() {
-  const rows = data.repos
+  const rows = repos
     .map((r) => {
       const url = `https://github.com/adewale/${r.id}`;
       const from = r.parents.length ? r.parents.map(esc).join(", ") : "—";
+      const tags = [r.cloudflare ? "Cloudflare" : null, r.featured ? "Featured" : null]
+        .filter(Boolean)
+        .join(", ") || "—";
       return (
         `<tr>` +
         `<td><a href="${esc(url)}" target="_blank" rel="noopener">${esc(r.id)}</a></td>` +
         `<td>${esc(catLabel[r.cat])}</td>` +
         `<td>${esc(langLabel[r.lang] || r.lang)}</td>` +
         `<td>${from}</td>` +
+        `<td>${tags}</td>` +
         `</tr>`
       );
     })
     .join("\n");
   return (
     `<table class="atlas-table">` +
-    `<caption>Every repository in the atlas, with its category, language, and lineage.</caption>` +
-    `<thead><tr><th scope="col">Repository</th><th scope="col">Category</th><th scope="col">Language</th><th scope="col">Descends from</th></tr></thead>` +
+    `<caption>Every repository in the atlas, with its category, language, lineage, and signals.</caption>` +
+    `<thead><tr><th scope="col">Repository</th><th scope="col">Category</th><th scope="col">Language</th><th scope="col">Descends from</th><th scope="col">Signals</th></tr></thead>` +
     `<tbody>\n${rows}\n</tbody></table>`
   );
 }
@@ -508,7 +521,7 @@ const standalone =
   `.territory-label{fill:#6f655c;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;paint-order:stroke;stroke:#fbf7ef;stroke-width:4px;stroke-linejoin:round}` +
   `.edge{fill:none;stroke:#7f0000;stroke-width:1.6;opacity:.62}` +
   `.edge-head{fill:none;stroke:#7f0000;stroke-width:1.6;opacity:.62}` +
-  `.node-disc{fill:#fbf7ef}.node-ring{fill:none;stroke-width:1.7}` +
+  `.node-disc{fill:#fbf7ef}.node-ring{fill:none;stroke-width:1.7}.node-feature{opacity:.16}` +
   `.node-ring-rough{fill:none;stroke-width:1.3;stroke-linecap:round}` +
   `.node-hatch{fill:none;stroke-width:1;opacity:.45;stroke-linecap:round}` +
   `.node-core{}` +
@@ -522,7 +535,9 @@ writeFileSync(join(ROOT, "site/atlas/preview.svg"), standalone);
 
 // quick build stats to stderr
 const span = `${f(maxX - minX)}×${f(maxY - minY)}`;
+const featuredN = nodes.filter((n) => n.featured).length;
+const cfN = nodes.filter((n) => n.cloudflare).length;
 console.log(
-  `atlas: ${nodes.length} nodes, ${links.length} lineage edges, ` +
-    `${Object.keys(cats).length} categories — layout span ${span} → wrote site/atlas.html + site/atlas/preview.svg`
+  `atlas: ${nodes.length} nodes (${featuredN} featured, ${cfN} on Cloudflare, ${excludedCount} excluded), ` +
+    `${links.length} lineage edges, ${Object.keys(cats).length} categories — span ${span}`
 );

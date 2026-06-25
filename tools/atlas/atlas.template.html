@@ -42,13 +42,16 @@
 
       #skin-engraved:checked ~ .atlas-controls label[for="skin-engraved"],
       #skin-sketchy:checked  ~ .atlas-controls label[for="skin-sketchy"],
-      #opt-lineage:checked   ~ .atlas-controls label[for="opt-lineage"] {
+      #opt-lineage:checked   ~ .atlas-controls label[for="opt-lineage"],
+      #opt-cf:checked        ~ .atlas-controls label[for="opt-cf"] {
         background: var(--brand); color: var(--paper);
       }
-      #opt-lineage:checked ~ .atlas-controls label[for="opt-lineage"]::before { background: var(--paper); }
+      #opt-lineage:checked ~ .atlas-controls label[for="opt-lineage"]::before,
+      #opt-cf:checked      ~ .atlas-controls label[for="opt-cf"]::before { background: var(--paper); }
       #skin-engraved:focus-visible ~ .atlas-controls label[for="skin-engraved"],
       #skin-sketchy:focus-visible  ~ .atlas-controls label[for="skin-sketchy"],
-      #opt-lineage:focus-visible   ~ .atlas-controls label[for="opt-lineage"] {
+      #opt-lineage:focus-visible   ~ .atlas-controls label[for="opt-lineage"],
+      #opt-cf:focus-visible        ~ .atlas-controls label[for="opt-cf"] {
         outline: 2px solid var(--brand); outline-offset: 2px;
       }
 
@@ -69,6 +72,7 @@
       .atlas-key .key-size { width: 14px; height: 14px; border-radius: 50%; border: 1.7px solid var(--brand); }
       .atlas-key .key-line { width: 22px; height: 0; border-top: 1.7px solid var(--brand); }
       .atlas-key .key-cluster { width: 16px; height: 14px; border-radius: 50%; background: color-mix(in oklch, var(--brand) 8%, transparent); border: 1px dashed color-mix(in oklch, var(--brand) 30%, transparent); }
+      .atlas-key .key-feature { width: 14px; height: 14px; border-radius: 50%; background: color-mix(in oklch, var(--brand) 24%, transparent); border: 1.7px solid var(--brand); }
 
       /* --- SVG marks --- */
       .territory { fill: var(--brand); opacity: .05; stroke: var(--brand); stroke-opacity: .13; stroke-dasharray: 3 5; }
@@ -88,6 +92,11 @@
       #skin-sketchy:checked ~ .atlas-stage .skin-engraved { display: none; }
       #skin-sketchy:checked ~ .atlas-stage .skin-sketchy { display: inline; }
       #opt-lineage:not(:checked) ~ .atlas-stage .layer-lineage { display: none; }
+
+      /* signals pulled from the github.com/adewale profile */
+      .node-feature { opacity: .16; }
+      .node.is-featured .node-label { font-weight: 600; }
+      #opt-cf:checked ~ .atlas-stage .layer-nodes .node[data-cf="0"] { opacity: .14; }
 
       /* focus + context highlighting (calendar accent lights the incident lineage) */
       .atlas-svg.is-focusing .node:not(.is-lit) { opacity: .15; }
@@ -140,12 +149,15 @@
             <p class="section-intro" id="atlas-note">A map of the work rather than a list of it. Every repository is a star;
             its <strong>cluster</strong> is the theme it belongs to, the <strong>maroon lines</strong> trace lineage —
             what grew from what — its <strong>colour</strong> is the language, and its <strong>size</strong> is how many
-            other projects descend from it. The layout is computed once and frozen, so nothing jitters.</p>
+            other projects descend from it. <strong>Filled</strong> stars are the projects I'm currently featuring; the
+            <strong>Cloudflare</strong> toggle spotlights everything built on the platform. The layout is computed once
+            and frozen, so nothing jitters.</p>
 
             <div class="atlas">
                 <input type="radio" name="skin" id="skin-engraved" class="vh" checked>
                 <input type="radio" name="skin" id="skin-sketchy" class="vh">
                 <input type="checkbox" id="opt-lineage" class="vh" checked>
+                <input type="checkbox" id="opt-cf" class="vh">
 
                 <div class="atlas-controls">
                     <div class="seg" role="group" aria-label="Rendering style">
@@ -153,6 +165,7 @@
                         <label for="skin-sketchy">Sketchy</label>
                     </div>
                     <label class="toggle" for="opt-lineage">Lineage</label>
+                    <label class="toggle" for="opt-cf">Cloudflare</label>
                     <!-- ATLAS:LEGEND -->
                 </div>
 
@@ -164,6 +177,7 @@
                     <li><span class="key-mark key-size"></span>size = projects descended from it</li>
                     <li><span class="key-mark key-line"></span>line = lineage (parent → child)</li>
                     <li><span class="key-mark key-cluster"></span>cluster = shared theme</li>
+                    <li><span class="key-mark key-feature"></span>filled = currently featured</li>
                 </ul>
             </div>
         </section>
