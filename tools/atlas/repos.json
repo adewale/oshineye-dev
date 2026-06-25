@@ -1,7 +1,7 @@
 {
   "categories": [
     { "id": "feeds",      "label": "Feeds & Planets" },
-    { "id": "skills",     "label": "Claude Skills" },
+    { "id": "skills",     "label": "Skills" },
     { "id": "thought",    "label": "Tools for Thought" },
     { "id": "cloudflare", "label": "Cloudflare Platform" },
     { "id": "playful",    "label": "Playful Builds" },
