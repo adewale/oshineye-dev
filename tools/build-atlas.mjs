@@ -31,17 +31,42 @@ const RY = 410;
 const TICKS = 600;
 const LBL_CHARW = 6.2; // approx label width per character at 11px
 
-// Muted, paper-friendly language hues. TypeScript (the dominant tongue) takes
-// the brand maroon; the rest are low-saturation accents so the plate stays
-// engraved rather than turning into a rainbow.
-const HUE = {
-  TS: "#7f0000",
-  Python: "#1d6f6a",
-  JS: "#9a7400",
-  Go: "#2b5d86",
-  HTML: "#6b4a86",
-  Skill: "#3f6b3f",
+// Convert an OKLCH colour (the colour space the rest of oshineye.dev is authored
+// in) to an sRGB hex string, so the palette is defined in the site's own space
+// but emitted as hex that renders everywhere. (Björn Ottosson's OKLab matrices.)
+function oklchToHex(L, C, h) {
+  const hr = (h * Math.PI) / 180;
+  const a = C * Math.cos(hr);
+  const b = C * Math.sin(hr);
+  const l_ = L + 0.3963377774 * a + 0.2158037573 * b;
+  const m_ = L - 0.1055613458 * a - 0.0638541728 * b;
+  const s_ = L - 0.0894841775 * a - 1.291485548 * b;
+  const l = l_ ** 3, m = m_ ** 3, s = s_ ** 3;
+  let r = 4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s;
+  let g = -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s;
+  let bl = -0.0041960863 * l - 0.7034186147 * m + 1.707614701 * s;
+  const gam = (x) => (x <= 0.0031308 ? 12.92 * x : 1.055 * Math.pow(x, 1 / 2.4) - 0.055);
+  const ch = (x) => Math.round(Math.max(0, Math.min(1, x)) * 255).toString(16).padStart(2, "0");
+  return "#" + ch(gam(r)) + ch(gam(g)) + ch(gam(bl));
+}
+
+// Language hues as a muted, warm "printer's-ink" family pinned to the site's
+// register: TypeScript (the dominant tongue) is the brand maroon itself; the
+// rest are earth pigments — terracotta, ochre, olive — with two heavily
+// desaturated cool notes and a neutral taupe for the meta "Skill" pseudo-lang.
+// Authored in OKLCH at the brand's lightness/chroma so they read as aged ink on
+// ivory rather than a digital rainbow. [L, C, h]
+const HUE_OKLCH = {
+  TS:     [0.355, 0.130, 28],   // brand maroon (matches --brand)
+  HTML:   [0.470, 0.105, 48],   // terracotta / rust
+  JS:     [0.560, 0.102, 80],   // ochre
+  Python: [0.520, 0.085, 152],  // olive drab
+  Go:     [0.505, 0.062, 232],  // dusty slate (desaturated)
+  Skill:  [0.480, 0.024, 65],   // warm taupe-grey (neutral / meta)
 };
+const HUE = Object.fromEntries(
+  Object.entries(HUE_OKLCH).map(([k, v]) => [k, oklchToHex(...v)])
+);
 
 // Order the category ring so the two largest clusters (skills, cloudflare) are
 // kept apart, smaller ones buffer between them, and lineage-linked clusters stay
@@ -515,12 +540,12 @@ const standalone =
   `<?xml version="1.0" encoding="UTF-8"?>\n` +
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}">` +
   `<style>` +
-  `:root{--brand:#7f0000;--ink:#231f1b;--ink-muted:#6f655c;}` +
+  `:root{--brand:${HUE.TS};--ink:#231f1b;--ink-muted:#6f655c;}` +
   `.atlas-svg{font-family:Georgia,serif}` +
-  `.territory{fill:#7f0000;opacity:.045;stroke:#7f0000;stroke-opacity:.14;stroke-dasharray:3 5}` +
+  `.territory{fill:${HUE.TS};opacity:.045;stroke:${HUE.TS};stroke-opacity:.14;stroke-dasharray:3 5}` +
   `.territory-label{fill:#6f655c;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;paint-order:stroke;stroke:#fbf7ef;stroke-width:4px;stroke-linejoin:round}` +
-  `.edge{fill:none;stroke:#7f0000;stroke-width:1.6;opacity:.62}` +
-  `.edge-head{fill:none;stroke:#7f0000;stroke-width:1.6;opacity:.62}` +
+  `.edge{fill:none;stroke:${HUE.TS};stroke-width:1.6;opacity:.62}` +
+  `.edge-head{fill:none;stroke:${HUE.TS};stroke-width:1.6;opacity:.62}` +
   `.node-disc{fill:#fbf7ef}.node-ring{fill:none;stroke-width:1.7}.node-feature{opacity:.16}` +
   `.node-ring-rough{fill:none;stroke-width:1.3;stroke-linecap:round}` +
   `.node-hatch{fill:none;stroke-width:1;opacity:.45;stroke-linecap:round}` +

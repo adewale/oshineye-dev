@@ -63,7 +63,7 @@
     { "id": "good-readme",             "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Claude Code skill for writing and improving READMEs." },
     { "id": "audit-skill",             "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Audit toolkit with 14 audit types and branch verdicts." },
     { "id": "geist_fabrik",            "lang": "TS",     "cat": "thought",    "parents": [],                                  "featured": true, "blurb": "Divergence engine for Obsidian vaults via code and Tracery." },
-    { "id": "web2kindle",              "lang": "TS",     "cat": "reading",    "parents": [],                                  "blurb": "Tools for reading web content on Kindle." },
+    { "id": "web2kindle",              "lang": "TS",     "cat": "reading",    "parents": [],                                  "exclude": true, "blurb": "Tools for reading web content on Kindle." },
     { "id": "awesome-claude-skills",   "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Curated list of Claude Skills, resources, and tools." },
     { "id": "guardrails-skill",        "lang": "Skill",  "cat": "skills",     "parents": [],                                  "blurb": "Quality gates wired into the Claude Code agent lifecycle." },
     { "id": "claude-history-explorer", "lang": "TS",     "cat": "thought",    "parents": [],                                  "featured": true, "blurb": "Explore, search, and visualise your Claude Code history." },
@@ -72,6 +72,6 @@
     { "id": "fibonacci_durable_object","lang": "TS",     "cat": "cloudflare", "parents": [],                                  "cloudflare": true, "blurb": "A very simple demonstration of a Durable Object." },
     { "id": "next-starter-template",   "lang": "TS",     "cat": "cloudflare", "parents": [],                                  "cloudflare": true, "blurb": "Starter template for building with modern web defaults." },
     { "id": "wwwoshineye",             "lang": "HTML",   "cat": "site",       "parents": [],                                  "blurb": "My personal website (the ancestor of oshineye.dev)." },
-    { "id": "livecore",                "lang": "TS",     "cat": "systems",    "parents": [],                                  "blurb": "Linux low-pause core file dumper from a running process." }
+    { "id": "livecore",                "lang": "TS",     "cat": "systems",    "parents": [],                                  "exclude": true, "blurb": "Linux low-pause core file dumper from a running process." }
   ]
 }
