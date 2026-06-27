@@ -91,6 +91,18 @@ const nodes = repos.map((r) => ({
   cloudflare: !!r.cloudflare,
 }));
 
+// depth = chronology. Rank nodes by repo creation date (from the GitHub API,
+// cached in repos-created.json) and spread them evenly through z so the time
+// axis stays legible despite the work clustering heavily in 2025–26.
+const created = JSON.parse(readFileSync(join(ROOT, "tools/atlas/repos-created.json"), "utf8"));
+const dateOf = (id) => created[id] || "2025-01-01";
+[...nodes]
+  .sort((a, b) => dateOf(a.id).localeCompare(dateOf(b.id)))
+  .forEach((n, i, arr) => {
+    n.t = arr.length > 1 ? i / (arr.length - 1) : 0.5; // 0 = oldest, 1 = newest
+    n.year = +dateOf(n.id).slice(0, 4);
+  });
+
 const presentCats = RING.filter((c) => nodes.some((n) => n.cat === c));
 
 const payload = {
