@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external && cp node_modules/garten/dist/index.global.js site/garten.js && bun tools/build-atlas.mjs",
-    "build:atlas": "bun tools/build-atlas.mjs",
+    "build": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external && cp node_modules/garten/dist/index.global.js site/garten.js && bun build src/atlas-graph.js --outdir site/vendor --format iife --minify && bun tools/build-atlas.mjs",
+    "build:atlas": "bun build src/atlas-graph.js --outdir site/vendor --format iife --minify && bun tools/build-atlas.mjs",
     "dev": "bun build src/oshineye-config.ts --outdir site --format iife --sourcemap=external --watch",
     "preview": "bun run build && wrangler dev",
     "test:garten-legibility": "node tools/screenshot-garten-legibility.mjs",
@@ -16,7 +16,9 @@
     "wrangler": "^4.65.0"
   },
   "dependencies": {
-    "force-graph": "^1.51.4",
-    "garten": "^1.1.0"
+    "3d-force-graph": "^1.80.0",
+    "garten": "^1.1.0",
+    "three": "^0.185.0",
+    "three-spritetext": "^1.10.0"
   }
 }

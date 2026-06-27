@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlas — Ade Oshineye</title>
-    <meta name="description" content="An interactive force-directed atlas of Ade Oshineye's GitHub projects: clustered by theme, joined by lineage, coloured by language.">
+    <meta name="description" content="An interactive 3D force-directed atlas of Ade Oshineye's GitHub projects: clustered by theme, joined by lineage, coloured by language.">
     <meta name="color-scheme" content="light">
     <meta property="og:title" content="Atlas — Ade Oshineye">
-    <meta property="og:description" content="An interactive force-directed map of a body of work: themes as clusters, lineage as a maroon backbone, language as colour.">
+    <meta property="og:description" content="An interactive 3D force-directed map of a body of work: themes as clusters, lineage as a maroon backbone, language as colour.">
     <script src="https://use.typekit.net/dbg2jxe.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script>
@@ -30,22 +30,18 @@
 
       .atlas-controls { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; margin: 0 0 16px; }
       .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-      .seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 2px; overflow: hidden; }
-      .seg label { padding: 6px 15px; font-size: .82rem; letter-spacing: .02em; cursor: pointer; color: var(--ink-soft); background: var(--paper); user-select: none; }
-      .seg label + label { border-left: 1.5px solid var(--ink); }
       .toggle { display: inline-flex; align-items: center; gap: 8px; padding: 6px 13px; border: 1.5px solid var(--ink); border-radius: 2px; cursor: pointer; font-size: .82rem; color: var(--ink-soft); user-select: none; }
       .toggle::before { content: ""; width: 10px; height: 10px; border: 1.5px solid currentColor; border-radius: 50%; }
 
-      #skin-engraved:checked ~ .atlas-controls label[for="skin-engraved"],
-      #skin-sketchy:checked  ~ .atlas-controls label[for="skin-sketchy"],
-      #opt-lineage:checked   ~ .atlas-controls label[for="opt-lineage"],
-      #opt-cf:checked        ~ .atlas-controls label[for="opt-cf"] { background: var(--brand); color: var(--paper); }
+      #opt-lineage:checked ~ .atlas-controls label[for="opt-lineage"],
+      #opt-cf:checked      ~ .atlas-controls label[for="opt-cf"],
+      #opt-spin:checked    ~ .atlas-controls label[for="opt-spin"] { background: var(--brand); color: var(--paper); }
       #opt-lineage:checked ~ .atlas-controls label[for="opt-lineage"]::before,
-      #opt-cf:checked      ~ .atlas-controls label[for="opt-cf"]::before { background: var(--paper); }
-      #skin-engraved:focus-visible ~ .atlas-controls label[for="skin-engraved"],
-      #skin-sketchy:focus-visible  ~ .atlas-controls label[for="skin-sketchy"],
-      #opt-lineage:focus-visible   ~ .atlas-controls label[for="opt-lineage"],
-      #opt-cf:focus-visible        ~ .atlas-controls label[for="opt-cf"] { outline: 2px solid var(--brand); outline-offset: 2px; }
+      #opt-cf:checked      ~ .atlas-controls label[for="opt-cf"]::before,
+      #opt-spin:checked    ~ .atlas-controls label[for="opt-spin"]::before { background: var(--paper); }
+      #opt-lineage:focus-visible ~ .atlas-controls label[for="opt-lineage"],
+      #opt-cf:focus-visible      ~ .atlas-controls label[for="opt-cf"],
+      #opt-spin:focus-visible    ~ .atlas-controls label[for="opt-spin"] { outline: 2px solid var(--brand); outline-offset: 2px; }
 
       .atlas-legend { display: flex; flex-wrap: wrap; gap: 8px 15px; list-style: none; padding: 0; margin: 0; }
       .atlas-legend li { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--ink-soft); }
@@ -55,18 +51,19 @@
         border: 2px solid var(--ink); border-top: 3px solid var(--brand); background: var(--paper);
         box-shadow: 0 1px 0 color-mix(in oklch, var(--ink) 5%, transparent), 0 12px 34px color-mix(in oklch, var(--ink) 7%, transparent);
       }
-      .atlas-graph { position: relative; width: 100%; height: clamp(520px, 74vh, 880px); cursor: grab; touch-action: none; }
-      .atlas-graph canvas { display: block; }
+      .atlas-graph { position: relative; width: 100%; height: clamp(540px, 76vh, 900px); cursor: grab; touch-action: none; }
+      .atlas-graph canvas { display: block; outline: none; }
       .atlas-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-muted); font-size: .9rem; pointer-events: none; }
       .atlas-fallback { padding: 24px; color: var(--ink-muted); }
+      .atlas-tip { font-family: "chaparral-pro", Georgia, serif; background: var(--ink); color: var(--paper); padding: 3px 8px; border-radius: 2px; font-size: .82rem; }
 
       .atlas-key { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; padding: 0; margin: 14px 0 0; font-size: .8rem; color: var(--ink-muted); }
       .atlas-key li { display: inline-flex; align-items: center; gap: 7px; }
       .atlas-key .key-mark { display: inline-block; flex: none; }
-      .atlas-key .key-size { width: 14px; height: 14px; border-radius: 50%; border: 1.7px solid var(--brand); }
+      .atlas-key .key-size { width: 14px; height: 14px; border-radius: 50%; background: color-mix(in oklch, var(--brand) 35%, transparent); }
       .atlas-key .key-line { width: 22px; height: 0; border-top: 1.7px solid var(--brand); }
-      .atlas-key .key-cluster { width: 16px; height: 14px; border-radius: 50%; background: color-mix(in oklch, var(--brand) 8%, transparent); border: 1px dashed color-mix(in oklch, var(--brand) 30%, transparent); }
-      .atlas-key .key-feature { width: 14px; height: 14px; border-radius: 50%; background: color-mix(in oklch, var(--brand) 24%, transparent); border: 1.7px solid var(--brand); }
+      .atlas-key .key-cluster { width: 16px; height: 14px; border-radius: 50%; background: color-mix(in oklch, var(--brand) 12%, transparent); border: 1px dashed color-mix(in oklch, var(--brand) 30%, transparent); }
+      .atlas-key .key-feature { font-weight: 700; color: var(--brand); }
 
       .atlas-details summary { cursor: pointer; color: var(--brand); font-weight: 600; }
       .atlas-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .9rem; }
@@ -106,32 +103,28 @@
                 <h2 id="atlas-title">Atlas</h2>
             </div>
 
-            <p class="section-intro" id="atlas-note">An interactive map of the work rather than a list of it. Every repository is a star;
+            <p class="section-intro" id="atlas-note">A 3D map of the work rather than a list of it. Every repository is a star;
             its <strong>cluster</strong> is the theme it belongs to, the <strong>maroon lines</strong> trace lineage —
             what grew from what — its <strong>colour</strong> is the language, and its <strong>size</strong> is how many
-            other projects descend from it. <strong>Drag</strong> a node, <strong>scroll</strong> to zoom, <strong>hover</strong>
-            to light its neighbourhood, <strong>click</strong> to open it on GitHub. Filled stars are currently-featured projects.</p>
+            other projects descend from it. <strong>Drag</strong> to orbit, <strong>scroll</strong> to zoom, <strong>hover</strong>
+            to light a neighbourhood, <strong>click</strong> a star to open it on GitHub. Bold labels are currently-featured projects.</p>
 
             <div class="atlas">
-                <input type="radio" name="skin" id="skin-engraved" class="vh" checked>
-                <input type="radio" name="skin" id="skin-sketchy" class="vh">
                 <input type="checkbox" id="opt-lineage" class="vh" checked>
                 <input type="checkbox" id="opt-cf" class="vh">
+                <input type="checkbox" id="opt-spin" class="vh">
 
                 <div class="atlas-controls">
-                    <div class="seg" role="group" aria-label="Rendering style">
-                        <label for="skin-engraved">Engraved</label>
-                        <label for="skin-sketchy">Sketchy</label>
-                    </div>
                     <label class="toggle" for="opt-lineage">Lineage</label>
                     <label class="toggle" for="opt-cf">Cloudflare</label>
+                    <label class="toggle" for="opt-spin">Spin</label>
                     <ul class="atlas-legend" aria-label="Languages by colour"><li><span class="swatch" style="background:#71110e"></span>TypeScript</li><li><span class="swatch" style="background:#407750"></span>Python</li><li><span class="swatch" style="background:#946d21"></span>JavaScript</li><li><span class="swatch" style="background:#3e6b82"></span>Go</li><li><span class="swatch" style="background:#89461f"></span>HTML</li><li><span class="swatch" style="background:#675b50"></span>Skill</li></ul>
                 </div>
 
                 <div class="atlas-stage">
                     <div id="atlas-graph" class="atlas-graph">
-                        <div class="atlas-loading">Settling the map…</div>
-                        <noscript><p class="atlas-fallback">This interactive map needs JavaScript. The full list of projects is in the table below.</p></noscript>
+                        <div class="atlas-loading">Settling the constellation…</div>
+                        <noscript><p class="atlas-fallback">This interactive map needs JavaScript and WebGL. The full list of projects is in the table below.</p></noscript>
                     </div>
                 </div>
 
@@ -139,7 +132,7 @@
                     <li><span class="key-mark key-size"></span>size = projects descended from it</li>
                     <li><span class="key-mark key-line"></span>line = lineage (parent → child)</li>
                     <li><span class="key-mark key-cluster"></span>cluster = shared theme</li>
-                    <li><span class="key-mark key-feature"></span>filled = currently featured</li>
+                    <li><span class="key-mark key-feature">Aa</span> = currently featured</li>
                 </ul>
             </div>
         </section>
@@ -220,146 +213,7 @@
     </script>
 
     <script>window.__ATLAS__ = {"nodes":[{"id":"autowiki","lang":"TS","cat":"thought","color":"#71110e","val":1,"featured":false,"cloudflare":false},{"id":"sunrise","lang":"TS","cat":"workflow","color":"#71110e","val":2.7,"featured":false,"cloudflare":true},{"id":"slide-maker","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"visivotab","lang":"JS","cat":"photo","color":"#946d21","val":1,"featured":false,"cloudflare":false},{"id":"atlas","lang":"TS","cat":"thought","color":"#71110e","val":1,"featured":false,"cloudflare":true},{"id":"good-pr","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"oshineye-dev","lang":"HTML","cat":"site","color":"#89461f","val":4.4,"featured":false,"cloudflare":false},{"id":"skill_scanner","lang":"Python","cat":"skills","color":"#407750","val":1,"featured":true,"cloudflare":false},{"id":"testing-best-practices","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"xampler","lang":"Python","cat":"cloudflare","color":"#407750","val":2.7,"featured":false,"cloudflare":true},{"id":"MaintainerBot","lang":"TS","cat":"workflow","color":"#71110e","val":1,"featured":true,"cloudflare":true},{"id":"swiss-poster-skill","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"python-workers-skill","lang":"Skill","cat":"skills","color":"#675b50","val":2.7,"featured":false,"cloudflare":false},{"id":"pythonbyexample","lang":"Python","cat":"cloudflare","color":"#407750","val":2.7,"featured":false,"cloudflare":true},{"id":"kirby_tarot","lang":"Python","cat":"playful","color":"#407750","val":1,"featured":false,"cloudflare":true},{"id":"flux-search","lang":"TS","cat":"feeds","color":"#71110e","val":1,"featured":false,"cloudflare":true},{"id":"pi-comfort","lang":"TS","cat":"workflow","color":"#71110e","val":1,"featured":false,"cloudflare":false},{"id":"bobbin","lang":"HTML","cat":"feeds","color":"#89461f","val":1,"featured":false,"cloudflare":true},{"id":"demoscene","lang":"TS","cat":"feeds","color":"#71110e","val":1,"featured":false,"cloudflare":true},{"id":"spa","lang":"HTML","cat":"workflow","color":"#89461f","val":1,"featured":false,"cloudflare":false},{"id":"cf-workers-design-system","lang":"HTML","cat":"cloudflare","color":"#89461f","val":1,"featured":false,"cloudflare":true},{"id":"garten","lang":"TS","cat":"site","color":"#71110e","val":2.7,"featured":true,"cloudflare":false},{"id":"sunrise-deploy","lang":"TS","cat":"workflow","color":"#71110e","val":2.7,"featured":false,"cloudflare":false},{"id":"python-workers-examples","lang":"Python","cat":"cloudflare","color":"#407750","val":7.8,"featured":false,"cloudflare":true},{"id":"cfboundary","lang":"Python","cat":"cloudflare","color":"#407750","val":1,"featured":false,"cloudflare":true},{"id":"python-workers-issues","lang":"Python","cat":"cloudflare","color":"#407750","val":2.7,"featured":false,"cloudflare":true},{"id":"vaders","lang":"TS","cat":"playful","color":"#71110e","val":2.7,"featured":false,"cloudflare":true},{"id":"yaket","lang":"TS","cat":"cloudflare","color":"#71110e","val":1,"featured":true,"cloudflare":true},{"id":"keyboardia","lang":"TS","cat":"playful","color":"#71110e","val":2.7,"featured":false,"cloudflare":true},{"id":"planet_cf","lang":"Python","cat":"feeds","color":"#407750","val":2.7,"featured":false,"cloudflare":true},{"id":"tasche","lang":"TS","cat":"reading","color":"#71110e","val":1,"featured":false,"cloudflare":true},{"id":"embed.oshineye.dev","lang":"HTML","cat":"site","color":"#89461f","val":1,"featured":false,"cloudflare":false},{"id":"olsen","lang":"Go","cat":"photo","color":"#3e6b82","val":1,"featured":true,"cloudflare":false},{"id":"rogue_planet","lang":"TS","cat":"feeds","color":"#71110e","val":2.7,"featured":true,"cloudflare":false},{"id":"kite","lang":"TS","cat":"workflow","color":"#71110e","val":1,"featured":false,"cloudflare":false},{"id":"tts-playground","lang":"TS","cat":"cloudflare","color":"#71110e","val":1,"featured":false,"cloudflare":true},{"id":"beautiful-mermaid","lang":"TS","cat":"thought","color":"#71110e","val":1,"featured":false,"cloudflare":false},{"id":"good-readme","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"audit-skill","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"geist_fabrik","lang":"TS","cat":"thought","color":"#71110e","val":1,"featured":true,"cloudflare":false},{"id":"guardrails-skill","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"claude-history-explorer","lang":"TS","cat":"thought","color":"#71110e","val":1,"featured":true,"cloudflare":false},{"id":"cf-advisor-skill","lang":"Skill","cat":"skills","color":"#675b50","val":1,"featured":false,"cloudflare":false},{"id":"fibonacci_durable_object","lang":"TS","cat":"cloudflare","color":"#71110e","val":4.4,"featured":false,"cloudflare":true},{"id":"next-starter-template","lang":"TS","cat":"cloudflare","color":"#71110e","val":1,"featured":false,"cloudflare":true},{"id":"wwwoshineye","lang":"HTML","cat":"site","color":"#89461f","val":2.7,"featured":false,"cloudflare":false}],"links":[{"source":"garten","target":"oshineye-dev"},{"source":"wwwoshineye","target":"oshineye-dev"},{"source":"python-workers-examples","target":"xampler"},{"source":"python-workers-examples","target":"python-workers-skill"},{"source":"python-workers-examples","target":"pythonbyexample"},{"source":"sunrise","target":"sunrise-deploy"},{"source":"python-workers-examples","target":"python-workers-issues"},{"source":"fibonacci_durable_object","target":"vaders"},{"source":"fibonacci_durable_object","target":"keyboardia"},{"source":"rogue_planet","target":"planet_cf"}],"cats":["skills","feeds","cloudflare","playful","workflow","photo","thought","reading","site"],"center":"cloudflare","catLabel":{"skills":"Skills","feeds":"Feeds & Planets","cloudflare":"Cloudflare Platform","playful":"Playful Builds","workflow":"Agents & Workflow","photo":"Photography","thought":"Tools for Thought","reading":"Reading & Capture","site":"The Site Itself"},"colors":{"paper":"#fbf9f9","ink":"#1d1615","brand":"#71110e"}};</script>
-    <script src="/vendor/force-graph.min.js"></script>
-    <script>
-      /* Interactive force-directed atlas. The d3-force simulation runs here in the
-         browser via vasturiano's force-graph: nodes are draggable, the view zooms
-         and pans, hovering lights a neighbourhood. Rendered in the site's engraved
-         maroon-on-ivory palette through the canvas hook. */
-      (() => {
-        const D = window.__ATLAS__;
-        const mount = document.getElementById('atlas-graph');
-        if (!D || !mount || typeof ForceGraph !== 'function') return;
-        const loading = mount.querySelector('.atlas-loading');
-
-        const PAPER = D.colors.paper, INK = D.colors.ink, BRAND = D.colors.brand;
-        const accent = () => (getComputedStyle(document.documentElement).getPropertyValue('--garden-accent').trim() || BRAND);
-
-        // category anchors in graph space: the Cloudflare hub at centre, rest on a ring
-        const ring = D.cats.filter((c) => c !== D.center);
-        const RAD = 240;
-        const anchor = { [D.center]: { x: 0, y: 0 } };
-        ring.forEach((c, i) => {
-          const a = (i / ring.length) * Math.PI * 2 - Math.PI / 2;
-          anchor[c] = { x: Math.cos(a) * RAD, y: Math.sin(a) * RAD };
-        });
-
-        let skin = 'engraved', showLineage = true, cfSpot = false;
-        let hoverId = null, adj = new Set();
-        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const baseR = (n) => 3 + Math.sqrt(n.val) * 1.7;
-        const jitter = {};
-        const rand = (s) => { const x = Math.sin(s * 12.9898) * 43758.5453; return x - Math.floor(x); };
-
-        const Graph = ForceGraph()(mount)
-          .graphData({ nodes: D.nodes.map((n) => ({ ...n })), links: D.links.map((l) => ({ ...l })) })
-          .backgroundColor('rgba(0,0,0,0)')
-          .nodeId('id')
-          .nodeVal('val')
-          .linkColor((l) => (linkLit(l) ? accent() : BRAND))
-          .linkWidth((l) => (linkLit(l) ? 2.2 : 1))
-          .linkDirectionalArrowLength(6)
-          .linkDirectionalArrowRelPos(1)
-          .linkDirectionalArrowColor((l) => (linkLit(l) ? accent() : BRAND))
-          .linkCurvature(0.06)
-          .linkVisibility(() => showLineage)
-          .enableNodeDrag(true)
-          .onNodeClick((n) => window.open('https://github.com/adewale/' + n.id, '_blank', 'noopener'))
-          .onNodeHover((n) => { setHover(n); mount.style.cursor = n ? 'pointer' : 'grab'; })
-          .nodeCanvasObject(drawNode)
-          .nodePointerAreaPaint((n, color, ctx) => { ctx.fillStyle = color; ctx.beginPath(); ctx.arc(n.x, n.y, baseR(n) + 2, 0, 2 * Math.PI); ctx.fill(); });
-
-        Graph.d3Force('charge').strength(-95);
-        Graph.d3Force('link').distance(26).strength(0.45);
-        const cluster = (alpha) => {
-          const k = 0.13 * alpha;
-          for (const n of Graph.graphData().nodes) {
-            const a = anchor[n.cat] || { x: 0, y: 0 };
-            n.vx += (a.x - n.x) * k;
-            n.vy += (a.y - n.y) * k;
-          }
-        };
-        cluster.initialize = () => {};
-        Graph.d3Force('cluster', cluster);
-
-        function setHover(n) {
-          hoverId = n ? n.id : null;
-          adj = new Set(hoverId ? [hoverId] : []);
-          if (n) for (const l of Graph.graphData().links) {
-            const s = l.source.id || l.source, t = l.target.id || l.target;
-            if (s === hoverId) adj.add(t);
-            if (t === hoverId) adj.add(s);
-          }
-        }
-        function linkLit(l) {
-          if (!hoverId) return false;
-          const s = l.source.id || l.source, t = l.target.id || l.target;
-          return s === hoverId || t === hoverId;
-        }
-
-        function drawNode(node, ctx, scale) {
-          const r = baseR(node);
-          const dim = (hoverId && !adj.has(node.id)) || (cfSpot && !node.cloudflare);
-          const base = dim ? 0.16 : 1;
-          ctx.globalAlpha = base;
-
-          ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 2 * Math.PI); ctx.fillStyle = PAPER; ctx.fill();
-          if (node.featured) { ctx.globalAlpha = base * 0.18; ctx.fillStyle = node.color; ctx.fill(); ctx.globalAlpha = base; }
-
-          ctx.strokeStyle = node.color; ctx.lineWidth = 1.7 / scale; ctx.lineJoin = 'round';
-          if (skin === 'sketchy') {
-            const seed = jitter[node.id] || (jitter[node.id] = node.id.length + r);
-            sketchRing(ctx, node.x, node.y, r, seed);
-            sketchRing(ctx, node.x, node.y, r, seed + 0.5);
-          } else {
-            ctx.beginPath(); ctx.arc(node.x, node.y, r, 0, 2 * Math.PI); ctx.stroke();
-          }
-          ctx.beginPath(); ctx.arc(node.x, node.y, Math.max(1.1, r * 0.22), 0, 2 * Math.PI); ctx.fillStyle = node.color; ctx.fill();
-
-          const showLabel = node.featured || node.val >= 4 || (hoverId && adj.has(node.id)) || scale > 2.2;
-          if (showLabel) {
-            const fs = 11 / scale;
-            ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
-            const lx = node.x + r + 3 / scale, ly = node.y;
-            ctx.font = `400 ${fs}px "chaparral-pro", Georgia, serif`;
-            ctx.lineWidth = 3 / scale; ctx.lineJoin = 'round'; ctx.strokeStyle = PAPER; ctx.strokeText(node.id, lx, ly);
-            ctx.fillStyle = INK; ctx.font = `${node.featured ? 600 : 400} ${fs}px "chaparral-pro", Georgia, serif`;
-            ctx.fillText(node.id, lx, ly);
-          }
-          ctx.globalAlpha = 1;
-        }
-
-        function sketchRing(ctx, cx, cy, r, seed) {
-          const N = 16; ctx.beginPath();
-          for (let i = 0; i <= N; i++) {
-            const a = (i / N) * Math.PI * 2;
-            const rr = r + (rand(seed + i) - 0.5) * 1.4;
-            const x = cx + Math.cos(a) * rr, y = cy + Math.sin(a) * rr;
-            i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
-          }
-          ctx.stroke();
-        }
-
-        const on = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener('change', (e) => fn(e.target)); };
-        on('skin-engraved', (t) => { if (t.checked) skin = 'engraved'; });
-        on('skin-sketchy', (t) => { if (t.checked) skin = 'sketchy'; });
-        on('opt-lineage', (t) => { showLineage = t.checked; Graph.linkVisibility(() => showLineage); });
-        on('opt-cf', (t) => { cfSpot = t.checked; });
-
-        if (reduce) {
-          Graph.warmupTicks(240).cooldownTicks(0);
-          requestAnimationFrame(() => { Graph.zoomToFit(0, 48); if (loading) loading.remove(); });
-        } else {
-          Graph.cooldownTicks(240).onEngineStop(() => { Graph.zoomToFit(700, 48); if (loading) loading.remove(); });
-        }
-
-        const size = () => Graph.width(mount.clientWidth).height(mount.clientHeight);
-        size();
-        window.addEventListener('resize', size);
-
-        window.__atlasGraph = Graph; // handle for debugging / inspection
-      })();
-    </script>
+    <script src="/vendor/atlas-graph.js"></script>
 
     <script>
       (() => {

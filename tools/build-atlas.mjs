@@ -14,7 +14,7 @@
  * Usage: bun tools/build-atlas.mjs   (also runs as part of `bun run build`)
  */
 
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -142,16 +142,9 @@ const page = template
   .replace("<!-- ATLAS:TABLE -->", table());
 writeFileSync(join(ROOT, "site/atlas.html"), page);
 
-// vendor the force-graph library (served as a static asset by the Worker)
-mkdirSync(join(ROOT, "site/vendor"), { recursive: true });
-copyFileSync(
-  join(ROOT, "node_modules/force-graph/dist/force-graph.min.js"),
-  join(ROOT, "site/vendor/force-graph.min.js")
-);
-
 const featuredN = nodes.filter((n) => n.featured).length;
 const cfN = nodes.filter((n) => n.cloudflare).length;
 console.log(
   `atlas: ${nodes.length} nodes (${featuredN} featured, ${cfN} on Cloudflare, ${excludedCount} excluded), ` +
-    `${links.length} lineage links, ${presentCats.length} categories — wrote site/atlas.html + vendored force-graph`
+    `${links.length} lineage links, ${presentCats.length} categories — wrote site/atlas.html`
 );
