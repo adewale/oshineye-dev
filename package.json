@@ -16,6 +16,7 @@
     "wrangler": "^4.65.0"
   },
   "dependencies": {
+    "force-graph": "^1.51.4",
     "garten": "^1.1.0"
   }
 }
