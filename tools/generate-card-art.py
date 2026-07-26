@@ -19,7 +19,6 @@ from urllib.request import Request, urlopen
 
 from PIL import Image
 
-
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "site" / "card-art"
 
@@ -151,7 +150,7 @@ def mix(a: tuple[int, int, int], b: tuple[int, int, int], amount: float) -> tupl
 
 
 def hex_color(rgb: tuple[int, int, int]) -> str:
-    return "#%02x%02x%02x" % rgb
+    return "#{:02x}{:02x}{:02x}".format(*rgb)
 
 
 def palette(image: Image.Image, seed: int) -> list[tuple[int, int, int]]:
@@ -194,8 +193,8 @@ def make_svg(source: CardSource, colors: list[tuple[int, int, int]]) -> str:
     dark = hex_color(mix(INK, colors[3], 0.16))
     phase = (seed % 100) / 100
     growth = 0.25 + phase * 0.62
-    density = 3 + seed % 6
-    axis = rng.choice(["horizontal", "vertical", "diagonal"])
+    3 + seed % 6
+    rng.choice(["horizontal", "vertical", "diagonal"])
     title = html.escape(source.title[:64])
 
     elements: list[str] = []
