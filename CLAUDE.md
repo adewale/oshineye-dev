@@ -26,3 +26,7 @@ This is a static portfolio site deployed via Cloudflare Workers Static Assets (c
 - Brand color: `#7f0000` (dark red) used for headings, borders, accents
 - CSS uses a golden-ratio modular type scale via custom properties (`--step-0` through `--step-6`)
 - Widget content (repos, presentations) is statically authored in HTML, not fetched from APIs
+
+## Project Copy Must Be Grounded
+
+Project descriptions on the site (`.repo-desc` in `site/index.html`, `subtitle` in `site/img/repo/generated/*/manifest.json`, and `site/projects/*.html`) must be quoted from, or directly derived from, each repository's GitHub description or README. Do not add features, counts or claims the source does not state, and never ship generator placeholder text. Invented descriptions have shipped twice (fixed by hand in 89b7306 and 828099c). The PR template asks for the source of every changed description.
