@@ -8,7 +8,8 @@
     "preview": "bun run build && wrangler dev",
     "test:garten-legibility": "node tools/screenshot-garten-legibility.mjs",
     "typecheck": "bunx tsc --noEmit",
-    "deploy": "bun run build && wrangler deploy"
+    "deploy": "bun run build && wrangler deploy",
+    "test": "bun test"
   },
   "devDependencies": {
     "typescript": "^5.3.0",
