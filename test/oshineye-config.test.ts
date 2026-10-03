@@ -19,6 +19,8 @@ describe("garden accent", () => {
     ["St George's Day inside Sechseläuten", 4, 23, "#cf142b"],
     ["Valentine's Day", 2, 14, "#e91e63"],
     ["Christmas Day", 12, 25, "#c62828"],
+    ["New Year's Day", 1, 1, "#ffd700"],
+    ["Bonfire Night", 11, 5, "#ff5722"],
   ])("%s", (_name, month, day, accent) => {
     expect(accentAt(month, day)).toBe(accent);
   });
@@ -28,6 +30,12 @@ describe("garden accent", () => {
     expect(accentAt(2, 15)).toBe("#ff6d00");
     expect(accentAt(3, 15)).toBe("#ff6d00");
     expect(accentAt(3, 16)).not.toBe("#ff6d00");
+  });
+
+  test("where two ranges overlap, the earlier-listed one wins", () => {
+    // Easter (03-29..04-21) is listed before Sechseläuten (04-13..04-28).
+    expect(accentAt(4, 15)).toBe("#ab47bc");
+    expect(accentAt(4, 22)).toBe("#ff5722");
   });
 
   // On a day with no event, the hour picks the accent. Boundaries come from

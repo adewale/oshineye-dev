@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Dev (watch)**: `bun run dev` — watch mode for the TypeScript source (does not copy garten.js)
 - **Preview**: `bun run preview` — builds then serves locally via `wrangler dev`
 - **Type check**: `bun run typecheck` (runs `bunx tsc --noEmit`)
-- **Test**: `bun run test` (runs `bun test`; tests in `test/` fake the clock with `setSystemTime`)
+- **Test**: `bun run test` (runs `bun test` with `TZ=Pacific/Auckland`, so local-vs-UTC date bugs fail; tests in `test/` fake the clock with `setSystemTime`)
 - **Deploy**: `bun run deploy` — builds then deploys via `wrangler deploy` (Workers Static Assets)
 
 ## Architecture
