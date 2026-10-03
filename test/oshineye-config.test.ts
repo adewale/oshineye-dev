@@ -15,6 +15,8 @@ describe("garden accent", () => {
   // assigns to each named day. A one-day event must win on its own day even
   // when it falls inside a longer season such as Fasnacht or Sechseläuten.
   test.each([
+    ["Commonwealth Day inside Fasnacht", 3, 10, "#00247d"],
+    ["St George's Day inside Sechseläuten", 4, 23, "#cf142b"],
     ["Valentine's Day", 2, 14, "#e91e63"],
     ["Christmas Day", 12, 25, "#c62828"],
   ])("%s", (_name, month, day, accent) => {
