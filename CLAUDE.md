@@ -9,6 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Preview**: `bun run preview` — builds then serves locally via `wrangler dev`
 - **Type check**: `bun run typecheck` (runs `bunx tsc --noEmit`)
 - **Test**: `bun run test` (runs `bun test` with `TZ=Pacific/Auckland`, so local-vs-UTC date bugs fail; tests in `test/` fake the clock with `setSystemTime`)
+- **CI**: one job, `lint` in `.github/workflows/ruff.yml`, runs `uvx ruff@0.16.0 check tools`, `bun run typecheck` and `bun run test` on every push and pull request. Add new cheap checks to that job rather than adding workflows.
 - **Deploy**: `bun run deploy` — builds then deploys via `wrangler deploy` (Workers Static Assets)
 
 ## Architecture
