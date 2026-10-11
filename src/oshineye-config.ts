@@ -96,10 +96,12 @@ function getSeason(): Season {
 function getEvent(): CalendarEvent | undefined {
   const now = new Date();
   const mmdd = `${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-  return EVENTS.find((e) => {
+  const matches = EVENTS.filter((e) => {
     if (e.start <= e.end) return mmdd >= e.start && mmdd <= e.end;
     return mmdd >= e.start || mmdd <= e.end;
   });
+  // A one-day event wins on its day over any longer range it falls inside.
+  return matches.find((e) => e.start === e.end) ?? matches[0];
 }
 
 function getAccent(): string {

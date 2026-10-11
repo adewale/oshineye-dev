@@ -14,3 +14,11 @@ jobs:
       - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v9.0.0
       - run: uvx ruff@0.16.0 check tools
+      # TypeScript checks share this job instead of running as their own
+      # workflows: together they add about 4s here (setup-bun, install,
+      # tsc, 16 bun tests), against two extra runners and checkouts.
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run typecheck
+      # Pins TZ=Pacific/Auckland so local-vs-UTC date bugs fail.
+      - run: bun run test
