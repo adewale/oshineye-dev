@@ -1338,6 +1338,220 @@ a:focus-visible {
 }
 
 /* =============================================================
+   Poster slideshow — swiss-poster-skill project page
+   ============================================================= */
+
+.poster-show {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    position: relative;
+    z-index: 2;
+}
+
+.poster-stage {
+    position: relative;
+    height: clamp(26rem, 64vh, 46rem);
+    border: 2px solid var(--ink);
+    border-top: 3px solid var(--brand);
+    background:
+        repeating-linear-gradient(45deg, var(--paper-deep) 0, var(--paper-deep) 12px, var(--paper-sunk) 12px, var(--paper-sunk) 24px);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.poster-track {
+    position: absolute;
+    inset: 0;
+}
+
+.poster-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 900ms var(--ease-out-quart),
+                visibility 0s linear 900ms;
+}
+.poster-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 900ms var(--ease-out-quart),
+                visibility 0s;
+    z-index: 1;
+}
+
+.poster-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.55);
+    transform: scale(1.001);
+    transition: transform 7s linear;
+}
+.poster-show.is-playing .poster-slide.is-active .poster-image {
+    transform: scale(1.045);
+}
+
+.poster-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: min(90%, 32rem);
+    margin: clamp(0.75rem, 2vw, 1.4rem);
+    padding: 0.5rem 0.8rem 0.6rem;
+    background: var(--ink);
+    color: var(--paper);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.poster-caption-title {
+    font-family: "cronos-pro-1", "cronos-pro-2", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.05rem, 0.9rem + 0.6vw, 1.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+.poster-caption-meta {
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: var(--step--2);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: color-mix(in oklch, var(--paper) 75%, var(--brand));
+}
+
+.poster-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: clamp(2.4rem, 5vw, 3.2rem);
+    height: clamp(2.4rem, 5vw, 3.2rem);
+    display: grid;
+    place-items: center;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 200ms var(--ease-out-quart),
+                background 200ms var(--ease-out-quart),
+                color 200ms var(--ease-out-quart);
+}
+.poster-nav--prev { left: clamp(0.5rem, 1.5vw, 1rem); }
+.poster-nav--next { right: clamp(0.5rem, 1.5vw, 1rem); }
+.poster-nav:hover,
+.poster-nav:focus-visible {
+    background: var(--brand);
+    color: var(--paper);
+    transform: translateY(-50%) scale(1.06);
+}
+
+.poster-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.poster-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5rem 0.85rem;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-weight: 900;
+    font-size: var(--step--1);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 200ms var(--ease-out-quart),
+                background 200ms var(--ease-out-quart),
+                color 200ms var(--ease-out-quart);
+}
+.poster-toggle:hover,
+.poster-toggle:focus-visible {
+    transform: translate(-2px, -2px);
+    background: var(--brand);
+    color: var(--paper);
+}
+.poster-toggle-icon {
+    width: 0.7rem;
+    height: 0.8rem;
+    background: currentColor;
+    /* pause: two bars */
+    clip-path: polygon(0 0, 38% 0, 38% 100%, 0 100%, 0 0, 62% 0, 100% 0, 100% 100%, 62% 100%, 62% 0);
+}
+.poster-toggle[aria-pressed="false"] .poster-toggle-icon {
+    /* play: triangle */
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.poster-counter {
+    font-family: "cronos-pro-1", system-ui, sans-serif;
+    font-size: var(--step--1);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--ink-muted);
+    font-feature-settings: "tnum";
+}
+.poster-counter span { color: var(--brand); }
+
+.poster-dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+.poster-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 0;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    transition: background 180ms var(--ease-out-quart),
+                transform 180ms var(--ease-out-quart);
+}
+.poster-dot:hover,
+.poster-dot:focus-visible {
+    background: var(--brand-soft);
+    transform: scale(1.2);
+}
+.poster-dot.is-active {
+    background: var(--brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .poster-slide {
+        transition: opacity 1ms linear, visibility 0s;
+    }
+    .poster-image { transition: none; }
+    .poster-show.is-playing .poster-slide.is-active .poster-image { transform: none; }
+}
+
+@media (max-width: 620px) {
+    .poster-stage { height: clamp(20rem, 70vh, 34rem); }
+    .poster-dots { margin-left: 0; width: 100%; }
+}
+
+/* =============================================================
    Colophon footer
    ============================================================= */
 
