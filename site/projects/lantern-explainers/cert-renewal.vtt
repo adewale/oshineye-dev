@@ -1,0 +1,34 @@
+WEBVTT
+Language: en
+
+1
+00:00:02.000 --> 00:00:18.500
+The CA/Browser Forum’s Baseline Requirements cap how long a publicly trusted TLS certificate may be valid. The cap was 398 days until 15 March 2026 and 200 days from then. It falls to 100 days in March 2027 and to 47 in March 2029.
+
+2
+00:00:20.400 --> 00:00:36.900
+The same timeline, edited to Let’s Encrypt’s schedule. Its opt-in tlsserver profile has issued 45-day certificates since May 2026. The default classic profile issues 90-day certificates until February 2027, then 64-day ones, and 45-day ones from February 2028, a year before the 47-day cap.
+
+3
+00:00:41.100 --> 00:00:58.000
+Certbot 3.3 renews when the certificate expires within renew_before_expiry, 30 days unless the renewal file sets it. Let’s Encrypt dates a certificate about an hour before it issues it, so a 90-day one falls due just before the run at day 60, which replaces it.
+
+4
+00:01:00.267 --> 00:01:18.667
+Since 4.1, with renew_before_expiry unset and no ARI answer, Certbot renews two thirds of the way through a certificate’s life, or half way for certificates shorter than ten days. Two thirds of 90 days is day 60, the day the old rule chose, so for 90-day certificates nothing moved.
+
+5
+00:01:20.367 --> 00:01:36.500
+Each blue tick is a renewal, over a year from a first certificate on 1 March 2028. Under the 30-day rule a certificate is due at day 15, 30 days before expiry, and the next twice-daily run, under an hour later, replaces it.
+
+6
+00:01:37.800 --> 00:01:56.933
+The lower strip is the same year under the default rule: a certificate is due at day 30, two thirds of 45 days, and the next twice-daily run, under an hour later, replaces it. Over 365 days the 30-day rule renews 24 times and the default rule 12: twice as often.
+
+7
+00:02:01.000 --> 00:02:13.767
+When a renewal falls due the certificate still has 30 days to run, time for 60 twice-daily runs to try again if the CA or the challenge fails. The default rule leaves 15 days.
+
+8
+00:02:15.633 --> 00:02:36.267
+With ACME Renewal Information the CA suggests when to renew. When a run gets an answer, Certbot 4.1 and later follow it instead of the default rule, though a set renew_before_expiry still renews first if it is earlier. Certbot’s new orders do not name the certificate they replace, so the rate limit still counts them.
