@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lantern Explainers — Ade Oshineye</title>
+    <meta name="description" content="Each explainer is one TypeScript Scene. A web page steps through it at the reader&#39;s pace, and the same scene can render a silent, captioned video.">
+    <meta name="color-scheme" content="light">
+    <script src="https://use.typekit.net/dbg2jxe.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+      try {
+        if (localStorage.getItem('oshineye-motion-seen')) {
+          document.documentElement.classList.add('seen-motion');
+        } else {
+          localStorage.setItem('oshineye-motion-seen', '1');
+        }
+      } catch (e) {}
+    </script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+      .explainer-tile a { display: block; color: inherit; text-decoration: none; }
+      .explainer-tile img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 1.5px solid var(--ink); margin-bottom: var(--space-s); }
+      .explainer-tile a:hover h3, .explainer-tile a:focus-visible h3 { text-decoration: underline; }
+      .explainer-embed { grid-column: 1 / -1; min-width: 0; }
+      .project-panel .project-motion-frame { aspect-ratio: 16 / 9; }
+      .explainer-embed iframe { border: 2px solid var(--ink) !important; background: var(--paper); }
+      .explainer-embed a { display: inline-block; margin-top: var(--space-s); }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="masthead-plate">
+        <div class="masthead">
+            <div class="title">
+                <h1 class="name">
+                    <span class="first" aria-label="Adewale">
+                        <span class="letter" style="--i:0">A</span><span class="letter" style="--i:1">d</span><span class="letter" style="--i:2">e</span><span class="letter" style="--i:3">w</span><span class="letter" style="--i:4">a</span><span class="letter" style="--i:5">l</span><span class="letter" style="--i:6">e</span>
+                    </span>
+                    <span class="last" aria-label="Oshineye">
+                        <span class="letter" style="--i:8">O</span><span class="letter" style="--i:9">s</span><span class="letter" style="--i:10">h</span><span class="letter" style="--i:11">i</span><span class="letter" style="--i:12">n</span><span class="letter" style="--i:13">e</span><span class="letter" style="--i:14">y</span><span class="letter" style="--i:15">e</span>
+                    </span>
+                </h1>
+                <p class="role">
+                    <span class="at"><a href="/" class="cloudflare-link">Back to oshineye.dev</a></span>
+                </p>
+            </div>
+
+            <div class="compact-title" aria-hidden="true">
+                <span class="compact-name">Adewale Oshineye</span>
+                <span class="compact-role">Lantern Explainers</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="page project-page">
+        <section class="section section--project-hero reveal" aria-labelledby="project-title">
+            <div class="section-head">
+                <h2 id="project-title">Lantern Explainers</h2>
+            </div>
+
+            <div class="project-hero-grid">
+                <div class="project-copy">
+                    <p class="project-lede">Each explainer is one TypeScript <code>Scene</code>. A web page steps through it at the reader’s pace, and the same scene can render a silent, captioned video.</p>
+                    <p>It is a fork of <a href="https://github.com/ivarvong/lantern">Lantern</a> by Ivar Vong. Diagrams come from <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a> at build time and are stored beside the scene, so the page runs no diagram renderer and makes no network requests.</p>
+                    <p class="project-actions">
+                        <a class="github-cta" href="https://github.com/adewale/lantern" target="_blank" rel="noopener">View lantern on GitHub</a>
+                    </p>
+                </div>
+                <aside class="project-panel" aria-label="The KV-cache explainer as video">
+                    <a class="project-motion-frame" href="/projects/lantern-explainers/mr-cache?step=after" aria-label="Open the KV-cache explainer">
+                        <img class="project-panel-image" src="/projects/lantern-explainers/mr-cache.png" alt="" width="960" height="540">
+                        <video class="project-motion-media" muted loop playsinline preload="none" poster="/projects/lantern-explainers/mr-cache.png" aria-hidden="true">
+                            <source src="/projects/lantern-explainers/mr-cache.mp4" type="video/mp4">
+                        </video>
+                    </a>
+                    <dl class="project-facts">
+                        <div><dt>Explainers</dt><dd>26</dd></div>
+                        <div><dt>Cases</dt><dd>140</dd></div>
+                        <div><dt>License</dt><dd>MIT</dd></div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section reveal" aria-labelledby="try-one">
+            <div class="section-head">
+                <h2 id="try-one">An example</h2>
+            </div>
+            <div class="explainer-embed" id="lantern-embed"></div>
+            <script src="/projects/lantern-explainers/loader.js" data-src="/projects/lantern-explainers/seasons?step=june" data-target="lantern-embed" data-title="Why June brings polar day to Tromsø and winter to Sydney"></script>
+        </section>
+
+        <section class="section reveal" aria-labelledby="examples">
+            <div class="section-head">
+                <h2 id="examples">Explainers</h2>
+            </div>
+            <div class="example-grid">
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/seasons?step=year"><img src="/projects/lantern-explainers/seasons.png" alt="" loading="lazy" width="960" height="540"><h3>Why June brings polar day to Tromsø and winter to Sydney</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/oauth-pkce?step=attack&amp;attacker=yes"><img src="/projects/lantern-explainers/oauth-pkce.png" alt="" loading="lazy" width="960" height="540"><h3>Why stealing an authorization code is not enough</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/exgit?step=change"><img src="/projects/lantern-explainers/exgit.png" alt="" loading="lazy" width="960" height="540"><h3>Git names each object by the hash of its bytes</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/token-bucket?step=trace"><img src="/projects/lantern-explainers/token-bucket.png" alt="" loading="lazy" width="960" height="540"><h3>A token bucket refills when a request arrives</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/mr-cache?step=after"><img src="/projects/lantern-explainers/mr-cache.png" alt="" loading="lazy" width="960" height="540"><h3>Five added lines put a KV cache in front of D1</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/state-machine?step=opened"><img src="/projects/lantern-explainers/state-machine.png" alt="" loading="lazy" width="960" height="540"><h3>One transition table drives both session histories</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/ring-buffer?step=result"><img src="/projects/lantern-explainers/ring-buffer.png" alt="" loading="lazy" width="960" height="540"><h3>A ring buffer reuses freed slots and refuses a push when full</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/2password?step=suggest"><img src="/projects/lantern-explainers/2password.png" alt="" loading="lazy" width="960" height="540"><h3>How 2password finds a secret without showing it to the agent</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/just-bash?step=cat"><img src="/projects/lantern-explainers/just-bash.png" alt="" loading="lazy" width="960" height="540"><h3>Running a command returns a new shell value</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/cert-renewal?step=other-rule"><img src="/projects/lantern-explainers/cert-renewal.png" alt="" loading="lazy" width="960" height="540"><h3>A renewal rule written for 90-day certificates renews 45-day ones twice as often</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/quotient-familial?step=plafond"><img src="/projects/lantern-explainers/quotient-familial.png" alt="" loading="lazy" width="960" height="540"><h3 lang="fr">Le quotient familial divise le revenu avant le barème, et son plafond reprend l’excédent</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/send-sync?step=wrap-arc"><img src="/projects/lantern-explainers/send-sync.png" alt="" loading="lazy" width="960" height="540"><h3>Arc&lt;T&gt; is Send and Sync only when T already is</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/gtfs?step=day"><img src="/projects/lantern-explainers/gtfs.png" alt="" loading="lazy" width="960" height="540"><h3>A GTFS route never runs; its trips do, on the dates their service_id allows</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/pg-page?step=full"><img src="/projects/lantern-explainers/pg-page.png" alt="" loading="lazy" width="960" height="540"><h3>A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/traffic-policy?step=shares"><img src="/projects/lantern-explainers/traffic-policy.png" alt="" loading="lazy" width="960" height="540"><h3>externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/isdigit?step=outcome"><img src="/projects/lantern-explainers/isdigit.png" alt="" loading="lazy" width="960" height="540"><h3>str.isdigit() accepts 128 characters that int() rejects</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/ical-recurrence?step=change"><img src="/projects/lantern-explainers/ical-recurrence.png" alt="" loading="lazy" width="960" height="540"><h3>Changing one meeting of a weekly series stores another VEVENT with the same UID</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/ext4-space?step=users"><img src="/projects/lantern-explainers/ext4-space.png" alt="" loading="lazy" width="960" height="540"><h3>A new 1 TiB ext4 filesystem lets users write 93% of it; the 5% root reserve is nearly three times all its metadata</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/trust-proxy?step=requests"><img src="/projects/lantern-explainers/trust-proxy.png" alt="" loading="lazy" width="960" height="540"><h3>With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/tailwind-gamut?step=palette"><img src="/projects/lantern-explainers/tailwind-gamut.png" alt="" loading="lazy" width="960" height="540"><h3>14 of Tailwind 4’s 17 coloured 500 shades lie outside sRGB; none lie outside Display P3</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/gnome-files?step=give-ups"><img src="/projects/lantern-explainers/gnome-files.png" alt="" loading="lazy" width="960" height="540"><h3>Each of six first-time users gave up on a GNOME Files task, every time in the menus</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/wcag-map?step=v22"><img src="/projects/lantern-explainers/wcag-map.png" alt="" loading="lazy" width="960" height="540"><h3>WCAG 2.2 at level AA is 55 success criteria: 20 Perceivable, 20 Operable, 13 Understandable, 2 Robust</h3></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal" aria-labelledby="toolchain">
+            <div class="section-head">
+                <h2 id="toolchain">How these are made</h2>
+            </div>
+            <div class="example-grid">
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/lantern?step=objects"><img src="/projects/lantern-explainers/lantern.png" alt="" loading="lazy" width="960" height="540"><h3>One scene program drives the page, the video and the trace</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/fork?step=fork"><img src="/projects/lantern-explainers/fork.png" alt="" loading="lazy" width="960" height="540"><h3>What this fork keeps from Lantern, and what it replaces</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/agentic-mermaid?step=repair"><img src="/projects/lantern-explainers/agentic-mermaid.png" alt="" loading="lazy" width="960" height="540"><h3>Verify and repair an agent’s Mermaid edit</h3></a>
+                </article>
+                <article class="example-card explainer-tile">
+                    <a href="/projects/lantern-explainers/glyph?step=measure"><img src="/projects/lantern-explainers/glyph.png" alt="" loading="lazy" width="960" height="540"><h3>Lantern draws text from measured glyph outlines</h3></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal" aria-labelledby="install">
+            <div class="section-head">
+                <h2 id="install">Build them yourself</h2>
+            </div>
+            <div class="install-grid">
+                <div class="code-panel code-panel--wide">
+                    <pre><code>npm ci
+npm run demos:build
+npm run demos:serve</code></pre>
+                </div>
+            </div>
+            <p class="section-intro">The README lists Node 26 or later and npm. Capturing a new or changed diagram needs Chromium; video needs FFmpeg.</p>
+        </section>
+    </main>
+
+    <div id="garden" aria-hidden="true"></div>
+    <script src="/garten.js"></script>
+    <script src="/oshineye-config.js"></script>
+    <script>
+      const gartenConfig = OshineyeConfig.getGartenConfig('#garden');
+      document.documentElement.style.setProperty('--garden-accent', gartenConfig.colors.accent);
+      new Garten.Garten(gartenConfig);
+    </script>
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        document.querySelectorAll('video.project-motion-media').forEach((video) => {
+          const frame = video.closest('.project-motion-frame');
+          if (!frame) return;
+
+          const play = () => video.play().catch(() => {});
+          const stop = () => {
+            video.pause();
+            video.currentTime = 0;
+          };
+
+          frame.addEventListener('mouseenter', play);
+          frame.addEventListener('mouseleave', stop);
+          frame.addEventListener('focusin', play);
+          frame.addEventListener('focusout', stop);
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const masthead = document.querySelector('.masthead-plate');
+        const title = document.querySelector('.masthead .title');
+        const hiddenFocusables = title.querySelectorAll('a, button, input, textarea, select, [tabindex]');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const collapseAt = 180;
+        const expandAt = 80;
+        const progressRange = 150;
+        let compact = false;
+        let ticking = false;
+
+        function setHiddenFocusability(isCompact) {
+          hiddenFocusables.forEach((el) => {
+            if (isCompact) {
+              el.dataset.prevTabindex = el.getAttribute('tabindex') || '';
+              el.setAttribute('tabindex', '-1');
+            } else {
+              const previous = el.dataset.prevTabindex;
+              if (previous === '') el.removeAttribute('tabindex');
+              else if (previous != null) el.setAttribute('tabindex', previous);
+            }
+          });
+        }
+
+        function updateMasthead() {
+          const y = window.scrollY;
+          const raw = reduceMotion.matches ? (y >= collapseAt ? 1 : 0) : y / progressRange;
+          const progress = Math.min(Math.max(raw, 0), 1);
+          const inverse = 1 - progress;
+
+          masthead.style.setProperty('--masthead-progress', progress.toFixed(3));
+          masthead.style.setProperty('--masthead-inverse', inverse.toFixed(3));
+
+          let nextCompact = compact;
+          if (!compact && y >= collapseAt) nextCompact = true;
+          if (compact && y <= expandAt) nextCompact = false;
+
+          if (nextCompact !== compact) {
+            compact = nextCompact;
+            masthead.classList.toggle('is-compact', compact);
+            setHiddenFocusability(compact);
+          }
+          ticking = false;
+        }
+
+        function requestUpdate() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateMasthead);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        reduceMotion.addEventListener?.('change', requestUpdate);
+        updateMasthead();
+      })();
+    </script>
+</body>
+</html>

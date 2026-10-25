@@ -1,0 +1,30 @@
+WEBVTT
+Language: en
+
+1
+00:00:07.667 --> 00:00:23.433
+demo.ts holds one async construct method: each this.step call names an idea and each this.play call runs an animation on the stage beside it. The engine calls that method directly, with no lesson interpreter in between, as the card’s last row records.
+
+2
+00:00:30.067 --> 00:00:46.200
+Each walked edge is one relation: a Scene owns mobjects, plays animations between endpoints fixed when they begin, and emits frames to a sink. The card’s three sinks turn the same frames into a browser view, an SVG string or an inspection trace.
+
+3
+00:00:49.933 --> 00:01:05.333
+Every shape, glyph and imported diagram is stored as cubic Bézier points, like the anchors and handles drawn on this circle. The engine has no separate camera, so the zoom onto Mobject in this step is the diagram moving those points.
+
+4
+00:01:10.267 --> 00:01:26.400
+Scene time advances by a fixed dt per frame, whichever sink is attached. The browser sink waits for a display tick before each frame while the trace sink takes them all at once, so both see the same scene times on the ruler.
+
+5
+00:01:31.900 --> 00:01:46.533
+renderAt seeks by running the scene again and skipping every frame before the target. Because each animation fixes its endpoints when it begins, the frame seeked straight to t has the same SVG fingerprint as the frame played there.
+
+6
+00:01:51.367 --> 00:02:04.867
+explain build captures each diagram once and writes lantern.html with the steps, cases, poster and transcript. Because the layouts are already captured, reader controls change only the pace and the page never calls a layout service.
+
+7
+00:02:06.600 --> 00:02:21.600
+Each walk records the edges it travelled, and trace.json lists this scene’s own clock and seek walks. explain check runs the card’s four tests on every case, so a frame that jumps or text under 14 px fails the check.
