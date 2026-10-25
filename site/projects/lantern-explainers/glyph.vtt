@@ -1,0 +1,22 @@
+WEBVTT
+Language: en
+
+1
+00:00:04.300 --> 00:00:15.567
+Each letter is a vector path from a font bundled with Lantern; no installed font is asked for. Write traces every contour. The close-up shows one glyph’s points and handles.
+
+2
+00:00:18.967 --> 00:00:31.733
+The shaper gives every glyph an exact advance, and the ticks mark each pen position. Inter’s advances vary by letter while JetBrains Mono’s are all equal, so the two rulers end at different widths.
+
+3
+00:00:39.867 --> 00:00:52.633
+The font stores quadratic curves and lines, as the note beside it counts. Lantern raises every segment to a cubic, so one kind of path feeds both the SVG player and offline video frames.
+
+4
+00:00:56.433 --> 00:01:06.933
+Transform pairs glyphs in order, then interpolates their points. Six pairs keep their letter, m and s reshape into h and t, and the last s shrinks away.
+
+5
+00:01:12.400 --> 00:01:25.900
+The pen-and-ink style asks for EB Garamond, but Lantern draws labels in embedded Inter, stretched to the width agentic-mermaid wrote into each label’s textLength. Box shapes and strokes come from the style; only the letterforms differ.

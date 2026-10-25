@@ -1,0 +1,26 @@
+WEBVTT
+Language: en
+
+1
+00:00:02.300 --> 00:00:17.300
+The agent’s edit is Mermaid source, and the card lists the id the snapshot gives each node and edge. Agentic Mermaid parses, lays out, styles and verifies it at build time, and none of Agentic Mermaid ships to the reader.
+
+2
+00:00:18.733 --> 00:00:28.867
+verify(flow) returns ok: true with two DECISION_BRANCH_UNLABELED warnings, one per marked edge. The diagram renders, but nothing on it says which edge out of Cached means yes.
+
+3
+00:00:32.700 --> 00:00:45.100
+Two set_label operations add yes and no to the edges. The build replays them on the parsed first edit and throws unless the result serializes to the same Mermaid as the next diagram.
+
+4
+00:00:48.167 --> 00:01:00.933
+The card lists the route the token follows from Cached to Reply. walk() looks up every hop before animating, so a hop with no edge, such as Reply to Database, throws before anything moves.
+
+5
+00:01:08.033 --> 00:01:18.167
+The scene.snapshots folder stores each diagram’s marks, ids, routes and verifier findings. The bars count the warnings stored for the first edit and for the final diagram.
+
+6
+00:01:21.667 --> 00:01:35.567
+The git graph shows the Mermaid source, the typed edit and the checked snapshot as three commits in order. The renderer stays pinned at agentic-mermaid@0.4.1, so an upgrade is a deliberate change whose snapshot diff gets reviewed.
