@@ -238,7 +238,7 @@
       "slug": "rayner",
       "repo": "adewale/lantern",
       "title": "rayner",
-      "subtitle": "Step-through explainers and optional captioned video from one TypeScript scene, with build-time Agentic Mermaid diagrams",
+      "subtitle": "Explainers written as TypeScript scenes that a reader steps through at their own pace, with diagrams drawn by Agentic Mermaid at build time",
       "colour": "rayner/colour.jpg",
       "animation": "rayner/animation.mp4"
     },

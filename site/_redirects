@@ -1,4 +1,0 @@
-# The explainers moved when the project was renamed from Lantern Explainers to Rayner.
-/projects/lantern-explainers /projects/rayner 301
-/projects/lantern-explainers.html /projects/rayner 301
-/projects/lantern-explainers/* /projects/rayner/:splat 301

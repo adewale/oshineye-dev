@@ -64,7 +64,7 @@
             <div class="project-hero-grid">
                 <div class="project-copy">
                     <p class="project-lede">Each explainer is one TypeScript <code>Scene</code>. A web page steps through it at the reader’s pace, and the same scene can render a silent, captioned video.</p>
-                    <p>It is a fork of <a href="https://github.com/ivarvong/lantern">Lantern</a> by Ivar Vong. Diagrams come from <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a> at build time and are stored beside the scene, so the page runs no diagram renderer and makes no network requests.</p>
+                    <p>Diagrams come from <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a> at build time and are stored beside the scene, so the page runs no diagram renderer and makes no network requests. The engine is a fork of Ivar Vong’s <a href="https://github.com/ivarvong/lantern">Lantern</a>.</p>
                     <p class="project-actions">
                         <a class="github-cta" href="https://github.com/adewale/lantern" target="_blank" rel="noopener">View source</a>
                     </p>
@@ -84,7 +84,7 @@
 
         <section class="section reveal" aria-labelledby="try-one">
             <div class="section-head">
-                <h2 id="try-one">An example</h2>
+                <h2 id="try-one">Step through one</h2>
             </div>
             <div class="explainer-embed" id="rayner-embed"></div>
             <script src="/projects/rayner/loader.js" data-src="/projects/rayner/seasons?step=june" data-target="rayner-embed" data-title="Why June brings polar day to Tromsø and winter to Sydney"></script>
@@ -195,7 +195,7 @@ npm run demos:build
 npm run demos:serve</code></pre>
                 </div>
             </div>
-            <p class="section-intro">The README lists Node 26 or later and npm. Capturing a new or changed diagram needs Chromium; video needs FFmpeg.</p>
+            <p class="section-intro">You need Node 26 or later and npm. Chromium captures a new or changed diagram, and FFmpeg renders video.</p>
         </section>
     </main>
 
