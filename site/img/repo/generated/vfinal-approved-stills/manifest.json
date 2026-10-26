@@ -235,6 +235,14 @@
       "animation": "keyboardia/animation.mp4"
     },
     {
+      "slug": "rayner",
+      "repo": "adewale/lantern",
+      "title": "rayner",
+      "subtitle": "Explainers written as TypeScript scenes that a reader steps through at their own pace, with diagrams drawn by Agentic Mermaid at build time",
+      "colour": "rayner/colour.jpg",
+      "animation": "rayner/animation.mp4"
+    },
+    {
       "slug": "planet_cf",
       "repo": "adewale/planet_cf",
       "title": "planet_cf",
