@@ -69,12 +69,9 @@
                         <a class="github-cta" href="https://github.com/adewale/lantern" target="_blank" rel="noopener">View source</a>
                     </p>
                 </div>
-                <aside class="project-panel" aria-label="The KV-cache explainer as video">
+                <aside class="project-panel" aria-label="The KV-cache explainer">
                     <a class="project-motion-frame" href="/projects/rayner/mr-cache?step=after" aria-label="Open the KV-cache explainer">
                         <img class="project-panel-image" src="/projects/rayner/mr-cache.png" alt="" width="960" height="540">
-                        <video class="project-motion-media" muted loop playsinline preload="none" poster="/projects/rayner/mr-cache.png" aria-hidden="true">
-                            <source src="/projects/rayner/mr-cache.mp4" type="video/mp4">
-                        </video>
                     </a>
                     <dl class="project-facts">
                         <div><dt>Explainers</dt><dd>26</dd></div>
@@ -111,7 +108,7 @@
                     <a href="/projects/rayner/token-bucket?step=trace"><img src="/projects/rayner/token-bucket.png" alt="" loading="lazy" width="960" height="540"><h3>A token bucket refills when a request arrives</h3></a>
                 </article>
                 <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/mr-cache?step=after"><img src="/projects/rayner/mr-cache.png" alt="" loading="lazy" width="960" height="540"><h3>Five added lines put a KV cache in front of D1</h3></a>
+                    <a href="/projects/rayner/mr-cache?step=after"><img src="/projects/rayner/mr-cache.png" alt="" loading="lazy" width="960" height="540"><h3>Four added lines and one rewritten put a KV cache in front of D1</h3></a>
                 </article>
                 <article class="example-card explainer-tile">
                     <a href="/projects/rayner/state-machine?step=opened"><img src="/projects/rayner/state-machine.png" alt="" loading="lazy" width="960" height="540"><h3>One transition table drives both session histories</h3></a>
@@ -209,28 +206,6 @@ npm run demos:serve</code></pre>
       const gartenConfig = OshineyeConfig.getGartenConfig('#garden');
       document.documentElement.style.setProperty('--garden-accent', gartenConfig.colors.accent);
       new Garten.Garten(gartenConfig);
-    </script>
-    <script>
-      (() => {
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduceMotion) return;
-
-        document.querySelectorAll('video.project-motion-media').forEach((video) => {
-          const frame = video.closest('.project-motion-frame');
-          if (!frame) return;
-
-          const play = () => video.play().catch(() => {});
-          const stop = () => {
-            video.pause();
-            video.currentTime = 0;
-          };
-
-          frame.addEventListener('mouseenter', play);
-          frame.addEventListener('mouseleave', stop);
-          frame.addEventListener('focusin', play);
-          frame.addEventListener('focusout', stop);
-        });
-      })();
     </script>
     <script>
       (() => {
