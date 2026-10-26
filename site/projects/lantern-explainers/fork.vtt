@@ -30,5 +30,5 @@ explain render draws every frame with resvg and encodes them with FFmpeg. In the
 Lantern’s own tests compared a seeked frame with a played one and looked for jumps in motion. explain check runs both on every case and adds the fork’s checks: text at least 14 px, no letters the fonts lack, words for every drawing, and a still picture while the caption is read.
 
 8
-00:02:27.800 --> 00:02:44.300
-Agents lose the Worker’s endpoints, and every diagram style is lettered in Inter. Capturing a new diagram needs Chromium at build time, though a page built from stored snapshots needs nothing. No engine change has gone upstream, and the fork has no named maintainer.
+00:02:27.800 --> 00:02:41.700
+Agents lose the Worker’s endpoints, and every diagram style is lettered in Inter. Capturing a new diagram needs Chromium at build time, though a page built from stored snapshots needs nothing. No engine change has gone upstream.
