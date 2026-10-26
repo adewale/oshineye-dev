@@ -235,6 +235,14 @@
       "animation": "keyboardia/animation.mp4"
     },
     {
+      "slug": "rayner",
+      "repo": "adewale/lantern",
+      "title": "rayner",
+      "subtitle": "Step-through explainers and optional captioned video from one TypeScript scene, with build-time Agentic Mermaid diagrams",
+      "colour": "rayner/colour.jpg",
+      "animation": "rayner/animation.mp4"
+    },
+    {
       "slug": "planet_cf",
       "repo": "adewale/planet_cf",
       "title": "planet_cf",
