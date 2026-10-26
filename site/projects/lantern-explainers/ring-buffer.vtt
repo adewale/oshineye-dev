@@ -2,17 +2,17 @@ WEBVTT
 Language: en
 
 1
-00:00:02.700 --> 00:00:15.833
-Head is the next value to pop; tail is the next slot to write. Both start at slot 0 and meet again when the ring is full, so count is what tells empty from full.
+00:00:03.067 --> 00:00:20.333
+Head is the next value to pop; tail is the next slot to write. Both start at slot 0 and meet again when the ring is full, so length is what tells empty from full. The middle of the ring shows the buffer’s own three fields.
 
 2
-00:00:19.967 --> 00:00:29.733
-Each push writes at tail, moves tail on modulo five and adds one to count. After five, tail is back at 0 and count is 5.
+00:00:30.333 --> 00:00:45.733
+Each push outlines the slot at tail, copies v into it, then moves tail on modulo five and adds one to length. After five pushes tail is back at 0 with head, and only length, 5, says the ring is full.
 
 3
-00:00:32.600 --> 00:00:44.600
-Each pop takes the value at head, clears the slot and moves head on. Tail stays at 0, so the next push goes into slot 0, the first slot a pop freed.
+00:00:49.500 --> 00:01:07.133
+The two pops copy the values in slots 0 and 1 out to the tray and clear both slots, then head moves on to 2. Tail stays at 0, so the next push goes into slot 0, the first of the two outlined slots the pops freed.
 
 4
-00:00:46.433 --> 00:00:59.933
-Tail wrapped to 0 after the fifth push, so pushes 6 and 7 land in slots 0 and 1 and no stored value moves. Count is back to 5, with head and tail both at 2.
+00:01:11.433 --> 00:01:24.933
+Tail wrapped to 0 after the fifth push, so 6 and 7 are copied into slots 0 and 1 and no stored value moves. Length is back to 5, with head and tail both at 2.

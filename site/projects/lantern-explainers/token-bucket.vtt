@@ -2,21 +2,21 @@ WEBVTT
 Language: en
 
 1
-00:00:03.467 --> 00:00:17.367
-The bucket starts full at five tokens, and each accepted request spends one. allow(now) adds refill for the time since the last call, so no background timer runs. The chips above are R1–R10 at their arrival times.
+00:00:07.100 --> 00:00:24.367
+The bucket starts full at five tokens, and each accepted request spends one. allow(now) adds refill for the time since the last call, so no background timer runs. The chart will plot the balance over time; the dashed line is the one token a request needs.
 
 2
-00:00:24.267 --> 00:00:36.267
-Six requests arrive at time zero. No time has passed, so refill adds nothing: the first five spend the balance and the sixth hits the tokens &lt; 1 check and gets 429.
+00:00:29.067 --> 00:00:41.833
+Six requests arrive at time zero. No time has passed, so refill adds nothing and the line drops one token per request. The sixth finds 0.0 tokens, under the dashed line, and gets 429.
 
 3
-00:00:40.067 --> 00:00:55.467
-Refill is (now − lastRefill) × 2. R7 at 0.5 s gains 1.0 and R8 at 1 s gains 1.0; R9 arrives at the same instant as R8 and gains nothing. R9 (0.0) is under 1 token, so it gets 429.
+00:00:44.433 --> 00:01:03.567
+Between calls the line climbs at 2 a second: (now − lastRefill) × 2. R7 at 0.5 s finds 1.0 and R8 at 1 s finds 1.0; R9 arrives at the same instant as R8 and finds what R8 left. R9 (0.0) is under the dashed line, so it gets 429.
 
 4
-00:00:57.200 --> 00:01:10.333
-R10 arrives at 2 s, one second after R9, and gains 2.0. The min(5, …) cap keeps the balance at five or below however long a client waits. R10 spends one token and leaves 1.0.
+00:01:04.767 --> 00:01:17.900
+R10 arrives at 2 s, one second after R9, and finds 2.0. The min(5, …) cap keeps the balance at five or below however long a client waits. R10 spends one token and leaves 1.0.
 
 5
-00:01:18.767 --> 00:01:26.667
-Each bar is the balance left after one allow call, and the red notes sit on the requests that got 429.
+00:01:20.567 --> 00:01:38.200
+Each line is one run of allow() over the same ten requests, and the bright one is this case. A faster refill climbs back over one token sooner: at 4 tokens a second, R6 gets 429, and at 1 token a second, R6, R7 and R9 do.

@@ -2,17 +2,17 @@ WEBVTT
 Language: en
 
 1
-00:00:04.667 --> 00:00:13.667
-getUser is a single D1 query, so the walked request goes from the handler straight to D1, and every lookup is a database read.
+00:00:04.767 --> 00:00:14.900
+getUser is a single D1 query, the outlined line, so the walked request goes from the handler straight to D1, and every lookup is a database read.
 
 2
-00:00:15.333 --> 00:00:31.467
-The five marked lines are the diff: a KV lookup, keyed by the user’s id, now runs before the D1 query. Only a miss reads the database, and it then writes the row to KV with expirationTtl: 300, a five-minute time to live.
+00:00:19.067 --> 00:00:39.333
+The first line stays and the closing brace moves down to make room. The old return keeps its D1 call inside const row = await, and the green lines grow in. The outlined lines check KV first, so only a miss reaches D1, and the row is then written to KV for 300 seconds.
 
 3
-00:00:33.633 --> 00:00:47.533
+00:00:41.500 --> 00:00:55.400
 The same edit, replayed as diagram operations, removes the handler’s edge to D1 and puts a KV cache between them. A hit goes from KV straight to Reply, while a miss falls through to D1 before replying.
 
 4
-00:00:52.133 --> 00:01:01.133
-The user is already in KV, so getUser returns on line three, the second highlighted line, and the note under D1 shows 0 reads.
+00:01:00.100 --> 00:01:09.100
+The user is already in KV, so getUser returns on line three, the second outlined line, and the note under D1 shows 0 reads.

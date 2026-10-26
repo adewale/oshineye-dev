@@ -11,7 +11,7 @@ Each walked edge is one relation: a Scene owns mobjects, plays animations betwee
 
 3
 00:00:49.933 --> 00:01:05.333
-Every shape, glyph and imported diagram is stored as cubic Bézier points, like the anchors and handles drawn on this circle. The engine has no separate camera, so the zoom onto Mobject in this step is the diagram moving those points.
+Every shape, glyph and imported diagram is stored as cubic Bézier points, like the anchors and handles drawn on this circle. The zoom onto Mobject is the camera: it changes what the stage shows, and no point in the diagram moves.
 
 4
 00:01:10.267 --> 00:01:26.400
