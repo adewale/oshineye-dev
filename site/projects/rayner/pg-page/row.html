@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One int4 row takes 36 bytes of the page · A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/pg-page?step=row">
+<meta name="description" content="An insert adds a 4-byte line pointer after the header and a tuple at the end of the page: a 23-byte header padded to 24, then the int4, 28 bytes. A 64-bit build stores each tuple in a multiple of 8…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="One int4 row takes 36 bytes of the page · A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same">
+<meta property="og:description" content="An insert adds a 4-byte line pointer after the header and a tuple at the end of the page: a 23-byte header padded to 24, then the int4, 28 bytes. A 64-bit build stores each tuple in a multiple of 8…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/pg-page/row">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/pg-page/row.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="An 8192-byte page drawn top to bottom, not to scale: a 24-byte header, then free space, then one 4-byte line pointer under the header and one 32-byte tuple at the very end of the page.; The 32-byte tuple in lines of 8 bytes, starting at offsets 0, 8, 16, 24: 23 header bytes, 1 padding byte, 4 data bytes, 4 padding bytes.; 4 labels.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One int4 row takes 36 bytes of the page · A one-integer Postgres row…">
+<meta name="twitter:description" content="An insert adds a 4-byte line pointer after the header and a tuple at the end of the page: a 23-byte header padded to 24, then the int4, 28 bytes. A 64-bit build stores each tuple in a multiple of 8…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/pg-page/row.png">
+<meta name="twitter:image:alt" content="An 8192-byte page drawn top to bottom, not to scale: a 24-byte header, then free space, then one 4-byte line pointer under the header and one 32-byte tuple at the very end of the page.; The 32-byte tuple in lines of 8 bytes, starting at offsets 0, 8, 16, 24: 23 header bytes, 1 padding byte, 4 data bytes, 4 padding bytes.; 4 labels.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/pg-page?step=row">
+</head><body><p><a href="/projects/rayner/pg-page?step=row">One int4 row takes 36 bytes of the page · A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</a></p></body></html>

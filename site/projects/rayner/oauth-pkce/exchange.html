@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The token endpoint returns a token only when S256(verifier) matches · Why stealing an authorization code is not enough</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/oauth-pkce?step=exchange">
+<meta name="description" content="The real client sends the code with the original verifier. The server computes S256 of the verifier, finds that it matches the challenge stored with the code, and returns an access token once its…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The token endpoint returns a token only when S256(verifier) matches · Why stealing an authorization code is not enough">
+<meta property="og:description" content="The real client sends the code with the original verifier. The server computes S256 of the verifier, finds that it matches the challenge stored with the code, and returns an access token once its…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/oauth-pkce/exchange">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/oauth-pkce/exchange.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Sequence diagram: 3 participants, 7 messages. Accepted: Client → Auth server: Token request: code + code_verifier; Auth server → Client: Access token; note: “S256(verifier) = bound challenge” beside Auth server → Client: Access token; carries the challenge: Client → Auth server: Authorize request + code_challenge; and 4 more.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The token endpoint returns a token only when S256(verifier) matches…">
+<meta name="twitter:description" content="The real client sends the code with the original verifier. The server computes S256 of the verifier, finds that it matches the challenge stored with the code, and returns an access token once its…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/oauth-pkce/exchange.png">
+<meta name="twitter:image:alt" content="Sequence diagram: 3 participants, 7 messages. Accepted: Client → Auth server: Token request: code + code_verifier; Auth server → Client: Access token; note: “S256(verifier) = bound challenge” beside Auth server → Client: Access token; carries the challenge: Client → Auth server: Authorize request + code_challenge; and 4 more.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/oauth-pkce?step=exchange">
+</head><body><p><a href="/projects/rayner/oauth-pkce?step=exchange">The token endpoint returns a token only when S256(verifier) matches · Why stealing an authorization code is not enough</a></p></body></html>

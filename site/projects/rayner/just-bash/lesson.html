@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The caller holds both shells and can cat either · Running a command returns a new shell value</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/just-bash?step=lesson">
+<meta name="description" content="Every exec returns the next shell and leaves its input alone. Because the caller holds s0 and s1 at once, it can cat either: s1 prints HELLO and s0 prints nothing.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The caller holds both shells and can cat either · Running a command returns a new shell value">
+<meta property="og:description" content="Every exec returns the next shell and leaves its input alone. Because the caller holds s0 and s1 at once, it can cat either: s1 prints HELLO and s0 prints nothing.">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/just-bash/lesson">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/just-bash/lesson.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Flowchart: 4 nodes, 3 links; Code, 4 lines. Travelled: original shell files: none → returned shell files: shout.txt: echo, tr, redirect; returned shell files: shout.txt → prints HELLO: cat; focused: 2: exec(s1, [[&quot;cat&quot;, &quot;shout.txt&quot;]]).stdout // &quot;HELLO\n&quot;.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The caller holds both shells and can cat either · Running a command…">
+<meta name="twitter:description" content="Every exec returns the next shell and leaves its input alone. Because the caller holds s0 and s1 at once, it can cat either: s1 prints HELLO and s0 prints nothing.">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/just-bash/lesson.png">
+<meta name="twitter:image:alt" content="Flowchart: 4 nodes, 3 links; Code, 4 lines. Travelled: original shell files: none → returned shell files: shout.txt: echo, tr, redirect; returned shell files: shout.txt → prints HELLO: cat; focused: 2: exec(s1, [[&quot;cat&quot;, &quot;shout.txt&quot;]]).stdout // &quot;HELLO\n&quot;.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/just-bash?step=lesson">
+</head><body><p><a href="/projects/rayner/just-bash?step=lesson">The caller holds both shells and can cat either · Running a command returns a new shell value</a></p></body></html>

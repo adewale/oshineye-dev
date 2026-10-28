@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A stolen code fails without the verifier · Why stealing an authorization code is not enough</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/oauth-pkce?step=attack">
+<meta name="description" content="Another app on the device registered the client’s custom URI scheme, so the operating system handed it the redirect and its code (RFC 7636 §1). It has to guess the verifier; S256 of the guess does…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A stolen code fails without the verifier · Why stealing an authorization code is not enough">
+<meta property="og:description" content="Another app on the device registered the client’s custom URI scheme, so the operating system handed it the redirect and its code (RFC 7636 §1). It has to guess the verifier; S256 of the guess does…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/oauth-pkce/attack">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/oauth-pkce/attack.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Sequence diagram: 3 participants, 5 messages. Attack: Auth server → Malicious app: Redirect via the shared URI scheme; Malicious app → Auth server: Token request: code + a guess; Auth server → Malicious app: invalid_grant; note: “S256(guess) ≠ bound challenge” beside Auth server → Malicious app: invalid_grant; and 2 more.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A stolen code fails without the verifier · Why stealing an…">
+<meta name="twitter:description" content="Another app on the device registered the client’s custom URI scheme, so the operating system handed it the redirect and its code (RFC 7636 §1). It has to guess the verifier; S256 of the guess does…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/oauth-pkce/attack.png">
+<meta name="twitter:image:alt" content="Sequence diagram: 3 participants, 5 messages. Attack: Auth server → Malicious app: Redirect via the shared URI scheme; Malicious app → Auth server: Token request: code + a guess; Auth server → Malicious app: invalid_grant; note: “S256(guess) ≠ bound challenge” beside Auth server → Malicious app: invalid_grant; and 2 more.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/oauth-pkce?step=attack">
+</head><body><p><a href="/projects/rayner/oauth-pkce?step=attack">A stolen code fails without the verifier · Why stealing an authorization code is not enough</a></p></body></html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rc&lt;i32&gt; is neither Send nor Sync · Arc&lt;T&gt; is Send and Sync only when T already is</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/send-sync?step=rc">
+<meta name="description" content="Rc counts its owners with a plain integer, not an atomic one. Two threads cloning Rcs that share one count could update it at the same moment, which is undefined behaviour. So rc.rs declares Rc…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rc&lt;i32&gt; is neither Send nor Sync · Arc&lt;T&gt; is Send and Sync only when T already is">
+<meta property="og:description" content="Rc counts its owners with a plain integer, not an atomic one. Two threads cloning Rcs that share one count could update it at the same moment, which is undefined behaviour. So rc.rs declares Rc…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/send-sync/rc">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/send-sync/rc.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Quadrant chart: 2 points; 1 label. Note: “Send: no, Sync: no” beside Rc&lt;i32&gt;. New in this step: Rc&lt;i32&gt;; 1 label.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rc&lt;i32&gt; is neither Send nor Sync · Arc&lt;T&gt; is Send and Sync only when…">
+<meta name="twitter:description" content="Rc counts its owners with a plain integer, not an atomic one. Two threads cloning Rcs that share one count could update it at the same moment, which is undefined behaviour. So rc.rs declares Rc…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/send-sync/rc.png">
+<meta name="twitter:image:alt" content="Quadrant chart: 2 points; 1 label. Note: “Send: no, Sync: no” beside Rc&lt;i32&gt;. New in this step: Rc&lt;i32&gt;; 1 label.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/send-sync?step=rc">
+</head><body><p><a href="/projects/rayner/send-sync?step=rc">Rc&lt;i32&gt; is neither Send nor Sync · Arc&lt;T&gt; is Send and Sync only when T already is</a></p></body></html>

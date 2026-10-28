@@ -1,0 +1,37 @@
+{
+  "baseHostCommit": "8824d5895c1c0b9e42a3cee8271a45690243a8dd",
+  "raynerSourceCommit": "aa654e901d5658bc54e1c9537fdfd025e3f120da",
+  "galleryViewports": [
+    {
+      "width": 1180,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 900
+    }
+  ],
+  "oauthViewport": {
+    "width": 390,
+    "height": 900
+  },
+  "before": "Fresh public responses from the audit; gallery response equals the hosting base source bytes. Chromium uses fallback fonts because Typekit is unavailable in the environment.",
+  "after": "Wrangler local Workers Static Assets, same fallback fonts; local origin 127.0.0.1:8793.",
+  "checks": {
+    "hostTests": 17,
+    "types": true,
+    "previewCards": 208,
+    "readerCases": 10,
+    "readerStepWidths": 106,
+    "loaderCacheControl": "public, max-age=0, must-revalidate",
+    "individualHtmlIdenticalToReviewedExport": 27
+  },
+  "images": {
+    "gallery-after-1180.png": "d524cef27a5ce4ac476bedd76ac9037d63c9a78c99dab9bd5fa5ec387b5d3220",
+    "oauth-before-390.png": "3ace33bc15e36b9c470ec49d6e3c5e4f8d9b021f0719592e39be71ef3f5aa81b",
+    "oauth-after-390.png": "df98fec95d17f942e7830bb6a44ef1a35f591e35982ccd3575cff9d7153a3c15",
+    "gallery-before-390.png": "df292ad529fca892587870108994a0f451cddb2b15701457aa97b67634f78199",
+    "gallery-after-390.png": "7c1607a3ad4ad287ce155e81b9a076370a6d687025c46154566e967eeeb9df0f",
+    "gallery-before-1180.png": "7c539a61f44b943831d3a44187e5b2bd151f0d7c310a728da941d57d2641a769"
+  }
+}
