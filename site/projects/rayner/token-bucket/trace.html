@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The same ten requests at 1, 2 and 4 tokens a second · A token bucket refills when a request arrives</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/token-bucket?step=trace">
+<meta name="description" content="Each line is one run of allow() over the same ten requests, and the bright one is this case. A faster refill climbs back over one token sooner: at 4 tokens a second, R6 gets 429, and at 1 token a…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The same ten requests at 1, 2 and 4 tokens a second · A token bucket refills when a request arrives">
+<meta property="og:description" content="Each line is one run of allow() over the same ten requests, and the bright one is this case. A faster refill climbs back over one token sooner: at 4 tokens a second, R6 gets 429, and at 1 token a…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/token-bucket/trace">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/token-bucket/trace.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Bucket balance: 1 tokens left, last refill at 2 seconds, 8 accepted; rejected requests: R6, R9; The bucket, filled to 1.0 of 5 tokens; A chart of the balance over time: it climbs at 2 a second between calls and drops one token for each 200. Dots mark what R1–R10 found; R6 at 0.0 and R9 at 0.0 are under the one-token line and got 429. Grey lines are the same requests at 1 and 4 tokens a second; each line&#39;s end names…">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The same ten requests at 1, 2 and 4 tokens a second · A token bucket…">
+<meta name="twitter:description" content="Each line is one run of allow() over the same ten requests, and the bright one is this case. A faster refill climbs back over one token sooner: at 4 tokens a second, R6 gets 429, and at 1 token a…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/token-bucket/trace.png">
+<meta name="twitter:image:alt" content="Bucket balance: 1 tokens left, last refill at 2 seconds, 8 accepted; rejected requests: R6, R9; The bucket, filled to 1.0 of 5 tokens; A chart of the balance over time: it climbs at 2 a second between calls and drops one token for each 200. Dots mark what R1–R10 found; R6 at 0.0 and R9 at 0.0 are under the one-token line and got 429. Grey lines are the same requests at 1 and 4 tokens a second; each line&#39;s end names…">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/token-bucket?step=trace">
+</head><body><p><a href="/projects/rayner/token-bucket?step=trace">The same ten requests at 1, 2 and 4 tokens a second · A token bucket refills when a request arrives</a></p></body></html>

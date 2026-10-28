@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The request stays on its node and keeps the client’s address · externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/traffic-policy?step=local-path">
+<meta name="description" content="Node 1’s rules list only its own pods, so the request never leaves Node 1, and kube-proxy adds no source NAT for it. Pod a sees the client’s address, 198.51.100.79. Under Local no outside request…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The request stays on its node and keeps the client’s address · externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod">
+<meta property="og:description" content="Node 1’s rules list only its own pods, so the request never leaves Node 1, and kube-proxy adds no source NAT for it. Pod a sees the client’s address, 198.51.100.79. Under Local no outside request…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/traffic-policy/local-path">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/traffic-policy/local-path.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Architecture diagram: 8 services, 7 edges. Note: “from 198.51.100.79” beside Pod a; travelled: Load balancer → Node 1 · 10.240.0.1; Node 1 · 10.240.0.1 → Pod a; focused: Node 1 · 10.240.0.1; and 3 more.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The request stays on its node and keeps the client’s address ·…">
+<meta name="twitter:description" content="Node 1’s rules list only its own pods, so the request never leaves Node 1, and kube-proxy adds no source NAT for it. Pod a sees the client’s address, 198.51.100.79. Under Local no outside request…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/traffic-policy/local-path.png">
+<meta name="twitter:image:alt" content="Architecture diagram: 8 services, 7 edges. Note: “from 198.51.100.79” beside Pod a; travelled: Load balancer → Node 1 · 10.240.0.1; Node 1 · 10.240.0.1 → Pod a; focused: Node 1 · 10.240.0.1; and 3 more.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/traffic-policy?step=local-path">
+</head><body><p><a href="/projects/rayner/traffic-policy?step=local-path">The request stays on its node and keeps the client’s address · externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod</a></p></body></html>

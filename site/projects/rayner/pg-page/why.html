@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Row 227 would need 32 bytes and a pointer; 32 are left · A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/pg-page?step=why">
+<meta name="description" content="226 rows of 36 bytes use 8136 of the 8168 free bytes, leaving 32; pageinspect reports pd_lower 928 and pd_upper 960. Before an insert, hio.c asks for the tuple’s 32 bytes, and bufpage.c counts the…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Row 227 would need 32 bytes and a pointer; 32 are left · A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same">
+<meta property="og:description" content="226 rows of 36 bytes use 8136 of the 8168 free bytes, leaving 32; pageinspect reports pd_lower 928 and pd_upper 960. Before an insert, hio.c asks for the tuple’s 32 bytes, and bufpage.c counts the…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/pg-page/why">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/pg-page/why.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Pie chart “One page of int4 rows”: 6 slices; “Why 226 rows”, 6 labelled values. Too small for another row: Free space: 32 (0.4%). New in this step: “Why 226 rows”, 6 labelled values.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Row 227 would need 32 bytes and a pointer; 32 are left · A…">
+<meta name="twitter:description" content="226 rows of 36 bytes use 8136 of the 8168 free bytes, leaving 32; pageinspect reports pd_lower 928 and pd_upper 960. Before an insert, hio.c asks for the tuple’s 32 bytes, and bufpage.c counts the…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/pg-page/why.png">
+<meta name="twitter:image:alt" content="Pie chart “One page of int4 rows”: 6 slices; “Why 226 rows”, 6 labelled values. Too small for another row: Free space: 32 (0.4%). New in this step: “Why 226 rows”, 6 labelled values.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/pg-page?step=why">
+</head><body><p><a href="/projects/rayner/pg-page?step=why">Row 227 would need 32 bytes and a pointer; 32 are left · A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</a></p></body></html>

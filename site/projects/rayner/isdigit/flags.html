@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CPython gives ² DIGIT_MASK and NUMERIC_MASK · str.isdigit() accepts 128 characters that int() rejects</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/isdigit?step=flags">
+<meta name="description" content="When CPython builds its character tables, makeunicodedata.py sets one flag for each filled field. It calls fields 6, 7 and 8 decomposition_mapping, numeric_type and numeric_value. isdecimal()…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CPython gives ² DIGIT_MASK and NUMERIC_MASK · str.isdigit() accepts 128 characters that int() rejects">
+<meta property="og:description" content="When CPython builds its character tables, makeunicodedata.py sets one flag for each filled field. It calls fields 6, 7 and 8 decomposition_mapping, numeric_type and numeric_value. isdecimal()…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/isdigit/flags">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/isdigit/flags.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Code, 7 lines; 1 label. The flags this character gets: 4: if record.numeric_type: # field 7; 5: flags |= DIGIT_MASK; 6: if record.numeric_value: # field 8; and 1 more.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CPython gives ² DIGIT_MASK and NUMERIC_MASK · str.isdigit() accepts…">
+<meta name="twitter:description" content="When CPython builds its character tables, makeunicodedata.py sets one flag for each filled field. It calls fields 6, 7 and 8 decomposition_mapping, numeric_type and numeric_value. isdecimal()…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/isdigit/flags.png">
+<meta name="twitter:image:alt" content="Code, 7 lines; 1 label. The flags this character gets: 4: if record.numeric_type: # field 7; 5: flags |= DIGIT_MASK; 6: if record.numeric_value: # field 8; and 1 more.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/isdigit?step=flags">
+</head><body><p><a href="/projects/rayner/isdigit?step=flags">CPython gives ² DIGIT_MASK and NUMERIC_MASK · str.isdigit() accepts 128 characters that int() rejects</a></p></body></html>

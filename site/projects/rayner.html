@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayner — Ade Oshineye</title>
-    <meta name="description" content="Each explainer is one TypeScript Scene. A web page steps through it at the reader&#39;s pace, and the same scene can render a silent, captioned video.">
+    <meta name="description" content="Interactive explanations of protocols, algorithms and code changes. For engineers and technical educators who write TypeScript.">
     <meta name="color-scheme" content="light">
     <script src="https://use.typekit.net/dbg2jxe.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -63,20 +63,19 @@
 
             <div class="project-hero-grid">
                 <div class="project-copy">
-                    <p class="project-lede">Each explainer is one TypeScript <code>Scene</code>. A web page steps through it at the reader’s pace, and the same scene can render a silent, captioned video.</p>
-                    <p>A slide deck holds a fixed picture per slide. Here one program computes every step: change a reader setting, such as the token bucket’s refill rate, and the program runs again, so the numbers, the diagram and the captions follow that case. Every case is checked before anyone sees it.</p>
-                    <p>Diagrams come from <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a> at build time and are stored beside the scene, so the page runs no diagram renderer and makes no network requests. The engine is a fork of Ivar Vong’s <a href="https://github.com/ivarvong/lantern">Lantern</a>.</p>
-                    <p class="project-actions">
-                        <a class="github-cta" href="https://github.com/adewale/rayner" target="_blank" rel="noopener">View rayner on GitHub</a>
-                    </p>
+                    <p class="project-lede">Interactive explanations of protocols, algorithms and code changes. For engineers and technical educators who write TypeScript.</p>
+                    <p>Step through a picture at your own pace, or change a setting to follow another case. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.</p>
+                    <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?step=request&amp;request=hit">Step through a cache request</a></p>
+                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">Write your first explainer</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md">Authoring reference</a> · <a href="https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md">Agent authoring skill</a></p>
+                    <p><a href="https://github.com/adewale/rayner">Rayner on GitHub</a></p>
                 </div>
                 <aside class="project-panel" aria-label="The KV-cache explainer">
                     <a class="project-motion-frame" href="/projects/rayner/mr-cache?step=after" aria-label="Open the KV-cache explainer">
                         <img class="project-panel-image" src="/projects/rayner/mr-cache.png" alt="" width="960" height="540">
                     </a>
                     <dl class="project-facts">
-                        <div><dt>Explainers</dt><dd>26</dd></div>
-                        <div><dt>Cases</dt><dd>140</dd></div>
+                        <div><dt>Explainers</dt><dd>27</dd></div>
+                        <div><dt>Cases</dt><dd>142</dd></div>
                         <div><dt>License</dt><dd>MIT</dd></div>
                     </dl>
                 </aside>
@@ -96,72 +95,28 @@
                 <h2 id="examples">Explainers</h2>
             </div>
             <div class="example-grid">
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/seasons?step=year"><img src="/projects/rayner/seasons.png" alt="" loading="lazy" width="960" height="540"><h3>Why June brings polar day to Tromsø and winter to Sydney</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/oauth-pkce?step=attack&amp;attacker=yes"><img src="/projects/rayner/oauth-pkce.png" alt="" loading="lazy" width="960" height="540"><h3>Why stealing an authorization code is not enough</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/exgit?step=change"><img src="/projects/rayner/exgit.png" alt="" loading="lazy" width="960" height="540"><h3>Git names each object by the hash of its bytes</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/token-bucket?step=trace"><img src="/projects/rayner/token-bucket.png" alt="" loading="lazy" width="960" height="540"><h3>A token bucket refills when a request arrives</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/mr-cache?step=after"><img src="/projects/rayner/mr-cache.png" alt="" loading="lazy" width="960" height="540"><h3>Four added lines and one rewritten put a KV cache in front of D1</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/state-machine?step=opened"><img src="/projects/rayner/state-machine.png" alt="" loading="lazy" width="960" height="540"><h3>One transition table drives both session histories</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/ring-buffer?step=result"><img src="/projects/rayner/ring-buffer.png" alt="" loading="lazy" width="960" height="540"><h3>A ring buffer reuses freed slots and refuses a push when full</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/2password?step=suggest"><img src="/projects/rayner/2password.png" alt="" loading="lazy" width="960" height="540"><h3>How 2password finds a secret without showing it to the agent</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/just-bash?step=cat"><img src="/projects/rayner/just-bash.png" alt="" loading="lazy" width="960" height="540"><h3>Running a command returns a new shell value</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/cert-renewal?step=other-rule"><img src="/projects/rayner/cert-renewal.png" alt="" loading="lazy" width="960" height="540"><h3>A renewal rule written for 90-day certificates renews 45-day ones twice as often</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/quotient-familial?step=plafond"><img src="/projects/rayner/quotient-familial.png" alt="" loading="lazy" width="960" height="540"><h3 lang="fr">Le quotient familial divise le revenu avant le barème, et son plafond reprend l’excédent</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/send-sync?step=wrap-arc"><img src="/projects/rayner/send-sync.png" alt="" loading="lazy" width="960" height="540"><h3>Arc&lt;T&gt; is Send and Sync only when T already is</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/gtfs?step=day"><img src="/projects/rayner/gtfs.png" alt="" loading="lazy" width="960" height="540"><h3>A GTFS route never runs; its trips do, on the dates their service_id allows</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/pg-page?step=full"><img src="/projects/rayner/pg-page.png" alt="" loading="lazy" width="960" height="540"><h3>A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/traffic-policy?step=shares"><img src="/projects/rayner/traffic-policy.png" alt="" loading="lazy" width="960" height="540"><h3>externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/isdigit?step=outcome"><img src="/projects/rayner/isdigit.png" alt="" loading="lazy" width="960" height="540"><h3>str.isdigit() accepts 128 characters that int() rejects</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/ical-recurrence?step=change"><img src="/projects/rayner/ical-recurrence.png" alt="" loading="lazy" width="960" height="540"><h3>Changing one meeting of a weekly series stores another VEVENT with the same UID</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/ext4-space?step=users"><img src="/projects/rayner/ext4-space.png" alt="" loading="lazy" width="960" height="540"><h3>A new 1 TiB ext4 filesystem lets users write 93% of it; the 5% root reserve is nearly three times all its metadata</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/trust-proxy?step=requests"><img src="/projects/rayner/trust-proxy.png" alt="" loading="lazy" width="960" height="540"><h3>With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/tailwind-gamut?step=palette"><img src="/projects/rayner/tailwind-gamut.png" alt="" loading="lazy" width="960" height="540"><h3>14 of Tailwind 4’s 17 coloured 500 shades lie outside sRGB; none lie outside Display P3</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/gnome-files?step=give-ups"><img src="/projects/rayner/gnome-files.png" alt="" loading="lazy" width="960" height="540"><h3>Each of six first-time users gave up on a GNOME Files task, every time in the menus</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/wcag-map?step=v22"><img src="/projects/rayner/wcag-map.png" alt="" loading="lazy" width="960" height="540"><h3>WCAG 2.2 at level AA is 55 success criteria: 20 Perceivable, 20 Operable, 13 Understandable, 2 Robust</h3></a>
-                </article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/seasons?step=year"><img src="/projects/rayner/seasons.png" alt="" loading="lazy" width="960" height="540"><h3>Why June brings polar day to Tromsø and winter to Sydney</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/oauth-pkce?step=attack"><img src="/projects/rayner/oauth-pkce.png" alt="" loading="lazy" width="960" height="540"><h3>Why stealing an authorization code is not enough</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/exgit?step=change"><img src="/projects/rayner/exgit.png" alt="" loading="lazy" width="960" height="540"><h3>Git names each object by the hash of its bytes</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/token-bucket?step=trace"><img src="/projects/rayner/token-bucket.png" alt="" loading="lazy" width="960" height="540"><h3>A token bucket refills when a request arrives</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/mr-cache?step=after"><img src="/projects/rayner/mr-cache.png" alt="" loading="lazy" width="960" height="540"><h3>Four added lines and one rewritten put a KV cache in front of D1</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/state-machine?step=opened"><img src="/projects/rayner/state-machine.png" alt="" loading="lazy" width="960" height="540"><h3>One transition table drives both session histories</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/ring-buffer?step=result"><img src="/projects/rayner/ring-buffer.png" alt="" loading="lazy" width="960" height="540"><h3>A ring buffer reuses freed slots and refuses a push when full</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/2password?step=suggest"><img src="/projects/rayner/2password.png" alt="" loading="lazy" width="960" height="540"><h3>How 2password finds a secret without showing it to the agent</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/just-bash?step=cat"><img src="/projects/rayner/just-bash.png" alt="" loading="lazy" width="960" height="540"><h3>Running a command returns a new shell value</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/cert-renewal?step=other-rule"><img src="/projects/rayner/cert-renewal.png" alt="" loading="lazy" width="960" height="540"><h3>A renewal rule written for 90-day certificates renews 45-day ones twice as often</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/quotient-familial?step=plafond"><img src="/projects/rayner/quotient-familial.png" alt="" loading="lazy" width="960" height="540"><h3 lang="fr">Le quotient familial divise le revenu avant le barème, et son plafond reprend l’excédent</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/send-sync?step=wrap-arc"><img src="/projects/rayner/send-sync.png" alt="" loading="lazy" width="960" height="540"><h3>Arc&lt;T&gt; is Send and Sync only when T already is</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/gtfs?step=day"><img src="/projects/rayner/gtfs.png" alt="" loading="lazy" width="960" height="540"><h3>A GTFS route never runs; its trips do, on the dates their service_id allows</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/pg-page?step=full"><img src="/projects/rayner/pg-page.png" alt="" loading="lazy" width="960" height="540"><h3>A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/traffic-policy?step=shares"><img src="/projects/rayner/traffic-policy.png" alt="" loading="lazy" width="960" height="540"><h3>externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/isdigit?step=outcome"><img src="/projects/rayner/isdigit.png" alt="" loading="lazy" width="960" height="540"><h3>str.isdigit() accepts 128 characters that int() rejects</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/ical-recurrence?step=change"><img src="/projects/rayner/ical-recurrence.png" alt="" loading="lazy" width="960" height="540"><h3>Changing one meeting of a weekly series stores another VEVENT with the same UID</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/ext4-space?step=users"><img src="/projects/rayner/ext4-space.png" alt="" loading="lazy" width="960" height="540"><h3>A new 1 TiB ext4 filesystem lets users write 93% of it; the 5% root reserve is nearly three times all its metadata</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/trust-proxy?step=requests"><img src="/projects/rayner/trust-proxy.png" alt="" loading="lazy" width="960" height="540"><h3>With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/tailwind-gamut?step=palette"><img src="/projects/rayner/tailwind-gamut.png" alt="" loading="lazy" width="960" height="540"><h3>14 of Tailwind 4’s 17 coloured 500 shades lie outside sRGB; none lie outside Display P3</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/gnome-files?step=give-ups"><img src="/projects/rayner/gnome-files.png" alt="" loading="lazy" width="960" height="540"><h3>Each of six first-time users gave up on a GNOME Files task, every time in the menus</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/wcag-map?step=v22"><img src="/projects/rayner/wcag-map.png" alt="" loading="lazy" width="960" height="540"><h3>WCAG 2.2 at level AA is 55 success criteria: 20 Perceivable, 20 Operable, 13 Understandable, 2 Robust</h3></a></article>
             </div>
         </section>
 
@@ -170,18 +125,11 @@
                 <h2 id="toolchain">How these are made</h2>
             </div>
             <div class="example-grid">
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/lantern?step=objects"><img src="/projects/rayner/lantern.png" alt="" loading="lazy" width="960" height="540"><h3>One scene program drives the page, the video and the trace</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/fork?step=fork"><img src="/projects/rayner/fork.png" alt="" loading="lazy" width="960" height="540"><h3>What this fork keeps from Lantern, and what it replaces</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/agentic-mermaid?step=repair"><img src="/projects/rayner/agentic-mermaid.png" alt="" loading="lazy" width="960" height="540"><h3>Verify and repair an agent’s Mermaid edit</h3></a>
-                </article>
-                <article class="example-card explainer-tile">
-                    <a href="/projects/rayner/glyph?step=measure"><img src="/projects/rayner/glyph.png" alt="" loading="lazy" width="960" height="540"><h3>Rayner draws text from measured glyph outlines</h3></a>
-                </article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/lantern?step=objects"><img src="/projects/rayner/lantern.png" alt="" loading="lazy" width="960" height="540"><h3>One scene program drives the page, the pictures and the trace</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/fork?step=fork"><img src="/projects/rayner/fork.png" alt="" loading="lazy" width="960" height="540"><h3>What this fork keeps from Lantern, and what it replaces</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/agentic-mermaid?step=repair"><img src="/projects/rayner/agentic-mermaid.png" alt="" loading="lazy" width="960" height="540"><h3>Verify and repair an agent’s Mermaid edit</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/glyph?step=measure"><img src="/projects/rayner/glyph.png" alt="" loading="lazy" width="960" height="540"><h3>Rayner draws text from measured glyph outlines</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/pen-and-pencil?step=plate"><img src="/projects/rayner/pen-and-pencil.png" alt="" loading="lazy" width="960" height="540"><h3>A layout engine places the chart; a simulated hand draws the plate</h3></a></article>
             </div>
         </section>
 
@@ -191,12 +139,14 @@
             </div>
             <div class="install-grid">
                 <div class="code-panel code-panel--wide">
-                    <pre><code>npm ci
-npm run demos:build
+                    <pre><code>git clone https://github.com/adewale/rayner &amp;&amp; cd rayner
+npm ci
+npx playwright-core install chromium
+npm run demos:check
 npm run demos:serve</code></pre>
                 </div>
             </div>
-            <p class="section-intro">You need Node 26 or later and npm. Chromium captures a new or changed diagram, and FFmpeg renders video.</p>
+            <p class="section-intro">Node 24 or later and Chromium. Authoring targets Ubuntu and macOS. Diagrams are captured at build time with <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a>; the engine is forked from Ivar Vong’s <a href="https://github.com/ivarvong/lantern">Lantern</a>.</p>
         </section>
     </main>
 

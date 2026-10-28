@@ -1,0 +1,1271 @@
+{
+  "origin": "http://127.0.0.1:8793",
+  "transport": "Wrangler local Workers Static Assets",
+  "blockedHostFontRequests": [
+    "https://use.typekit.net/dbg2jxe.js"
+  ],
+  "cases": 10,
+  "stepWidths": 106,
+  "results": [
+    {
+      "id": "oauth-pkce",
+      "settings": {
+        "attacker": "yes"
+      },
+      "steps": [
+        {
+          "step": "secret",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: edge:V->H#0",
+            "emphasis: edge:H->C#0",
+            "emphasis: C",
+            "emphasis: row code_challenge",
+            "V",
+            "H",
+            "C",
+            "code_verifier",
+            "code_challenge"
+          ]
+        },
+        {
+          "step": "authorize",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: note challenge + S256; verifier not sent",
+            "message:C->S#0",
+            "challenge + S256; verifier not sent"
+          ]
+        },
+        {
+          "step": "code",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "emphasis: message:S->C#0",
+            "emphasis: note code bound to the challenge"
+          ]
+        },
+        {
+          "step": "attack",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "emphasis: message:S->X#0",
+            "emphasis: message:X->S#0",
+            "emphasis: message:S->X#1",
+            "emphasis: note S256(guess) ≠ bound challenge",
+            "message:S->X#0",
+            "message:X->S#0",
+            "message:S->X#1"
+          ]
+        },
+        {
+          "step": "exchange",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#1",
+            "emphasis: message:S->C#1",
+            "emphasis: note S256(verifier) = bound challenge",
+            "message:C->S#1",
+            "message:S->C#1"
+          ]
+        },
+        {
+          "step": "channels",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: message:S->C#0",
+            "emphasis: message:S->X#0",
+            "emphasis: message:C->S#1",
+            "emphasis: note The verifier, 32 random bytes, went only by TLS"
+          ]
+        },
+        {
+          "step": "secret",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:V->H#0",
+            "emphasis: edge:H->C#0",
+            "emphasis: C",
+            "emphasis: row code_challenge",
+            "V",
+            "H",
+            "C",
+            "code_verifier",
+            "code_challenge"
+          ]
+        },
+        {
+          "step": "authorize",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: note challenge + S256; verifier not sent",
+            "message:C->S#0",
+            "challenge + S256; verifier not sent"
+          ]
+        },
+        {
+          "step": "code",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:S->C#0",
+            "emphasis: note code bound to the challenge"
+          ]
+        },
+        {
+          "step": "attack",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:S->X#0",
+            "emphasis: message:X->S#0",
+            "emphasis: message:S->X#1",
+            "emphasis: note S256(guess) ≠ bound challenge",
+            "message:S->X#0",
+            "message:X->S#0",
+            "message:S->X#1"
+          ]
+        },
+        {
+          "step": "exchange",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#1",
+            "emphasis: message:S->C#1",
+            "emphasis: note S256(verifier) = bound challenge",
+            "message:C->S#1",
+            "message:S->C#1"
+          ]
+        },
+        {
+          "step": "channels",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: message:S->C#0",
+            "emphasis: message:S->X#0",
+            "emphasis: message:C->S#1",
+            "emphasis: note The verifier, 32 random bytes, went only by TLS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oauth-pkce",
+      "settings": {
+        "attacker": "no"
+      },
+      "steps": [
+        {
+          "step": "secret",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: edge:V->H#0",
+            "emphasis: edge:H->C#0",
+            "emphasis: C",
+            "emphasis: row code_challenge",
+            "V",
+            "H",
+            "C",
+            "code_verifier",
+            "code_challenge"
+          ]
+        },
+        {
+          "step": "authorize",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: note challenge + S256; verifier not sent",
+            "message:C->S#0",
+            "challenge + S256; verifier not sent"
+          ]
+        },
+        {
+          "step": "code",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "emphasis: message:S->C#0",
+            "emphasis: note code bound to the challenge"
+          ]
+        },
+        {
+          "step": "exchange",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#1",
+            "emphasis: message:S->C#1",
+            "emphasis: note S256(verifier) = bound challenge",
+            "message:C->S#1",
+            "message:S->C#1"
+          ]
+        },
+        {
+          "step": "channels",
+          "width": 390,
+          "views": 2,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: message:S->C#0",
+            "emphasis: message:C->S#1",
+            "emphasis: note The verifier, 32 random bytes, went only by TLS"
+          ]
+        },
+        {
+          "step": "secret",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:V->H#0",
+            "emphasis: edge:H->C#0",
+            "emphasis: C",
+            "emphasis: row code_challenge",
+            "V",
+            "H",
+            "C",
+            "code_verifier",
+            "code_challenge"
+          ]
+        },
+        {
+          "step": "authorize",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: note challenge + S256; verifier not sent",
+            "message:C->S#0",
+            "challenge + S256; verifier not sent"
+          ]
+        },
+        {
+          "step": "code",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:S->C#0",
+            "emphasis: note code bound to the challenge"
+          ]
+        },
+        {
+          "step": "exchange",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#1",
+            "emphasis: message:S->C#1",
+            "emphasis: note S256(verifier) = bound challenge",
+            "message:C->S#1",
+            "message:S->C#1"
+          ]
+        },
+        {
+          "step": "channels",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: message:C->S#0",
+            "emphasis: message:S->C#0",
+            "emphasis: message:C->S#1",
+            "emphasis: note The verifier, 32 random bytes, went only by TLS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mr-cache",
+      "settings": {
+        "request": "hit"
+      },
+      "steps": [
+        {
+          "step": "before",
+          "width": 390,
+          "views": 7,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->D1#0"
+          ]
+        },
+        {
+          "step": "diff",
+          "width": 390,
+          "views": 4,
+          "targets": [
+            "changed: drawing",
+            "changed: async function getUser(id, env) {",
+            "changed:   const hit = await env.KV.get(`user:${id}`, \"json\");",
+            "changed:   if (hit) return hit;",
+            "changed:   const row = await env.DB.prepare(SQL).bind(id).first();",
+            "changed:   await env.KV.put(`user:${id}`, JSON.stringify(row), { expirationTtl: 300 });",
+            "changed:   return row;",
+            "changed: }",
+            "changed: 2 lines added",
+            "changed: 1 line rewritten"
+          ]
+        },
+        {
+          "step": "after",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "emphasis: note TTL 300 s",
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "step": "request",
+          "width": 390,
+          "views": 4,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->KV#0",
+            "emphasis: edge:KV->Reply#0",
+            "emphasis: note 0 reads",
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "step": "before",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->D1#0"
+          ]
+        },
+        {
+          "step": "diff",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: async function getUser(id, env) {",
+            "changed:   const hit = await env.KV.get(`user:${id}`, \"json\");",
+            "changed:   if (hit) return hit;",
+            "changed:   const row = await env.DB.prepare(SQL).bind(id).first();",
+            "changed:   await env.KV.put(`user:${id}`, JSON.stringify(row), { expirationTtl: 300 });",
+            "changed:   return row;",
+            "changed: }",
+            "changed: 2 lines added",
+            "changed: 1 line rewritten"
+          ]
+        },
+        {
+          "step": "after",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: note TTL 300 s",
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "step": "request",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->KV#0",
+            "emphasis: edge:KV->Reply#0",
+            "emphasis: note 0 reads",
+            "hit",
+            "miss"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mr-cache",
+      "settings": {
+        "request": "miss"
+      },
+      "steps": [
+        {
+          "step": "before",
+          "width": 390,
+          "views": 7,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->D1#0"
+          ]
+        },
+        {
+          "step": "diff",
+          "width": 390,
+          "views": 4,
+          "targets": [
+            "changed: drawing",
+            "changed: async function getUser(id, env) {",
+            "changed:   const hit = await env.KV.get(`user:${id}`, \"json\");",
+            "changed:   if (hit) return hit;",
+            "changed:   const row = await env.DB.prepare(SQL).bind(id).first();",
+            "changed:   await env.KV.put(`user:${id}`, JSON.stringify(row), { expirationTtl: 300 });",
+            "changed:   return row;",
+            "changed: }",
+            "changed: 2 lines added",
+            "changed: 1 line rewritten"
+          ]
+        },
+        {
+          "step": "after",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "emphasis: note TTL 300 s",
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "step": "request",
+          "width": 390,
+          "views": 4,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->KV#0",
+            "emphasis: edge:KV->D1#0",
+            "emphasis: edge:D1->Reply#0",
+            "emphasis: note 1 read",
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "step": "before",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->D1#0"
+          ]
+        },
+        {
+          "step": "diff",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: async function getUser(id, env) {",
+            "changed:   const hit = await env.KV.get(`user:${id}`, \"json\");",
+            "changed:   if (hit) return hit;",
+            "changed:   const row = await env.DB.prepare(SQL).bind(id).first();",
+            "changed:   await env.KV.put(`user:${id}`, JSON.stringify(row), { expirationTtl: 300 });",
+            "changed:   return row;",
+            "changed: }",
+            "changed: 2 lines added",
+            "changed: 1 line rewritten"
+          ]
+        },
+        {
+          "step": "after",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: note TTL 300 s",
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "step": "request",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Request->H#0",
+            "emphasis: edge:H->KV#0",
+            "emphasis: edge:KV->D1#0",
+            "emphasis: edge:D1->Reply#0",
+            "emphasis: note 1 read",
+            "hit",
+            "miss"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lantern",
+      "settings": {},
+      "steps": [
+        {
+          "step": "model",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: lines 6-6"
+          ]
+        },
+        {
+          "step": "objects",
+          "width": 390,
+          "views": 9,
+          "targets": [
+            "emphasis: rel:Scene->Mobject#0",
+            "emphasis: rel:Scene->Animation#0",
+            "emphasis: rel:Scene->Sink#0",
+            "emphasis: note endpoints fixed at begin()",
+            "owns",
+            "plays",
+            "emits"
+          ]
+        },
+        {
+          "step": "points",
+          "width": 390,
+          "views": 7,
+          "targets": [
+            "emphasis: class:Mobject",
+            "emphasis: note points: Float32Array"
+          ]
+        },
+        {
+          "step": "clock",
+          "width": 390,
+          "views": 13,
+          "targets": [
+            "emphasis: edge:Clock->Browser#0",
+            "emphasis: edge:Clock->Trace#0"
+          ]
+        },
+        {
+          "step": "seek",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: edge:Author->Clock#0",
+            "emphasis: edge:Clock->SVG#0"
+          ]
+        },
+        {
+          "step": "publish",
+          "width": 390,
+          "views": 5,
+          "targets": [
+            "emphasis: edge:Author->Build#0",
+            "emphasis: edge:Build->Page#0",
+            "emphasis: edge:Page->Reader#0"
+          ]
+        },
+        {
+          "step": "inspect",
+          "width": 390,
+          "views": 5,
+          "targets": [
+            "emphasis: note trace + checks ship with it"
+          ]
+        },
+        {
+          "step": "model",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 6-6"
+          ]
+        },
+        {
+          "step": "objects",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: rel:Scene->Mobject#0",
+            "emphasis: rel:Scene->Animation#0",
+            "emphasis: rel:Scene->Sink#0",
+            "emphasis: note endpoints fixed at begin()",
+            "owns",
+            "plays",
+            "emits"
+          ]
+        },
+        {
+          "step": "points",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: class:Mobject",
+            "emphasis: note points: Float32Array"
+          ]
+        },
+        {
+          "step": "clock",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Clock->Browser#0",
+            "emphasis: edge:Clock->Trace#0"
+          ]
+        },
+        {
+          "step": "seek",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Author->Clock#0",
+            "emphasis: edge:Clock->SVG#0"
+          ]
+        },
+        {
+          "step": "publish",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: edge:Author->Build#0",
+            "emphasis: edge:Build->Page#0",
+            "emphasis: edge:Page->Reader#0"
+          ]
+        },
+        {
+          "step": "inspect",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: note trace + checks ship with it"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "token-bucket",
+      "settings": {
+        "rate": "1"
+      },
+      "steps": [
+        {
+          "step": "balance",
+          "width": 390,
+          "views": 11,
+          "targets": [
+            "emphasis: lines 1-3",
+            "bucket",
+            "Tokens left"
+          ]
+        },
+        {
+          "step": "burst",
+          "width": 390,
+          "views": 8,
+          "targets": [
+            "emphasis: lines 4-4"
+          ]
+        },
+        {
+          "step": "refill",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "changed: Tokens left",
+            "changed: 0",
+            "changed: Last refill (s)",
+            "changed: 1",
+            "changed: Accepted",
+            "changed: 6",
+            "changed: Rejected",
+            "changed: R6, R7, R9",
+            "changed: drawing",
+            "changed: R7",
+            "changed: 429",
+            "changed: R8",
+            "changed: 200",
+            "changed: R9"
+          ]
+        },
+        {
+          "step": "later",
+          "width": 390,
+          "views": 5,
+          "targets": [
+            "emphasis: lines 5-6"
+          ]
+        },
+        {
+          "step": "trace",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "1 / s",
+            "2 / s",
+            "4 / s"
+          ]
+        },
+        {
+          "step": "balance",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 1-3",
+            "bucket",
+            "Tokens left"
+          ]
+        },
+        {
+          "step": "burst",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 4-4"
+          ]
+        },
+        {
+          "step": "refill",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: Tokens left",
+            "changed: 0",
+            "changed: Last refill (s)",
+            "changed: 1",
+            "changed: Accepted",
+            "changed: 6",
+            "changed: Rejected",
+            "changed: R6, R7, R9",
+            "changed: drawing",
+            "changed: R7",
+            "changed: 429",
+            "changed: R8",
+            "changed: 200",
+            "changed: R9"
+          ]
+        },
+        {
+          "step": "later",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 5-6"
+          ]
+        },
+        {
+          "step": "trace",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "1 / s",
+            "2 / s",
+            "4 / s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "token-bucket",
+      "settings": {
+        "rate": "2"
+      },
+      "steps": [
+        {
+          "step": "balance",
+          "width": 390,
+          "views": 11,
+          "targets": [
+            "emphasis: lines 1-3",
+            "bucket",
+            "Tokens left"
+          ]
+        },
+        {
+          "step": "burst",
+          "width": 390,
+          "views": 8,
+          "targets": [
+            "emphasis: lines 4-4"
+          ]
+        },
+        {
+          "step": "refill",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "changed: Tokens left",
+            "changed: 0",
+            "changed: Last refill (s)",
+            "changed: 1",
+            "changed: Accepted",
+            "changed: 7",
+            "changed: Rejected",
+            "changed: R6, R9",
+            "changed: drawing",
+            "changed: R7",
+            "changed: 200",
+            "changed: R8",
+            "changed: R9",
+            "changed: 429"
+          ]
+        },
+        {
+          "step": "later",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "emphasis: lines 5-6"
+          ]
+        },
+        {
+          "step": "trace",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "1 / s",
+            "2 / s",
+            "4 / s"
+          ]
+        },
+        {
+          "step": "balance",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 1-3",
+            "bucket",
+            "Tokens left"
+          ]
+        },
+        {
+          "step": "burst",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 4-4"
+          ]
+        },
+        {
+          "step": "refill",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: Tokens left",
+            "changed: 0",
+            "changed: Last refill (s)",
+            "changed: 1",
+            "changed: Accepted",
+            "changed: 7",
+            "changed: Rejected",
+            "changed: R6, R9",
+            "changed: drawing",
+            "changed: R7",
+            "changed: 200",
+            "changed: R8",
+            "changed: R9",
+            "changed: 429"
+          ]
+        },
+        {
+          "step": "later",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 5-6"
+          ]
+        },
+        {
+          "step": "trace",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "1 / s",
+            "2 / s",
+            "4 / s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "token-bucket",
+      "settings": {
+        "rate": "4"
+      },
+      "steps": [
+        {
+          "step": "balance",
+          "width": 390,
+          "views": 11,
+          "targets": [
+            "emphasis: lines 1-3",
+            "bucket",
+            "Tokens left"
+          ]
+        },
+        {
+          "step": "burst",
+          "width": 390,
+          "views": 8,
+          "targets": [
+            "emphasis: lines 4-4"
+          ]
+        },
+        {
+          "step": "refill",
+          "width": 390,
+          "views": 5,
+          "targets": [
+            "emphasis: lines 5-6"
+          ]
+        },
+        {
+          "step": "later",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "changed: drawing",
+            "changed: Tokens left",
+            "changed: 4",
+            "changed: Last refill (s)",
+            "changed: 2",
+            "changed: Accepted",
+            "changed: 9",
+            "changed: Rejected",
+            "changed: R6",
+            "changed: R10",
+            "changed: 200"
+          ]
+        },
+        {
+          "step": "trace",
+          "width": 390,
+          "views": 6,
+          "targets": [
+            "1 / s",
+            "2 / s",
+            "4 / s"
+          ]
+        },
+        {
+          "step": "balance",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 1-3",
+            "bucket",
+            "Tokens left"
+          ]
+        },
+        {
+          "step": "burst",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 4-4"
+          ]
+        },
+        {
+          "step": "refill",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: lines 5-6"
+          ]
+        },
+        {
+          "step": "later",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: Tokens left",
+            "changed: 4",
+            "changed: Last refill (s)",
+            "changed: 2",
+            "changed: Accepted",
+            "changed: 9",
+            "changed: Rejected",
+            "changed: R6",
+            "changed: R10",
+            "changed: 200"
+          ]
+        },
+        {
+          "step": "trace",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "1 / s",
+            "2 / s",
+            "4 / s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pen-and-pencil",
+      "settings": {
+        "hand": "first"
+      },
+      "steps": [
+        {
+          "step": "text",
+          "width": 390,
+          "views": 2,
+          "targets": [
+            "changed: drawing",
+            "changed: timeline",
+            "changed:   Dusk : Lamp lit",
+            "changed:   Midnight : Wick trimmed",
+            "changed:   Small hours : Fog bell rung",
+            "changed:   Dawn : Lamp put out",
+            "changed: The page’s four plates",
+            "changed: The wind's day",
+            "changed: radar",
+            "changed: The vesper bell",
+            "changed: state",
+            "changed: Bottling thunder",
+            "changed: sankey",
+            "changed: The comet's long way home"
+          ]
+        },
+        {
+          "step": "layout",
+          "width": 390,
+          "views": 8,
+          "targets": [
+            "emphasis: period:period-1"
+          ]
+        },
+        {
+          "step": "marks",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "changed: drawing",
+            "changed: 40 outlines · 13 filled shapes · 8 words"
+          ]
+        },
+        {
+          "step": "hand",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "scene",
+          "width": 390,
+          "views": 4,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "plate",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "text",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: timeline",
+            "changed:   Dusk : Lamp lit",
+            "changed:   Midnight : Wick trimmed",
+            "changed:   Small hours : Fog bell rung",
+            "changed:   Dawn : Lamp put out",
+            "changed: The page’s four plates",
+            "changed: The wind's day",
+            "changed: radar",
+            "changed: The vesper bell",
+            "changed: state",
+            "changed: Bottling thunder",
+            "changed: sankey",
+            "changed: The comet's long way home"
+          ]
+        },
+        {
+          "step": "layout",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: period:period-1"
+          ]
+        },
+        {
+          "step": "marks",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: 40 outlines · 13 filled shapes · 8 words"
+          ]
+        },
+        {
+          "step": "hand",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "scene",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "plate",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pen-and-pencil",
+      "settings": {
+        "hand": "second"
+      },
+      "steps": [
+        {
+          "step": "text",
+          "width": 390,
+          "views": 2,
+          "targets": [
+            "changed: drawing",
+            "changed: timeline",
+            "changed:   Dusk : Lamp lit",
+            "changed:   Midnight : Wick trimmed",
+            "changed:   Small hours : Fog bell rung",
+            "changed:   Dawn : Lamp put out",
+            "changed: The page’s four plates",
+            "changed: The wind's day",
+            "changed: radar",
+            "changed: The vesper bell",
+            "changed: state",
+            "changed: Bottling thunder",
+            "changed: sankey",
+            "changed: The comet's long way home"
+          ]
+        },
+        {
+          "step": "layout",
+          "width": 390,
+          "views": 8,
+          "targets": [
+            "emphasis: period:period-1"
+          ]
+        },
+        {
+          "step": "marks",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "changed: drawing",
+            "changed: 40 outlines · 13 filled shapes · 8 words"
+          ]
+        },
+        {
+          "step": "hand",
+          "width": 390,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "scene",
+          "width": 390,
+          "views": 4,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "plate",
+          "width": 390,
+          "views": 3,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "text",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: timeline",
+            "changed:   Dusk : Lamp lit",
+            "changed:   Midnight : Wick trimmed",
+            "changed:   Small hours : Fog bell rung",
+            "changed:   Dawn : Lamp put out",
+            "changed: The page’s four plates",
+            "changed: The wind's day",
+            "changed: radar",
+            "changed: The vesper bell",
+            "changed: state",
+            "changed: Bottling thunder",
+            "changed: sankey",
+            "changed: The comet's long way home"
+          ]
+        },
+        {
+          "step": "layout",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "emphasis: period:period-1"
+          ]
+        },
+        {
+          "step": "marks",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing",
+            "changed: 40 outlines · 13 filled shapes · 8 words"
+          ]
+        },
+        {
+          "step": "hand",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "scene",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        },
+        {
+          "step": "plate",
+          "width": 1180,
+          "views": 1,
+          "targets": [
+            "changed: drawing"
+          ]
+        }
+      ]
+    }
+  ]
+}

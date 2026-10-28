@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A cache hit returns from KV with no D1 read · Four added lines and one rewritten put a KV cache in front of D1</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/mr-cache?step=request">
+<meta name="description" content="The user is already in KV, so getUser returns on line three, the second outlined line, and the note under D1 shows 0 reads.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A cache hit returns from KV with no D1 read · Four added lines and one rewritten put a KV cache in front of D1">
+<meta property="og:description" content="The user is already in KV, so getUser returns on line three, the second outlined line, and the note under D1 shows 0 reads.">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/mr-cache/request">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/mr-cache/request.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Flowchart: 5 nodes, 5 links; Code “users.ts”, 7 lines: 1: async function getUser(id, env) { · 2: const hit = await env.KV.get(`user:${id}`, &quot;json&quot;); · 3: if (hit) return hit; · 4: const row = await env.DB.prepare(SQL).bind(id).first(); · 5: await env.KV.put(`user:${id}`, JSON.stringify(row), { expirationTtl: 300 }); · 6: return row; · 7: }; Lines 2 to 3, the ones this request runs, outlined. Note: “0 reads” beside…">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A cache hit returns from KV with no D1 read · Four added lines and…">
+<meta name="twitter:description" content="The user is already in KV, so getUser returns on line three, the second outlined line, and the note under D1 shows 0 reads.">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/mr-cache/request.png">
+<meta name="twitter:image:alt" content="Flowchart: 5 nodes, 5 links; Code “users.ts”, 7 lines: 1: async function getUser(id, env) { · 2: const hit = await env.KV.get(`user:${id}`, &quot;json&quot;); · 3: if (hit) return hit; · 4: const row = await env.DB.prepare(SQL).bind(id).first(); · 5: await env.KV.put(`user:${id}`, JSON.stringify(row), { expirationTtl: 300 }); · 6: return row; · 7: }; Lines 2 to 3, the ones this request runs, outlined. Note: “0 reads” beside…">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/mr-cache?step=request">
+</head><body><p><a href="/projects/rayner/mr-cache?step=request">A cache hit returns from KV with no D1 read · Four added lines and one rewritten put a KV cache in front of D1</a></p></body></html>

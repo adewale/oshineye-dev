@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Refill at 2/s: R7–R9 get 200, 200, 429 · A token bucket refills when a request arrives</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/token-bucket?step=refill">
+<meta name="description" content="Between calls the line climbs at 2 a second: (now − lastRefill) × 2. R7 at 0.5 s finds 1.0 and R8 at 1 s finds 1.0; R9 arrives at the same instant as R8 and finds what R8 left. R9 (0.0) is under the…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Refill at 2/s: R7–R9 get 200, 200, 429 · A token bucket refills when a request arrives">
+<meta property="og:description" content="Between calls the line climbs at 2 a second: (now − lastRefill) × 2. R7 at 0.5 s finds 1.0 and R8 at 1 s finds 1.0; R9 arrives at the same instant as R8 and finds what R8 left. R9 (0.0) is under the…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/token-bucket/refill">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/token-bucket/refill.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Bucket balance: 0 tokens left, last refill at 1 seconds, 7 accepted; rejected requests: R6, R9; The bucket, filled to 0.0 of 5 tokens; A chart of the balance over time: it climbs at 2 a second between calls and drops one token for each 200. Dots mark what R1–R9 found; R6 at 0.0 and R9 at 0.0 are under the one-token line and got 429; Requests R1 to R10 at their arrival times: 7 answered 200, R6 and R9 429, 1…">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Refill at 2/s: R7–R9 get 200, 200, 429 · A token bucket refills when…">
+<meta name="twitter:description" content="Between calls the line climbs at 2 a second: (now − lastRefill) × 2. R7 at 0.5 s finds 1.0 and R8 at 1 s finds 1.0; R9 arrives at the same instant as R8 and finds what R8 left. R9 (0.0) is under the…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/token-bucket/refill.png">
+<meta name="twitter:image:alt" content="Bucket balance: 0 tokens left, last refill at 1 seconds, 7 accepted; rejected requests: R6, R9; The bucket, filled to 0.0 of 5 tokens; A chart of the balance over time: it climbs at 2 a second between calls and drops one token for each 200. Dots mark what R1–R9 found; R6 at 0.0 and R9 at 0.0 are under the one-token line and got 429; Requests R1 to R10 at their arrival times: 7 answered 200, R6 and R9 429, 1…">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/token-bucket?step=refill">
+</head><body><p><a href="/projects/rayner/token-bucket?step=refill">Refill at 2/s: R7–R9 get 200, 200, 429 · A token bucket refills when a request arrives</a></p></body></html>
