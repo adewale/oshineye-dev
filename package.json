@@ -9,7 +9,8 @@
     "test:garten-legibility": "node tools/screenshot-garten-legibility.mjs",
     "typecheck": "bunx tsc --noEmit",
     "deploy": "bun run build && wrangler deploy",
-    "test": "TZ=Pacific/Auckland bun test"
+    "test": "TZ=Pacific/Auckland bun test",
+    "check:rayner-export": "node tools/verify-rayner-export.mjs"
   },
   "devDependencies": {
     "typescript": "^5.3.0",
