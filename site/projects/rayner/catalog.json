@@ -197,7 +197,7 @@
       "id": "lantern",
       "step": "objects",
       "group": "toolchain",
-      "title": "One scene program drives the page, the pictures and the trace",
+      "title": "How one scene program becomes a page, pictures and a trace",
       "lang": "en",
       "cases": 1
     },
@@ -205,7 +205,7 @@
       "id": "fork",
       "step": "fork",
       "group": "toolchain",
-      "title": "What this fork keeps from Lantern, and what it replaces",
+      "title": "What changes when Lantern’s live player becomes a prebuilt page?",
       "lang": "en",
       "cases": 1
     },
@@ -213,7 +213,7 @@
       "id": "agentic-mermaid",
       "step": "repair",
       "group": "toolchain",
-      "title": "Verify and repair an agent’s Mermaid edit",
+      "title": "How a Mermaid verifier checks and repairs flowchart branches",
       "lang": "en",
       "cases": 2
     },
@@ -221,7 +221,7 @@
       "id": "glyph",
       "step": "measure",
       "group": "toolchain",
-      "title": "Rayner draws text from measured glyph outlines",
+      "title": "Why Rayner measures glyphs before drawing text",
       "lang": "en",
       "cases": 2
     },
@@ -229,7 +229,7 @@
       "id": "pen-and-pencil",
       "step": "plate",
       "group": "toolchain",
-      "title": "A layout engine places the chart; a simulated hand draws the plate",
+      "title": "How a hand-drawn timeline keeps its labels inside fixed boxes",
       "lang": "en",
       "cases": 2
     }

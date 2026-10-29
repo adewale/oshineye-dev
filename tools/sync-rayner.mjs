@@ -11,7 +11,7 @@ html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(p
 const copy = `<div class="project-copy">
                     <p class="project-lede">${escape(product.summary)} ${escape(product.audience)}</p>
                     <p>${escape(product.description)}</p>
-                    <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?step=request&amp;request=hit">Step through a cache request</a></p>
+                    <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?request=hit">Step through a cache request</a></p>
                     <p><a href="${escape(product.tutorial)}">Write your first explainer</a> · <a href="${escape(product.reference)}">Authoring reference</a> · <a href="${escape(product.skill)}">Agent authoring skill</a></p>
                     <p><a href="https://github.com/adewale/rayner">Rayner on GitHub</a></p>
                 </div>`;
@@ -22,7 +22,7 @@ let group = 0;
 html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {
   const category = ['topic', 'toolchain'][group++];
   return '<div class="example-grid">\n' + scenes.filter(s => s.group === category).map(s =>
-    `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}?step=${encodeURIComponent(s.step)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(s.title)}</h3></a></article>`
+    `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(s.title)}</h3></a></article>`
   ).join('\n') + '\n            </div>';
 });
 if (group !== 2) throw new Error('Expected the topic and toolchain gallery sections');
