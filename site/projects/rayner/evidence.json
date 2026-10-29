@@ -204,7 +204,7 @@
         "flowchart",
         "sequence"
       ],
-      "sourceHash": "29517ecd154551c51acbdd6660ac862de1e20275b4c66d8423683d73e7025b83",
+      "sourceHash": "aaab0333003f84d18810f8abead2a1cc4737b4af20c60c658292b52b76f7bf64",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "e9b5ddee0497eee2d9e17b08e18d080607774e7ac062d002770fa61220d40a0c",
@@ -286,7 +286,7 @@
         "timeline",
         "gantt"
       ],
-      "sourceHash": "fb718bb74bf96af5d1e7d9dc89fa876f58f752fc90332af5b9aedff29a9379e0",
+      "sourceHash": "983b9df1eaf5a7d78123aedc1a6d748c62a0fd475cbd7ca331fd2ece25c104ed",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "4e3ec96db276bb49883777f2ca9e17811379c88c760a720524c1021df8175495",
@@ -360,7 +360,7 @@
         "flowchart",
         "xychart"
       ],
-      "sourceHash": "dd2b48f2da34f55a8cc282189b4f37e45e5149c50c9625426464bfac059c8d76",
+      "sourceHash": "1654ac7ea24060c0c126407269f4c401fd833f2f9531cf41d311e56f6a714f89",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "218bed23a4e48a5635c804706ecbcce5ea9009fb5717389b42b8972158d9b23c",
@@ -487,7 +487,7 @@
         "er",
         "gantt"
       ],
-      "sourceHash": "3b557030d705026e2025348ddad55bd0de3b5ac20f263b071b332b66f1b6acbf",
+      "sourceHash": "b5a4e4aea5ce3d63819674299ef7ec2ed61c74a447eb9a414dc5db46361e3456",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "6c99623ff2820e63ab9c75557345141bb135224608427d13402eefc5a9891344",
@@ -662,7 +662,7 @@
       "diagrams": 0,
       "styles": [],
       "families": [],
-      "sourceHash": "7e5cc2020dfb7833997a5ef120f67487f5a5326a778b611e13c027d1a0aabdef",
+      "sourceHash": "2b7a3d274a2452b86c182da41396900bd59bd02f751d4d70382e1384cca67de9",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": []
     },
@@ -759,7 +759,7 @@
       "families": [
         "pie"
       ],
-      "sourceHash": "c4885acd23aff9a58f0abf24ccc811f76ab7c309febe72776f46d0a9f5ed5d0e",
+      "sourceHash": "52c110f4538c67609058002a71b8014cf98041edb3cea33f6a5122214a3e0ab3",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "118a018e8c0bddb624bcc01ffe69b767bc56149882a26c92f6f7e80980e4f585",
@@ -843,7 +843,7 @@
       "families": [
         "architecture"
       ],
-      "sourceHash": "1b411664ba28e51dfcde7435188fbd0c342cdea02750ac6607893a6bbd440a42",
+      "sourceHash": "38324be50fb3e697c86004301ca8a1b4f509b795789d860796d5a9d485d4aa8e",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "a5ad2215e13a4de9dfdb9b3d0e772640411cbfa4cff488223e4385fa4d0cd663"
@@ -886,7 +886,7 @@
       "families": [
         "radar"
       ],
-      "sourceHash": "19184902841dc8d666a5148630a38130ef6646473fdd5058bc085933aa00e8a0",
+      "sourceHash": "38b4a9eb912ace54a1f0fc40bcd0a23bca97611db819ada60c2869e987adf05b",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "cb268475a709cf21ae20e31925af349d5166017d6c339b8cb543fde051fd1174",
@@ -1021,7 +1021,7 @@
       "families": [
         "mindmap"
       ],
-      "sourceHash": "42be640f818690f67c2288c99b2b4f1dbcb9ba53e8fb6376ddc994054119ec77",
+      "sourceHash": "447c79abb9026ea114f4c50d618740e1c20b79b21062399fcd4501b82e5014ac",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "9763e22dab0e8119947146b049ae6504295d05145707e12e57ccbfa1a498cb8f",
@@ -1048,7 +1048,7 @@
     },
     {
       "id": "lantern",
-      "title": "One scene program drives the page, the pictures and the trace",
+      "title": "How one scene program becomes a page, pictures and a trace",
       "lang": "en",
       "cases": [
         {}
@@ -1061,7 +1061,7 @@
         "class",
         "flowchart"
       ],
-      "sourceHash": "813bee812f2db26adc3ac94eb4c79b637416b6d0ddf433cb3a0211ce0abf69d7",
+      "sourceHash": "eb5793c7e738517f0e18fbad0167ba23f9c92bb93a32a66df3550d2571cd2a1e",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "0ae9c89a1d666fa27e7fe22cbd0e6a1578134fcd8e2bdfea4c99294b5455671a",
@@ -1071,7 +1071,7 @@
     },
     {
       "id": "fork",
-      "title": "What this fork keeps from Lantern, and what it replaces",
+      "title": "What changes when Lantern’s live player becomes a prebuilt page?",
       "lang": "en",
       "cases": [
         {}
@@ -1083,7 +1083,7 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "fc3a9af2ddb07e89a0bd4e5683c92dd28aa7d5d9a7104d900dc09f75544c921d",
+      "sourceHash": "e5e3ec799131b357b923cf6336a03ff69e36f15e68ed32efdfc9956ec01ef01d",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "e4dec2d18ebcadcfc87d2410a6b4bfded287b01ac68de1df584c24a19819136c",
@@ -1092,7 +1092,7 @@
     },
     {
       "id": "agentic-mermaid",
-      "title": "Verify and repair an agent’s Mermaid edit",
+      "title": "How a Mermaid verifier checks and repairs flowchart branches",
       "lang": "en",
       "cases": [
         {
@@ -1111,7 +1111,7 @@
         "xychart",
         "gitgraph"
       ],
-      "sourceHash": "1ce8492db6a2e78d6d1b73e5148b34e365c51f7a330d38b4f9bb9440c9020e7a",
+      "sourceHash": "174924b70ea56e98d5a1780da4d92cfee567392a17c0acaf0339f913b856f276",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "b4631294ad88de184d957bdd64af66989615ba8a0854316dbbb634c777496831",
@@ -1123,7 +1123,7 @@
     },
     {
       "id": "glyph",
-      "title": "Rayner draws text from measured glyph outlines",
+      "title": "Why Rayner measures glyphs before drawing text",
       "lang": "en",
       "cases": [
         {
@@ -1140,7 +1140,7 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "5ff1f918cab24d406b4a28ff71360981e582ff19083f06c011d462caa7c061f6",
+      "sourceHash": "8766b0bcd061b13b623058dc878d2bc7ceed28527676618b98511d2303f4331b",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "94bed86e0bc925e30ded33b2734b746392eb64bac9a0532d8922d78ee29e532f",
@@ -1149,7 +1149,7 @@
     },
     {
       "id": "pen-and-pencil",
-      "title": "A layout engine places the chart; a simulated hand draws the plate",
+      "title": "How a hand-drawn timeline keeps its labels inside fixed boxes",
       "lang": "en",
       "cases": [
         {
@@ -1166,7 +1166,7 @@
       "families": [
         "timeline"
       ],
-      "sourceHash": "baff2746345b69f089acaa5a6679e15a28e218bf8946b63fc3772eedef2a51cc",
+      "sourceHash": "fdf826f92e74b1f7abdbf66a0444533023c16a6d8439ad65cecc9585a0eb247e",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "e6ff0d0451af8260ab56a827de31c0b54d8a08dc54f3ff6e85cb3be80cb5fc15"

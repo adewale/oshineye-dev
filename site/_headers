@@ -67,11 +67,11 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/2password
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-oetnsSQzTy/c0bnXyvAFC6fzBx36lDyVpYmICUoNe/8='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-Bx9OBIFcnQznHAWUrAVYT8QRyS3nKArPM/9GHRhEFF0='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/2password.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-oetnsSQzTy/c0bnXyvAFC6fzBx36lDyVpYmICUoNe/8='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-Bx9OBIFcnQznHAWUrAVYT8QRyS3nKArPM/9GHRhEFF0='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/just-bash
@@ -83,19 +83,19 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/cert-renewal
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-CP54UpmDq/rD+jSHkeD/S/escc0BkRSdaOF7vRic510='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-uJlAQg432Mb7YNyhmuguL1C0rrcyI00LGsBVZk5OGkk='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/cert-renewal.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-CP54UpmDq/rD+jSHkeD/S/escc0BkRSdaOF7vRic510='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-uJlAQg432Mb7YNyhmuguL1C0rrcyI00LGsBVZk5OGkk='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/quotient-familial
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-sGmTOf5NEiBzWGw0Rr3ArWfKHrq63VhXx+I1n3r4GRY='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-gjwt/MWh28hkDjDclwIXWeEg324klCseUsuiQYc6dTM='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/quotient-familial.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-sGmTOf5NEiBzWGw0Rr3ArWfKHrq63VhXx+I1n3r4GRY='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-gjwt/MWh28hkDjDclwIXWeEg324klCseUsuiQYc6dTM='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/send-sync
@@ -107,11 +107,11 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/gtfs
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-hgUXtZKiQYuDpH4Srdf7hs+obZdpW7cTrW1q7oXuN/4='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-VIn3l2kYGYXmxVNGFxvftCn30yOmunzmViIfZpDn7mc='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/gtfs.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-hgUXtZKiQYuDpH4Srdf7hs+obZdpW7cTrW1q7oXuN/4='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-VIn3l2kYGYXmxVNGFxvftCn30yOmunzmViIfZpDn7mc='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/pg-page
@@ -131,11 +131,11 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/isdigit
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-7DQFjqYek9ykzg8dzYCdh42Ql++QjaSa6NF7NjdrVIw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-/G1fbHrL458+bNV1uRqmBNOrpOF5CpwAJ5o84eH7TDg='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/isdigit.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-7DQFjqYek9ykzg8dzYCdh42Ql++QjaSa6NF7NjdrVIw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-/G1fbHrL458+bNV1uRqmBNOrpOF5CpwAJ5o84eH7TDg='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/ical-recurrence
@@ -147,27 +147,27 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/ext4-space
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-krvmFkj9zQBdFZhzkyXwNaAEpFpFETcl2lTLaE/vMtM='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-7dMrypZtdfSdnXra9MVUOvsYLweurAaVOSDXYcI4Ufs='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/ext4-space.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-krvmFkj9zQBdFZhzkyXwNaAEpFpFETcl2lTLaE/vMtM='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-7dMrypZtdfSdnXra9MVUOvsYLweurAaVOSDXYcI4Ufs='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/trust-proxy
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-KyF9JVCsoQbnJjNsPDXtAv9+UB9AN4zd1asxLCATBPc='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-STmxFaaVdxNBHzRkiJQa+fPNb96K6wD+3UbZUGFS7co='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/trust-proxy.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-KyF9JVCsoQbnJjNsPDXtAv9+UB9AN4zd1asxLCATBPc='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-STmxFaaVdxNBHzRkiJQa+fPNb96K6wD+3UbZUGFS7co='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/tailwind-gamut
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-n2hhUDAIEHYkglcS1rgnUFc0eJ2K+Pchb58mME1WotE='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-ggxblfaE+2cn9lMWz4L6JZQMsDDsXTHQzXSzh6m8oiw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/tailwind-gamut.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-n2hhUDAIEHYkglcS1rgnUFc0eJ2K+Pchb58mME1WotE='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-ggxblfaE+2cn9lMWz4L6JZQMsDDsXTHQzXSzh6m8oiw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/gnome-files
@@ -179,49 +179,49 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/wcag-map
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-xofzwsdWXsmR77+iuGMzbQvTyzlLlliaO6WjZ1DeZk0='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-/PNCgzt41qDjc+rtWz5khkNeFr5eKm/TM7AXqD4J0vc='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/wcag-map.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-xofzwsdWXsmR77+iuGMzbQvTyzlLlliaO6WjZ1DeZk0='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-/PNCgzt41qDjc+rtWz5khkNeFr5eKm/TM7AXqD4J0vc='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/lantern
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-N1f21SIsLwiaoMrpT8GwbhYiexS5iCdaMJ/pNlQ0t6E='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-ICDzkm1nvwYUPPDRNhAAREMMK6wC97cstzyu4vP7yNg='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/lantern.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-N1f21SIsLwiaoMrpT8GwbhYiexS5iCdaMJ/pNlQ0t6E='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-ICDzkm1nvwYUPPDRNhAAREMMK6wC97cstzyu4vP7yNg='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/fork
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-i+ez50gIMRTPSz2ie+9ehvJRozaw+vD3eLPJ/OfJxOw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-8FCjNBYXXAXCNYkmHHtg8vBNx2C8zDZEOYyy2inwohs='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/fork.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-i+ez50gIMRTPSz2ie+9ehvJRozaw+vD3eLPJ/OfJxOw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-8FCjNBYXXAXCNYkmHHtg8vBNx2C8zDZEOYyy2inwohs='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/agentic-mermaid
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-PJc4SqOqAls2YtsmFabrwvGM26udLyG9hcuDCwiCU98='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-WTUl2fQrUusW5FZVEktVUT8qUHVlNs4AqLXR2hQ9K8w='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/agentic-mermaid.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-PJc4SqOqAls2YtsmFabrwvGM26udLyG9hcuDCwiCU98='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-WTUl2fQrUusW5FZVEktVUT8qUHVlNs4AqLXR2hQ9K8w='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/glyph
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-+C8NLsxsCmik+vhWdHDh0adAIFY4W9PiB+0iOctmDgk='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-r4u9GcAuzGj+KcuJ8sL1+3JYz2C1RoupPFkvyjyHlfA='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/glyph.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-+C8NLsxsCmik+vhWdHDh0adAIFY4W9PiB+0iOctmDgk='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-r4u9GcAuzGj+KcuJ8sL1+3JYz2C1RoupPFkvyjyHlfA='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/pen-and-pencil
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-u89svBoEdf5M5aV4X7NaZJ7MtNL7FRWgfw7JKAW6fj8='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-quXKeeALjjihw0k7NhDN5tLutiV4L6l9blZZK5gIyGA='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/pen-and-pencil.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-u89svBoEdf5M5aV4X7NaZJ7MtNL7FRWgfw7JKAW6fj8='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-quXKeeALjjihw0k7NhDN5tLutiV4L6l9blZZK5gIyGA='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate

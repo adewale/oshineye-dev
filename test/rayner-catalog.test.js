@@ -22,7 +22,11 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect(once).toContain('<dt>Explainers</dt><dd>2</dd>');
     expect(once).toContain('<dt>Cases</dt><dd>5</dd>');
     expect(once).toContain('Cache hit &amp; miss');
-    expect(once).toContain('/projects/rayner/engine?step=start');
+    expect(once).toContain('/projects/rayner/engine"><img src="/projects/rayner/engine.png"');
+    expect(once).toContain('/projects/rayner/cache"><img src="/projects/rayner/cache.png"');
+    expect(once).not.toContain('/projects/rayner/engine?step=');
+    expect(once).toContain('/projects/rayner/mr-cache?request=hit');
+    expect(once).not.toContain('/projects/rayner/mr-cache?step=request');
     expect(once).toContain('https://example.org/tutorial');
     expect(once).toContain('Node 24 and Chromium');
     expect(once).not.toContain('Old topics');
