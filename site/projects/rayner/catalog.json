@@ -18,9 +18,9 @@
     }
   },
   "totals": {
-    "explainers": 28,
-    "cases": 143,
-    "diagrams": 160,
+    "explainers": 29,
+    "cases": 144,
+    "diagrams": 161,
     "styles": 8,
     "families": 15
   },
@@ -235,9 +235,17 @@
     },
     {
       "id": "font-metrics",
-      "step": "cuts",
+      "step": "diagram",
       "group": "toolchain",
       "title": "A font’s advance places the next word",
+      "lang": "en",
+      "cases": 1
+    },
+    {
+      "id": "layout-direction",
+      "step": "columns",
+      "group": "toolchain",
+      "title": "Choose where a panel starts",
       "lang": "en",
       "cases": 1
     },
