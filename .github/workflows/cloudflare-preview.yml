@@ -20,9 +20,17 @@ concurrency:
   cancel-in-progress: ${{ !inputs.production }}
 
 jobs:
+  reject-unreviewed-production:
+    if: ${{ inputs.production && github.ref != 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Production requires the reviewed main branch' >&2; exit 1
+
   deploy-preview:
+    if: ${{ !inputs.production || github.ref == 'refs/heads/main' }}
     name: Deploy Cloudflare
     runs-on: ubuntu-latest
+    environment: ${{ inputs.production && 'production' || 'preview' }}
     steps:
       - name: Check out branch
         uses: actions/checkout@v4
@@ -50,8 +58,8 @@ jobs:
       - name: Build static assets
         run: bun run build
 
-      - name: Validate the site
-        run: bun run typecheck && bun run test
+      - name: Validate the site and exported Rayner bytes
+        run: bun run typecheck && bun run test && bun run check:rayner-export
 
       - name: Deploy redesign Preview
         if: ${{ !inputs.production }}
@@ -70,7 +78,7 @@ jobs:
           echo "Preview URL: https://redesign.oshineye.dev" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Deploy production
-        if: ${{ inputs.production }}
+        if: ${{ inputs.production && github.ref == 'refs/heads/main' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 8837d43caf5a2ab3df5143eb3e2f1b96

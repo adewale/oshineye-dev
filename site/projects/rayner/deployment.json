@@ -241,7 +241,7 @@
       },
       {
         "file": "tools/explain-demos.ts",
-        "sha256": "8c34f9a283328fc40bb63e67d75e74bbc52fcbc88188b7c8d2e74a9daf2473fc"
+        "sha256": "fc81733703dfdc0a64d8a0cf6dccdf3bb44215d57e4ed87b0746326df17ec59a"
       },
       {
         "file": "tools/explain-package-smoke.ts",
@@ -261,7 +261,7 @@
       },
       {
         "file": "tools/explain-site.ts",
-        "sha256": "4af978d346c9f25ac1be1da283e63e485473ce1cbd1a9df4eaa3be6b3a98d6d7"
+        "sha256": "7d7fbae1062803921fdd60b0cf13632585723c4c0e2e2114b9071d5c4438709c"
       },
       {
         "file": "tools/explain.ts",
@@ -306,6 +306,10 @@
       {
         "file": "tools/lib/explain-build.ts",
         "sha256": "a35375ed13e33eece875ff39f9fe8595c1e40f5afc35555925a0e2821be8a57a"
+      },
+      {
+        "file": "tools/lib/explain-built-files.ts",
+        "sha256": "6f18974354df30f1b0368aaaf4a8cb601757fbd13ac44e8977c560780023bf39"
       },
       {
         "file": "tools/lib/explain-check.ts",
@@ -381,7 +385,7 @@
       },
       {
         "file": "tools/lib/site-headers.ts",
-        "sha256": "f47796b9cd50046719266331ad02aa8b4b9dd74ec60ff0d134ced4b64b426940"
+        "sha256": "a5c066a53580e8c92f296f69ec2d1c743868663bd393cee2d18f0dae54661ebc"
       },
       {
         "file": "tools/lib/tokenize.ts",
@@ -464,7 +468,7 @@
         "sha256": "fd3340c177298bbd2a5ce010cfefa27c26d491132fb319f7538a2b49ec8b0f71"
       }
     ],
-    "hash": "49828e585107b10586d83fd3e8c9ed96f0d2e2f21a54d37fc3b5144612f81bda"
+    "hash": "8997d797fc73fa0d5d42517f481b931ff5519f2cf0641896c4004d788845f3ce"
   },
   "files": [
     {
@@ -685,7 +689,7 @@
     },
     {
       "path": "/projects/rayner/evidence.json",
-      "sha256": "de8e29809e8efe90365af0ac344b8ee0b98b61597ad873a2b1e30a57a295a02a"
+      "sha256": "6e177aa9bb408cf94289b148f807a047e0835a9d49e604349e12c4bc33f3401b"
     },
     {
       "path": "/projects/rayner/exgit.html",
@@ -1473,11 +1477,11 @@
     },
     {
       "path": "/projects/rayner/pen-and-pencil.html",
-      "sha256": "d90969b4fd8a08d971d852e6143e91c2410e3b60383da6f4ce9085f42e3e73d8"
+      "sha256": "db35654d270ca6f87122b397c1249b4546f0066195675c425cea373207fd7af1"
     },
     {
       "path": "/projects/rayner/pen-and-pencil.json",
-      "sha256": "794ed00456158af9911078e19bc0945d0277edfde4f56b9ba98f172358002e3d"
+      "sha256": "385f8e5828e6bb720de3ad97ff1d1fdf19d5d1c965636ef234257cc9e389a8cf"
     },
     {
       "path": "/projects/rayner/pen-and-pencil.png",

@@ -219,9 +219,9 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/pen-and-pencil
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-quXKeeALjjihw0k7NhDN5tLutiV4L6l9blZZK5gIyGA='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-sMSgWUHKsQIuPIRChYCzsAnzOqrTeJXqmR7ifk9+oIw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/pen-and-pencil.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-quXKeeALjjihw0k7NhDN5tLutiV4L6l9blZZK5gIyGA='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-sMSgWUHKsQIuPIRChYCzsAnzOqrTeJXqmR7ifk9+oIw='; style-src 'sha256-v9EVINIms5hWvKVcUB4tGIlrqjXoHNeKtU6iqzVyDTA='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
