@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "checked": false,
+  "checked": true,
   "totals": {
     "explainers": 27,
     "cases": 142,
