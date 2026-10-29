@@ -261,7 +261,7 @@
       },
       {
         "file": "tools/explain-site.ts",
-        "sha256": "7d7fbae1062803921fdd60b0cf13632585723c4c0e2e2114b9071d5c4438709c"
+        "sha256": "855d4b05ff7b29bc1e50c13f5a93f4af62d517af82e33dd1a9d1badc0f1fb594"
       },
       {
         "file": "tools/explain.ts",
@@ -309,7 +309,7 @@
       },
       {
         "file": "tools/lib/explain-built-files.ts",
-        "sha256": "6f18974354df30f1b0368aaaf4a8cb601757fbd13ac44e8977c560780023bf39"
+        "sha256": "44b982d4d5bc8ba8af1ddf2222ebb3d3b51cf7ac483971e0e2969b191ceaf8dc"
       },
       {
         "file": "tools/lib/explain-check.ts",
@@ -385,7 +385,7 @@
       },
       {
         "file": "tools/lib/site-headers.ts",
-        "sha256": "a5c066a53580e8c92f296f69ec2d1c743868663bd393cee2d18f0dae54661ebc"
+        "sha256": "5e7069eb2f646c50a57ff90dadff31705b2121801687e3ec92c1b3f14ad201c8"
       },
       {
         "file": "tools/lib/tokenize.ts",
@@ -468,9 +468,13 @@
         "sha256": "fd3340c177298bbd2a5ce010cfefa27c26d491132fb319f7538a2b49ec8b0f71"
       }
     ],
-    "hash": "8997d797fc73fa0d5d42517f481b931ff5519f2cf0641896c4004d788845f3ce"
+    "hash": "86ba97ce34bfff93f201364d05a38a788a95f21a09558f41d4ed3f669c8e1bf7"
   },
   "files": [
+    {
+      "path": "/_headers",
+      "sha256": "2c0e530a3f35b043bd4718c54eedffedba34e93eb6977f5d597ad5fe18563bb7"
+    },
     {
       "path": "/projects/rayner.html",
       "sha256": "b872747db2b0659d570379b81697bddec32e05c2374eaec0949231c8bb0b3b8f"

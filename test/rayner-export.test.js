@@ -15,11 +15,13 @@ test('a deployed Rayner export has exactly the recorded bytes, including branded
     const page = join(root, 'projects/rayner.html');
     const tile = join(root, 'projects/rayner/cache.html');
     writeFileSync(page, 'host');
+    writeFileSync(join(root, '_headers'), '/projects/rayner/cache\n  Content-Security-Policy: strict\n');
     writeFileSync(join(root, 'projects/rayner/index.html'), 'host');
     writeFileSync(tile, 'scene');
     const manifest = {
       version: 1,
       files: [
+        { path: '/_headers', sha256: hash('/projects/rayner/cache\n  Content-Security-Policy: strict\n') },
         { path: '/projects/rayner.html', sha256: hash('host') },
         { path: '/projects/rayner/index.html', sha256: hash('host') },
         { path: '/projects/rayner/cache.html', sha256: hash('scene') },
@@ -39,6 +41,9 @@ test('a deployed Rayner export has exactly the recorded bytes, including branded
     unlinkSync(tile);
     await expect(verifyRaynerExport(root)).rejects.toThrow(/cache\.html.*missing/);
     writeFileSync(tile, 'scene');
+    writeFileSync(join(root, '_headers'), '/projects/rayner/cache\n');
+    await expect(verifyRaynerExport(root)).rejects.toThrow(/_headers.*digest/);
+    writeFileSync(join(root, '_headers'), '/projects/rayner/cache\n  Content-Security-Policy: strict\n');
     writeFileSync(join(repo, 'tools/sync-rayner.mjs'), 'modified');
     await expect(verifyRaynerExport(root)).rejects.toThrow(/generator.*digest/);
     writeFileSync(join(repo, 'tools/sync-rayner.mjs'), 'sync');

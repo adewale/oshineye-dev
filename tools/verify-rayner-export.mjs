@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const validDigest = value => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
-const owned = path => path === '/projects/rayner.html' || /^\/projects\/rayner\/(?!\.)[a-zA-Z0-9_.\/-]+$/.test(path);
+const owned = path => path === '/_headers' || path === '/projects/rayner.html' || /^\/projects\/rayner\/(?!\.)[a-zA-Z0-9_.\/-]+$/.test(path);
 
 export async function verifyRaynerExport(root) {
   root = resolve(root);
@@ -28,8 +28,8 @@ export async function verifyRaynerExport(root) {
     });
     if (digest(bytes) !== sha256) throw new Error(`${path} has a different digest`);
   }
-  if (!listed.has('/projects/rayner.html') || !listed.has('/projects/rayner/index.html'))
-    throw new Error('Rayner branded pages are missing from the manifest');
+  if (!listed.has('/_headers') || !listed.has('/projects/rayner.html') || !listed.has('/projects/rayner/index.html'))
+    throw new Error('Rayner response headers or branded pages are missing from the manifest');
   for (const entry of await readdir(subtree, { recursive: true, withFileTypes: true })) {
     const path = '/projects/rayner/' + relative(subtree, join(entry.parentPath, entry.name)).replaceAll('\\', '/');
     if (entry.isSymbolicLink()) throw new Error(`unlisted symlink: ${path}`);
