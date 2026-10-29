@@ -6,12 +6,16 @@ const { version, product, totals, scenes } = JSON.parse(await readFile(new URL('
 if (version !== 1 || scenes.length !== totals.explainers || scenes.reduce((n, scene) => n + scene.cases, 0) !== totals.cases)
   throw new Error('Rayner catalog version or counts are inconsistent');
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+const entry = product.entry;
+if (!entry || !scenes.some(scene => scene.id === entry.id) || !entry.step || !entry.label)
+  throw new Error('Rayner catalog needs a valid introductory entry');
+const entryUrl = `/projects/rayner/${encodeURIComponent(entry.id)}?${new URLSearchParams({step: entry.step, ...entry.settings})}`;
 let html = await readFile(file, 'utf8');
 html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(product.summary + ' ' + product.audience));
 const copy = `<div class="project-copy">
                     <p class="project-lede">${escape(product.summary)} ${escape(product.audience)}</p>
                     <p>${escape(product.description)}</p>
-                    <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?request=hit">Step through a cache request</a></p>
+                    <p class="project-actions"><a class="github-cta" href="${escape(entryUrl)}">${escape(entry.label)}</a></p>
                     <p><a href="${escape(product.tutorial)}">Write your first explainer</a> · <a href="${escape(product.reference)}">Authoring reference</a> · <a href="${escape(product.skill)}">Agent authoring skill</a></p>
                     <p><a href="https://github.com/adewale/rayner">Rayner on GitHub</a></p>
                 </div>`;

@@ -2,8 +2,8 @@
   "version": 2,
   "checked": true,
   "totals": {
-    "explainers": 27,
-    "cases": 142,
+    "explainers": 28,
+    "cases": 143,
     "diagrams": 160,
     "styles": 8,
     "families": 15
@@ -110,7 +110,7 @@
       "diagrams": 0,
       "styles": [],
       "families": [],
-      "sourceHash": "6575af8ca778d9928644def3010c140b9e1f666b8c9de392a9409cd8d6e7d6dc",
+      "sourceHash": "636dacc8cbe7f5aded889b969d2650af905e2062c04949c9c0e16d5894321f71",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": []
     },
@@ -133,7 +133,7 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "3d816795074a61c05cf54ab6834d55e93d8ef2e948b38daa80e62b4be83aea5e",
+      "sourceHash": "79ae7c07aa3aabe48e7cc5f1c2c83abce48a3dedaac5b12576791217617b34b6",
       "engineHash": "e2910801bdce7422d225466adc5c51025ea356aa8986ead7488144779fa90675",
       "snapshotHashes": [
         "8976bab9b7f5de3039fb810a6772f8b8edd3cf4531efbb0408c4d17d14250b82",
@@ -1146,6 +1146,20 @@
         "94bed86e0bc925e30ded33b2734b746392eb64bac9a0532d8922d78ee29e532f",
         "2b1f8dce38ed6b88236cb5bffdef8b3ace8af78a83001b32680c86428ef89768"
       ]
+    },
+    {
+      "id": "font-metrics",
+      "title": "A font’s advance places the next word",
+      "lang": "en",
+      "cases": [
+        {}
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "sourceHash": "19b63647fd2ff4592d3a608e69ce9398a9b12f4e92309ed2f0049839f1e5c9fa",
+      "engineHash": "30b1819857884bdfb17991f2eb2d9a81b599afaae3a9b9ef3af4d50573b90b83",
+      "snapshotHashes": []
     },
     {
       "id": "pen-and-pencil",

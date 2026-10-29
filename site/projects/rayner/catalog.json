@@ -7,11 +7,19 @@
     "requirements": "Node 24 or later and Chromium. Authoring targets Ubuntu and macOS.",
     "tutorial": "https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md",
     "reference": "https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md",
-    "skill": "https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md"
+    "skill": "https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md",
+    "entry": {
+      "id": "mr-cache",
+      "step": "before",
+      "settings": {
+        "request": "hit"
+      },
+      "label": "Step through a cache request"
+    }
   },
   "totals": {
-    "explainers": 27,
-    "cases": 142,
+    "explainers": 28,
+    "cases": 143,
     "diagrams": 160,
     "styles": 8,
     "families": 15
@@ -224,6 +232,14 @@
       "title": "Why Rayner measures glyphs before drawing text",
       "lang": "en",
       "cases": 2
+    },
+    {
+      "id": "font-metrics",
+      "step": "cuts",
+      "group": "toolchain",
+      "title": "A font’s advance places the next word",
+      "lang": "en",
+      "cases": 1
     },
     {
       "id": "pen-and-pencil",
