@@ -11,7 +11,7 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     mkdirSync(join(root, 'site/projects/rayner'), { recursive: true });
     copyFileSync(new URL('../tools/sync-rayner.mjs', import.meta.url), join(root, 'tools/sync-rayner.mjs'));
     const page = join(root, 'site/projects/rayner.html'), catalog = join(root, 'site/projects/rayner/catalog.json');
-    writeFileSync(page, '<meta name="description" content="Old"><div class="project-copy">Old copy</div><aside></aside><dt>Explainers</dt><dd>26</dd><dt>Cases</dt><dd>140</dd><script src="/projects/rayner/loader.js" data-src="/projects/rayner/seasons?step=june" data-target="rayner-embed" data-title="Seasons"></script><div class="example-grid">Old topics</div><section class="section reveal" aria-labelledby="toolchain"><div class="example-grid">Old tools</div></section><section class="section reveal" aria-labelledby="install"><pre><code>npm ci\nold</code></pre><p class="section-intro">You need Node 26.</p></section>');
+    writeFileSync(page, '<meta name="description" content="Old"><div class="project-copy">Old copy</div><aside><dl><dt>Explainers</dt><dd>26</dd><dt>Cases</dt><dd>140</dd></dl></aside><script src="/projects/rayner/loader.js" data-src="/projects/rayner/seasons?step=june" data-target="rayner-embed" data-title="Seasons"></script><div class="example-grid">Old topics</div><section class="section reveal" aria-labelledby="toolchain"><div class="example-grid">Old tools</div></section><section class="section reveal" aria-labelledby="install"><pre><code>npm ci\nold</code></pre><p class="section-intro">You need Node 26.</p></section>');
     writeFileSync(join(root, 'site/index.html'), '<a href="/projects/rayner" class="repo-title">rayner</a><p class="repo-desc">Old copy</p>');
     writeFileSync(join(root, 'site/projects/rayner/deployment.json'), JSON.stringify({ files: [] }));
     const data = { version: 1, product: { summary: 'Model-led explanations.', audience: 'For TypeScript authors.', description: 'Follow another case.', requirements: 'Node 24 and Chromium.', tutorial: 'https://example.org/tutorial', reference: 'https://example.org/reference', skill: 'https://example.org/skill', entry: {id: 'cache', step: 'begin', settings: {request: 'hit'}, label: 'Follow from the start'} }, totals: { explainers: 2, cases: 5 }, scenes: [{ id: 'cache', title: 'Cache hit & miss', step: 'request', lang: 'en', group: 'topic', cases: 2 }, { id: 'engine', title: 'How it works', step: 'start', lang: 'en', group: 'toolchain', cases: 3 }] };
@@ -19,8 +19,9 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     const run = () => spawnSync('node', [join(root, 'tools/sync-rayner.mjs')], { encoding: 'utf8' });
     expect(run().status).toBe(0);
     const once = readFileSync(page, 'utf8');
-    expect(once).toContain('<dt>Readers</dt><dd>2</dd>');
-    expect(once).toContain('<dt>Cases</dt><dd>5</dd>');
+    expect(once).not.toContain('<dt>Readers</dt>');
+    expect(once).not.toContain('<dt>Cases</dt>');
+    expect(once).toContain('<dt>Requires</dt><dd>Node 24 and Chromium.</dd>');
     expect(once).toContain('Cache hit &amp; miss');
     expect(once).toContain('/projects/rayner/engine"><img src="/projects/rayner/engine.png"');
     expect(once).toContain('/projects/rayner/cache"><img src="/projects/rayner/cache.png"');
@@ -50,8 +51,11 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect(restored.status).toBe(0);
     const withAuthors = readFileSync(page, 'utf8');
     expect(withAuthors).toContain('aria-labelledby="toolchain"');
-    expect(withAuthors).toContain('Hello World: build smoke test');
-    expect(withAuthors).toContain('Feature tour: API demo');
+    expect(withAuthors).toContain('Hello World: a complete nine-line scene');
+    expect(withAuthors).toContain('Feature tour: recipe, then result');
+    // The authors' intro lands in the recreated section once, never in the install section.
+    expect(withAuthors.split('These are for authors').length - 1).toBe(1);
+    expect(withAuthors).toMatch(/aria-labelledby="toolchain">[\s\S]*These are for authors[\s\S]*aria-labelledby="install"/);
     expect(withAuthors).toContain('href="/projects/rayner/hello-world"');
     expect(withAuthors).toContain('href="/projects/rayner/feature-tour"');
     expect(withAuthors).toContain('https://example.org/tutorial#0-hello-world');
@@ -64,7 +68,7 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).toBe(0);
     const selected = readFileSync(page, 'utf8');
-    expect(selected).toContain('<dt>Readers</dt><dd>1</dd>');
+    expect(selected).not.toContain('<dt>Readers</dt>');
     expect(selected).not.toContain('/projects/rayner/engine');
     expect(selected).not.toContain('aria-labelledby="toolchain"');
     expect((selected.match(/class="example-card explainer-tile"/g) ?? []).length).toBe(1);

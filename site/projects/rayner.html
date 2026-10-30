@@ -73,18 +73,21 @@
                     <p class="project-lede">Interactive explanations of protocols, algorithms and code changes. For engineers and technical educators who write TypeScript.</p>
                     <p>Step through a picture at your own pace, or change a setting to follow another case. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.</p>
                     <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?step=before&amp;request=hit">Step through a cache request</a></p>
-                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/BY-EXAMPLE.md">Learn by example: code beside consequential results</a></p>
-                    <p><a href="/projects/rayner/hello-world">Hello World: build smoke test</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md#0-hello-world">See its complete code</a> · <a href="/projects/rayner/feature-tour">Feature tour: API demo</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">Read the feature guide</a></p>
-                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">Write your first explainer</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md">Authoring reference</a> · <a href="https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md">Agent authoring skill</a></p>
-                    <p><a href="https://github.com/adewale/rayner">Rayner on GitHub</a></p>
+                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/BY-EXAMPLE.md">Learn by example</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">Write your first explainer</a></p>
                 </div>
-                <aside class="project-panel" aria-label="The KV-cache explainer">
-                    <a class="project-motion-frame" href="/projects/rayner/mr-cache?step=after" aria-label="Open the KV-cache explainer">
-                        <img class="project-panel-image" src="/projects/rayner/mr-cache.png" alt="" width="960" height="540">
+                <aside class="project-panel" aria-labelledby="project-facts-title">
+                    <a class="project-motion-frame" href="https://github.com/adewale/rayner" target="_blank" rel="noopener" aria-label="View Rayner on GitHub">
+                        <img class="project-panel-image" src="/img/repo/generated/vfinal-approved-stills/rayner/colour.jpg" alt="Generated project artwork for Rayner" loading="lazy" width="400" height="300">
+                        <video class="project-motion-media" muted loop playsinline preload="none" poster="/img/repo/generated/vfinal-approved-stills/rayner/colour.jpg" aria-hidden="true" width="400" height="300">
+                            <source src="/img/repo/generated/vfinal-approved-stills/rayner/animation.mp4" type="video/mp4">
+                        </video>
                     </a>
+                    <h3 id="project-facts-title">Project facts</h3>
                     <dl class="project-facts">
-                        <div><dt>Readers</dt><dd>8</dd></div>
-                        <div><dt>Cases</dt><dd>62</dd></div>
+                        <div><dt>Package</dt><dd><code>npm install --save-dev rayner</code></dd></div>
+                        <div><dt>Requires</dt><dd>Node 24 or later and Chromium. Authoring targets Ubuntu and macOS.</dd></div>
+                        <div><dt>Publishes</dt><dd>A portable HTML page with a transcript</dd></div>
+                        <div><dt>Repository</dt><dd><a href="https://github.com/adewale/rayner" target="_blank" rel="noopener"><code>adewale/rayner</code></a></dd></div>
                         <div><dt>License</dt><dd>MIT</dd></div>
                     </dl>
                 </aside>
@@ -152,10 +155,10 @@ this.state.attackerAccepted =
 
         <section class="section reveal" aria-labelledby="toolchain">
             <div class="section-head"><h2 id="toolchain">How to write one</h2></div>
-            <p class="section-intro">These are authoring tools, not subject lessons. Hello World checks a minimal build; the feature tour demonstrates representative APIs.</p>
+            <p class="section-intro">These are for authors, not subject lessons. The <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md#0-hello-world">nine-line Hello World scene</a> checks that you can write and build one. The <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">feature guide</a> shows the code an author writes for each feature, then its result. For the whole path, read <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">the tutorial</a>, the <a href="https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md">authoring reference</a> or the <a href="https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md">agent authoring skill</a>.</p>
             <div class="example-grid">
-                <article class="example-card explainer-tile"><a href="/projects/rayner/hello-world"><img src="/projects/rayner/hello-world.png" alt="" loading="lazy" width="960" height="540"><h3>Hello World: build smoke test</h3></a></article>
-                <article class="example-card explainer-tile"><a href="/projects/rayner/feature-tour"><img src="/projects/rayner/feature-tour.png" alt="" loading="lazy" width="960" height="540"><h3>Feature tour: API demo</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/hello-world"><img src="/projects/rayner/hello-world.png" alt="" loading="lazy" width="960" height="540"><h3>Hello World: a complete nine-line scene</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/feature-tour"><img src="/projects/rayner/feature-tour.png" alt="" loading="lazy" width="960" height="540"><h3>Feature tour: recipe, then result</h3></a></article>
             </div>
         </section>
 
@@ -168,7 +171,7 @@ this.state.attackerAccepted =
                     <pre><code>git clone https://github.com/adewale/rayner &amp;&amp; cd rayner
 npm ci
 npx playwright-core install chromium
-npm run demos:check
+npm run demos:build
 npm run demos:serve</code></pre>
                 </div>
             </div>
