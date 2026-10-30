@@ -12,21 +12,21 @@ if (!entry || !scenes.some(scene => scene.id === entry.id) || !entry.step || !en
 const entryUrl = `/projects/rayner/${encodeURIComponent(entry.id)}?${new URLSearchParams({step: entry.step, ...entry.settings})}`;
 const selected = new Set(scenes.map(scene => scene.id));
 // Authoring examples are titled by what an author gets from them, in the README's terms.
-const TOOL_TITLES = { 'hello-world': 'Hello World: a complete nine-line scene', 'feature-tour': 'Feature tour: recipe, then result' };
+const TOOL_TITLES = { 'feature-tour': 'Feature tour: recipe, then result' };
 const authoring = [
-  selected.has('hello-world') && `The <a href="${escape(product.tutorial)}#0-hello-world">nine-line Hello World scene</a> checks that you can write and build one.`,
   selected.has('feature-tour') && `The <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">feature guide</a> shows the code an author writes for each feature, then its result.`,
 ].filter(Boolean).join(' ');
 const toolIntro = `These are for authors, not subject lessons. ${authoring ? authoring + ' ' : ''}For the whole path, read <a href="${escape(product.tutorial)}">the tutorial</a>, the <a href="${escape(product.reference)}">authoring reference</a> or the <a href="${escape(product.skill)}">agent authoring skill</a>.`;
 let html = await readFile(file, 'utf8');
-if (html.includes('aria-labelledby="by-example"') && !['mr-cache', 'isdigit', 'oauth-pkce'].every(id => selected.has(id)))
-  throw new Error('The by-example links require mr-cache, isdigit and oauth-pkce in this export');
+// Retired examples may remain in an old exported page; remove them on every sync.
+html = html.replace(/<section class="section reveal" aria-labelledby="by-example">[\s\S]*?<\/section>\s*/, '');
+html = html.replace(/^\s*\.by-example-[^\n]*\n/gm, '');
 html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(product.summary + ' ' + product.audience));
 const copy = `<div class="project-copy">
                     <p class="project-lede">${escape(product.summary)} ${escape(product.audience)}</p>
                     <p>${escape(product.description)}</p>
                     <p class="project-actions"><a class="github-cta" href="${escape(entryUrl)}">${escape(entry.label)}</a></p>
-                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/BY-EXAMPLE.md">Learn by example</a> · <a href="${escape(product.tutorial)}">Write your first explainer</a></p>
+                    <p><a href="${escape(product.tutorial)}">Write your first explainer</a></p>
                 </div>`;
 html = html.replace(/<div class="project-copy">[\s\S]*?<\/div>(?=\s*<aside)/, copy);
 // The panel follows the other project pages: the project's artwork, then facts an author can

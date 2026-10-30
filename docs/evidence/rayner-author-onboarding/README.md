@@ -1,5 +1,7 @@
 # Publish authoring examples — 30 October 2026
 
+**Historical deployment record.** Hello World and the Learn by example section were retired in a later export. The routes, counts and verification steps below refer to this earlier deployment, not the current site.
+
 Purpose: retain the six subject leaders without treating an API example as a /24 lesson, and add `hello-world` and `feature-tour` to the *authoring* section. The Rayner source is merged [`b972544`](https://github.com/adewale/rayner/commit/b97254428b9c8a0530113251a344afb33afe0318). The Linux catalog artifact comes from passing [Rayner CI run `41055933256`](https://github.com/adewale/rayner/actions/runs/41055933256) for the reviewed PR content; `site:export` checked all 32 source inputs and the catalog output hashes before selecting eight readers. The six old subject HTML files did not change in this website diff. The exported catalog and evidence agree on **8 explainers, 62 cases, 32 diagrams**. Source checks still cover all **32 scenes and 164 cases**.
 
 The branded landing page now restores a distinct “How to write one” group and gives direct links to the Hello World reader, its complete nine-line code in the tutorial, the feature tour and its scope guide. The tour has 15 runnable authoring families, **not every Rayner export or option**. The gallery tile links begin at the first step. The six subject leaders remain the only subject entries; the other 24 source scenes are not published. No historical /24 score was changed.

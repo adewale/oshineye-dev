@@ -1,16 +1,16 @@
 import { test, expect } from 'bun:test';
 import { readFileSync, readdirSync } from 'node:fs';
 
-// The six subject leaders stay curated; the two authoring examples serve a
-// different purpose and do not acquire a fictional /24 lesson score.
+// The six subject leaders stay curated; the remaining authoring demo serves a
+// different purpose and does not acquire a fictional /24 lesson score.
 const topRank = ['ext4-space', 'isdigit', 'mr-cache', 'oauth-pkce', 'pg-page', 'trust-proxy'];
-const authoring = ['hello-world', 'feature-tour'];
+const authoring = ['feature-tour'];
 const selected = [...topRank, ...authoring];
 const site = new URL('../site/', import.meta.url);
 const read = path => readFileSync(new URL(path, site), 'utf8');
 const ids = paths => paths.sort((a, b) => a.localeCompare(b));
 
-test('only six subject leaders and two authoring examples are exported and linked', () => {
+test('only six subject leaders and one authoring demo are exported and linked', () => {
   const catalog = JSON.parse(read('projects/rayner/catalog.json'));
   const evidence = JSON.parse(read('projects/rayner/evidence.json'));
   const manifest = JSON.parse(read('projects/rayner/deployment.json'));
@@ -20,8 +20,8 @@ test('only six subject leaders and two authoring examples are exported and linke
   expect(ids(evidence.scenes.map(s => s.id))).toEqual(ids([...selected]));
   expect(ids(catalog.scenes.filter(s => s.group === 'toolchain').map(s => s.id))).toEqual(ids([...authoring]));
   expect(catalog.totals).toEqual(evidence.totals);
-  expect(catalog.totals.explainers).toBe(8);
-  expect(catalog.totals.cases).toBe(62);
+  expect(catalog.totals.explainers).toBe(7);
+  expect(catalog.totals.cases).toBe(61);
   // The panel gives facts an author can act on, not counts of the gallery.
   expect(landing).not.toContain('<dt>Readers</dt>');
   expect(landing).not.toContain('<dt>Cases</dt>');
@@ -31,18 +31,13 @@ test('only six subject leaders and two authoring examples are exported and linke
   expect(landing).toContain('npm run demos:build');
   expect(landing).not.toContain('demos:check');
   expect(landing).toContain('aria-labelledby="toolchain"');
-  expect(landing).toContain('aria-labelledby="by-example"');
-  expect(landing).toContain('Why does a cache hit skip D1?');
-  expect(landing).toContain('Why can ² pass isdigit() but fail int()?');
-  expect(landing).toContain('Why can’t an attacker exchange the stolen code?');
-  for (const url of ['mr-cache?request=hit&amp;step=request', 'mr-cache?request=miss&amp;step=request', 'isdigit?char=super&amp;guard=isdigit&amp;step=outcome', 'isdigit?char=super&amp;guard=isdecimal&amp;step=outcome', 'oauth-pkce?attacker=yes&amp;step=attack', 'oauth-pkce?attacker=no&amp;step=exchange'])
-    expect(landing).toContain(`/projects/rayner/${url}`);
-  expect(landing).toContain('Hello World: a complete nine-line scene');
+  expect(landing).not.toContain('aria-labelledby="by-example"');
+  expect(landing).not.toContain('Learn by example');
+  expect(landing).not.toContain('docs/BY-EXAMPLE.md');
+  expect(landing).not.toContain('hello-world');
   expect(landing).toContain('Feature tour: recipe, then result');
-  expect(landing).toContain('docs/BY-EXAMPLE.md');
-  expect(landing).toContain('href="/projects/rayner/hello-world"');
   expect(landing).toContain('href="/projects/rayner/feature-tour"');
-  expect(landing).toContain('docs/TUTORIAL.md#0-hello-world');
+  expect(landing).toContain('docs/TUTORIAL.md');
   expect(landing).toContain('docs/FEATURE-TOUR.md');
   expect(landing).toContain('data-src="/projects/rayner/mr-cache"');
   expect(landing).toBe(read('projects/rayner/index.html'));
@@ -58,4 +53,5 @@ test('only six subject leaders and two authoring examples are exported and linke
   expect(ids(readdirSync(new URL('projects/rayner/', site)))).toEqual(ids(allowed));
   for (const path of read('_headers').matchAll(/^\/projects\/rayner\/([a-z0-9-]+)(?:\.html)?$/gm))
     expect(selected).toContain(path[1]);
+  expect(manifest.files.some(entry => entry.path.includes('hello-world'))).toBe(false);
 });

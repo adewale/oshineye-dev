@@ -41,26 +41,23 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     // next export must recreate it when authoring examples return.
     writeFileSync(page, once.replace(/<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/, ''));
     data.scenes.push(
-      { id: 'hello-world', title: 'Hello, world!', step: 'hello', lang: 'en', group: 'toolchain', cases: 1 },
       { id: 'feature-tour', title: 'How do I write that?', step: 'result', lang: 'en', group: 'toolchain', cases: 15 },
     );
-    data.totals = { explainers: 4, cases: 21 };
+    data.totals = { explainers: 3, cases: 20 };
     writeFileSync(catalog, JSON.stringify(data));
     const restored = run();
     expect(restored.stderr).toBe('');
     expect(restored.status).toBe(0);
     const withAuthors = readFileSync(page, 'utf8');
     expect(withAuthors).toContain('aria-labelledby="toolchain"');
-    expect(withAuthors).toContain('Hello World: a complete nine-line scene');
     expect(withAuthors).toContain('Feature tour: recipe, then result');
     // The authors' intro lands in the recreated section once, never in the install section.
     expect(withAuthors.split('These are for authors').length - 1).toBe(1);
     expect(withAuthors).toMatch(/aria-labelledby="toolchain">[\s\S]*These are for authors[\s\S]*aria-labelledby="install"/);
-    expect(withAuthors).toContain('href="/projects/rayner/hello-world"');
     expect(withAuthors).toContain('href="/projects/rayner/feature-tour"');
-    expect(withAuthors).toContain('https://example.org/tutorial#0-hello-world');
+    expect(withAuthors).toContain('https://example.org/tutorial');
     expect(withAuthors).toContain('docs/FEATURE-TOUR.md');
-    expect((withAuthors.match(/class="example-card explainer-tile"/g) ?? []).length).toBe(4);
+    expect((withAuthors.match(/class="example-card explainer-tile"/g) ?? []).length).toBe(3);
     expect(run().status).toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(withAuthors);
     data.scenes = data.scenes.slice(0, 1);
@@ -74,10 +71,10 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect((selected.match(/class="example-card explainer-tile"/g) ?? []).length).toBe(1);
     expect(run().status).toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(selected);
-    const brokenLinks = selected.replace('<section class="section reveal" aria-labelledby="install">', '<section class="section reveal" aria-labelledby="by-example"></section><section class="section reveal" aria-labelledby="install">');
-    writeFileSync(page, brokenLinks);
-    expect(run().status).not.toBe(0);
-    expect(readFileSync(page, 'utf8')).toBe(brokenLinks);
+    const stalePage = selected.replace('<section class="section reveal" aria-labelledby="install">', '<section class="section reveal" aria-labelledby="by-example"><p>Retired</p></section><section class="section reveal" aria-labelledby="install">');
+    writeFileSync(page, stalePage);
+    expect(run().status).toBe(0);
+    expect(readFileSync(page, 'utf8')).toBe(selected);
     writeFileSync(page, selected);
     data.totals.cases = 6;
     writeFileSync(catalog, JSON.stringify(data));
