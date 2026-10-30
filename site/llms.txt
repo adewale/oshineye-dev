@@ -12,3 +12,8 @@ Each item links the page, gives the first sentence of its first caption, and lin
 - [str.isdigit() accepts 128 characters that int() rejects](https://oshineye.dev/projects/rayner/isdigit): The Unicode Character Database gives each of these a numeric value. JSON: [isdigit.json](https://oshineye.dev/projects/rayner/isdigit.json)
 - [A new 1 TiB ext4 filesystem lets users write 93% of it; the 5% root reserve is nearly three times all its metadata](https://oshineye.dev/projects/rayner/ext4-space): mke2fs.conf sets 4096-byte blocks, so 1 TiB is 268,435,456 blocks in 8,192 groups of 32,768. JSON: [ext4-space.json](https://oshineye.dev/projects/rayner/ext4-space.json)
 - [With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP](https://oshineye.dev/projects/rayner/trust-proxy): Requests are meant to reach Express through a CDN and then a load balancer, but the load balancer also accepts connections from the internet, so an attacker can skip the CDN. JSON: [trust-proxy.json](https://oshineye.dev/projects/rayner/trust-proxy.json)
+
+## How these are made
+
+- [Hello, world!](https://oshineye.dev/projects/rayner/hello-world): The picture says “Hello, world!”. JSON: [hello-world.json](https://oshineye.dev/projects/rayner/hello-world.json)
+- [How do I write that in Rayner?](https://oshineye.dev/projects/rayner/feature-tour): This is the author-side code for steps. JSON: [feature-tour.json](https://oshineye.dev/projects/rayner/feature-tour.json)

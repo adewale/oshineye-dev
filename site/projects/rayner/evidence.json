@@ -2,10 +2,10 @@
   "version": 2,
   "checked": true,
   "totals": {
-    "explainers": 6,
-    "cases": 46,
-    "diagrams": 31,
-    "styles": 3,
+    "explainers": 8,
+    "cases": 62,
+    "diagrams": 32,
+    "styles": 4,
     "families": 4
   },
   "scenes": [
@@ -322,6 +322,84 @@
       "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
       "snapshotHashes": [
         "531da6aa3462ca4d4061911c955fb611db90f0d1c5bba55dea074af1ed603322"
+      ]
+    },
+    {
+      "id": "hello-world",
+      "title": "Hello, world!",
+      "lang": "en",
+      "cases": [
+        {}
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "sourceHash": "70fe3c1392718941581599031c75096690c50664c3cb4d5f620870274d41f14c",
+      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "snapshotHashes": []
+    },
+    {
+      "id": "feature-tour",
+      "title": "How do I write that in Rayner?",
+      "lang": "en",
+      "cases": [
+        {
+          "feature": "steps"
+        },
+        {
+          "feature": "settings"
+        },
+        {
+          "feature": "diagram"
+        },
+        {
+          "feature": "code"
+        },
+        {
+          "feature": "code-diff"
+        },
+        {
+          "feature": "animation"
+        },
+        {
+          "feature": "matching"
+        },
+        {
+          "feature": "restore"
+        },
+        {
+          "feature": "emphasis"
+        },
+        {
+          "feature": "camera"
+        },
+        {
+          "feature": "chart"
+        },
+        {
+          "feature": "state"
+        },
+        {
+          "feature": "annotations"
+        },
+        {
+          "feature": "direction"
+        },
+        {
+          "feature": "drawing"
+        }
+      ],
+      "diagrams": 1,
+      "styles": [
+        "github-dark"
+      ],
+      "families": [
+        "flowchart"
+      ],
+      "sourceHash": "129da4cdbc9f9d26c8928f43eca0efd673ba0ee9c3bd9deacfd87842d354459a",
+      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "snapshotHashes": [
+        "237678fe558c7dfae631f04e6ee0fca658ccb01fdd6a5ba06673bce1e1efd6ab"
       ]
     }
   ]

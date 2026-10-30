@@ -129,7 +129,7 @@
       },
       {
         "file": "scenes/explainers/catalog.ts",
-        "sha256": "a39702651c981b8635f93119151c205913bab214ff6b3dafa9c70f2981384268"
+        "sha256": "194a8d1c5a4c2973939ec97520b4ea4347f7cdce4aa7897ea59fc30bcdf0afdf"
       },
       {
         "file": "src/animation.ts",
@@ -512,24 +512,24 @@
         "sha256": "fd3340c177298bbd2a5ce010cfefa27c26d491132fb319f7538a2b49ec8b0f71"
       }
     ],
-    "hash": "9b3e6375a39af10bff73b031cfef7995bb0c62c45cf823d07224155babad66a1"
+    "hash": "2b6237286e605fc217d92d3263956f055b587867191838a45012340ebf880f4e"
   },
   "files": [
     {
       "path": "/_headers",
-      "sha256": "f92c6e75dbf8322ca8b300898723ec62decd6a33cf3ea4af9764606da2d6d11e"
+      "sha256": "629e5203b7620f510e84c56472deb4f26512c10de82bb76f229180ac5e8bfc25"
     },
     {
       "path": "/projects/rayner.html",
-      "sha256": "7c8bf4cff92a2d49dc8fd16b2e9777ec196719f1d77d21ddb0d8d4b5bbc06b9a"
+      "sha256": "4a33ff828f2292330c62e337f3db70813325894482622b7ab2994f781fa2f098"
     },
     {
       "path": "/projects/rayner/catalog.json",
-      "sha256": "e60ae70028c56f88e13d7a86aaf72e6f0e92c0d1f9ee8d9e32e0f3bc689ab8a3"
+      "sha256": "a6143c68bce59e7a4a025b54832999a2a0df03a6d5ac0e1b7d42526f03b4ae26"
     },
     {
       "path": "/projects/rayner/evidence.json",
-      "sha256": "4c31ba2ed62c7d8da91162794a25f6712db9d5b744716e0bc3455c41d00adef1"
+      "sha256": "1c074dde3187208438e3d6a36af5b278ad63c20e5acb8c7a5f3c725ff0d5fecb"
     },
     {
       "path": "/projects/rayner/ext4-space.html",
@@ -600,8 +600,56 @@
       "sha256": "bdf9d87f7874cc173f7e50d778e6b1c2797b741dd756876ac2ad08f4853f86b5"
     },
     {
+      "path": "/projects/rayner/feature-tour.html",
+      "sha256": "3fc7beccc88c5e94fd73cee89fa5c092253ab400efd98f781d26480458e6d4a4"
+    },
+    {
+      "path": "/projects/rayner/feature-tour.json",
+      "sha256": "fad6a66e8167eb36a9e22d7897d2484e3d8cf8b52bbe6994913c40c88284bf10"
+    },
+    {
+      "path": "/projects/rayner/feature-tour.png",
+      "sha256": "a18f5f8ded15e09fd736f37088ba38de7d425764e80d7bef9fb91b95dbb97e0b"
+    },
+    {
+      "path": "/projects/rayner/feature-tour/recipe.html",
+      "sha256": "95aaddcf71e714c957cb84abe1c04748eced8aa333c7c66ad845128a9bd4d15c"
+    },
+    {
+      "path": "/projects/rayner/feature-tour/recipe.png",
+      "sha256": "31f8a897fe757c0f982a08a554fc692135a8f54135e0da57964c66665d44120b"
+    },
+    {
+      "path": "/projects/rayner/feature-tour/result.html",
+      "sha256": "f4f6508ec4e91c52c173676b3b57d0c6a68b76d4b9be8bd49f560d82d1ebb0c4"
+    },
+    {
+      "path": "/projects/rayner/feature-tour/result.png",
+      "sha256": "d82bca27a86f9728ce327534bebea9f76daa02089bf0ec267960e94163eed7eb"
+    },
+    {
+      "path": "/projects/rayner/hello-world.html",
+      "sha256": "7f161620d8776ce3a1a856bafa86cb586418e4cd8bff9502ecdc95ecf5a7734f"
+    },
+    {
+      "path": "/projects/rayner/hello-world.json",
+      "sha256": "5586376927cba2bfb747de90d8e96c1c1b4fa53a8cf79ae0e22b5769b99f4089"
+    },
+    {
+      "path": "/projects/rayner/hello-world.png",
+      "sha256": "489935eea98b0615c62476bede7202022f0e35a65d377298d4c46c8090e0cc75"
+    },
+    {
+      "path": "/projects/rayner/hello-world/hello.html",
+      "sha256": "da1be2bccb2f212e9c425f87f0df297ec89698c727f6d326e7cdafc9293c4cc8"
+    },
+    {
+      "path": "/projects/rayner/hello-world/hello.png",
+      "sha256": "028b30665463d26919ff2d79b29901620e73812ecaad6e68ef0e423bc11e82e3"
+    },
+    {
       "path": "/projects/rayner/index.html",
-      "sha256": "7c8bf4cff92a2d49dc8fd16b2e9777ec196719f1d77d21ddb0d8d4b5bbc06b9a"
+      "sha256": "4a33ff828f2292330c62e337f3db70813325894482622b7ab2994f781fa2f098"
     },
     {
       "path": "/projects/rayner/isdigit.html",
@@ -934,6 +982,6 @@
   ],
   "host": {
     "generator": "tools/sync-rayner.mjs",
-    "sha256": "32f4190b6ac01c78dc023731ddbd2d693eacae250c0cab149c7b55785fe4ca7f"
+    "sha256": "7887f24f042c69b71f10972f680cd817b52dea4861e1c5b58ed8670b64cf5706"
   }
 }
