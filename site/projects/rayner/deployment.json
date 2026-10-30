@@ -513,11 +513,11 @@
   "files": [
     {
       "path": "/_headers",
-      "sha256": "912bd670af378ba6a1430434c5077fbf34542f97d91512b281690885b1ee0aaa"
+      "sha256": "7de38e64c9bde0fe1828aa1f0a748bef5c801dc409f94eb93fd9388f5b6a4ccd"
     },
     {
       "path": "/projects/rayner.html",
-      "sha256": "ab6fcc59791126bb86b82ac69e17ea99c42c12aa09b8dfa14c18476503921af7"
+      "sha256": "129e33beed8c5f965a534dffc43b4db2e0ea87ba9eda21f2ba382acdf2bf6e9d"
     },
     {
       "path": "/projects/rayner/2password.html",
@@ -641,7 +641,7 @@
     },
     {
       "path": "/projects/rayner/catalog.json",
-      "sha256": "1fe634e3787b2870fbb130264bbd5a75e40e2c8efaac727e0002feb4c9c01fad"
+      "sha256": "3b0a47758c35330aaa6a068be9e0a59238880a024128cf42764e61ac5b1adc32"
     },
     {
       "path": "/projects/rayner/cert-renewal.html",
@@ -733,7 +733,7 @@
     },
     {
       "path": "/projects/rayner/evidence.json",
-      "sha256": "ca805bde6b7fa2ec16481473ee796d145a918ef0d557681b26972679d54005f7"
+      "sha256": "a0791271b5657e6d359b4007097dc9dd3c6ccdba4447e73ceb8b40ec1ceed3ac"
     },
     {
       "path": "/projects/rayner/exgit.html",
@@ -865,47 +865,47 @@
     },
     {
       "path": "/projects/rayner/font-metrics.html",
-      "sha256": "51cf77292eb32600ee444bd413ed5248df2f29c36d0abc9e9ec0256bcc1c5d7b"
+      "sha256": "26703bcc6ed28cf2bf2722300e17877a54419be715f257e9a79c97d31d7ba173"
     },
     {
       "path": "/projects/rayner/font-metrics.json",
-      "sha256": "f3e2110e668a29ef658ec857910727cdf2113059ad40ac3d309b21a8b8a0762c"
+      "sha256": "5a811da8cea50a887e0bd395dfb7754e4a4a07511c776f4a2506aaf5552aef63"
     },
     {
       "path": "/projects/rayner/font-metrics.png",
-      "sha256": "9beb02e766b2fd2f44bbab5b1e56d254f6977ed27bc2e3f2171e3b2433ef67a8"
+      "sha256": "d5f3dabf59dff6244250548b4dd1290a02a14ee7b8af3e43645fe64ed4900266"
     },
     {
       "path": "/projects/rayner/font-metrics/advance.html",
-      "sha256": "4422b0d214d40e829767d591bea337cffad4bb896aee39c87591e7cc4f3a0127"
+      "sha256": "d44d9eaa7bc208ade1d69bc704aabfcdfdaaece249aa536aab44b77b0bab02d5"
     },
     {
       "path": "/projects/rayner/font-metrics/advance.png",
-      "sha256": "538b2e10a6c7d76ccdd584314da7fe2469582de8aadbc488d7a5118e662eef04"
+      "sha256": "112cf825223a37436d825ae6fe33f1a1830ba2d9536b5397c880805702d96c10"
     },
     {
       "path": "/projects/rayner/font-metrics/cuts.html",
-      "sha256": "19424d1a94458db8780923d510e626e99971ca5ce9a5224951c3818d1278450f"
+      "sha256": "0cec01f20f5626fde95d5769b747d0c1873901803a92bb89107c5cf2461fb30f"
     },
     {
       "path": "/projects/rayner/font-metrics/cuts.png",
-      "sha256": "990a3880d126cd0b7b4640e1852ef2f99c82d63c29987af9b691dee6e82a1705"
+      "sha256": "3cd4519e7e9822bbf16f9ccfb61f864018853c03169b4116d040e43136706e21"
     },
     {
       "path": "/projects/rayner/font-metrics/diagram.html",
-      "sha256": "b223138cd3a174f1f2333832a1a86f47506c8b73abe93aa5737d09391b3ecc91"
+      "sha256": "b4a6ec1f96a6032da25e76a5f966c40083821a77629115266bfad34db9aa6148"
     },
     {
       "path": "/projects/rayner/font-metrics/diagram.png",
-      "sha256": "5d64bed5edd899497a9c80f010f7fe6dff57798057b5c0e3a0ffa40872a0fcce"
+      "sha256": "f4182deae5146b6e5ab424f94dfe1528c7c5cf79ee2f2317bcedd0f415280462"
     },
     {
       "path": "/projects/rayner/fork.html",
-      "sha256": "1046940aa5a12fe24f75bf813548fff7f9371d746e38e12a81dd06d1a2b4354f"
+      "sha256": "9aa13c46032d0112524426c5829b5b11c9bace1253a2a5ce8cec634bff312a60"
     },
     {
       "path": "/projects/rayner/fork.json",
-      "sha256": "e3d44641bfe04cec782f530a99dc0883749eca03fed001af84db3c87748a9f09"
+      "sha256": "c9d1a226be799a8dec90ce8a8c248a43c4aee7c1ea49875afd896a30c129bcf0"
     },
     {
       "path": "/projects/rayner/fork.png",
@@ -921,11 +921,11 @@
     },
     {
       "path": "/projects/rayner/fork/cost.html",
-      "sha256": "3a35d67efce141c537113a5eb204eda56bd785aaf53e80b3b5859e0d063e9256"
+      "sha256": "b6a58a3cb6ef083b82ab83fa1f2a057eeee5ecf368e499d54da837c81983131d"
     },
     {
       "path": "/projects/rayner/fork/cost.png",
-      "sha256": "02791700997bc60e43248a8d2d8b0603827a62f091407adbd57f75fb93fb8df2"
+      "sha256": "06f6be5db02e8ee7931190b64da68a872e3ec28e8c55f9fa18739246ac93ec8c"
     },
     {
       "path": "/projects/rayner/fork/engine.html",
@@ -977,11 +977,11 @@
     },
     {
       "path": "/projects/rayner/glyph.html",
-      "sha256": "e67c0ec2f6af362e9da77c1994a2c0be09e262f342e5ed442dfe76acb143f31a"
+      "sha256": "82941476e34a895714d74f73115007392e29fa9fee804ad61e2b9654332f4f8a"
     },
     {
       "path": "/projects/rayner/glyph.json",
-      "sha256": "5f568d253712de89467eeeb422202bf9906c41759ebd1bc9826fe3a02a6cee38"
+      "sha256": "c48847cdf32e8201c9672dd17dd525cb897c30a2bfffca08c0bde22c8a88b405"
     },
     {
       "path": "/projects/rayner/glyph.png",
@@ -1021,11 +1021,11 @@
     },
     {
       "path": "/projects/rayner/glyph/tradeoff.html",
-      "sha256": "fbd9d6727d3a7a4862aa353f4fb70b108581678141b97cfa152a17500c629b86"
+      "sha256": "d1676d98b11f47885f8a1202ac9bdd7f8f648497645c5c6fe4feffaaf4065263"
     },
     {
       "path": "/projects/rayner/glyph/tradeoff.png",
-      "sha256": "f624ad06f0e26b2717369b15ccc43649052f0c0f09b6dc1908b4447046a486d2"
+      "sha256": "53c22767a2e4fe17171ab6c001f55c6be5813823e8bd92c266ba21e79ed13978"
     },
     {
       "path": "/projects/rayner/glyph/write.html",
@@ -1233,15 +1233,15 @@
     },
     {
       "path": "/projects/rayner/index.html",
-      "sha256": "ab6fcc59791126bb86b82ac69e17ea99c42c12aa09b8dfa14c18476503921af7"
+      "sha256": "129e33beed8c5f965a534dffc43b4db2e0ea87ba9eda21f2ba382acdf2bf6e9d"
     },
     {
       "path": "/projects/rayner/isdigit.html",
-      "sha256": "8ab39f54d90c5e99e465ef05ab765e2506df9b30b9f7b12ab6745cbf7ae7b6be"
+      "sha256": "8ebb16ce5052bb0caedf08f78f29083d66b6b158f0d351b589a2f9588209bc8c"
     },
     {
       "path": "/projects/rayner/isdigit.json",
-      "sha256": "23a190a57621375fcf5a55db77386500d56d9db297418c1f114d82ff44938a7c"
+      "sha256": "9aeefb1abff747aac5876289c1abd7e3e385e6a943424afeb9a4be83eec74b49"
     },
     {
       "path": "/projects/rayner/isdigit.png",
@@ -1297,11 +1297,11 @@
     },
     {
       "path": "/projects/rayner/isdigit/sets.html",
-      "sha256": "cb9e3f514eb7b25059f5b9e60b02ee5dc2994854e1dd4977b0a5e2190876aef3"
+      "sha256": "47d3874fe7e0f67859da574f314600f18ce442b26e658c8de97d14212cdeda28"
     },
     {
       "path": "/projects/rayner/isdigit/sets.png",
-      "sha256": "def1cc5bae658d9e92675514a741202120fae173377e6270d13ae45fef5fae59"
+      "sha256": "c93a020dfbdf3ac467fce21c8a2b936aa019b233c5f903b1999d790d420f8b2c"
     },
     {
       "path": "/projects/rayner/isdigit/ucd.html",
@@ -1449,31 +1449,31 @@
     },
     {
       "path": "/projects/rayner/layout-direction.html",
-      "sha256": "df74f389d014f97af577ab44b301efcd5a4a3adbbcac5579c5050a9b70fb18fa"
+      "sha256": "ec9e3a2f13522da5e2ec57b8090d77d6c0651af25d59dc6ee0b8c6277d75c951"
     },
     {
       "path": "/projects/rayner/layout-direction.json",
-      "sha256": "cfb586433848c8b18ecdf5bb51e7eb87cc08d0acc556fae930b3d3e0623eede3"
+      "sha256": "468315b2de66af6f3ac93e813591e0bf06cd8282d37c056e2701cdd6ac6f4829"
     },
     {
       "path": "/projects/rayner/layout-direction.png",
-      "sha256": "f6aa26bfc55fbef0a535e5265141f5a2b7e4ea894afaf278bdc9dc3718ef62a1"
+      "sha256": "b547b0a34293edc68c72c7052b00cf7dad23081fc2c7e9907ae5649423796a17"
     },
     {
       "path": "/projects/rayner/layout-direction/columns.html",
-      "sha256": "17991f2ba333ee0cf25bea55b46ba4f982bd5b7fa1f6511b0169ae9594bc1709"
+      "sha256": "fd18c68f9a0e44bcf075caf26750d094b22dcd865dbc503d28b72dd751c9ad99"
     },
     {
       "path": "/projects/rayner/layout-direction/columns.png",
-      "sha256": "902380deedde7de9f1338c9eb6f83055c0cb18813e1f291c298a89915f3db25c"
+      "sha256": "849713c2fd4a9fb02ed10d8b04a795ffd6ab3cc0ae9a86a64abe1b103c4179b0"
     },
     {
       "path": "/projects/rayner/layout-direction/updates.html",
-      "sha256": "9592011cded12e86315d67014edee00ef5e711391fafd7e99e861213da2f6c3f"
+      "sha256": "7398cd324e89b57cdec093adc3ae765039c97746f28379e0f1d129ab46b7eb63"
     },
     {
       "path": "/projects/rayner/layout-direction/updates.png",
-      "sha256": "1d63048755c74a1955fde99c6c565485bfa74c2cacb31d05239414873ea38083"
+      "sha256": "0ab00c8a3af824fdbad315ddd2b6df2671b9afa21015f78eaae4fe1c21a944eb"
     },
     {
       "path": "/projects/rayner/loader.js",
