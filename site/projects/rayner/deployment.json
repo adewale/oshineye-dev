@@ -521,7 +521,7 @@
     },
     {
       "path": "/projects/rayner.html",
-      "sha256": "9c2e204241a3c90bcc6453faed2a182b05a5c626709a7590839d94545456f88b"
+      "sha256": "419e0e9ca05a8dbb5c05c634ca05ed50d10a5ac19219e9103867f68579395f9b"
     },
     {
       "path": "/projects/rayner/catalog.json",
@@ -649,7 +649,7 @@
     },
     {
       "path": "/projects/rayner/index.html",
-      "sha256": "9c2e204241a3c90bcc6453faed2a182b05a5c626709a7590839d94545456f88b"
+      "sha256": "419e0e9ca05a8dbb5c05c634ca05ed50d10a5ac19219e9103867f68579395f9b"
     },
     {
       "path": "/projects/rayner/isdigit.html",
@@ -982,6 +982,6 @@
   ],
   "host": {
     "generator": "tools/sync-rayner.mjs",
-    "sha256": "db8dafaba8b7aeeb1bfd5634a3d081e5e930b6f3e024cedcdd544baa2d9c2afa"
+    "sha256": "e50e91c0a94fbde40cd70ade9547d13fceb87a55e287fcef8a04c58d48f97a72"
   }
 }
