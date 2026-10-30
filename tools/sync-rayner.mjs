@@ -16,8 +16,8 @@ const onboarding = [
   selected.has('feature-tour') && `<a href="/projects/rayner/feature-tour">Feature tour: API demo</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">Read the feature guide</a>`,
 ].filter(Boolean).join(' · ');
 let html = await readFile(file, 'utf8');
-if (html.includes('aria-labelledby="by-example"') && !['mr-cache', 'token-bucket', 'oauth-pkce'].every(id => selected.has(id)))
-  throw new Error('The by-example links require mr-cache, token-bucket and oauth-pkce in this export');
+if (html.includes('aria-labelledby="by-example"') && !['mr-cache', 'isdigit', 'oauth-pkce'].every(id => selected.has(id)))
+  throw new Error('The by-example links require mr-cache, isdigit and oauth-pkce in this export');
 html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(product.summary + ' ' + product.audience));
 const copy = `<div class="project-copy">
                     <p class="project-lede">${escape(product.summary)} ${escape(product.audience)}</p>

@@ -27,9 +27,9 @@ test('only six subject leaders and two authoring examples are exported and linke
   expect(landing).toContain('aria-labelledby="toolchain"');
   expect(landing).toContain('aria-labelledby="by-example"');
   expect(landing).toContain('Why does a cache hit skip D1?');
-  expect(landing).toContain('Why do later requests get different answers?');
+  expect(landing).toContain('Why can ² pass isdigit() but fail int()?');
   expect(landing).toContain('Why can’t an attacker exchange the stolen code?');
-  for (const url of ['mr-cache?request=hit&amp;step=request', 'mr-cache?request=miss&amp;step=request', 'token-bucket?rate=1&amp;step=trace', 'token-bucket?rate=4&amp;step=trace', 'oauth-pkce?attacker=yes&amp;step=attack', 'oauth-pkce?attacker=no&amp;step=exchange'])
+  for (const url of ['mr-cache?request=hit&amp;step=request', 'mr-cache?request=miss&amp;step=request', 'isdigit?char=super&amp;guard=isdigit&amp;step=outcome', 'isdigit?char=super&amp;guard=isdecimal&amp;step=outcome', 'oauth-pkce?attacker=yes&amp;step=attack', 'oauth-pkce?attacker=no&amp;step=exchange'])
     expect(landing).toContain(`/projects/rayner/${url}`);
   expect(landing).toContain('Hello World: build smoke test');
   expect(landing).toContain('Feature tour: API demo');

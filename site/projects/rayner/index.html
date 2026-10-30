@@ -31,7 +31,7 @@
       .by-example-lesson { padding: 1.1rem; border: 2px solid var(--ink); background: var(--paper); }
       .by-example-lesson h3 { margin-bottom: 0.7rem; }
       .by-example-lesson .example-box { min-width: 0; min-height: 0; }
-      .by-example-lesson pre { overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
+      .by-example-lesson pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.85rem; line-height: 1.5; }
       .by-example-lesson pre code { background: none; padding: 0; }
       .by-example-lesson .example-box p a { overflow-wrap: anywhere; }
     </style>
@@ -114,18 +114,14 @@ this.state.reads =
                     </div>
                 </article>
                 <article class="by-example-lesson">
-                    <h3>Why do later requests get different answers?</h3>
+                    <h3>Why can ² pass isdigit() but fail int()?</h3>
                     <div class="example-pair">
-                        <div class="example-box"><p class="example-label">Author model (excerpt)</p><pre><code>this.tokens = Math.min(
-  this.capacity,
-  this.tokens +
-    (now - this.lastRefill) * this.rate
-);
-this.lastRefill = now;
-if (this.tokens &lt; 1) return false;
-this.tokens--;
-return true;</code></pre><p>Condensed from <a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/lib/models.ts">TokenBucket.allow</a>; <a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/token-bucket/scene.ts">full scene</a>.</p></div>
-                        <div class="example-box example-box--after"><p class="example-label">Result: refill rate changes</p><p><a href="/projects/rayner/token-bucket?rate=1&amp;step=trace">1 token/s: R6, R7, R9 rejected</a></p><p><a href="/projects/rayner/token-bucket?rate=4&amp;step=trace">4 tokens/s: only R6 rejected</a></p><p>R6 arrives before any refill can help it. Later calls use the same arrival times at both rates.</p></div>
+                        <div class="example-box"><p class="example-label">Author model (excerpt)</p><pre><code>const passes = predicates(c)[guard],
+  int = intOf(c);
+return { passes, int, outcome:
+  !passes ? 'refused' :
+  'value' in int ? 'parsed' : 'raised' };</code></pre><p>From <a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/lib/isdigit.ts">guarded</a>; <a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/isdigit/scene.ts">full scene</a>.</p></div>
+                        <div class="example-box example-box--after"><p class="example-label">Result: change only the guard</p><p><a href="/projects/rayner/isdigit?char=super&amp;guard=isdigit&amp;step=outcome">isdigit() lets ² through; int() raises ValueError</a></p><p><a href="/projects/rayner/isdigit?char=super&amp;guard=isdecimal&amp;step=outcome">isdecimal() turns ² away before int() runs</a></p><p>For whole strings, call int() and catch ValueError; a predicate is not a general parser.</p></div>
                     </div>
                 </article>
                 <article class="by-example-lesson">
