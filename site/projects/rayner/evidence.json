@@ -662,7 +662,7 @@
       "diagrams": 0,
       "styles": [],
       "families": [],
-      "sourceHash": "2b7a3d274a2452b86c182da41396900bd59bd02f751d4d70382e1384cca67de9",
+      "sourceHash": "2d77724bc2ffe5de025a8a20d8e1d256f17ce46ce695e26756794573a1a9f5db",
       "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
       "snapshotHashes": []
     },
@@ -1083,7 +1083,7 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "e5e3ec799131b357b923cf6336a03ff69e36f15e68ed32efdfc9956ec01ef01d",
+      "sourceHash": "18de68096369ae75c67ca8e1cf016e4c5d76da7fffdc275ee17d347df5c1e616",
       "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
       "snapshotHashes": [
         "4f2130d3f926402baeace68ba8b784f4ae8634023534a84ae8ee44605c8837ef",
@@ -1140,7 +1140,7 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "8766b0bcd061b13b623058dc878d2bc7ceed28527676618b98511d2303f4331b",
+      "sourceHash": "cdaa15dad67f4572bfc9ca56f5abd7a105ca586cb866d8c195e307e5dc0f54f8",
       "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
       "snapshotHashes": [
         "f6f4ab9644da650d93b2fce6c25a78839d00972cfb784e4ffd87230daa9b5507",
@@ -1149,7 +1149,7 @@
     },
     {
       "id": "font-metrics",
-      "title": "A font’s advance places the next word",
+      "title": "Measuring a phrase with EB Garamond before layout",
       "lang": "en",
       "cases": [
         {}
@@ -1161,7 +1161,7 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "d4166ccdc97b394e4539045a20881ec62938e5cb939f360bacac9666c1827d6c",
+      "sourceHash": "464dc772a69f3aec7c697b6c2ee7ab6a3d611f9a8846781997c79dd04f6b8d0e",
       "engineHash": "2584e6a265c1db74f06528b24a21cb631c82ba0a0c53f7e1ecf004c054dac8c5",
       "snapshotHashes": [
         "93bbd4102f6d0f2e8c3a4a8a218e3cc8a7dad8bd90b0ef881b37192dd2b2d983"
@@ -1169,7 +1169,7 @@
     },
     {
       "id": "layout-direction",
-      "title": "Choose where a panel starts",
+      "title": "The stage places cards; each card orders its fields",
       "lang": "en",
       "cases": [
         {}
@@ -1177,7 +1177,7 @@
       "diagrams": 0,
       "styles": [],
       "families": [],
-      "sourceHash": "91f921c7b3707230b34869d7f0151884265b39a1b83fe1470f0a2289ead4188b",
+      "sourceHash": "4b6931a27a5df8f599a2af82f70ce91f2e0d3e1cabe91c1750e8220450b51c21",
       "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
       "snapshotHashes": []
     },

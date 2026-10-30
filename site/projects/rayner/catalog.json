@@ -237,7 +237,7 @@
       "id": "font-metrics",
       "step": "diagram",
       "group": "toolchain",
-      "title": "A font’s advance places the next word",
+      "title": "Measuring a phrase with EB Garamond before layout",
       "lang": "en",
       "cases": 1
     },
@@ -245,7 +245,7 @@
       "id": "layout-direction",
       "step": "columns",
       "group": "toolchain",
-      "title": "Choose where a panel starts",
+      "title": "The stage places cards; each card orders its fields",
       "lang": "en",
       "cases": 1
     },
