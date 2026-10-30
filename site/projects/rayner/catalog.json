@@ -18,21 +18,13 @@
     }
   },
   "totals": {
-    "explainers": 29,
-    "cases": 144,
-    "diagrams": 161,
-    "styles": 8,
-    "families": 15
+    "explainers": 6,
+    "cases": 46,
+    "diagrams": 31,
+    "styles": 3,
+    "families": 4
   },
   "scenes": [
-    {
-      "id": "seasons",
-      "step": "year",
-      "group": "topic",
-      "title": "Why June brings polar day to Tromsø and winter to Sydney",
-      "lang": "en",
-      "cases": 4
-    },
     {
       "id": "oauth-pkce",
       "step": "attack",
@@ -40,22 +32,6 @@
       "title": "Why stealing an authorization code is not enough",
       "lang": "en",
       "cases": 2
-    },
-    {
-      "id": "exgit",
-      "step": "change",
-      "group": "topic",
-      "title": "Git names each object by the hash of its bytes",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "token-bucket",
-      "step": "trace",
-      "group": "topic",
-      "title": "A token bucket refills when a request arrives",
-      "lang": "en",
-      "cases": 3
     },
     {
       "id": "mr-cache",
@@ -66,82 +42,10 @@
       "cases": 2
     },
     {
-      "id": "state-machine",
-      "step": "opened",
-      "group": "topic",
-      "title": "One transition table drives both session histories",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "ring-buffer",
-      "step": "result",
-      "group": "topic",
-      "title": "A ring buffer reuses freed slots and refuses a push when full",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "2password",
-      "step": "suggest",
-      "group": "topic",
-      "title": "How 2password finds a secret without showing it to the agent",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "just-bash",
-      "step": "cat",
-      "group": "topic",
-      "title": "Running a command returns a new shell value",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "cert-renewal",
-      "step": "other-rule",
-      "group": "topic",
-      "title": "A renewal rule written for 90-day certificates renews 45-day ones twice as often",
-      "lang": "en",
-      "cases": 8
-    },
-    {
-      "id": "quotient-familial",
-      "step": "plafond",
-      "group": "topic",
-      "title": "Le quotient familial divise le revenu avant le barème, et son plafond reprend l’excédent",
-      "lang": "fr",
-      "cases": 12
-    },
-    {
-      "id": "send-sync",
-      "step": "wrap-arc",
-      "group": "topic",
-      "title": "Arc<T> is Send and Sync only when T already is",
-      "lang": "en",
-      "cases": 9
-    },
-    {
-      "id": "gtfs",
-      "step": "day",
-      "group": "topic",
-      "title": "A GTFS route never runs; its trips do, on the dates their service_id allows",
-      "lang": "en",
-      "cases": 6
-    },
-    {
       "id": "pg-page",
       "step": "full",
       "group": "topic",
       "title": "A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same",
-      "lang": "en",
-      "cases": 6
-    },
-    {
-      "id": "traffic-policy",
-      "step": "shares",
-      "group": "topic",
-      "title": "externalTrafficPolicy: Local keeps the client’s address but splits traffic by node, not by pod",
       "lang": "en",
       "cases": 6
     },
@@ -152,14 +56,6 @@
       "title": "str.isdigit() accepts 128 characters that int() rejects",
       "lang": "en",
       "cases": 15
-    },
-    {
-      "id": "ical-recurrence",
-      "step": "change",
-      "group": "topic",
-      "title": "Changing one meeting of a weekly series stores another VEVENT with the same UID",
-      "lang": "en",
-      "cases": 6
     },
     {
       "id": "ext4-space",
@@ -176,86 +72,6 @@
       "title": "With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP",
       "lang": "en",
       "cases": 12
-    },
-    {
-      "id": "tailwind-gamut",
-      "step": "palette",
-      "group": "topic",
-      "title": "14 of Tailwind 4’s 17 coloured 500 shades lie outside sRGB; none lie outside Display P3",
-      "lang": "en",
-      "cases": 6
-    },
-    {
-      "id": "gnome-files",
-      "step": "give-ups",
-      "group": "topic",
-      "title": "Each of six first-time users gave up on a GNOME Files task, every time in the menus",
-      "lang": "en",
-      "cases": 6
-    },
-    {
-      "id": "wcag-map",
-      "step": "v22",
-      "group": "topic",
-      "title": "WCAG 2.2 at level AA is 55 success criteria: 20 Perceivable, 20 Operable, 13 Understandable, 2 Robust",
-      "lang": "en",
-      "cases": 12
-    },
-    {
-      "id": "lantern",
-      "step": "objects",
-      "group": "toolchain",
-      "title": "How one scene program becomes a page, pictures and a trace",
-      "lang": "en",
-      "cases": 1
-    },
-    {
-      "id": "fork",
-      "step": "fork",
-      "group": "toolchain",
-      "title": "What changes when Lantern’s live player becomes a prebuilt page?",
-      "lang": "en",
-      "cases": 1
-    },
-    {
-      "id": "agentic-mermaid",
-      "step": "repair",
-      "group": "toolchain",
-      "title": "How a Mermaid verifier checks and repairs flowchart branches",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "glyph",
-      "step": "measure",
-      "group": "toolchain",
-      "title": "Why Rayner measures glyphs before drawing text",
-      "lang": "en",
-      "cases": 2
-    },
-    {
-      "id": "font-metrics",
-      "step": "diagram",
-      "group": "toolchain",
-      "title": "Measuring a phrase with EB Garamond before layout",
-      "lang": "en",
-      "cases": 1
-    },
-    {
-      "id": "layout-direction",
-      "step": "columns",
-      "group": "toolchain",
-      "title": "The stage places cards; each card orders its fields",
-      "lang": "en",
-      "cases": 1
-    },
-    {
-      "id": "pen-and-pencil",
-      "step": "plate",
-      "group": "toolchain",
-      "title": "How a hand-drawn timeline keeps its labels inside fixed boxes",
-      "lang": "en",
-      "cases": 2
     }
   ]
 }

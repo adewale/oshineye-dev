@@ -22,6 +22,10 @@ const copy = `<div class="project-copy">
 html = html.replace(/<div class="project-copy">[\s\S]*?<\/div>(?=\s*<aside)/, copy);
 html = html.replace(/(<dt>Explainers<\/dt><dd>)[^<]+/, '$1' + totals.explainers);
 html = html.replace(/(<dt>Cases<\/dt><dd>)[^<]+/, '$1' + totals.cases);
+html = html.replace(/(<script src="\/projects\/rayner\/loader\.js" data-src=")[^"]*(" data-target="rayner-embed" data-title=")[^"]*("><\/script>)/,
+  (_, before, middle, after) => `${before}/projects/rayner/${escape(entry.id)}${middle}${escape(scenes.find(s => s.id === entry.id).title)}${after}`);
+const hasToolchain = scenes.some(s => s.group === 'toolchain');
+if (!hasToolchain) html = html.replace(/\s*<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/, '');
 let group = 0;
 html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {
   const category = ['topic', 'toolchain'][group++];
@@ -29,7 +33,7 @@ html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {
     `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(s.title)}</h3></a></article>`
   ).join('\n') + '\n            </div>';
 });
-if (group !== 2) throw new Error('Expected the topic and toolchain gallery sections');
+if (group !== (hasToolchain ? 2 : 1)) throw new Error('Expected the gallery sections for the selected groups');
 html = html.replace(/<pre><code>npm ci[\s\S]*?<\/code><\/pre>/, `<pre><code>git clone https://github.com/adewale/rayner &amp;&amp; cd rayner
 npm ci
 npx playwright-core install chromium
