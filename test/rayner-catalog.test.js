@@ -19,7 +19,7 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     const run = () => spawnSync('node', [join(root, 'tools/sync-rayner.mjs')], { encoding: 'utf8' });
     expect(run().status).toBe(0);
     const once = readFileSync(page, 'utf8');
-    expect(once).toContain('<dt>Explainers</dt><dd>2</dd>');
+    expect(once).toContain('<dt>Readers</dt><dd>2</dd>');
     expect(once).toContain('<dt>Cases</dt><dd>5</dd>');
     expect(once).toContain('Cache hit &amp; miss');
     expect(once).toContain('/projects/rayner/engine"><img src="/projects/rayner/engine.png"');
@@ -50,6 +50,8 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect(restored.status).toBe(0);
     const withAuthors = readFileSync(page, 'utf8');
     expect(withAuthors).toContain('aria-labelledby="toolchain"');
+    expect(withAuthors).toContain('Hello World: build smoke test');
+    expect(withAuthors).toContain('Feature tour: API demo');
     expect(withAuthors).toContain('href="/projects/rayner/hello-world"');
     expect(withAuthors).toContain('href="/projects/rayner/feature-tour"');
     expect(withAuthors).toContain('https://example.org/tutorial#0-hello-world');
@@ -62,12 +64,17 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).toBe(0);
     const selected = readFileSync(page, 'utf8');
-    expect(selected).toContain('<dt>Explainers</dt><dd>1</dd>');
+    expect(selected).toContain('<dt>Readers</dt><dd>1</dd>');
     expect(selected).not.toContain('/projects/rayner/engine');
     expect(selected).not.toContain('aria-labelledby="toolchain"');
     expect((selected.match(/class="example-card explainer-tile"/g) ?? []).length).toBe(1);
     expect(run().status).toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(selected);
+    const brokenLinks = selected.replace('<section class="section reveal" aria-labelledby="install">', '<section class="section reveal" aria-labelledby="by-example"></section><section class="section reveal" aria-labelledby="install">');
+    writeFileSync(page, brokenLinks);
+    expect(run().status).not.toBe(0);
+    expect(readFileSync(page, 'utf8')).toBe(brokenLinks);
+    writeFileSync(page, selected);
     data.totals.cases = 6;
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).not.toBe(0);

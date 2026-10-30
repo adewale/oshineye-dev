@@ -22,9 +22,18 @@ test('only six subject leaders and two authoring examples are exported and linke
   expect(catalog.totals).toEqual(evidence.totals);
   expect(catalog.totals.explainers).toBe(8);
   expect(catalog.totals.cases).toBe(62);
-  expect(landing).toContain('<dt>Explainers</dt><dd>8</dd>');
+  expect(landing).toContain('<dt>Readers</dt><dd>8</dd>');
   expect(landing).toContain('<dt>Cases</dt><dd>62</dd>');
   expect(landing).toContain('aria-labelledby="toolchain"');
+  expect(landing).toContain('aria-labelledby="by-example"');
+  expect(landing).toContain('Why does a cache hit skip D1?');
+  expect(landing).toContain('Why do later requests get different answers?');
+  expect(landing).toContain('Why can’t an attacker exchange the stolen code?');
+  for (const url of ['mr-cache?request=hit&amp;step=request', 'mr-cache?request=miss&amp;step=request', 'token-bucket?rate=1&amp;step=trace', 'token-bucket?rate=4&amp;step=trace', 'oauth-pkce?attacker=yes&amp;step=attack', 'oauth-pkce?attacker=no&amp;step=exchange'])
+    expect(landing).toContain(`/projects/rayner/${url}`);
+  expect(landing).toContain('Hello World: build smoke test');
+  expect(landing).toContain('Feature tour: API demo');
+  expect(landing).toContain('docs/BY-EXAMPLE.md');
   expect(landing).toContain('href="/projects/rayner/hello-world"');
   expect(landing).toContain('href="/projects/rayner/feature-tour"');
   expect(landing).toContain('docs/TUTORIAL.md#0-hello-world');

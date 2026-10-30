@@ -12,21 +12,24 @@ if (!entry || !scenes.some(scene => scene.id === entry.id) || !entry.step || !en
 const entryUrl = `/projects/rayner/${encodeURIComponent(entry.id)}?${new URLSearchParams({step: entry.step, ...entry.settings})}`;
 const selected = new Set(scenes.map(scene => scene.id));
 const onboarding = [
-  selected.has('hello-world') && `<a href="/projects/rayner/hello-world">Try Hello World</a> · <a href="${escape(product.tutorial)}#0-hello-world">See its complete code</a>`,
-  selected.has('feature-tour') && `<a href="/projects/rayner/feature-tour">Explore authoring features</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">Read the feature guide</a>`,
+  selected.has('hello-world') && `<a href="/projects/rayner/hello-world">Hello World: build smoke test</a> · <a href="${escape(product.tutorial)}#0-hello-world">See its complete code</a>`,
+  selected.has('feature-tour') && `<a href="/projects/rayner/feature-tour">Feature tour: API demo</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">Read the feature guide</a>`,
 ].filter(Boolean).join(' · ');
 let html = await readFile(file, 'utf8');
+if (html.includes('aria-labelledby="by-example"') && !['mr-cache', 'token-bucket', 'oauth-pkce'].every(id => selected.has(id)))
+  throw new Error('The by-example links require mr-cache, token-bucket and oauth-pkce in this export');
 html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(product.summary + ' ' + product.audience));
 const copy = `<div class="project-copy">
                     <p class="project-lede">${escape(product.summary)} ${escape(product.audience)}</p>
                     <p>${escape(product.description)}</p>
                     <p class="project-actions"><a class="github-cta" href="${escape(entryUrl)}">${escape(entry.label)}</a></p>
+                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/BY-EXAMPLE.md">Learn by example: code beside consequential results</a></p>
                     ${onboarding ? `<p>${onboarding}</p>` : ''}
                     <p><a href="${escape(product.tutorial)}">Write your first explainer</a> · <a href="${escape(product.reference)}">Authoring reference</a> · <a href="${escape(product.skill)}">Agent authoring skill</a></p>
                     <p><a href="https://github.com/adewale/rayner">Rayner on GitHub</a></p>
                 </div>`;
 html = html.replace(/<div class="project-copy">[\s\S]*?<\/div>(?=\s*<aside)/, copy);
-html = html.replace(/(<dt>Explainers<\/dt><dd>)[^<]+/, '$1' + totals.explainers);
+html = html.replace(/<dt>(?:Explainers|Readers)<\/dt><dd>[^<]+/, `<dt>Readers</dt><dd>${totals.explainers}`);
 html = html.replace(/(<dt>Cases<\/dt><dd>)[^<]+/, '$1' + totals.cases);
 html = html.replace(/(<script src="\/projects\/rayner\/loader\.js" data-src=")[^"]*(" data-target="rayner-embed" data-title=")[^"]*("><\/script>)/,
   (_, before, middle, after) => `${before}/projects/rayner/${escape(entry.id)}${middle}${escape(scenes.find(s => s.id === entry.id).title)}${after}`);
@@ -45,7 +48,7 @@ let group = 0;
 html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {
   const category = ['topic', 'toolchain'][group++];
   return '<div class="example-grid">\n' + scenes.filter(s => s.group === category).map(s =>
-    `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(s.title)}</h3></a></article>`
+    `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(s.id === 'hello-world' ? 'Hello World: build smoke test' : s.id === 'feature-tour' ? 'Feature tour: API demo' : s.title)}</h3></a></article>`
   ).join('\n') + '\n            </div>';
 });
 if (group !== (hasToolchain ? 2 : 1)) throw new Error('Expected the gallery sections for the selected groups');
