@@ -10,12 +10,18 @@ const entry = product.entry;
 if (!entry || !scenes.some(scene => scene.id === entry.id) || !entry.step || !entry.label)
   throw new Error('Rayner catalog needs a valid introductory entry');
 const entryUrl = `/projects/rayner/${encodeURIComponent(entry.id)}?${new URLSearchParams({step: entry.step, ...entry.settings})}`;
+const selected = new Set(scenes.map(scene => scene.id));
+const onboarding = [
+  selected.has('hello-world') && `<a href="/projects/rayner/hello-world">Try Hello World</a> · <a href="${escape(product.tutorial)}#0-hello-world">See its complete code</a>`,
+  selected.has('feature-tour') && `<a href="/projects/rayner/feature-tour">Explore authoring features</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">Read the feature guide</a>`,
+].filter(Boolean).join(' · ');
 let html = await readFile(file, 'utf8');
 html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(product.summary + ' ' + product.audience));
 const copy = `<div class="project-copy">
                     <p class="project-lede">${escape(product.summary)} ${escape(product.audience)}</p>
                     <p>${escape(product.description)}</p>
                     <p class="project-actions"><a class="github-cta" href="${escape(entryUrl)}">${escape(entry.label)}</a></p>
+                    ${onboarding ? `<p>${onboarding}</p>` : ''}
                     <p><a href="${escape(product.tutorial)}">Write your first explainer</a> · <a href="${escape(product.reference)}">Authoring reference</a> · <a href="${escape(product.skill)}">Agent authoring skill</a></p>
                     <p><a href="https://github.com/adewale/rayner">Rayner on GitHub</a></p>
                 </div>`;
@@ -25,6 +31,15 @@ html = html.replace(/(<dt>Cases<\/dt><dd>)[^<]+/, '$1' + totals.cases);
 html = html.replace(/(<script src="\/projects\/rayner\/loader\.js" data-src=")[^"]*(" data-target="rayner-embed" data-title=")[^"]*("><\/script>)/,
   (_, before, middle, after) => `${before}/projects/rayner/${escape(entry.id)}${middle}${escape(scenes.find(s => s.id === entry.id).title)}${after}`);
 const hasToolchain = scenes.some(s => s.group === 'toolchain');
+const toolchain = /<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/;
+if (hasToolchain && !toolchain.test(html)) {
+  const install = '<section class="section reveal" aria-labelledby="install">';
+  if (!html.includes(install)) throw new Error('Cannot restore the toolchain section: install section missing');
+  html = html.replace(install, `<section class="section reveal" aria-labelledby="toolchain">
+            <div class="section-head"><h2 id="toolchain">How to write one</h2></div>
+            <div class="example-grid"></div>
+        </section>\n\n        ${install}`);
+}
 if (!hasToolchain) html = html.replace(/\s*<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/, '');
 let group = 0;
 html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {

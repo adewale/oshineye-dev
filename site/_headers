@@ -57,3 +57,19 @@
 /projects/rayner/trust-proxy.html
   Content-Security-Policy: default-src 'none'; script-src 'sha256-lj5jyFKO7Q3HuwNXrfXS4v43tPldcjsG1f3lVYh2xWs='; style-src 'sha256-1OdUQlrA92sU5F/J8tlqFPOwoStuaZvu+iWrtHaYuP4='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
+
+/projects/rayner/hello-world
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-3CdaT+zWszo3XtS7fJYeyxx6Lo0KoB4mPGuHGW1pbPc='; style-src 'sha256-1OdUQlrA92sU5F/J8tlqFPOwoStuaZvu+iWrtHaYuP4='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Cache-Control: public, max-age=0, must-revalidate
+
+/projects/rayner/hello-world.html
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-3CdaT+zWszo3XtS7fJYeyxx6Lo0KoB4mPGuHGW1pbPc='; style-src 'sha256-1OdUQlrA92sU5F/J8tlqFPOwoStuaZvu+iWrtHaYuP4='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Cache-Control: public, max-age=0, must-revalidate
+
+/projects/rayner/feature-tour
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-3FPJEt/5vL2N07xEx3g8Z36nsSbQ+4PO3bZXgHuHcwM='; style-src 'sha256-1OdUQlrA92sU5F/J8tlqFPOwoStuaZvu+iWrtHaYuP4='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Cache-Control: public, max-age=0, must-revalidate
+
+/projects/rayner/feature-tour.html
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-3FPJEt/5vL2N07xEx3g8Z36nsSbQ+4PO3bZXgHuHcwM='; style-src 'sha256-1OdUQlrA92sU5F/J8tlqFPOwoStuaZvu+iWrtHaYuP4='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Cache-Control: public, max-age=0, must-revalidate
