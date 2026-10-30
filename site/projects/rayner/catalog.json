@@ -18,8 +18,8 @@
     }
   },
   "totals": {
-    "explainers": 8,
-    "cases": 62,
+    "explainers": 7,
+    "cases": 61,
     "diagrams": 32,
     "styles": 4,
     "families": 4
@@ -72,14 +72,6 @@
       "title": "With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP",
       "lang": "en",
       "cases": 12
-    },
-    {
-      "id": "hello-world",
-      "step": "hello",
-      "group": "toolchain",
-      "title": "Hello, world!",
-      "lang": "en",
-      "cases": 1
     },
     {
       "id": "feature-tour",

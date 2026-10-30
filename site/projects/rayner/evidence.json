@@ -2,8 +2,8 @@
   "version": 2,
   "checked": true,
   "totals": {
-    "explainers": 8,
-    "cases": 62,
+    "explainers": 7,
+    "cases": 61,
     "diagrams": 32,
     "styles": 4,
     "families": 4
@@ -30,7 +30,7 @@
         "sequence"
       ],
       "sourceHash": "74be84a9797199b6486c451016340c2f6380cc8d6f38fde53359df92ef491046",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": [
         "c827eb230c8650a45d898695fd57fcc69495c871be6b23d07f3730a07b4d9e82",
         "30fa634d85f19a8ee9a78b0a836ff023c26cf6c52345bc9bd2b9cc0e3dc76198",
@@ -57,7 +57,7 @@
         "flowchart"
       ],
       "sourceHash": "79ae7c07aa3aabe48e7cc5f1c2c83abce48a3dedaac5b12576791217617b34b6",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": [
         "f3bbe8eb3c68b12b9d66737ad6998a55a1bd7334bb2fc56f1af7845c3598c3c4",
         "24e90ff416ca93074780137bb8736298faf7ba1af64ddde42124fadd232d2a8a"
@@ -101,7 +101,7 @@
         "pie"
       ],
       "sourceHash": "1a55864d882d58f4cef45676336c837581915c4f13803d4b620d1f47beed509e",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": [
         "3584b31736a3d9de0d3943f6f9af9a5bb525e40575d9eb7044a2fa409a7d9de2",
         "28283383fb0aa5420cac6d24b96c31adbb6e2601e3197c44ca51611f283f923c",
@@ -182,7 +182,7 @@
       "styles": [],
       "families": [],
       "sourceHash": "2d77724bc2ffe5de025a8a20d8e1d256f17ce46ce695e26756794573a1a9f5db",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": []
     },
     {
@@ -235,7 +235,7 @@
         "pie"
       ],
       "sourceHash": "52c110f4538c67609058002a71b8014cf98041edb3cea33f6a5122214a3e0ab3",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": [
         "9c905e5b335069b7f2ef1297e87b59c851dac5b7a2a1ace105f170fe139a730d",
         "0e0e9310c768dec4baee87cabacbd4e5724b13e8626e4b86b92d4129bfcb28af",
@@ -319,24 +319,10 @@
         "architecture"
       ],
       "sourceHash": "38324be50fb3e697c86004301ca8a1b4f509b795789d860796d5a9d485d4aa8e",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": [
         "531da6aa3462ca4d4061911c955fb611db90f0d1c5bba55dea074af1ed603322"
       ]
-    },
-    {
-      "id": "hello-world",
-      "title": "Hello, world!",
-      "lang": "en",
-      "cases": [
-        {}
-      ],
-      "diagrams": 0,
-      "styles": [],
-      "families": [],
-      "sourceHash": "70fe3c1392718941581599031c75096690c50664c3cb4d5f620870274d41f14c",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
-      "snapshotHashes": []
     },
     {
       "id": "feature-tour",
@@ -396,8 +382,8 @@
       "families": [
         "flowchart"
       ],
-      "sourceHash": "129da4cdbc9f9d26c8928f43eca0efd673ba0ee9c3bd9deacfd87842d354459a",
-      "engineHash": "71aea9ad9ae0372f0cad0a489ef30cd698494c1f627eb26a5aa67d6087e3ce64",
+      "sourceHash": "051b18efbd26e28bc7f5c811fab65f38ac8e3ad5416a104dd2b7f861a3c3b072",
+      "engineHash": "edfea9c1f58fb1c9b7291c233aa4ff3d92aba4dec3cd305f4dfc66237182a9f2",
       "snapshotHashes": [
         "237678fe558c7dfae631f04e6ee0fca658ccb01fdd6a5ba06673bce1e1efd6ab"
       ]

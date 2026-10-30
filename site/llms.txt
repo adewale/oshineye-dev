@@ -15,5 +15,4 @@ Each item links the page, gives the first sentence of its first caption, and lin
 
 ## How these are made
 
-- [Hello, world!](https://oshineye.dev/projects/rayner/hello-world): The picture says “Hello, world!”. JSON: [hello-world.json](https://oshineye.dev/projects/rayner/hello-world.json)
 - [How do I write that in Rayner?](https://oshineye.dev/projects/rayner/feature-tour): This is the author-side code for steps. JSON: [feature-tour.json](https://oshineye.dev/projects/rayner/feature-tour.json)

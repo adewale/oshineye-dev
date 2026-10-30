@@ -27,13 +27,6 @@
       .project-panel .project-motion-frame { aspect-ratio: 16 / 9; }
       .explainer-embed iframe { border: 2px solid var(--ink) !important; background: var(--paper); }
       .explainer-embed a { display: inline-block; margin-top: var(--space-s); }
-      .by-example-lessons { grid-column: 1 / -1; display: grid; gap: var(--space-m); }
-      .by-example-lesson { padding: 1.1rem; border: 2px solid var(--ink); background: var(--paper); }
-      .by-example-lesson h3 { margin-bottom: 0.7rem; }
-      .by-example-lesson .example-box { min-width: 0; min-height: 0; }
-      .by-example-lesson pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.85rem; line-height: 1.5; }
-      .by-example-lesson pre code { background: none; padding: 0; }
-      .by-example-lesson .example-box p a { overflow-wrap: anywhere; }
     </style>
 </head>
 <body>
@@ -73,7 +66,7 @@
                     <p class="project-lede">Interactive explanations of protocols, algorithms and code changes. For engineers and technical educators who write TypeScript.</p>
                     <p>Step through a picture at your own pace, or change a setting to follow another case. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.</p>
                     <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?step=before&amp;request=hit">Step through a cache request</a></p>
-                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/BY-EXAMPLE.md">Learn by example</a> · <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">Write your first explainer</a></p>
+                    <p><a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">Write your first explainer</a></p>
                 </div>
                 <aside class="project-panel" aria-labelledby="project-facts-title">
                     <a class="project-motion-frame" href="https://github.com/adewale/rayner" target="_blank" rel="noopener" aria-label="View Rayner on GitHub">
@@ -102,43 +95,6 @@
             <script src="/projects/rayner/loader.js" data-src="/projects/rayner/mr-cache" data-target="rayner-embed" data-title="Four added lines and one rewritten put a KV cache in front of D1"></script>
         </section>
 
-        <section class="section reveal" aria-labelledby="by-example">
-            <div class="section-head"><h2 id="by-example">Learn by example</h2></div>
-            <p class="section-intro">Start with a question. The author code sits beside two results; change one input to see what the model does. These are excerpts from <a href="https://github.com/adewale/rayner/blob/main/docs/BY-EXAMPLE.md">three complete lessons with sources and limits</a>.</p>
-            <div class="by-example-lessons">
-                <article class="by-example-lesson">
-                    <h3>Why does a cache hit skip D1?</h3>
-                    <div class="example-pair">
-                        <div class="example-box"><p class="example-label">Author code (selected lines)</p><pre><code>const path = PATH[which];
-await flow.walk(path, { trail: true });
-this.state.reads =
-  which === 'hit' ? 0 : 1;</code></pre><p><a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/mr-cache/scene.ts">Full scene</a></p></div>
-                        <div class="example-box example-box--after"><p class="example-label">Result: one changed input</p><p><a href="/projects/rayner/mr-cache?request=hit&amp;step=request">Row in KV: 0 D1 reads</a></p><p><a href="/projects/rayner/mr-cache?request=miss&amp;step=request">No row in KV: 1 D1 read</a></p><p>A miss reads D1 and caches the row for 300 seconds. This is a model, not a latency benchmark.</p></div>
-                    </div>
-                </article>
-                <article class="by-example-lesson">
-                    <h3>Why can ² pass isdigit() but fail int()?</h3>
-                    <div class="example-pair">
-                        <div class="example-box"><p class="example-label">Author model (excerpt)</p><pre><code>const passes = predicates(c)[guard],
-  int = intOf(c);
-return { passes, int, outcome:
-  !passes ? 'refused' :
-  'value' in int ? 'parsed' : 'raised' };</code></pre><p>From <a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/lib/isdigit.ts">guarded</a>; <a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/isdigit/scene.ts">full scene</a>.</p></div>
-                        <div class="example-box example-box--after"><p class="example-label">Result: change only the guard</p><p><a href="/projects/rayner/isdigit?char=super&amp;guard=isdigit&amp;step=outcome">isdigit() lets ² through; int() raises ValueError</a></p><p><a href="/projects/rayner/isdigit?char=super&amp;guard=isdecimal&amp;step=outcome">isdecimal() turns ² away before int() runs</a></p><p>For whole strings, call int() and catch ValueError; a predicate is not a general parser.</p></div>
-                    </div>
-                </article>
-                <article class="by-example-lesson">
-                    <h3>Why can’t an attacker exchange the stolen code?</h3>
-                    <div class="example-pair">
-                        <div class="example-box"><p class="example-label">Author code (excerpt)</p><pre><code>const bad = pkceChallenge(GUESS);
-this.state.attackerAccepted =
-  bad === challenge;</code></pre><p><a href="https://github.com/adewale/rayner/blob/main/scenes/explainers/oauth-pkce/scene.ts">Full scene</a></p></div>
-                        <div class="example-box example-box--after"><p class="example-label">Result: who knows the verifier?</p><p><a href="/projects/rayner/oauth-pkce?attacker=yes&amp;step=attack">The attacker’s guess fails</a>; <a href="/projects/rayner/oauth-pkce?attacker=yes&amp;step=exchange">the client succeeds</a>.</p><p><a href="/projects/rayner/oauth-pkce?attacker=no&amp;step=exchange">With no attacker</a>, the legitimate exchange is unchanged. PKCE does not protect a stolen verifier.</p></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
         <section class="section reveal" aria-labelledby="examples">
             <div class="section-head">
                 <h2 id="examples">Explainers</h2>
@@ -155,9 +111,8 @@ this.state.attackerAccepted =
 
         <section class="section reveal" aria-labelledby="toolchain">
             <div class="section-head"><h2 id="toolchain">How to write one</h2></div>
-            <p class="section-intro">These are for authors, not subject lessons. The <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md#0-hello-world">nine-line Hello World scene</a> checks that you can write and build one. The <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">feature guide</a> shows the code an author writes for each feature, then its result. For the whole path, read <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">the tutorial</a>, the <a href="https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md">authoring reference</a> or the <a href="https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md">agent authoring skill</a>.</p>
+            <p class="section-intro">These are for authors, not subject lessons. The <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">feature guide</a> shows the code an author writes for each feature, then its result. For the whole path, read <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">the tutorial</a>, the <a href="https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md">authoring reference</a> or the <a href="https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md">agent authoring skill</a>.</p>
             <div class="example-grid">
-                <article class="example-card explainer-tile"><a href="/projects/rayner/hello-world"><img src="/projects/rayner/hello-world.png" alt="" loading="lazy" width="960" height="540"><h3>Hello World: a complete nine-line scene</h3></a></article>
                 <article class="example-card explainer-tile"><a href="/projects/rayner/feature-tour"><img src="/projects/rayner/feature-tour.png" alt="" loading="lazy" width="960" height="540"><h3>Feature tour: recipe, then result</h3></a></article>
             </div>
         </section>
