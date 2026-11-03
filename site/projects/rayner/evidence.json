@@ -10078,7 +10078,8 @@
               "labels": [
                 "As written",
                 "On an sRGB screen",
-                "oklch(82.7% 0.119 306.383)",
+                "oklch(82.7%",
+                "0.119 306.383)",
                 "#dab2ff",
                 "Chroma 0.119",
                 "Chroma 0.114"
@@ -10133,7 +10134,8 @@
               "labels": [
                 "As written",
                 "On an sRGB screen",
-                "oklch(82.7% 0.119 306.383)",
+                "oklch(82.7%",
+                "0.119 306.383)",
                 "#dab2ff",
                 "Chroma 0.119",
                 "Chroma 0.114"
@@ -10188,7 +10190,8 @@
               "labels": [
                 "As written",
                 "On an sRGB screen",
-                "oklch(71.5% 0.143 215.221)",
+                "oklch(71.5%",
+                "0.143 215.221)",
                 "#00b8db",
                 "Chroma 0.143",
                 "Chroma 0.130"
@@ -10243,7 +10246,8 @@
               "labels": [
                 "As written",
                 "On an sRGB screen",
-                "oklch(71.5% 0.143 215.221)",
+                "oklch(71.5%",
+                "0.143 215.221)",
                 "#00b8db",
                 "Chroma 0.143",
                 "Chroma 0.130"
@@ -10298,7 +10302,8 @@
               "labels": [
                 "As written",
                 "On an sRGB screen",
-                "oklch(50.8% 0.118 165.612)",
+                "oklch(50.8%",
+                "0.118 165.612)",
                 "#007a55",
                 "Chroma 0.118",
                 "Chroma 0.110"
@@ -10353,7 +10358,8 @@
               "labels": [
                 "As written",
                 "On an sRGB screen",
-                "oklch(50.8% 0.118 165.612)",
+                "oklch(50.8%",
+                "0.118 165.612)",
                 "#007a55",
                 "Chroma 0.118",
                 "Chroma 0.110"
@@ -10406,7 +10412,7 @@
           "screen": "srgb"
         }
       },
-      "sourceHash": "be5f0c9d7d6535341a71dcf089c1c7ad32fa07e0cab2eaf36fceffbc3e6496ec",
+      "sourceHash": "bac9f97b47d33642a5cd316c35614f03182236d6fe56742a74dcee726738530c",
       "engineHash": "f4219c47a794ab1ee906205de4eb0a7fd4e5a7ae080f6814d9ae0c79c2690f63",
       "snapshotHashes": [
         "7058dd7a9b9a617abcf241e149ecf0129b49c0687417b37ec04ca206016bc64c",
