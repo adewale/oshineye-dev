@@ -243,11 +243,11 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/tailwind-gamut
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-EdnQUL2fjtm41KTLHPJsIWxNj1iD7SISGAX5p/yJBK8=' 'sha256-kEjIeJqUTKJMoEs/ZGEvRjh2ggH7bWnLNJOBYXUlXwM='; style-src 'sha256-+APkXBprIxuxKaonorYoVZMWaQjq3oxfJUO+O9nY2mc='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-EdnQUL2fjtm41KTLHPJsIWxNj1iD7SISGAX5p/yJBK8=' 'sha256-YqHz9lQPwFMcBHRD2z4S4ANXcLY1Rq+EiX0ET7dQv4Q='; style-src 'sha256-+APkXBprIxuxKaonorYoVZMWaQjq3oxfJUO+O9nY2mc='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/tailwind-gamut.html
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-EdnQUL2fjtm41KTLHPJsIWxNj1iD7SISGAX5p/yJBK8=' 'sha256-kEjIeJqUTKJMoEs/ZGEvRjh2ggH7bWnLNJOBYXUlXwM='; style-src 'sha256-+APkXBprIxuxKaonorYoVZMWaQjq3oxfJUO+O9nY2mc='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-EdnQUL2fjtm41KTLHPJsIWxNj1iD7SISGAX5p/yJBK8=' 'sha256-YqHz9lQPwFMcBHRD2z4S4ANXcLY1Rq+EiX0ET7dQv4Q='; style-src 'sha256-+APkXBprIxuxKaonorYoVZMWaQjq3oxfJUO+O9nY2mc='; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; object-src 'none'; frame-ancestors *
   Cache-Control: public, max-age=0, must-revalidate
 
 /projects/rayner/gnome-files
