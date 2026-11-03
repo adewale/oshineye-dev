@@ -65,7 +65,7 @@
                 <div class="project-copy">
                     <p class="project-lede">Interactive explanations of protocols, algorithms and code changes. For engineers and technical educators who write TypeScript.</p>
                     <p>Step through a picture at your own pace, or change a setting to follow another case. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.</p>
-                    <p class="project-actions"><a class="github-cta" href="/projects/rayner/mr-cache?step=before&amp;request=hit">Step through a cache request</a></p>
+                    <p class="project-actions"><a class="github-cta" href="/projects/rayner/bloom-filter?step=question&amp;bits=16">See why a Bloom filter answers “maybe”</a></p>
                     <p><a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">Write your first explainer</a></p>
                 </div>
                 <aside class="project-panel" aria-labelledby="project-facts-title">
@@ -92,21 +92,44 @@
                 <h2 id="try-one">Step through one</h2>
             </div>
             <div class="explainer-embed" id="rayner-embed"></div>
-            <script src="/projects/rayner/loader.js" data-src="/projects/rayner/mr-cache" data-target="rayner-embed" data-title="Four added lines and one rewritten put a KV cache in front of D1"></script>
+            <script src="/projects/rayner/loader.js" data-src="/projects/rayner/bloom-filter" data-target="rayner-embed" data-title="Why does a Bloom filter answer “maybe”?"></script>
         </section>
 
         <section class="section reveal" aria-labelledby="examples">
             <div class="section-head">
-                <h2 id="examples">Explainers</h2>
+                <h2 id="examples">Selected explanations</h2>
             </div>
             <div class="example-grid">
-                <article class="example-card explainer-tile"><a href="/projects/rayner/oauth-pkce"><img src="/projects/rayner/oauth-pkce.png" alt="" loading="lazy" width="960" height="540"><h3>Why stealing an authorization code is not enough</h3></a></article>
-                <article class="example-card explainer-tile"><a href="/projects/rayner/mr-cache"><img src="/projects/rayner/mr-cache.png" alt="" loading="lazy" width="960" height="540"><h3>Four added lines and one rewritten put a KV cache in front of D1</h3></a></article>
-                <article class="example-card explainer-tile"><a href="/projects/rayner/pg-page"><img src="/projects/rayner/pg-page.png" alt="" loading="lazy" width="960" height="540"><h3>A one-integer Postgres row takes 36 bytes of an 8 KB page, and a bigint row takes the same</h3></a></article>
-                <article class="example-card explainer-tile"><a href="/projects/rayner/isdigit"><img src="/projects/rayner/isdigit.png" alt="" loading="lazy" width="960" height="540"><h3>str.isdigit() accepts 128 characters that int() rejects</h3></a></article>
-                <article class="example-card explainer-tile"><a href="/projects/rayner/ext4-space"><img src="/projects/rayner/ext4-space.png" alt="" loading="lazy" width="960" height="540"><h3>A new 1 TiB ext4 filesystem lets users write 93% of it; the 5% root reserve is nearly three times all its metadata</h3></a></article>
-                <article class="example-card explainer-tile"><a href="/projects/rayner/trust-proxy"><img src="/projects/rayner/trust-proxy.png" alt="" loading="lazy" width="960" height="540"><h3>With trust proxy set to 2, an attacker who skips the CDN can make Express report any client IP</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/python-dict"><img src="/projects/rayner/python-dict.png" alt="" loading="lazy" width="960" height="540"><h3>Why does a deleted dictionary slot need a marker?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/bloom-filter"><img src="/projects/rayner/bloom-filter.png" alt="" loading="lazy" width="960" height="540"><h3>Why does a Bloom filter answer “maybe”?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/git-branches"><img src="/projects/rayner/git-branches.png" alt="" loading="lazy" width="960" height="540"><h3>Why does a merge sometimes need a new commit?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/latest-search"><img src="/projects/rayner/latest-search.png" alt="" loading="lazy" width="960" height="540"><h3>Why can an older search replace the latest result?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/monty-hall"><img src="/projects/rayner/monty-hall.png" alt="" loading="lazy" width="960" height="540"><h3>Why does the host’s rule change the odds of switching?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/melody-rhythm"><img src="/projects/rayner/melody-rhythm.png" alt="" loading="lazy" width="960" height="540"><h3>Why does one version of a tune sound off the beat?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/seasons"><img src="/projects/rayner/seasons.png" alt="" loading="lazy" width="960" height="540"><h3>Why does the north have summer when Earth is farthest from the Sun?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/henge"><img src="/projects/rayner/henge.png" alt="" loading="lazy" width="960" height="540"><h3>Why does sunset line up with Manhattan’s streets?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/statecharts"><img src="/projects/rayner/statecharts.png" alt="" loading="lazy" width="960" height="540"><h3>What is a statechart, and why use one instead of a state machine?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/isdigit"><img src="/projects/rayner/isdigit.png" alt="" loading="lazy" width="960" height="540"><h3>Does isdigit guarantee int can parse it?</h3></a></article>
             </div>
+            <details class="rayner-more"><summary>More subject explanations</summary><div class="example-grid more-example-grid">
+                <article class="example-card explainer-tile"><a href="/projects/rayner/periodic-groups"><img src="/projects/rayner/periodic-groups.png" alt="" loading="lazy" width="960" height="540"><h3>Why does the periodic table have this shape?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/birthday-paradox"><img src="/projects/rayner/birthday-paradox.png" alt="" loading="lazy" width="960" height="540"><h3>How many people make a shared birthday likely?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/oauth-pkce"><img src="/projects/rayner/oauth-pkce.png" alt="" loading="lazy" width="960" height="540"><h3>Why stealing an authorization code is not enough</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/exgit"><img src="/projects/rayner/exgit.png" alt="" loading="lazy" width="960" height="540"><h3>What does Git store when a file changes?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/token-bucket"><img src="/projects/rayner/token-bucket.png" alt="" loading="lazy" width="960" height="540"><h3>How does a token bucket let a burst through but refuse a flood?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/ring-buffer"><img src="/projects/rayner/ring-buffer.png" alt="" loading="lazy" width="960" height="540"><h3>How does a ring buffer reuse storage?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/2password"><img src="/projects/rayner/2password.png" alt="" loading="lazy" width="960" height="540"><h3>Can an agent use a key it never sees?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/cert-renewal"><img src="/projects/rayner/cert-renewal.png" alt="" loading="lazy" width="960" height="540"><h3>When should a short-lived certificate renew?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/quotient-familial"><img src="/projects/rayner/quotient-familial.png" alt="" loading="lazy" width="960" height="540"><h3 lang="fr">Comment les parts changent-elles l’impôt d’un couple ?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/send-sync"><img src="/projects/rayner/send-sync.png" alt="" loading="lazy" width="960" height="540"><h3>Can this Rust value cross a thread boundary?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/gtfs"><img src="/projects/rayner/gtfs.png" alt="" loading="lazy" width="960" height="540"><h3>Why does a GTFS route have no departures today?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/pg-page"><img src="/projects/rayner/pg-page.png" alt="" loading="lazy" width="960" height="540"><h3>Why can int4 and int8 rows take the same space?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/traffic-policy"><img src="/projects/rayner/traffic-policy.png" alt="" loading="lazy" width="960" height="540"><h3>How does traffic policy divide requests among pods?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/ical-recurrence"><img src="/projects/rayner/ical-recurrence.png" alt="" loading="lazy" width="960" height="540"><h3>What does a guest’s calendar keep when one meeting of a series changes?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/ext4-space"><img src="/projects/rayner/ext4-space.png" alt="" loading="lazy" width="960" height="540"><h3>Where does an empty ext4 filesystem’s space go?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/trust-proxy"><img src="/projects/rayner/trust-proxy.png" alt="" loading="lazy" width="960" height="540"><h3>Which address should Express call the client?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/tailwind-gamut"><img src="/projects/rayner/tailwind-gamut.png" alt="" loading="lazy" width="960" height="540"><h3>Will this Tailwind colour fit the display?</h3></a></article>
+            </div></details>
         </section>
 
         <section class="section reveal" aria-labelledby="toolchain">
@@ -114,6 +137,12 @@
             <p class="section-intro">These are for authors, not subject lessons. The <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">feature guide</a> shows the code an author writes for each feature, then its result. For the whole path, read <a href="https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md">the tutorial</a>, the <a href="https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md">authoring reference</a> or the <a href="https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md">agent authoring skill</a>.</p>
             <div class="example-grid">
                 <article class="example-card explainer-tile"><a href="/projects/rayner/feature-tour"><img src="/projects/rayner/feature-tour.png" alt="" loading="lazy" width="960" height="540"><h3>Feature tour: recipe, then result</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/lantern"><img src="/projects/rayner/lantern.png" alt="" loading="lazy" width="960" height="540"><h3>How can a still skip the frames before it?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/fork"><img src="/projects/rayner/fork.png" alt="" loading="lazy" width="960" height="540"><h3>Why build the page before readers open it?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/agentic-mermaid"><img src="/projects/rayner/agentic-mermaid.png" alt="" loading="lazy" width="960" height="540"><h3>What does a Mermaid verifier check?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/glyph"><img src="/projects/rayner/glyph.png" alt="" loading="lazy" width="960" height="540"><h3>Why does the same text take different space?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/font-metrics"><img src="/projects/rayner/font-metrics.png" alt="" loading="lazy" width="960" height="540"><h3>Why must font measurement match the drawn face?</h3></a></article>
+                <article class="example-card explainer-tile"><a href="/projects/rayner/pen-and-pencil"><img src="/projects/rayner/pen-and-pencil.png" alt="" loading="lazy" width="960" height="540"><h3>Can hand-drawn strokes keep a diagram’s layout?</h3></a></article>
             </div>
         </section>
 

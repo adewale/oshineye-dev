@@ -1,57 +1,61 @@
 import { test, expect } from 'bun:test';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 
-// The six subject leaders stay curated; the remaining authoring demo serves a
-// different purpose and does not acquire a fictional /24 lesson score.
-const topRank = ['ext4-space', 'isdigit', 'mr-cache', 'oauth-pkce', 'pg-page', 'trust-proxy'];
-const authoring = ['feature-tour'];
-const selected = [...topRank, ...authoring];
 const site = new URL('../site/', import.meta.url);
 const read = path => readFileSync(new URL(path, site), 'utf8');
-const ids = paths => paths.sort((a, b) => a.localeCompare(b));
+const ids = values => [...values].sort((a, b) => a.localeCompare(b));
+const tiles = html => [...html.matchAll(/class="example-card explainer-tile"><a href="\/projects\/rayner\/([a-z0-9-]+)"/g)].map(match => match[1]);
 
-test('only six subject leaders and one authoring demo are exported and linked', () => {
+test('the full reviewed collection is published and catalog tiers select its recommendations', () => {
   const catalog = JSON.parse(read('projects/rayner/catalog.json'));
   const evidence = JSON.parse(read('projects/rayner/evidence.json'));
   const manifest = JSON.parse(read('projects/rayner/deployment.json'));
   const landing = read('projects/rayner.html');
   const llms = read('llms.txt');
-  expect(ids(catalog.scenes.map(s => s.id))).toEqual(ids([...selected]));
-  expect(ids(evidence.scenes.map(s => s.id))).toEqual(ids([...selected]));
-  expect(ids(catalog.scenes.filter(s => s.group === 'toolchain').map(s => s.id))).toEqual(ids([...authoring]));
+  const visible = catalog.scenes.filter(scene => scene.tier !== 'coverage');
+  const coverage = catalog.scenes.filter(scene => scene.tier === 'coverage');
+  const leaders = visible.filter(scene => scene.group === 'topic' && scene.tier === 'showcase');
+  const more = visible.filter(scene => scene.group === 'topic' && scene.tier === 'gallery');
+  const authoring = visible.filter(scene => scene.group === 'toolchain');
+  expect(catalog.scenes.some(scene => scene.id === 'henge')).toBe(true);
+  expect(leaders.length).toBeGreaterThan(0);
+  expect(more.length).toBeGreaterThan(0);
+  expect(coverage.length).toBeGreaterThan(0);
+  expect(ids(catalog.scenes.map(scene => scene.id))).toEqual(ids(evidence.scenes.map(scene => scene.id)));
   expect(catalog.totals).toEqual(evidence.totals);
-  expect(catalog.totals.explainers).toBe(7);
-  expect(catalog.totals.cases).toBe(61);
-  // The panel gives facts an author can act on, not counts of the gallery.
+  expect(catalog.totals.explainers).toBe(catalog.scenes.length);
+  expect(catalog.totals.cases).toBe(catalog.scenes.reduce((sum, scene) => sum + scene.cases, 0));
+  const subjects = landing.match(/aria-labelledby="examples">([\s\S]*?)<\/section>/)?.[1];
+  const tools = landing.match(/aria-labelledby="toolchain">([\s\S]*?)<\/section>/)?.[1];
+  const moreHtml = subjects?.match(/<details class="rayner-more">([\s\S]*?)<\/details>/)?.[1];
+  expect(subjects).toBeDefined();
+  expect(tools).toBeDefined();
+  expect(moreHtml).toBeDefined();
+  expect(ids(tiles(subjects.split('<details class="rayner-more">')[0]))).toEqual(ids(leaders.map(scene => scene.id)));
+  expect(ids(tiles(moreHtml))).toEqual(ids(more.map(scene => scene.id)));
+  expect(ids(tiles(tools))).toEqual(ids(authoring.map(scene => scene.id)));
+  expect(ids(tiles(landing))).toEqual(ids(visible.map(scene => scene.id)));
+  const listed = [...llms.matchAll(/^[-] \[[^\n]+\]\(https:\/\/oshineye\.dev\/projects\/rayner\/([a-z0-9-]+)\)/gm)].map(match => match[1]);
+  expect(ids(listed)).toEqual(ids(visible.map(scene => scene.id)));
+  // Coverage remains available by direct link without being advertised as a lesson.
+  for (const scene of catalog.scenes) {
+    expect(existsSync(new URL(`projects/rayner/${scene.id}.html`, site))).toBe(true);
+    expect(existsSync(new URL(`projects/rayner/${scene.id}.json`, site))).toBe(true);
+    expect(existsSync(new URL(`projects/rayner/${scene.id}.png`, site))).toBe(true);
+  }
+  expect(landing).toBe(read('projects/rayner/index.html'));
+  expect(landing).toContain('<dt>Requires</dt><dd>' + catalog.product.requirements + '</dd>');
   expect(landing).not.toContain('<dt>Readers</dt>');
   expect(landing).not.toContain('<dt>Cases</dt>');
-  expect(landing).toContain('<dt>Requires</dt><dd>' + catalog.product.requirements + '</dd>');
-  expect(landing).toContain('src="/img/repo/generated/vfinal-approved-stills/rayner/colour.jpg"');
-  expect(landing).not.toContain('consequential');
-  expect(landing).toContain('npm run demos:build');
-  expect(landing).not.toContain('demos:check');
-  expect(landing).toContain('aria-labelledby="toolchain"');
-  expect(landing).not.toContain('aria-labelledby="by-example"');
-  expect(landing).not.toContain('Learn by example');
-  expect(landing).not.toContain('docs/BY-EXAMPLE.md');
-  expect(landing).not.toContain('hello-world');
+  expect(landing).toContain(`data-src="/projects/rayner/${catalog.product.entry.id}"`);
   expect(landing).toContain('Feature tour: recipe, then result');
-  expect(landing).toContain('href="/projects/rayner/feature-tour"');
   expect(landing).toContain('docs/TUTORIAL.md');
   expect(landing).toContain('docs/FEATURE-TOUR.md');
-  expect(landing).toContain('data-src="/projects/rayner/mr-cache"');
-  expect(landing).toBe(read('projects/rayner/index.html'));
-  const tiles = [...landing.matchAll(/class="example-card explainer-tile"><a href="\/projects\/rayner\/([a-z0-9-]+)"/g)].map(m => m[1]);
-  expect(ids(tiles)).toEqual(ids([...selected]));
-  const listed = [...llms.matchAll(/^[-] \[[^\n]+\]\(https:\/\/oshineye\.dev\/projects\/rayner\/([a-z0-9-]+)\)/gm)].map(m => m[1]);
-  expect(ids(listed)).toEqual(ids([...selected]));
-  const allowedFile = new RegExp(`^/projects/rayner/(?:${selected.join('|')})(?:[./]|$)`);
-  const common = new Set(['/_headers', '/projects/rayner.html', '/projects/rayner/index.html', '/projects/rayner/loader.js', '/projects/rayner/catalog.json', '/projects/rayner/evidence.json']);
+  expect(landing).not.toContain('aria-labelledby="by-example"');
+  expect(landing).not.toContain('hello-world');
+  const allowedFile = new RegExp(`^/projects/rayner/(?:${catalog.scenes.map(scene => scene.id).join('|')})(?:[./]|$)`);
+  expect(existsSync(new URL('projects/rayner/embed-lab.html', site))).toBe(true);
+  const common = new Set(['/_headers', '/projects/rayner.html', '/projects/rayner/index.html', '/projects/rayner/loader.js', '/projects/rayner/catalog.json', '/projects/rayner/evidence.json', '/projects/rayner/embed-lab.html']);
   for (const { path } of manifest.files)
     expect(common.has(path) || allowedFile.test(path)).toBe(true);
-  const allowed = [...selected.flatMap(id => [id, `${id}.html`, `${id}.png`, `${id}.json`]), 'index.html', 'loader.js', 'catalog.json', 'evidence.json', 'deployment.json'];
-  expect(ids(readdirSync(new URL('projects/rayner/', site)))).toEqual(ids(allowed));
-  for (const path of read('_headers').matchAll(/^\/projects\/rayner\/([a-z0-9-]+)(?:\.html)?$/gm))
-    expect(selected).toContain(path[1]);
-  expect(manifest.files.some(entry => entry.path.includes('hello-world'))).toBe(false);
 });

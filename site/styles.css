@@ -1045,6 +1045,10 @@ a:focus-visible {
     font-size: clamp(1.12rem, 1rem + 0.45vw, 1.3rem);
 }
 
+.rayner-more { margin-top: 2rem; }
+.rayner-more > summary { cursor: pointer; }
+.rayner-more[open] > summary { margin-bottom: 1.5rem; }
+
 .example-grid {
     grid-column: 1 / -1;
     display: grid;

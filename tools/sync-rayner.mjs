@@ -10,7 +10,13 @@ const entry = product.entry;
 if (!entry || !scenes.some(scene => scene.id === entry.id) || !entry.step || !entry.label)
   throw new Error('Rayner catalog needs a valid introductory entry');
 const entryUrl = `/projects/rayner/${encodeURIComponent(entry.id)}?${new URLSearchParams({step: entry.step, ...entry.settings})}`;
-const selected = new Set(scenes.map(scene => scene.id));
+const visible = scenes.filter(scene => scene.tier !== 'coverage');
+const selected = new Set(visible.map(scene => scene.id));
+const subjects = visible.filter(scene => scene.group === 'topic');
+// Older exports had no tiers. Preserve their gallery while using the source
+// catalog's selection for new exports, rather than maintaining a host-side list.
+const leaders = subjects.filter(scene => (scene.tier ?? 'showcase') === 'showcase');
+const more = subjects.filter(scene => scene.tier === 'gallery');
 // Authoring examples are titled by what an author gets from them, in the README's terms.
 const TOOL_TITLES = { 'feature-tour': 'Feature tour: recipe, then result' };
 const authoring = [
@@ -20,6 +26,8 @@ const toolIntro = `These are for authors, not subject lessons. ${authoring ? aut
 let html = await readFile(file, 'utf8');
 // Retired examples may remain in an old exported page; remove them on every sync.
 html = html.replace(/<section class="section reveal" aria-labelledby="by-example">[\s\S]*?<\/section>\s*/, '');
+html = html.replace(/\s*<details class="rayner-more">[\s\S]*?<\/details>/g, '');
+html = html.replace(/(<h2 id="examples">)[\s\S]*?(<\/h2>)/, '$1Selected explanations$2');
 html = html.replace(/^\s*\.by-example-[^\n]*\n/gm, '');
 html = html.replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(product.summary + ' ' + product.audience));
 const copy = `<div class="project-copy">
@@ -53,7 +61,7 @@ if (!besideCopy.test(html)) throw new Error('Cannot place the Rayner project pan
 html = html.replace(besideCopy, (_, copyBlock) => copyBlock + panel);
 html = html.replace(/(<script src="\/projects\/rayner\/loader\.js" data-src=")[^"]*(" data-target="rayner-embed" data-title=")[^"]*("><\/script>)/,
   (_, before, middle, after) => `${before}/projects/rayner/${escape(entry.id)}${middle}${escape(scenes.find(s => s.id === entry.id).title)}${after}`);
-const hasToolchain = scenes.some(s => s.group === 'toolchain');
+const hasToolchain = visible.some(s => s.group === 'toolchain');
 const toolchain = /<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/;
 if (hasToolchain && !toolchain.test(html)) {
   const install = '<section class="section reveal" aria-labelledby="install">';
@@ -70,11 +78,16 @@ if (hasToolchain)
     : section.replace('<div class="example-grid">', `<p class="section-intro">${toolIntro}</p>\n            <div class="example-grid">`));
 if (!hasToolchain) html = html.replace(/\s*<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/, '');
 let group = 0;
+const cards = entries => entries.map(s =>
+  `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(TOOL_TITLES[s.id] ?? s.title)}</h3></a></article>`
+).join('\n');
 html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {
   const category = ['topic', 'toolchain'][group++];
-  return '<div class="example-grid">\n' + scenes.filter(s => s.group === category).map(s =>
-    `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(TOOL_TITLES[s.id] ?? s.title)}</h3></a></article>`
-  ).join('\n') + '\n            </div>';
+  const entries = category === 'topic' ? leaders : visible.filter(s => s.group === category);
+  const grid = '<div class="example-grid">\n' + cards(entries) + '\n            </div>';
+  return category === 'topic' && more.length
+    ? grid + '\n            <details class="rayner-more"><summary>More subject explanations</summary><div class="example-grid more-example-grid">\n' + cards(more) + '\n            </div></details>'
+    : grid;
 });
 if (group !== (hasToolchain ? 2 : 1)) throw new Error('Expected the gallery sections for the selected groups');
 html = html.replace(/<pre><code>(?:npm ci|git clone https:\/\/github\.com\/adewale\/rayner)[\s\S]*?<\/code><\/pre>/, `<pre><code>git clone https://github.com/adewale/rayner &amp;&amp; cd rayner
