@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>rustc refuses to send this Arc to another thread · Can this Rust value cross a thread boundary?</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/send-sync?step=spawn">
+<meta name="description" content="x is an Arc, the pointer the standard library provides for sharing one value between threads; here it holds a Cell&lt;i32&gt;. thread::spawn runs a closure on a new thread, and move hands x to that…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rustc refuses to send this Arc to another thread · Can this Rust value cross a thread boundary?">
+<meta property="og:description" content="x is an Arc, the pointer the standard library provides for sharing one value between threads; here it holds a Cell&lt;i32&gt;. thread::spawn runs a closure on a new thread, and move hands x to that…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/send-sync/spawn">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/send-sync/spawn.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Code, 8 lines. The two traits: 5: = help: the trait `Sync` is not implemented; 6: for `Cell&lt;i32&gt;`; 7: = note: required for `Arc&lt;Cell&lt;i32&gt;&gt;` to; and 1 more.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="rustc refuses to send this Arc to another thread · Can this Rust…">
+<meta name="twitter:description" content="x is an Arc, the pointer the standard library provides for sharing one value between threads; here it holds a Cell&lt;i32&gt;. thread::spawn runs a closure on a new thread, and move hands x to that…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/send-sync/spawn.png">
+<meta name="twitter:image:alt" content="Code, 8 lines. The two traits: 5: = help: the trait `Sync` is not implemented; 6: for `Cell&lt;i32&gt;`; 7: = note: required for `Arc&lt;Cell&lt;i32&gt;&gt;` to; and 1 more.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/send-sync?step=spawn">
+</head><body><p><a href="/projects/rayner/send-sync?step=spawn">rustc refuses to send this Arc to another thread · Can this Rust value cross a thread boundary?</a></p></body></html>

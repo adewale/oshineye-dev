@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "provider_name": "Rayner",
+  "provider_url": "https://github.com/adewale/rayner",
+  "title": "How many people make a shared birthday likely?",
+  "thumbnail_url": "https://oshineye.dev/projects/rayner/birthday-paradox.png",
+  "thumbnail_width": 960,
+  "thumbnail_height": 540,
+  "width": 640,
+  "height": 1024,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/birthday-paradox.html?theme=light\" title=\"How many people make a shared birthday likely?\" width=\"640\" height=\"1024\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "cache_age": 86400
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ten requests from one client, and a bucket of five tokens · How does a token bucket let a burst through but refuse a flood?</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/token-bucket?step=balance">
+<meta name="description" content="A server shares its work among many clients, so it limits each one: a request it serves gets 200, OK, and one it refuses gets 429, Too Many Requests, which tells the client to slow down. A short…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ten requests from one client, and a bucket of five tokens · How does a token bucket let a burst through but refuse a flood?">
+<meta property="og:description" content="A server shares its work among many clients, so it limits each one: a request it serves gets 200, OK, and one it refuses gets 429, Too Many Requests, which tells the client to slow down. A short…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/token-bucket/balance">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/token-bucket/balance.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Bucket balance: 5 tokens left, last refill at 0 seconds, 0 accepted; rejected requests: none; The bucket, filled to 5.0 of 5 tokens; A chart of tokens, 0 to 5, against time, 0 to 5 s, with a dashed line at the one token a request needs; Requests R1 to R10 at their arrival times: none answered yet; Code “bucket.allow(now), rate = 2”, 8 lines. Refill: 2: tokens = min(5; 3: tokens + (now - lastRefill) * rate); 4…">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ten requests from one client, and a bucket of five tokens · How does…">
+<meta name="twitter:description" content="A server shares its work among many clients, so it limits each one: a request it serves gets 200, OK, and one it refuses gets 429, Too Many Requests, which tells the client to slow down. A short…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/token-bucket/balance.png">
+<meta name="twitter:image:alt" content="Bucket balance: 5 tokens left, last refill at 0 seconds, 0 accepted; rejected requests: none; The bucket, filled to 5.0 of 5 tokens; A chart of tokens, 0 to 5, against time, 0 to 5 s, with a dashed line at the one token a request needs; Requests R1 to R10 at their arrival times: none answered yet; Code “bucket.allow(now), rate = 2”, 8 lines. Refill: 2: tokens = min(5; 3: tokens + (now - lastRefill) * rate); 4…">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/token-bucket?step=balance">
+</head><body><p><a href="/projects/rayner/token-bucket?step=balance">Ten requests from one client, and a bucket of five tokens · How does a token bucket let a burst through but refuse a flood?</a></p></body></html>

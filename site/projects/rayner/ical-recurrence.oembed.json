@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "provider_name": "Rayner",
+  "provider_url": "https://github.com/adewale/rayner",
+  "title": "What does a guest’s calendar keep when one meeting of a series changes?",
+  "thumbnail_url": "https://oshineye.dev/projects/rayner/ical-recurrence.png",
+  "thumbnail_width": 960,
+  "thumbnail_height": 540,
+  "width": 640,
+  "height": 1174,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/ical-recurrence.html?theme=light\" title=\"What does a guest’s calendar keep when one meeting of a series changes?\" width=\"640\" height=\"1174\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "cache_age": 86400
+}

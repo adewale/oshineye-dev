@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync · Can this Rust value cross a thread boundary?</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/send-sync?step=wrap-arc">
+<meta name="description" content="Wrapping Mutex&lt;Cell&lt;i32&gt;&gt; in Arc gives Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;. Arc needs the type inside to be both Send and Sync, and Mutex&lt;Cell&lt;i32&gt;&gt; is Send and Sync, so Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync · Can this Rust value cross a thread boundary?">
+<meta property="og:description" content="Wrapping Mutex&lt;Cell&lt;i32&gt;&gt; in Arc gives Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;. Arc needs the type inside to be both Send and Sync, and Mutex&lt;Cell&lt;i32&gt;&gt; is Send and Sync, so Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/send-sync/wrap-arc">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/send-sync/wrap-arc.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="Quadrant chart: 1 point; Map of the four quadrants, “Send and Sync” filled; 2 labels. Note: “Send: yes, Sync: yes” beside x is Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;. New in this step: x is Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;; 2 labels.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync · Can this Rust value cross a…">
+<meta name="twitter:description" content="Wrapping Mutex&lt;Cell&lt;i32&gt;&gt; in Arc gives Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;. Arc needs the type inside to be both Send and Sync, and Mutex&lt;Cell&lt;i32&gt;&gt; is Send and Sync, so Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/send-sync/wrap-arc.png">
+<meta name="twitter:image:alt" content="Quadrant chart: 1 point; Map of the four quadrants, “Send and Sync” filled; 2 labels. Note: “Send: yes, Sync: yes” beside x is Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;. New in this step: x is Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt;; 2 labels.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/send-sync?step=wrap-arc">
+</head><body><p><a href="/projects/rayner/send-sync?step=wrap-arc">Arc&lt;Mutex&lt;Cell&lt;i32&gt;&gt;&gt; is Send and Sync · Can this Rust value cross a thread boundary?</a></p></body></html>

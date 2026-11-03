@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "provider_name": "Rayner",
+  "provider_url": "https://github.com/adewale/rayner",
+  "title": "What is a statechart, and why use one instead of a state machine?",
+  "thumbnail_url": "https://oshineye.dev/projects/rayner/statecharts.png",
+  "thumbnail_width": 960,
+  "thumbnail_height": 540,
+  "width": 640,
+  "height": 1097,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/statecharts.html?theme=light\" title=\"What is a statechart, and why use one instead of a state machine?\" width=\"640\" height=\"1097\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "cache_age": 86400
+}

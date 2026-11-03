@@ -75,6 +75,36 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     writeFileSync(page, stalePage);
     expect(run().status).toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(selected);
+    // Catalog tiers determine placement. Coverage artifacts may remain available
+    // without becoming recommendations, and promoting a lesson moves its card.
+    data.scenes = [
+      { id: 'cache', title: 'Cache', lang: 'en', group: 'topic', tier: 'showcase', cases: 2 },
+      { id: 'notes', title: 'Another subject', lang: 'en', group: 'topic', tier: 'gallery', cases: 1 },
+      { id: 'hidden', title: 'Coverage subject', lang: 'en', group: 'topic', tier: 'coverage', cases: 1 },
+      { id: 'engine', title: 'Author recipe', lang: 'en', group: 'toolchain', tier: 'gallery', cases: 1 },
+      { id: 'hidden-tool', title: 'Coverage tool', lang: 'en', group: 'toolchain', tier: 'coverage', cases: 1 },
+    ];
+    data.totals = { explainers: 5, cases: 6 };
+    writeFileSync(catalog, JSON.stringify(data));
+    expect(run().status).toBe(0);
+    const tiered = readFileSync(page, 'utf8');
+    const beforeMore = tiered.split('<details class="rayner-more">')[0];
+    expect(beforeMore).toContain('/projects/rayner/cache"><img');
+    expect(beforeMore).not.toContain('/projects/rayner/notes"><img');
+    expect(tiered).toMatch(/<details class="rayner-more">[\s\S]*\/projects\/rayner\/notes"><img[\s\S]*<\/details>/);
+    expect(tiered).toContain('/projects/rayner/engine"><img');
+    expect(tiered).not.toContain('/projects/rayner/hidden');
+    expect(run().status).toBe(0);
+    expect(readFileSync(page, 'utf8')).toBe(tiered);
+    data.scenes[1].tier = 'showcase';
+    writeFileSync(catalog, JSON.stringify(data));
+    expect(run().status).toBe(0);
+    const promoted = readFileSync(page, 'utf8');
+    expect(promoted).not.toContain('<details class="rayner-more">');
+    expect(promoted).toContain('/projects/rayner/notes"><img');
+    // Restore the one-scene fixture before testing the inconsistent-count guard.
+    data.scenes = data.scenes.slice(0, 1);
+    data.totals = { explainers: 1, cases: 2 };
     writeFileSync(page, selected);
     data.totals.cases = 6;
     writeFileSync(catalog, JSON.stringify(data));
