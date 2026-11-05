@@ -16,13 +16,13 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v9.0.0
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
       - run: uvx ruff@0.16.0 check tools
       # TypeScript checks share this job instead of running as their own
       # workflows: together they add about 4s here (setup-bun, install,
       # tsc, 16 bun tests), against two extra runners and checkouts.
-      - uses: oven-sh/setup-bun@v2
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
       - run: bun install --frozen-lockfile
       - run: bun run typecheck
       # Pins TZ=Pacific/Auckland so local-vs-UTC date bugs fail.
