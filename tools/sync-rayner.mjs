@@ -3,7 +3,7 @@ import { readFile, writeFile, copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const file = new URL('../site/projects/rayner.html', import.meta.url);
 const { version, product, totals, scenes } = JSON.parse(await readFile(new URL('../site/projects/rayner/catalog.json', import.meta.url), 'utf8'));
-if (version !== 1 || scenes.length !== totals.explainers || scenes.reduce((n, scene) => n + scene.cases, 0) !== totals.cases)
+if (version !== 2 || scenes.length !== totals.explainers || scenes.reduce((n, scene) => n + scene.scenarios, 0) !== totals.scenarios)
   throw new Error('Rayner catalog version or counts are inconsistent');
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const entry = product.entry;
@@ -113,4 +113,4 @@ const index = new URL('../site/index.html', import.meta.url);
 let home = await readFile(index, 'utf8');
 home = home.replace(/(<a href="\/projects\/rayner" class="repo-title">rayner<\/a>[\s\S]*?<p class="repo-desc">)[\s\S]*?(<\/p>)/, '$1' + escape(product.summary) + '$2');
 await writeFile(index, home);
-console.log(`Updated Rayner landing page from the exported catalog: ${totals.explainers} explainers, ${totals.cases} cases.`);
+console.log(`Updated Rayner landing page from the exported catalog: ${totals.explainers} explainers, ${totals.scenarios} scenarios.`);

@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Answer: Arc&lt;Cell&lt;i32&gt;&gt; is neither Send nor Sync · Can this Rust value cross a thread boundary?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/send-sync?step=arc-cell">
-<meta name="description" content="Arc&lt;T&gt; is Send only when T is both Send and Sync, and the same holds for Sync. Every clone of an Arc reaches the same T, so a clone moved to another thread shares T between threads, and Arc adds no…">
+<meta name="description" content="Arc&lt;T&gt; is Send only when T is both Send and Sync, and the same holds for Sync. Cloning an Arc gives another owner of the same T, so a clone moved to another thread shares T between threads, and Arc…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Answer: Arc&lt;Cell&lt;i32&gt;&gt; is neither Send nor Sync · Can this Rust value cross a thread boundary?">
-<meta property="og:description" content="Arc&lt;T&gt; is Send only when T is both Send and Sync, and the same holds for Sync. Every clone of an Arc reaches the same T, so a clone moved to another thread shares T between threads, and Arc adds no…">
+<meta property="og:description" content="Arc&lt;T&gt; is Send only when T is both Send and Sync, and the same holds for Sync. Cloning an Arc gives another owner of the same T, so a clone moved to another thread shares T between threads, and Arc…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/send-sync/arc-cell">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/send-sync/arc-cell.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Quadrant chart: 1 point; Map of the four quadrants, “Neither” filled; 3 labels. Note: “Send: no, Sync: no” beside x is Arc&lt;Cell&lt;i32&gt;&gt;. New in this step: x is Arc&lt;Cell&lt;i32&gt;&gt;; Map of the four quadrants, “Neither” filled; 3 labels.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Answer: Arc&lt;Cell&lt;i32&gt;&gt; is neither Send nor Sync · Can this Rust…">
-<meta name="twitter:description" content="Arc&lt;T&gt; is Send only when T is both Send and Sync, and the same holds for Sync. Every clone of an Arc reaches the same T, so a clone moved to another thread shares T between threads, and Arc adds no…">
+<meta name="twitter:description" content="Arc&lt;T&gt; is Send only when T is both Send and Sync, and the same holds for Sync. Cloning an Arc gives another owner of the same T, so a clone moved to another thread shares T between threads, and Arc…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/send-sync/arc-cell.png">
 <meta name="twitter:image:alt" content="Quadrant chart: 1 point; Map of the four quadrants, “Neither” filled; 3 labels. Note: “Send: no, Sync: no” beside x is Arc&lt;Cell&lt;i32&gt;&gt;. New in this step: x is Arc&lt;Cell&lt;i32&gt;&gt;; Map of the four quadrants, “Neither” filled; 3 labels.">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/send-sync?step=arc-cell">

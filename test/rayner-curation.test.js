@@ -24,7 +24,7 @@ test('the full reviewed collection is published and catalog tiers select its rec
   expect(ids(catalog.scenes.map(scene => scene.id))).toEqual(ids(evidence.scenes.map(scene => scene.id)));
   expect(catalog.totals).toEqual(evidence.totals);
   expect(catalog.totals.explainers).toBe(catalog.scenes.length);
-  expect(catalog.totals.cases).toBe(catalog.scenes.reduce((sum, scene) => sum + scene.cases, 0));
+  expect(catalog.totals.scenarios).toBe(catalog.scenes.reduce((sum, scene) => sum + scene.scenarios, 0));
   const subjects = landing.match(/aria-labelledby="examples">([\s\S]*?)<\/section>/)?.[1];
   const tools = landing.match(/aria-labelledby="toolchain">([\s\S]*?)<\/section>/)?.[1];
   const moreHtml = subjects?.match(/<details class="rayner-more">([\s\S]*?)<\/details>/)?.[1];

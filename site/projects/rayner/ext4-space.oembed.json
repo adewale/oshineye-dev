@@ -8,7 +8,7 @@
   "thumbnail_width": 960,
   "thumbnail_height": 540,
   "width": 640,
-  "height": 1160,
-  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/ext4-space.html?theme=light\" title=\"Where does an empty ext4 filesystem’s space go?\" width=\"640\" height=\"1160\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "height": 1246,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/ext4-space.html?theme=light\" title=\"Where does an empty ext4 filesystem’s space go?\" width=\"640\" height=\"1246\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
   "cache_age": 86400
 }

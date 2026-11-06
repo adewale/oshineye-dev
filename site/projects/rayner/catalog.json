@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "product": {
     "home": "https://github.com/adewale/rayner",
     "summary": "Interactive explanations of protocols, algorithms and code changes.",
     "audience": "For engineers and technical educators who write TypeScript.",
-    "description": "Step through a picture at your own pace, or change a setting to follow another case. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.",
+    "description": "Step through a picture at your own pace, or change a setting to follow another scenario. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.",
     "requirements": "Node 24 or later and Chromium. Authoring targets Ubuntu and macOS.",
     "tutorial": "https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md",
     "reference": "https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md",
@@ -19,9 +19,9 @@
     }
   },
   "totals": {
-    "explainers": 40,
-    "cases": 183,
-    "diagrams": 166,
+    "explainers": 41,
+    "scenarios": 197,
+    "diagrams": 155,
     "styles": 9,
     "families": 15
   },
@@ -30,10 +30,10 @@
       "id": "periodic-groups",
       "step": "stack",
       "group": "topic",
-      "tier": "gallery",
+      "tier": "showcase",
       "title": "Why does the periodic table have this shape?",
       "lang": "en",
-      "cases": 5,
+      "scenarios": 5,
       "entry": {
         "step": "column",
         "settings": {
@@ -48,7 +48,7 @@
       "tier": "showcase",
       "title": "Why does a deleted dictionary slot need a marker?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "question",
         "settings": {
@@ -63,7 +63,7 @@
       "tier": "showcase",
       "title": "Why does a Bloom filter answer “maybe”?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "question",
         "settings": {
@@ -78,7 +78,7 @@
       "tier": "showcase",
       "title": "Why does a merge sometimes need a new commit?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "question",
         "settings": {
@@ -93,7 +93,7 @@
       "tier": "showcase",
       "title": "Why can an older search replace the latest result?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "race",
         "settings": {
@@ -108,7 +108,7 @@
       "tier": "showcase",
       "title": "Why does the host’s rule change the odds of switching?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "choice",
         "settings": {
@@ -123,7 +123,7 @@
       "tier": "gallery",
       "title": "How many people make a shared birthday likely?",
       "lang": "en",
-      "cases": 3,
+      "scenarios": 3,
       "entry": {
         "step": "room",
         "settings": {
@@ -138,12 +138,11 @@
       "tier": "showcase",
       "title": "Why does one version of a tune sound off the beat?",
       "lang": "en",
-      "cases": 4,
+      "scenarios": 2,
       "entry": {
         "step": "listen",
         "settings": {
-          "timing": "syncopated",
-          "tempo": "96"
+          "timing": "syncopated"
         }
       }
     },
@@ -154,7 +153,7 @@
       "tier": "showcase",
       "title": "Why does the north have summer when Earth is farthest from the Sun?",
       "lang": "en",
-      "cases": 4,
+      "scenarios": 4,
       "entry": {
         "step": "nearest",
         "settings": {
@@ -169,11 +168,26 @@
       "tier": "showcase",
       "title": "Why does sunset line up with Manhattan’s streets?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "street",
         "settings": {
           "street": "manhattan"
+        }
+      }
+    },
+    {
+      "id": "great-circle",
+      "step": "turn",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "Why does a flight from London to Los Angeles pass over Greenland?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "question",
+        "settings": {
+          "second": "madrid"
         }
       }
     },
@@ -184,7 +198,7 @@
       "tier": "gallery",
       "title": "Why stealing an authorization code is not enough",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "stolen",
         "settings": {
@@ -199,7 +213,7 @@
       "tier": "gallery",
       "title": "What does Git store when a file changes?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "blob",
         "settings": {
@@ -214,7 +228,7 @@
       "tier": "gallery",
       "title": "How does a token bucket let a burst through but refuse a flood?",
       "lang": "en",
-      "cases": 3,
+      "scenarios": 3,
       "entry": {
         "step": "balance",
         "settings": {
@@ -229,7 +243,7 @@
       "tier": "coverage",
       "title": "What does a cache hit save?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "reader-request",
         "settings": {
@@ -244,7 +258,7 @@
       "tier": "coverage",
       "title": "Which events can change this session?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "reader-path",
         "settings": {
@@ -259,7 +273,7 @@
       "tier": "showcase",
       "title": "What is a statechart, and why use one instead of a state machine?",
       "lang": "en",
-      "cases": 1,
+      "scenarios": 1,
       "entry": {
         "step": "machine",
         "settings": {}
@@ -272,7 +286,7 @@
       "tier": "gallery",
       "title": "How does a ring buffer reuse storage?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "shift",
         "settings": {
@@ -287,12 +301,10 @@
       "tier": "gallery",
       "title": "Can an agent use a key it never sees?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 1,
       "entry": {
         "step": "ask",
-        "settings": {
-          "auth": "desktop"
-        }
+        "settings": {}
       }
     },
     {
@@ -302,7 +314,7 @@
       "tier": "coverage",
       "title": "Why must you keep the returned shell?",
       "lang": "en",
-      "cases": 1,
+      "scenarios": 1,
       "entry": {
         "step": "reader-pipeline",
         "settings": {}
@@ -315,7 +327,7 @@
       "tier": "gallery",
       "title": "When should a short-lived certificate renew?",
       "lang": "en",
-      "cases": 8,
+      "scenarios": 8,
       "entry": {
         "step": "limit",
         "settings": {
@@ -331,7 +343,7 @@
       "tier": "gallery",
       "title": "Comment les parts changent-elles l’impôt d’un couple ?",
       "lang": "fr",
-      "cases": 12,
+      "scenarios": 12,
       "entry": {
         "step": "revenu",
         "settings": {
@@ -347,7 +359,7 @@
       "tier": "gallery",
       "title": "Can this Rust value cross a thread boundary?",
       "lang": "en",
-      "cases": 9,
+      "scenarios": 9,
       "entry": {
         "step": "spawn",
         "settings": {
@@ -363,7 +375,7 @@
       "tier": "gallery",
       "title": "Why does a GTFS route have no departures today?",
       "lang": "en",
-      "cases": 6,
+      "scenarios": 6,
       "entry": {
         "step": "day-before",
         "settings": {
@@ -379,7 +391,7 @@
       "tier": "gallery",
       "title": "Why can int4 and int8 rows take the same space?",
       "lang": "en",
-      "cases": 3,
+      "scenarios": 3,
       "entry": {
         "step": "page",
         "settings": {
@@ -394,7 +406,7 @@
       "tier": "gallery",
       "title": "How does traffic policy divide requests among pods?",
       "lang": "en",
-      "cases": 6,
+      "scenarios": 6,
       "entry": {
         "step": "topology",
         "settings": {
@@ -410,7 +422,7 @@
       "tier": "showcase",
       "title": "Does isdigit guarantee int can parse it?",
       "lang": "en",
-      "cases": 15,
+      "scenarios": 15,
       "entry": {
         "step": "guard",
         "settings": {
@@ -424,9 +436,9 @@
       "step": "copy",
       "group": "topic",
       "tier": "gallery",
-      "title": "What does a guest’s calendar keep when one meeting of a series changes?",
+      "title": "Why can a cancelled meeting remain in a guest’s calendar?",
       "lang": "en",
-      "cases": 6,
+      "scenarios": 6,
       "entry": {
         "step": "series",
         "settings": {
@@ -442,7 +454,7 @@
       "tier": "gallery",
       "title": "Where does an empty ext4 filesystem’s space go?",
       "lang": "en",
-      "cases": 9,
+      "scenarios": 9,
       "entry": {
         "step": "df",
         "settings": {
@@ -458,7 +470,7 @@
       "tier": "gallery",
       "title": "Which address should Express call the client?",
       "lang": "en",
-      "cases": 12,
+      "scenarios": 12,
       "entry": {
         "step": "paths",
         "settings": {
@@ -474,7 +486,7 @@
       "tier": "gallery",
       "title": "Will this Tailwind colour fit the display?",
       "lang": "en",
-      "cases": 6,
+      "scenarios": 6,
       "entry": {
         "step": "reader-display",
         "settings": {
@@ -490,9 +502,9 @@
       "tier": "coverage",
       "title": "Why couldn’t these users find the command?",
       "lang": "en",
-      "cases": 6,
+      "scenarios": 6,
       "entry": {
-        "step": "reader-task",
+        "step": "test",
         "settings": {
           "participant": "P1"
         }
@@ -505,7 +517,7 @@
       "tier": "coverage",
       "title": "What does a WCAG conformance level require?",
       "lang": "en",
-      "cases": 12,
+      "scenarios": 12,
       "entry": {
         "step": "reader-focus",
         "settings": {
@@ -521,7 +533,7 @@
       "tier": "gallery",
       "title": "How do I write that in Rayner?",
       "lang": "en",
-      "cases": 15,
+      "scenarios": 29,
       "entry": {
         "step": "recipe",
         "settings": {
@@ -533,10 +545,10 @@
       "id": "lantern",
       "step": "seek",
       "group": "toolchain",
-      "tier": "gallery",
+      "tier": "showcase",
       "title": "How can a still skip the frames before it?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "played",
         "settings": {
@@ -551,7 +563,7 @@
       "tier": "gallery",
       "title": "Why build the page before readers open it?",
       "lang": "en",
-      "cases": 1,
+      "scenarios": 1,
       "entry": {
         "step": "sentence",
         "settings": {}
@@ -564,7 +576,7 @@
       "tier": "gallery",
       "title": "What does a Mermaid verifier check?",
       "lang": "en",
-      "cases": 3,
+      "scenarios": 3,
       "entry": {
         "step": "source",
         "settings": {
@@ -579,7 +591,7 @@
       "tier": "gallery",
       "title": "Why does the same text take different space?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "reader-width",
         "settings": {
@@ -594,7 +606,7 @@
       "tier": "gallery",
       "title": "Why must font measurement match the drawn face?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "layout",
         "settings": {
@@ -609,10 +621,12 @@
       "tier": "coverage",
       "title": "How does RTL change panels and field columns?",
       "lang": "en",
-      "cases": 1,
+      "scenarios": 2,
       "entry": {
-        "step": "reader-place",
-        "settings": {}
+        "step": "code",
+        "settings": {
+          "direction": "rtl"
+        }
       }
     },
     {
@@ -622,7 +636,7 @@
       "tier": "gallery",
       "title": "Can hand-drawn strokes keep a diagram’s layout?",
       "lang": "en",
-      "cases": 2,
+      "scenarios": 2,
       "entry": {
         "step": "text",
         "settings": {

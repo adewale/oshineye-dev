@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Answer: 5% is held back for root, 3.0 times all the metadata · Where does an empty ext4 filesystem’s space go?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/ext4-space?step=reserve">
-<meta name="description" content="On a disk of 1 GiB or more, the default 5% reserve for root takes as much space as all the metadata, or more. Without -m, mke2fs reserves 5% of the blocks for root, 13,421,772 here, held back for…">
+<meta name="description" content="Much of it is free space held back for root: the default 5% reserve is 1.0, 3.0 and 12.4 times all the metadata on the 1 GiB, 1 TiB and 20 TiB disks. Without -m, mke2fs reserves 5% of the blocks for…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Answer: 5% is held back for root, 3.0 times all the metadata · Where does an empty ext4 filesystem’s space go?">
-<meta property="og:description" content="On a disk of 1 GiB or more, the default 5% reserve for root takes as much space as all the metadata, or more. Without -m, mke2fs reserves 5% of the blocks for root, 13,421,772 here, held back for…">
+<meta property="og:description" content="Much of it is free space held back for root: the default 5% reserve is 1.0, 3.0 and 12.4 times all the metadata on the 1 GiB, 1 TiB and 20 TiB disks. Without -m, mke2fs reserves 5% of the blocks for…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/ext4-space/reserve">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/ext4-space/reserve.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Pie chart “Every 4 KiB block of 1 TiB”: 3 slices; “Where the blocks go”, 7 labelled values. The answer: Root reserve: 5.0%. New in this step: Metadata: 1.7%; “Where the blocks go”, 7 labelled values.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Answer: 5% is held back for root, 3.0 times all the metadata · Where…">
-<meta name="twitter:description" content="On a disk of 1 GiB or more, the default 5% reserve for root takes as much space as all the metadata, or more. Without -m, mke2fs reserves 5% of the blocks for root, 13,421,772 here, held back for…">
+<meta name="twitter:description" content="Much of it is free space held back for root: the default 5% reserve is 1.0, 3.0 and 12.4 times all the metadata on the 1 GiB, 1 TiB and 20 TiB disks. Without -m, mke2fs reserves 5% of the blocks for…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/ext4-space/reserve.png">
 <meta name="twitter:image:alt" content="Pie chart “Every 4 KiB block of 1 TiB”: 3 slices; “Where the blocks go”, 7 labelled values. The answer: Root reserve: 5.0%. New in this step: Metadata: 1.7%; “Where the blocks go”, 7 labelled values.">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/ext4-space?step=reserve">
