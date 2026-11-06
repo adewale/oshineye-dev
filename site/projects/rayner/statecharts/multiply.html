@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A media player: two on/off features make four flat states · What is a statechart, and why use one instead of a state machine?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/statecharts?step=multiply">
-<meta name="description" content="A media player is playing or paused, and separately muted or unmuted; neither choice limits the other. A plain state machine is in one state at a time, so each state must name both: four…">
+<meta name="description" content="A media player is playing or paused, and muted or unmuted, and playback and volume never affect each other. A plain state machine is in one state at a time, so each state must name both: four…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A media player: two on/off features make four flat states · What is a statechart, and why use one instead of a state machine?">
-<meta property="og:description" content="A media player is playing or paused, and separately muted or unmuted; neither choice limits the other. A plain state machine is in one state at a time, so each state must name both: four…">
+<meta property="og:description" content="A media player is playing or paused, and muted or unmuted, and playback and volume never affect each other. A plain state machine is in one state at a time, so each state must name both: four…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/statecharts/multiply">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/statecharts/multiply.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Off; start → off; paused · unmuted; playing · unmuted; paused · muted; playing · muted; off → paused · unmuted: POWER; paused · unmuted → off: POWER; paused · unmuted → playing · unmuted: PLAY; paused · unmuted → paused · muted: MUTE; playing · unmuted → off: POWER; playing · unmuted → paused · unmuted: PAUSE; playing · unmuted → playing · muted: MUTE; paused · muted → off: POWER; paused · muted → playing · muted…">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="A media player: two on/off features make four flat states · What is…">
-<meta name="twitter:description" content="A media player is playing or paused, and separately muted or unmuted; neither choice limits the other. A plain state machine is in one state at a time, so each state must name both: four…">
+<meta name="twitter:description" content="A media player is playing or paused, and muted or unmuted, and playback and volume never affect each other. A plain state machine is in one state at a time, so each state must name both: four…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/statecharts/multiply.png">
 <meta name="twitter:image:alt" content="Off; start → off; paused · unmuted; playing · unmuted; paused · muted; playing · muted; off → paused · unmuted: POWER; paused · unmuted → off: POWER; paused · unmuted → playing · unmuted: PLAY; paused · unmuted → paused · muted: MUTE; playing · unmuted → off: POWER; playing · unmuted → paused · unmuted: PAUSE; playing · unmuted → playing · muted: MUTE; paused · muted → off: POWER; paused · muted → playing · muted…">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/statecharts?step=multiply">

@@ -8,7 +8,7 @@
   "thumbnail_width": 960,
   "thumbnail_height": 540,
   "width": 640,
-  "height": 1124,
-  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/ring-buffer.html?theme=light\" title=\"How does a ring buffer reuse storage?\" width=\"640\" height=\"1124\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "height": 1095,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/ring-buffer.html?theme=light\" title=\"How does a ring buffer reuse storage?\" width=\"640\" height=\"1095\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
   "cache_age": 86400
 }

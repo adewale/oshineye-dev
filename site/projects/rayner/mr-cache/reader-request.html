@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Does this request need the database? · What does a cache hit save?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/mr-cache?step=reader-request">
-<meta name="description" content="A direct lookup reads the database once. Add a store of saved values before that query: the cache. Would the selected request still need the database if its value were already saved?">
+<meta name="description" content="The handler’s lookup function, getUser, answers each request with one database query, even when the same user was fetched a second ago. The change in this merge request puts a store of saved values…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Does this request need the database? · What does a cache hit save?">
-<meta property="og:description" content="A direct lookup reads the database once. Add a store of saved values before that query: the cache. Would the selected request still need the database if its value were already saved?">
+<meta property="og:description" content="The handler’s lookup function, getUser, answers each request with one database query, even when the same user was fetched a second ago. The change in this merge request puts a store of saved values…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/mr-cache/reader-request">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/mr-cache/reader-request.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Request. Database. Response. Before: one database read.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Does this request need the database? · What does a cache hit save?">
-<meta name="twitter:description" content="A direct lookup reads the database once. Add a store of saved values before that query: the cache. Would the selected request still need the database if its value were already saved?">
+<meta name="twitter:description" content="The handler’s lookup function, getUser, answers each request with one database query, even when the same user was fetched a second ago. The change in this merge request puts a store of saved values…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/mr-cache/reader-request.png">
 <meta name="twitter:image:alt" content="Request. Database. Response. Before: one database read.">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/mr-cache?step=reader-request">

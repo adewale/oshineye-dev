@@ -8,7 +8,7 @@
   "thumbnail_width": 960,
   "thumbnail_height": 540,
   "width": 640,
-  "height": 1127,
-  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/monty-hall.html?theme=light\" title=\"Why does the host’s rule change the odds of switching?\" width=\"640\" height=\"1127\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "height": 1486,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/monty-hall.html?theme=light\" title=\"Why does the host’s rule change the odds of switching?\" width=\"640\" height=\"1486\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
   "cache_age": 86400
 }

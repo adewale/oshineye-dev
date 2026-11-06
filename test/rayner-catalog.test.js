@@ -14,7 +14,7 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     writeFileSync(page, '<meta name="description" content="Old"><div class="project-copy">Old copy</div><aside><dl><dt>Explainers</dt><dd>26</dd><dt>Cases</dt><dd>140</dd></dl></aside><script src="/projects/rayner/loader.js" data-src="/projects/rayner/seasons?step=june" data-target="rayner-embed" data-title="Seasons"></script><div class="example-grid">Old topics</div><section class="section reveal" aria-labelledby="toolchain"><div class="example-grid">Old tools</div></section><section class="section reveal" aria-labelledby="install"><pre><code>npm ci\nold</code></pre><p class="section-intro">You need Node 26.</p></section>');
     writeFileSync(join(root, 'site/index.html'), '<a href="/projects/rayner" class="repo-title">rayner</a><p class="repo-desc">Old copy</p>');
     writeFileSync(join(root, 'site/projects/rayner/deployment.json'), JSON.stringify({ files: [] }));
-    const data = { version: 1, product: { summary: 'Model-led explanations.', audience: 'For TypeScript authors.', description: 'Follow another case.', requirements: 'Node 24 and Chromium.', tutorial: 'https://example.org/tutorial', reference: 'https://example.org/reference', skill: 'https://example.org/skill', entry: {id: 'cache', step: 'begin', settings: {request: 'hit'}, label: 'Follow from the start'} }, totals: { explainers: 2, cases: 5 }, scenes: [{ id: 'cache', title: 'Cache hit & miss', step: 'request', lang: 'en', group: 'topic', cases: 2 }, { id: 'engine', title: 'How it works', step: 'start', lang: 'en', group: 'toolchain', cases: 3 }] };
+    const data = { version: 2, product: { summary: 'Model-led explanations.', audience: 'For TypeScript authors.', description: 'Follow another case.', requirements: 'Node 24 and Chromium.', tutorial: 'https://example.org/tutorial', reference: 'https://example.org/reference', skill: 'https://example.org/skill', entry: {id: 'cache', step: 'begin', settings: {request: 'hit'}, label: 'Follow from the start'} }, totals: { explainers: 2, scenarios: 5 }, scenes: [{ id: 'cache', title: 'Cache hit & miss', step: 'request', lang: 'en', group: 'topic', scenarios: 2 }, { id: 'engine', title: 'How it works', step: 'start', lang: 'en', group: 'toolchain', scenarios: 3 }] };
     writeFileSync(catalog, JSON.stringify(data));
     const run = () => spawnSync('node', [join(root, 'tools/sync-rayner.mjs')], { encoding: 'utf8' });
     expect(run().status).toBe(0);
@@ -41,9 +41,9 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     // next export must recreate it when authoring examples return.
     writeFileSync(page, once.replace(/<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/, ''));
     data.scenes.push(
-      { id: 'feature-tour', title: 'How do I write that?', step: 'result', lang: 'en', group: 'toolchain', cases: 15 },
+      { id: 'feature-tour', title: 'How do I write that?', step: 'result', lang: 'en', group: 'toolchain', scenarios: 15 },
     );
-    data.totals = { explainers: 3, cases: 20 };
+    data.totals = { explainers: 3, scenarios: 20 };
     writeFileSync(catalog, JSON.stringify(data));
     const restored = run();
     expect(restored.stderr).toBe('');
@@ -61,7 +61,7 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect(run().status).toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(withAuthors);
     data.scenes = data.scenes.slice(0, 1);
-    data.totals = { explainers: 1, cases: 2 };
+    data.totals = { explainers: 1, scenarios: 2 };
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).toBe(0);
     const selected = readFileSync(page, 'utf8');
@@ -78,13 +78,13 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     // Catalog tiers determine placement. Coverage artifacts may remain available
     // without becoming recommendations, and promoting a lesson moves its card.
     data.scenes = [
-      { id: 'cache', title: 'Cache', lang: 'en', group: 'topic', tier: 'showcase', cases: 2 },
-      { id: 'notes', title: 'Another subject', lang: 'en', group: 'topic', tier: 'gallery', cases: 1 },
-      { id: 'hidden', title: 'Coverage subject', lang: 'en', group: 'topic', tier: 'coverage', cases: 1 },
-      { id: 'engine', title: 'Author recipe', lang: 'en', group: 'toolchain', tier: 'gallery', cases: 1 },
-      { id: 'hidden-tool', title: 'Coverage tool', lang: 'en', group: 'toolchain', tier: 'coverage', cases: 1 },
+      { id: 'cache', title: 'Cache', lang: 'en', group: 'topic', tier: 'showcase', scenarios: 2 },
+      { id: 'notes', title: 'Another subject', lang: 'en', group: 'topic', tier: 'gallery', scenarios: 1 },
+      { id: 'hidden', title: 'Coverage subject', lang: 'en', group: 'topic', tier: 'coverage', scenarios: 1 },
+      { id: 'engine', title: 'Author recipe', lang: 'en', group: 'toolchain', tier: 'gallery', scenarios: 1 },
+      { id: 'hidden-tool', title: 'Coverage tool', lang: 'en', group: 'toolchain', tier: 'coverage', scenarios: 1 },
     ];
-    data.totals = { explainers: 5, cases: 6 };
+    data.totals = { explainers: 5, scenarios: 6 };
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).toBe(0);
     const tiered = readFileSync(page, 'utf8');
@@ -104,9 +104,9 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect(promoted).toContain('/projects/rayner/notes"><img');
     // Restore the one-scene fixture before testing the inconsistent-count guard.
     data.scenes = data.scenes.slice(0, 1);
-    data.totals = { explainers: 1, cases: 2 };
+    data.totals = { explainers: 1, scenarios: 2 };
     writeFileSync(page, selected);
-    data.totals.cases = 6;
+    data.totals.scenarios = 6;
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).not.toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(selected);

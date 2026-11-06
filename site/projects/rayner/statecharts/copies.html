@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A POWER_OFF copied onto every state, and one copy missed · What is a statechart, and why use one instead of a state machine?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/statecharts?step=copies">
-<meta name="description" content="In a plain state machine an arrow leaves exactly one state, so idle, grinding, brewing and ready each need their own POWER_OFF, and off needs a POWER_ON: 5 more arrows, 9 in all. Copied by hand, one…">
+<meta name="description" content="In this hand-copied machine brewing’s POWER_OFF is missing, so the power button does nothing while the machine brews, until the brew finishes. The copies are needed because in a plain state machine…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A POWER_OFF copied onto every state, and one copy missed · What is a statechart, and why use one instead of a state machine?">
-<meta property="og:description" content="In a plain state machine an arrow leaves exactly one state, so idle, grinding, brewing and ready each need their own POWER_OFF, and off needs a POWER_ON: 5 more arrows, 9 in all. Copied by hand, one…">
+<meta property="og:description" content="In this hand-copied machine brewing’s POWER_OFF is missing, so the power button does nothing while the machine brews, until the brew finishes. The copies are needed because in a plain state machine…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/statecharts/copies">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/statecharts/copies.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Off; idle; grinding; brewing; ready; start → off; off → idle: POWER_ON; idle → off: POWER_OFF (marked); idle → grinding: START; grinding → off: POWER_OFF (marked); grinding → brewing: GROUND; brewing → ready: BREWED; ready → off: POWER_OFF (marked); ready → idle: TAKE; brewing → off: POWER_OFF missing (marked).">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="A POWER_OFF copied onto every state, and one copy missed · What is a…">
-<meta name="twitter:description" content="In a plain state machine an arrow leaves exactly one state, so idle, grinding, brewing and ready each need their own POWER_OFF, and off needs a POWER_ON: 5 more arrows, 9 in all. Copied by hand, one…">
+<meta name="twitter:description" content="In this hand-copied machine brewing’s POWER_OFF is missing, so the power button does nothing while the machine brews, until the brew finishes. The copies are needed because in a plain state machine…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/statecharts/copies.png">
 <meta name="twitter:image:alt" content="Off; idle; grinding; brewing; ready; start → off; off → idle: POWER_ON; idle → off: POWER_OFF (marked); idle → grinding: START; grinding → off: POWER_OFF (marked); grinding → brewing: GROUND; brewing → ready: BREWED; ready → off: POWER_OFF (marked); ready → idle: TAKE; brewing → off: POWER_OFF missing (marked).">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/statecharts?step=copies">

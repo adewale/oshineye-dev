@@ -8,7 +8,7 @@
   "thumbnail_width": 960,
   "thumbnail_height": 540,
   "width": 640,
-  "height": 1024,
-  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/birthday-paradox.html?theme=light\" title=\"How many people make a shared birthday likely?\" width=\"640\" height=\"1024\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "height": 1082,
+  "html": "<iframe src=\"https://oshineye.dev/projects/rayner/birthday-paradox.html?theme=light\" title=\"How many people make a shared birthday likely?\" width=\"640\" height=\"1082\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
   "cache_age": 86400
 }
