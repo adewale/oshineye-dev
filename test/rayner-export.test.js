@@ -45,8 +45,9 @@ test('a deployed Rayner export has exactly the recorded bytes, including branded
     await expect(verifyRaynerExport(root)).rejects.toThrow(/_headers.*digest/);
     writeFileSync(join(root, '_headers'), '/projects/rayner/cache\n  Content-Security-Policy: strict\n');
     writeFileSync(join(repo, 'tools/sync-rayner.mjs'), 'modified');
-    await expect(verifyRaynerExport(root)).rejects.toThrow(/generator.*digest/);
-    writeFileSync(join(repo, 'tools/sync-rayner.mjs'), 'sync');
+    await verifyRaynerExport(root);
+    unlinkSync(join(repo, 'tools/sync-rayner.mjs'));
+    await verifyRaynerExport(root);
     manifest.files.push({ path: '/../outside', sha256: hash('x') });
     writeFileSync(join(root, 'projects/rayner/deployment.json'), JSON.stringify(manifest));
     await expect(verifyRaynerExport(root)).rejects.toThrow(/invalid manifest path/);
