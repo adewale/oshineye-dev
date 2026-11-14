@@ -3,7 +3,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, rmSync, unlinkSync } from 'node:
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
-import { verifyRaynerExport } from '../tools/verify-rayner-export.mjs';
+import { verifyRaynerExport, verifyPoppyExport } from '../tools/verify-rayner-export.mjs';
 
 const hash = text => createHash('sha256').update(text).digest('hex');
 
@@ -50,5 +50,35 @@ test('a deployed Rayner export has exactly the recorded bytes, including branded
     manifest.files.push({ path: '/../outside', sha256: hash('x') });
     writeFileSync(join(root, 'projects/rayner/deployment.json'), JSON.stringify(manifest));
     await expect(verifyRaynerExport(root)).rejects.toThrow(/invalid manifest path/);
+  } finally { rmSync(repo, { recursive: true, force: true }); }
+});
+
+test('the Poppy export is verified the same way, under its own subtree, page and generator', async () => {
+  const repo = mkdtempSync(join(tmpdir(), 'poppy-export-'));
+  const root = join(repo, 'site');
+  try {
+    mkdirSync(join(root, 'projects/poppy'), { recursive: true });
+    mkdirSync(join(repo, 'tools'));
+    const headers = '/projects/poppy/poppy\n  Content-Security-Policy: strict\n';
+    writeFileSync(join(root, '_headers'), headers);
+    writeFileSync(join(root, 'projects/poppy.html'), 'host');
+    writeFileSync(join(root, 'projects/poppy/index.html'), 'host');
+    writeFileSync(join(root, 'projects/poppy/poppy.html'), 'scene');
+    writeFileSync(join(repo, 'tools/sync-poppy.mjs'), 'sync');
+    const manifest = {
+      version: 1,
+      files: [
+        { path: '/_headers', sha256: hash(headers) },
+        { path: '/projects/poppy.html', sha256: hash('host') },
+        { path: '/projects/poppy/index.html', sha256: hash('host') },
+        { path: '/projects/poppy/poppy.html', sha256: hash('scene') },
+      ],
+      host: { generator: 'tools/sync-poppy.mjs', sha256: hash('sync') },
+    };
+    writeFileSync(join(root, 'projects/poppy/deployment.json'), JSON.stringify(manifest));
+    expect(await verifyPoppyExport(root)).toBe(4);
+    manifest.files.push({ path: '/projects/rayner/cache.html', sha256: hash('x') });
+    writeFileSync(join(root, 'projects/poppy/deployment.json'), JSON.stringify(manifest));
+    await expect(verifyPoppyExport(root)).rejects.toThrow(/invalid manifest path/);
   } finally { rmSync(repo, { recursive: true, force: true }); }
 });

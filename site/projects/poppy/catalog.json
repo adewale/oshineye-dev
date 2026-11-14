@@ -1,0 +1,178 @@
+{
+  "version": 2,
+  "product": {
+    "home": "https://github.com/adewale/rayner",
+    "summary": "Rayner makes a verified explanation of what this version of this system really does, with a short receipt the person who commissioned it can review.",
+    "audience": "It is for the person who commissions an explainer of a protocol, an algorithm or a data structure, and for the agent or person who writes it.",
+    "description": "The writer models the system in TypeScript and tests the model against the real system where it can: run live, recorded once, or read from its specification. Every picture on the page is checked against the model’s state, and the receipt says what the model was checked against and how. The result is one HTML page of steps and a transcript, with no runtime network requests.",
+    "requirements": "Node 24 or later to write, check and build. Chromium for rayner review and screenshots, and to capture Mermaid diagrams. Authoring targets Ubuntu and macOS.",
+    "tutorial": "https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md",
+    "reference": "https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md",
+    "skill": "https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md",
+    "install": "Rayner 0.2.0, which these guides describe, is not on npm yet: npm has rayner 0.1.0, an earlier single-package release, and no rayner-cli. Build both packages from the repository, as the quick start shows.",
+    "installGuide": "https://github.com/adewale/rayner#quick-start",
+    "entry": {
+      "id": "poppy",
+      "step": "errand",
+      "settings": {
+        "approve": "read-write"
+      },
+      "label": "How does Poppy work?"
+    }
+  },
+  "totals": {
+    "explainers": 8,
+    "scenarios": 14,
+    "diagrams": 0,
+    "styles": 0,
+    "families": 0
+  },
+  "scenes": [
+    {
+      "id": "poppy",
+      "step": "both",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "How does Poppy work?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "errand",
+        "settings": {
+          "approve": "read-write"
+        }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-discovery",
+      "step": "handshake",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "How does an agent know a poppy.json speaks for the shop?",
+      "lang": "en",
+      "scenarios": 1,
+      "entry": {
+        "step": "stranger",
+        "settings": {}
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-sessions",
+      "step": "send",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "What is inside the seal?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "stranger",
+        "settings": {
+          "company": "remembers"
+        }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-sign-in",
+      "step": "key",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "How do you give your agent a key without giving it your password?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "password",
+        "settings": {
+          "flow": "direct"
+        }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-browser",
+      "step": "submit",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "How does the agent's browser join the Session without ever carrying the key?",
+      "lang": "en",
+      "scenarios": 3,
+      "entry": {
+        "step": "fetch",
+        "settings": {
+          "signin": "signed-in"
+        }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-refusals",
+      "step": "slip",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "What does your agent do when the Company says no?",
+      "lang": "en",
+      "scenarios": 1,
+      "entry": {
+        "step": "turned-back",
+        "settings": {}
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-conversations",
+      "step": "direct",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "When two agents talk, who is a person and who is an AI?",
+      "lang": "en",
+      "scenarios": 1,
+      "entry": {
+        "step": "open",
+        "settings": {}
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    },
+    {
+      "id": "poppy-coverage",
+      "step": "sort",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "What can a Company tell your agent, and what must your agent refuse to be told?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "search",
+        "settings": {
+          "company": "hostile"
+        }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the Personal Agent Protocol draft 1.0, as published on 2026-11-13"
+      }
+    }
+  ]
+}

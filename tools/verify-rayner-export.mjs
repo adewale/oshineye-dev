@@ -6,11 +6,17 @@ import { fileURLToPath } from 'node:url';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const validDigest = value => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
-const owned = path => path === '/_headers' || path === '/projects/rayner.html' || /^\/projects\/rayner\/(?!\.)[a-zA-Z0-9_.\/-]+$/.test(path);
+// Each Rayner export (the Rayner collection, and the Poppy chapters) owns one subtree, its branded
+// page, and its rules in the shared _headers file.
+const ownedBy = name => path => path === '/_headers' || path === `/projects/${name}.html` || new RegExp(`^/projects/${name}/(?!\\.)[a-zA-Z0-9_./-]+$`).test(path);
 
-export async function verifyRaynerExport(root) {
+export const verifyRaynerExport = root => verifyExport(root, 'rayner', 'tools/sync-rayner.mjs');
+export const verifyPoppyExport = root => verifyExport(root, 'poppy', 'tools/sync-poppy.mjs');
+
+export async function verifyExport(root, name, expectedGenerator) {
   root = resolve(root);
-  const subtree = join(root, 'projects/rayner');
+  const owned = ownedBy(name);
+  const subtree = join(root, 'projects', name);
   const manifest = JSON.parse(await readFile(join(subtree, 'deployment.json'), 'utf8'));
   if (manifest.version !== 1 || !Array.isArray(manifest.files) || !manifest.files.length)
     throw new Error('Invalid Rayner deployment manifest');
@@ -28,15 +34,15 @@ export async function verifyRaynerExport(root) {
     });
     if (digest(bytes) !== sha256) throw new Error(`${path} has a different digest`);
   }
-  if (!listed.has('/_headers') || !listed.has('/projects/rayner.html') || !listed.has('/projects/rayner/index.html'))
+  if (!listed.has('/_headers') || !listed.has(`/projects/${name}.html`) || !listed.has(`/projects/${name}/index.html`))
     throw new Error('Rayner response headers or branded pages are missing from the manifest');
   for (const entry of await readdir(subtree, { recursive: true, withFileTypes: true })) {
-    const path = '/projects/rayner/' + relative(subtree, join(entry.parentPath, entry.name)).replaceAll('\\', '/');
+    const path = `/projects/${name}/` + relative(subtree, join(entry.parentPath, entry.name)).replaceAll('\\', '/');
     if (entry.isSymbolicLink()) throw new Error(`unlisted symlink: ${path}`);
     if (entry.isFile() && entry.name !== 'deployment.json' && !listed.has(path)) throw new Error(`unlisted Rayner file: ${path}`);
   }
   const generator = manifest.host?.generator;
-  if (generator !== 'tools/sync-rayner.mjs' || !validDigest(manifest.host.sha256)) throw new Error('Invalid Rayner host generator');
+  if (generator !== expectedGenerator || !validDigest(manifest.host.sha256)) throw new Error('Invalid Rayner host generator');
   if (digest(await readFile(join(dirname(root), generator))) !== manifest.host.sha256) throw new Error('Rayner generator has a different digest');
   return listed.size;
 }
@@ -44,4 +50,5 @@ export async function verifyRaynerExport(root) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '../site');
   console.log(`Verified ${await verifyRaynerExport(root)} Rayner deployment files`);
+  console.log(`Verified ${await verifyPoppyExport(root)} Poppy deployment files`);
 }

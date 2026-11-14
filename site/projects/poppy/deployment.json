@@ -1,0 +1,1307 @@
+{
+  "version": 1,
+  "build": {
+    "version": 1,
+    "inputs": [
+      {
+        "file": "LICENSE",
+        "sha256": "ba863aa6eaa995fc8b878a3b180bec51a55f58b6a9f68afd14f46a756f9102a9"
+      },
+      {
+        "file": "app/embed-audio.css",
+        "sha256": "3b9b3e50098e76016b48966de98e5495f71c462e3abbd8ebeac2deca9e61446c"
+      },
+      {
+        "file": "app/embed-audio.ts",
+        "sha256": "1a622a7873030c1081fb67917f4fe04d23f98d48a119b8a97b3ac75587b50bce"
+      },
+      {
+        "file": "app/embed-closeup.ts",
+        "sha256": "fdd77eaee9a518e7fac063b3db9412e643e010dfc814ec686ff635593d233bdd"
+      },
+      {
+        "file": "app/embed-icons.ts",
+        "sha256": "100f06d59ee50256e4cd4e2d0aede27d4ceec81d2e34f5f40efddd6478207120"
+      },
+      {
+        "file": "app/embed-live.ts",
+        "sha256": "4857c6b2746ed1edf9437f80c50492f8743cb0f2fb71151e78be787268d75857"
+      },
+      {
+        "file": "app/embed-lru.ts",
+        "sha256": "25c90bcae4e6b9ea92a929405c1a862265bd85c64ddfc15a82ed063a51f79737"
+      },
+      {
+        "file": "app/embed-protocol.ts",
+        "sha256": "fc702f36427b206a723672f5e6c4d08351336132e068956c62abcda3a031b59c"
+      },
+      {
+        "file": "app/embed-scope.ts",
+        "sha256": "2ef291302e36fb263a06125cf651200a5503ea792d1e7c8532c9dc25d37cc965"
+      },
+      {
+        "file": "app/embed-share.ts",
+        "sha256": "b673f9aadda3f422a080d1882138895eb8cf491846c87e789e40dfac185ee6a6"
+      },
+      {
+        "file": "app/embed-snapshot-codec.ts",
+        "sha256": "69c825ae9d0368c6f6f62fa09eda4a8f01a94f97ebd3795a8ffc42ba44b382d4"
+      },
+      {
+        "file": "app/embed-snapshots.ts",
+        "sha256": "d31a24dca0b97dfd057a2f65b83930031e9611c515608effa093df96f28be5b3"
+      },
+      {
+        "file": "app/embed-steps.ts",
+        "sha256": "52ded8b75051b590126ebc9cc49e282da98b6133c94e3d33c261a32a64bd6da5"
+      },
+      {
+        "file": "app/embed-strings.ts",
+        "sha256": "8e7f11df15fef216b7118e6453b5608d37abd190a5f244e5986d8012f2c57f88"
+      },
+      {
+        "file": "app/embed-style.ts",
+        "sha256": "5188506b93eba44e7918a26b4e98fc4b34732fdb356c5532c70ea176d5824f75"
+      },
+      {
+        "file": "app/embed-trace.ts",
+        "sha256": "829f18a214bfe42858d457eae169e6aa7ad0e7c76914ac13c42cf65dff7ffaa6"
+      },
+      {
+        "file": "app/embed-zoom.ts",
+        "sha256": "bb007b11d58cda48a8b17e603d36b8909fd64a2174e0e6e51b7320b34789cea5"
+      },
+      {
+        "file": "app/embed.css",
+        "sha256": "db5b84cdf1f8eb24b471f6c9440fc51eec02eba07dedf97c27beee0df2a8fad5"
+      },
+      {
+        "file": "app/embed.ts",
+        "sha256": "2e91b492f4e62dab33cee7d11b1b91a82190c05af843e0770066226a3673eb92"
+      },
+      {
+        "file": "app/loader.ts",
+        "sha256": "1b8582c7b494e4087c48b1fd23e728968ed105798f6c79895232ad6fa7da4458"
+      },
+      {
+        "file": "cli/package.json",
+        "sha256": "9e237b59b8022b20760b96120178bc95268bec090199b8932caa3792de5e7e2a"
+      },
+      {
+        "file": "explain/action.ts",
+        "sha256": "09b22a8561e6a1c5604abb6d63f0b50d144ffefabc69eb3665bae866f0373f70"
+      },
+      {
+        "file": "explain/annotate.ts",
+        "sha256": "825268da8b5488d8a1537ec7bc448d5d696b4b5a0aa0869ca7e87f82f23f9857"
+      },
+      {
+        "file": "explain/audio.ts",
+        "sha256": "bd1a4b63f7ba576c4dc867cabb82bb1804684b9f288b893b7ba324ef0ff5f337"
+      },
+      {
+        "file": "explain/caption-looks.ts",
+        "sha256": "15fb9c5cae39bcf1a82aa64f19b40877cd9d6dcbf20708ee8858cedf72819e1e"
+      },
+      {
+        "file": "explain/choreograph.ts",
+        "sha256": "b71768586123926792f0ddbd7600b2a49177d795ab379a7117cc7e480e342c9b"
+      },
+      {
+        "file": "explain/claims.ts",
+        "sha256": "a2d7e671bbb735ffdb94c67fd1a38a60009683935bd0696526729d8a1a15a7f4"
+      },
+      {
+        "file": "explain/describe.ts",
+        "sha256": "ce3f2f0a5b7e34d150eb302a7c3ec1c9ed14d47746617c942620658c3338b02f"
+      },
+      {
+        "file": "explain/diagram-snapshot.ts",
+        "sha256": "7e16305c206b20eb17b74655ed82b4e9aaf7a8617d932bffc4d2152e6405d6b3"
+      },
+      {
+        "file": "explain/diagram-text.ts",
+        "sha256": "4651fa645ac27b6bd3090957823dec3186f099c27f261be61c4c16a0bd40219e"
+      },
+      {
+        "file": "explain/diagrams.ts",
+        "sha256": "be4a30a7d20433017398df12ad822186f7edded989e5c9547d4a29c766630d8c"
+      },
+      {
+        "file": "explain/drawing.ts",
+        "sha256": "1533c499be9edda1b77e31252aa6b44f376f888d85f7b817a92aaa553dfc4b87"
+      },
+      {
+        "file": "explain/geo.ts",
+        "sha256": "2a26a83f4820a38b4d1fb3f96e14a4cb92ca6340d51c011bf9646341825a1f2c"
+      },
+      {
+        "file": "explain/grounding.ts",
+        "sha256": "887f5d56160971de96c4c876d81e63d96726cb2aecfef0d2fdb482204c7efb13"
+      },
+      {
+        "file": "explain/index.ts",
+        "sha256": "f63aaa6313b69cb8729d18994ac986b7cd55b08004199385fdf0fae001b13a7e"
+      },
+      {
+        "file": "explain/intent.ts",
+        "sha256": "4ceaaccbca13c5be581d60b791dd7d29ff3ce8d7d74b929e30c9f476fa5f7031"
+      },
+      {
+        "file": "explain/internal.ts",
+        "sha256": "7df56aff0c3e17c09c69296fac30aea5db1d13601c69ca3f3109b7a640095ff7"
+      },
+      {
+        "file": "explain/kit.ts",
+        "sha256": "758de161dfd9679761ac86e9b20b0aa8d793bfd8ec64e01cb961803f3dd0a567"
+      },
+      {
+        "file": "explain/labels.ts",
+        "sha256": "45761a6855feea6af6c40e8c249d0a71bdd28871516522a1c47c6658bed66d7c"
+      },
+      {
+        "file": "explain/layout-direction.ts",
+        "sha256": "1453bb4bee1c01f1afefdd92517729780650edd849d45ddbfd9a74b419756918"
+      },
+      {
+        "file": "explain/live.ts",
+        "sha256": "f0a7f3d8b50f9567ed8e13a64f1e8686ee9421a8ff15fe7454fa744108fb5853"
+      },
+      {
+        "file": "explain/look.ts",
+        "sha256": "1f34a67fb28fc5f1a209585797909ff5f1cf56b90a27014256ab133af77379c4"
+      },
+      {
+        "file": "explain/machine.ts",
+        "sha256": "c9024c99dd7abbbcfcaef66bc55d0ef6a3319ff6d89440e20651ce01a29c6471"
+      },
+      {
+        "file": "explain/mermaid.ts",
+        "sha256": "467b5096a17f0847c5ea415dccb50b59b87227c96e98a78b054789274495d6b4"
+      },
+      {
+        "file": "explain/page-query.ts",
+        "sha256": "53d08169c736c6af03d7cd4c5575f0fc9869c361c133e1a6981fa54b6af4c0cc"
+      },
+      {
+        "file": "explain/palettes.ts",
+        "sha256": "5506abe4cca38464ecb4d2833c8102db5ac46a0d9aa99b1988a5814a1d7e0518"
+      },
+      {
+        "file": "explain/panels.ts",
+        "sha256": "88e3b1d87c33e0ffd929f644aafd6397b7aa7dc2b633d71f6cf5f7ef95b3d316"
+      },
+      {
+        "file": "explain/project.ts",
+        "sha256": "ffa776ae18516c40336dae0912b5d617ce482861d1d2b8c380c7cdbb9bb69a73"
+      },
+      {
+        "file": "explain/script.ts",
+        "sha256": "e578fd8085575cad20d9d2ce0a19fe52cac6188e02bfe8f241c34aaa2cea7e68"
+      },
+      {
+        "file": "explain/seen-from.ts",
+        "sha256": "626ed6437c6ef29db3fb1e0e5153a2828d812c618dc180ed4c4a11813495283d"
+      },
+      {
+        "file": "explain/settings.ts",
+        "sha256": "51db4064dac23417c74ffadf82ffec489d02aa8167670193182f6614f2d54ce9"
+      },
+      {
+        "file": "explain/stage.ts",
+        "sha256": "bf061f1e6f046fe5b4c94a101e77dd03f9af71bba590dd8e29a420a681ed2ca9"
+      },
+      {
+        "file": "explain/state.ts",
+        "sha256": "0155d92a7bd7f2bc530ae4171e12cd74190daa29345dd1a52cde92735a56bd4a"
+      },
+      {
+        "file": "explain/test-helpers.ts",
+        "sha256": "8457275030be9913d51b8897d647ad1ce4531f6f257ade885b6ab2d68ea2cd5b"
+      },
+      {
+        "file": "explain/testing.ts",
+        "sha256": "9a61edef3f863b1936f01d6dec90d01eaa0ff67c3e267d38845c7b06374bd4ad"
+      },
+      {
+        "file": "explain/trace.ts",
+        "sha256": "eab34eaf1f3949c8b68ca37b0f2f73cdd729acd30e655fad6d7488bd30319b92"
+      },
+      {
+        "file": "explain/view.ts",
+        "sha256": "49453f7d549dc0ded576cb1d08ec4ef09efb1271f4acc948c69e6c2393d2bad0"
+      },
+      {
+        "file": "explain/words.ts",
+        "sha256": "27580b15ff32cbc20fd3fb963e2ec27a4f60136e0bc1522d78695d9c35bd6627"
+      },
+      {
+        "file": "integrations/agentic-mermaid/capture.ts",
+        "sha256": "a4f4f9ee5154e2bb6187f12b9f65e4c8eb9296ed5966cea19a2f17a9432fa839"
+      },
+      {
+        "file": "integrations/agentic-mermaid/index.ts",
+        "sha256": "064f72043eac2a5f0081e10f390f0921c8593a0e20ad5f48902798a747e8ab4a"
+      },
+      {
+        "file": "integrations/agentic-mermaid/measurement.ts",
+        "sha256": "bbfa74ba707a42bcb70768e521ec145d6b3e0b7e8f2099874eeca36f9d9e6e12"
+      },
+      {
+        "file": "integrations/agentic-mermaid/read-svg.ts",
+        "sha256": "a1aea62914d9b70800aa596bf2fe1a46dccb0fc007390e5c18e3450ed19a18a2"
+      },
+      {
+        "file": "package-lock.json",
+        "sha256": "872899287c5a151fefe147b6a7fc1636a462a04f36036fac51580e1d743ec3c4"
+      },
+      {
+        "file": "package.json",
+        "sha256": "cf93508af109b44adffd661c5aa6bd0aee37100b6455974698964234e7cce76a"
+      },
+      {
+        "file": "scenes/explainers/catalog.ts",
+        "sha256": "a50308eca0418d34fc81993e4e5d75b1a27c929a7d258ffd9c7a0aa694caf91b"
+      },
+      {
+        "file": "src/animation.ts",
+        "sha256": "16ce4db9d7d3f95221bc2a8c77de6eded5b9b3c0b3ba43ef6152ef4b62df3878"
+      },
+      {
+        "file": "src/ascii.ts",
+        "sha256": "49bf6569028e42e6a7245942cf5865cb38d56dc3586387835f9e68343daad53f"
+      },
+      {
+        "file": "src/box.ts",
+        "sha256": "563bd9ca7c355d269c41d3c5b12e293bf2be3d1af9be66fbe07565d9cabec47d"
+      },
+      {
+        "file": "src/color.ts",
+        "sha256": "7039ca170efc5afa309a0bf2cebf8784f557718e4b52470cc252ec4bf380d09c"
+      },
+      {
+        "file": "src/diff.ts",
+        "sha256": "c5df0946f16bd4d8be2e3adce61c144bd33ce73cdfbe18d4b3729992965812a4"
+      },
+      {
+        "file": "src/font-data.ts",
+        "sha256": "0e2a29f589c9990ea7d25115a139019bc34430334106632cb7ff113bc2fd2c3f"
+      },
+      {
+        "file": "src/fonts.ts",
+        "sha256": "d2b2cde363f9dd6f0fdd2cce979d40560e6fe8c739518e5d7796fcf34346b5ab"
+      },
+      {
+        "file": "src/frame.ts",
+        "sha256": "4be085f35b8b2d6f6cb6ae78a42f182ce3df1e944283b6f589403463d8debb16"
+      },
+      {
+        "file": "src/graphing.ts",
+        "sha256": "2a90d6e4c01e738d3e5f7bb203e20549d4e2fb2030d9cbb189de3d776e7ffc5a"
+      },
+      {
+        "file": "src/index.ts",
+        "sha256": "a4b3fda5e6471bdf3103464625cf34c936695736bf2b110ed812a5df1493ac50"
+      },
+      {
+        "file": "src/internal.ts",
+        "sha256": "7e0b3d0906451e8cf14c0c4b2e6215767e4ae3ce71854bec1df4c2c67590a585"
+      },
+      {
+        "file": "src/italic.ts",
+        "sha256": "14df328700116fe5178ef5eed9e0818dd8a1ef32be147d6184e496aaec7ed325"
+      },
+      {
+        "file": "src/json.ts",
+        "sha256": "093d71950ef78a37ab07e1d8a55d909adc9311feb62125ed43ff58f5c2a34dd6"
+      },
+      {
+        "file": "src/lettering-outlines.ts",
+        "sha256": "0d4c7734fd3c1f8559e37eaae2813129458285cddd20ea2add421203594c25bd"
+      },
+      {
+        "file": "src/lettering-scripts.ts",
+        "sha256": "417bb3a6d26b52647063c2a0c56d02f8d7678f89e6ea8b3ffafd2775df3f56c8"
+      },
+      {
+        "file": "src/lettering.ts",
+        "sha256": "859296aa048362429d663dfae92a217ebdd1529983c51bf0d0bcf205f734bbe4"
+      },
+      {
+        "file": "src/math.ts",
+        "sha256": "a8de90ab7d722c12ed4832ff121130d48ea5f0a1218d2cb3a4e5c1839318a1b9"
+      },
+      {
+        "file": "src/mobject.ts",
+        "sha256": "9a4dc1ff9e91e93c0832b5f4ee2ba264dab0144c32c904af680b48f79ef2fe2f"
+      },
+      {
+        "file": "src/output.ts",
+        "sha256": "01527f59d9d74857c1fbd22a44cf3e9272f819c46d9338953510e423eda4cefb"
+      },
+      {
+        "file": "src/perf.ts",
+        "sha256": "25d937d762aeeee96f73b73daab6bb7f31bddbb3fbd424ea47dddecff8f4050f"
+      },
+      {
+        "file": "src/rate.ts",
+        "sha256": "1c896e809fff496a4a4f9b61f6abea9e7898ce61d774258212ffebd190ef6f92"
+      },
+      {
+        "file": "src/scene.ts",
+        "sha256": "ce6413cf37e31bb5e66d3f39d46c85662fc243af3f2d729ff7cd66cb83a5a3cc"
+      },
+      {
+        "file": "src/shapes.ts",
+        "sha256": "a844215ac21a441f736495569ed9fdd9d1dccdd3d9999a122d7109a4871c198a"
+      },
+      {
+        "file": "src/svg.ts",
+        "sha256": "0cc38c96bd280eb1155f2eb4e82e40171af4e8cd730b46dc403d0ddbed5b87ed"
+      },
+      {
+        "file": "src/testing.ts",
+        "sha256": "a87c1f1b3a8de3dea848a5e9f08ce5543262f313737cfa7a623a86b5f9c8fd13"
+      },
+      {
+        "file": "src/text-context.ts",
+        "sha256": "2f318475934912b65cfce47b77269327c2cc15a702e95a94e2195bfd26992c73"
+      },
+      {
+        "file": "src/text.ts",
+        "sha256": "f58d9b73fb4fad8381b9bd2d23ea986a4c612180f2b1264feac6d74c8c447559"
+      },
+      {
+        "file": "src/timeline.ts",
+        "sha256": "0abbc5b275f93f24a9bfb85b4cedab193a1729738c6a1d343a2ffed995f2c620"
+      },
+      {
+        "file": "src/trace.ts",
+        "sha256": "a76aef218b409da5952b1f5df32f28eaad9365e07917ceb675af2b52d61cbae3"
+      },
+      {
+        "file": "src/units.ts",
+        "sha256": "9d3dee95132644b8931cb8e516f5b722d570b81112551aa2b5a83b81064a320d"
+      },
+      {
+        "file": "src/vec.ts",
+        "sha256": "6ffb32b6558aded68131d42b65bc9f0f22e1cdd27ab6c31f46708305d069e459"
+      },
+      {
+        "file": "src/verify.ts",
+        "sha256": "b933de888fd673fe19d1983e451fac481b4b3a6faf131d81a7bf23b3e25fca13"
+      },
+      {
+        "file": "src/vmobject.ts",
+        "sha256": "e0c19f6636d430d69e6c18c9f72823b79651877a6838b66068288b4d42f56169"
+      },
+      {
+        "file": "tools/lettering-requirements.txt",
+        "sha256": "6ece92e09d757871b1fed3e21261388ffa80ca3f10556409a3bf0d18a94c9078"
+      },
+      {
+        "file": "tools/lettering.py",
+        "sha256": "deedc9815e74171b73cefc0e7c71d004c1fc5eb2a20b0cb6c6f3d9e64bd20c05"
+      },
+      {
+        "file": "tools/lib/addons.ts",
+        "sha256": "11a54bd23e2b5347433c05cd446ef92a222af15207ab85a959303fefd6e7836e"
+      },
+      {
+        "file": "tools/lib/browser.ts",
+        "sha256": "62e66fff326a9a13a0af27bb9e6f6b34f9944090451cad878e98852528edee81"
+      },
+      {
+        "file": "tools/lib/build-inputs.ts",
+        "sha256": "955e29a3df03a3c75847339fa87a2c4ea0657b5d1fa17a3dc764fc8e4cf3c028"
+      },
+      {
+        "file": "tools/lib/entry-points.ts",
+        "sha256": "901814054c6a620657f3760a8e9abfb7e8a86a7c1a63f452f4bf2cb90f3c573d"
+      },
+      {
+        "file": "tools/lib/explain-artifacts.ts",
+        "sha256": "bcb4e4797344217d45627560b2dbe26f0531417a08a51546dd9e01c58b013537"
+      },
+      {
+        "file": "tools/lib/explain-browser-fonts.ts",
+        "sha256": "d332cb413249cef48bf2f600c9cbc9cc535e5a2e4d7bdc5caaafa3c2c1c37445"
+      },
+      {
+        "file": "tools/lib/explain-build.ts",
+        "sha256": "96c7d73ca230eb271f25153e9a8c75f86e8316db6bd4b866ecc1a99278694172"
+      },
+      {
+        "file": "tools/lib/explain-diagram-code.ts",
+        "sha256": "a24ca1806b8b70b808373445ce1cc6abc5cb3924dec5aa0c74b613ddd630d77b"
+      },
+      {
+        "file": "tools/lib/explain-lettering.ts",
+        "sha256": "62c742e42bf52ab49c6ebb6ab05ab376cb86da81507efad8de5a669673b1ef1e"
+      },
+      {
+        "file": "tools/lib/explain-morph.ts",
+        "sha256": "3e5f8423acc2a388c3c84e90e33a5da1250798726a39a7ae42d2f9647dee09d5"
+      },
+      {
+        "file": "tools/lib/explain-palette.ts",
+        "sha256": "9522cb58df81b3a2f37f454c195b824a2437063181a6c28ce8b5f346915962ae"
+      },
+      {
+        "file": "tools/lib/explain-project.ts",
+        "sha256": "9dd8f05a6d12f71f1a6160ba27ba508bea56628c578c6c4fc97b02bb4f577bb6"
+      },
+      {
+        "file": "tools/lib/explain-raster.ts",
+        "sha256": "0de54ab00dbd24be4a33ebf7acd1c6b7acb5ff4b046e866c2e15abd63fa3f718"
+      },
+      {
+        "file": "tools/lib/explain-share.ts",
+        "sha256": "5f24af2df383832050c9bb50de14eaa3f81600bc6743babf2277df47b311f4ad"
+      },
+      {
+        "file": "tools/lib/explain-shots.ts",
+        "sha256": "c1d5a14412d97c18cd686171baddcb3494d5790e538a60fcb73b69169133af31"
+      },
+      {
+        "file": "tools/lib/explain-warnings.ts",
+        "sha256": "c86f706057e304dd092dadd0ea2b24c897585991b3624b3c1cd0ee2a7b3d7a81"
+      },
+      {
+        "file": "tools/lib/glyph-sfnt.ts",
+        "sha256": "faaf8b89dc27224dcc7952920b216600046087095ea72a223c666da0b60aa7c8"
+      },
+      {
+        "file": "tools/lib/hash.ts",
+        "sha256": "2e1eda44d5ab59bb8c27bece34761bdd9410545daec360ba5ea83cdc4c5bbe55"
+      },
+      {
+        "file": "tools/lib/lettering-validation.ts",
+        "sha256": "0bd521642572dd5a61f3adf7842462b0dd59cffce6ccbe00188b952d6755c8ee"
+      },
+      {
+        "file": "tools/lib/lettering.ts",
+        "sha256": "d30393d30c2d6b7a13015fabe11a16869a26580999cc4b851316b161cdfafa5d"
+      },
+      {
+        "file": "tools/lib/page-budget.ts",
+        "sha256": "8c5ccf76cbc5a3bf3e6c499b507543105f97093b4e8c022bcd6f6f4c91672892"
+      },
+      {
+        "file": "tools/lib/page-snapshots.ts",
+        "sha256": "5c90be7caeb3f9668fed269b8f4052aea68e517c0b1bbcc783d8b0e0abdf77e1"
+      },
+      {
+        "file": "tools/lib/review-sizes.ts",
+        "sha256": "b867466a584bd31fe0a11bf279cc987925b6c6ee94d7dd2c5ed486d7922ab7ea"
+      },
+      {
+        "file": "tools/lib/roots.ts",
+        "sha256": "871936d1f02ffa8790f03eec53e2a74120a16ae7c9719f2f3bfb539d153ceafd"
+      },
+      {
+        "file": "tools/lib/scene-entry.ts",
+        "sha256": "c232bc5b9a556757c6ccb1930ba47804a8fc566f504d39270fbb29ec5324d135"
+      },
+      {
+        "file": "tools/lib/woff2.ts",
+        "sha256": "acf6b1d5de3852a085990aea3ccd9800ec0b0fc75ad5f059751f8f383c1e5449"
+      },
+      {
+        "file": "tools/repo/explain-demos.ts",
+        "sha256": "1beac0f7026c33587b60d56586a17b9bc3db6400de2e0c73b8c045a06f19b75f"
+      },
+      {
+        "file": "tools/repo/explain-site.ts",
+        "sha256": "61c0ea99621f657a689d13b4e7d8825c9da84a59d42aa801c46552e84ce3b300"
+      },
+      {
+        "file": "tools/repo/lib/explain-embed-size.ts",
+        "sha256": "47d28393014ef128b2c9aca9a563c6e0e625cf4772a881c716fb6d832b075e51"
+      },
+      {
+        "file": "tools/repo/lib/explain-gallery.ts",
+        "sha256": "fe01b32cf7ca44e3ab976eba6dbbbd3d81d7e87b195bc319cd662e633e365cd7"
+      },
+      {
+        "file": "tools/repo/lib/explain-site-describe.ts",
+        "sha256": "768faddc9bf9500c8757ad1b9597adfbf59b6bdc3912fcfcc665b8dbe34935ca"
+      },
+      {
+        "file": "vendor/LETTERING.md",
+        "sha256": "4aaff7ebd03905e346bad08ffab4f4332019c2f38f996302f5a72410256af1b7"
+      },
+      {
+        "file": "vendor/font-data-sfnt.json",
+        "sha256": "e18502cc1a0145eea07fc38fbc4064eae8f8ff831d3ceac57864f11197297063"
+      },
+      {
+        "file": "vendor/glyph-math.d.ts",
+        "sha256": "9c1026e7ebfc8a19ad0799753eaf4c28800b4d7f95005b3f3327f86764c9dba5"
+      },
+      {
+        "file": "vendor/glyph-math.js",
+        "sha256": "74e32369e03c861c8810c5ef32cd6431baa55901993784f00efc85940a1d6dbb"
+      },
+      {
+        "file": "vendor/glyph.d.ts",
+        "sha256": "525032c39bf0ed33ec57f5fb0c1bf09240a08bc2d5388015e8fd029976241190"
+      },
+      {
+        "file": "vendor/glyph.js",
+        "sha256": "ee2e084bcf145b1dc47386413d6d2273445f57bd657a3ae6cbe3c7564a6a900a"
+      },
+      {
+        "file": "vendor/glyph.pin.json",
+        "sha256": "9cd03f5978dd278cdb02bc6c8169cfa4c74df6996a129a4d6ad145224fcc393c"
+      },
+      {
+        "file": "vendor/lettering/inter.woff2",
+        "sha256": "ff4eae94e81c40b93349e5a6527c101adf1758ca29399fc2829b845c944a2604"
+      },
+      {
+        "file": "vendor/lettering/jetbrains-mono.woff2",
+        "sha256": "705547193dd4145954a02105eeef89df5c9d4ade764970bc9f3dbb01420d3df8"
+      },
+      {
+        "file": "vendor/licenses/Inter-OFL.txt",
+        "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+      },
+      {
+        "file": "vendor/licenses/JetBrainsMono-OFL.txt",
+        "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d"
+      },
+      {
+        "file": "vendor/licenses/LatinModernMath-GUST.txt",
+        "sha256": "2bd69affc3da00715116f713f57eab9707e96daf3562ad0215987b15b9c16f73"
+      },
+      {
+        "file": "vendor/licenses/Noto-OFL.txt",
+        "sha256": "91a6ed2e7b0bb70abd6923b028a40aa1ab4c9de3c0a4fa8405c5605f8bbe8944"
+      },
+      {
+        "file": "vendor/licenses/glyph-MIT.txt",
+        "sha256": "fd3340c177298bbd2a5ce010cfefa27c26d491132fb319f7538a2b49ec8b0f71"
+      }
+    ],
+    "hash": "4e343840d62edc799ac1b91387454c8764c83c4e62398c62c3bc815c7a2c62db"
+  },
+  "files": [
+    {
+      "path": "/_headers",
+      "sha256": "19083a1d623106856003077035ed190d2ef0c0e279d7a4e6cf46561d07f697a1"
+    },
+    {
+      "path": "/projects/poppy.html",
+      "sha256": "a648859e6f2bfa7176786eaed12ab30afbfd92a5c95a3229a50b4dc63be90677"
+    },
+    {
+      "path": "/projects/poppy/catalog.json",
+      "sha256": "643095fc551beca5285a71d54543bb91611c6944934d3167d8bc1418180a3345"
+    },
+    {
+      "path": "/projects/poppy/evidence.json",
+      "sha256": "1979ba56d12feefa669e30c2a4270b56319fed5d5c4622ba07515da8dba5a1d1"
+    },
+    {
+      "path": "/projects/poppy/index.html",
+      "sha256": "a648859e6f2bfa7176786eaed12ab30afbfd92a5c95a3229a50b4dc63be90677"
+    },
+    {
+      "path": "/projects/poppy/loader.js",
+      "sha256": "6075d18d4a98faa751ced1f0a23cf05157fea8c1bb4cb58324e9f4752e7b88e5"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser.embed.json",
+      "sha256": "402ea0d2e97664bdf6ebc54b6280a7a408a4241f650339029d39d11776675131"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser.html",
+      "sha256": "62f747390e18bc55f242858023ab3404e3d80b5c06824e2787bd77aed3e10869"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser.json",
+      "sha256": "4ce115cf45784c2ff55d9ea951b7cdf813be40597dbd0380b7ac5744ace7f086"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser.oembed.json",
+      "sha256": "f763ad88ef241c51cd7be48655bc6a114838581f51dd1e6be05f62984e58db43"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser.png",
+      "sha256": "8a298c9efd45c16a5392d1b83a11a59e6b55e34c20d233b7fdf399d9c9f952fe"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/authorize.html",
+      "sha256": "aaaa88ee59619717a0ef0fb7b7f9cdfbef7313b34a6b519ad892e0a9d835789a"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/authorize.png",
+      "sha256": "cec47cab49884cb78d90dd9d4561eca3f36d9e548c565fa883b1994fd1bbff00"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/browse.html",
+      "sha256": "e721fae713a79c140afe1d4813dbc349daa7334391f1b16195fe6cae232e3172"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/browse.png",
+      "sha256": "39881ffb9f232198dac400e9303da1c0681ce12d3fc3a0bad5e44d2336d58dc2"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/fetch.html",
+      "sha256": "152b1804902db9db0749c2c3f2c84902fe50d9ec522ae2ea27557523401fcd08"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/fetch.png",
+      "sha256": "a7ba4b73288df3a08acfa2be307418dcadc7388c32369f7088a7dbe1ca55030c"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/forge.html",
+      "sha256": "4ff16a6350c7fb7ce991465e24bdcdbd35eaa518d9e4ba0e84c88284bdb9cf37"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/forge.png",
+      "sha256": "3bbdcdb88c62f327f5bf92918472fbb4989c7392c371ba9fcaec64dadb861633"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/load.html",
+      "sha256": "a38a5496041e15e260b56970475cf8d14a3a31d24c39930f83191499637e3ff2"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/load.png",
+      "sha256": "706d1d7ce270c4374d97ec3c099b6193c8b66bcbd5869cbbe924590265c25370"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/logins.html",
+      "sha256": "a283941cbb3e56b9c44f85432a382588776a21d86ce6c75165fff6852d070ec5"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/logins.png",
+      "sha256": "3df0684b3b5d5d839c7fd7f01bae5ebff13a3fa5b34477e3972eb5f1c08e9a6e"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/phish.html",
+      "sha256": "f71cac40a1f7c0202a2cd77343abcacc84f21963bbf0e2e03685b5135b6b6aeb"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/phish.png",
+      "sha256": "c1ac32ee81d48878eb0d017065e66c8deb5b63f6973d559ac891da34f252f25d"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/submit.html",
+      "sha256": "a3d61106a2448e1e8e353dccf1eea136b14b3d6cb5092c325e5084c41c144f9b"
+    },
+    {
+      "path": "/projects/poppy/poppy-browser/submit.png",
+      "sha256": "1a8ed594f68072c087253837b24804bb10939bc4dd09b0968d81f4108785949b"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations.embed.json",
+      "sha256": "df53172cb77779c602656a907d71f9292651fee32416f081a1394eeaba9f2cd9"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations.html",
+      "sha256": "91231cf86369c66e897f8ffc6c5ae2e21e2a0284861df0bb5077b93256006222"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations.json",
+      "sha256": "a9f2e286acbf63901c8eb467731b5311db2aff64e40dbda098f0f5169db97747"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations.oembed.json",
+      "sha256": "3901727f6e90c783b8c629302a9b777492ce3c203f18f2ebe783f7e20ce731bc"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations.png",
+      "sha256": "f50dc2f982f0e054bb4126ac4cd8f99e12cca973f87316d63d6b28b3e091cb00"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/close.html",
+      "sha256": "230bc1992c030dbe0bf665d0a0ad275ac329c1ccf97b0568c802a9f959989761"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/close.png",
+      "sha256": "0cd2626c66c6911d06d911e16050203c73a85e01aea63be98eafb06a8bf66ae7"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/direct.html",
+      "sha256": "b2e824cf6c9a96685ba1104bc85eb7acbf4ac10c4db124056ac26a5f5a494f29"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/direct.png",
+      "sha256": "8fa0b5a656c20f9364c8511a26a5faf66f6b52676e0593624760c728b2803e59"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/invite.html",
+      "sha256": "6bc7eb0939c24d81372471b6468e4d81616e1798c09504c23fa4c51c80f57065"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/invite.png",
+      "sha256": "5c716d4ca50f4df3fde722a83541c8798207daeddba4f5fc23614285511f94df"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/open.html",
+      "sha256": "94767a58fd0b61f791d3c5079a8b68d55a371cb9fd834d20bdb1aa488740a32f"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/open.png",
+      "sha256": "a652994bf1e1a61b050dff26d927a2113e75e4ff3a9a86b1948ef2142cd633b9"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/owner.html",
+      "sha256": "126d3f36bee0ca655f9590d7dedc382d616404bb4646736bf12a38dbd1059848"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/owner.png",
+      "sha256": "3fb4ccb5b46f037188ca17f16df7fe02dc157baf2cfe28b45a770abd91ae47c6"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/person.html",
+      "sha256": "0c5077ba4e563207230200bd4ef7caad9238631b1919c2f35430520fb4035fa3"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/person.png",
+      "sha256": "471d5c7055844dceac959da9656f2881c39d989c45c8322e8168aa090a3bbdad"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/read.html",
+      "sha256": "051f3133149491300447e34b425004c344987032d469bcce6e5b77ac311dd7c8"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/read.png",
+      "sha256": "242c6361c52a7658c702a7a05ee806b1eea894e1da308cb63c1c4171d01e30e1"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/words.html",
+      "sha256": "abc52eea713867329869bd6d2b63507acd435cf5f4a4523d3bcca76531863ecd"
+    },
+    {
+      "path": "/projects/poppy/poppy-conversations/words.png",
+      "sha256": "deadd75a1f538b936edef45186fdf5ef6e12640770896a0fd80e6180a531aad1"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage.embed.json",
+      "sha256": "7d5e08c28f27c39a8d793f76abbf980f32fcaf45a471de7089ea47fd6c0336ac"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage.html",
+      "sha256": "5e79fc9ac7ae55c7bd3113ac2353924f60ba04ac4f342825c70a4381846f0560"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage.json",
+      "sha256": "7ced7cd24685af81c0467e68f57e025dd968c1011f0baf12eaeb1b0d93f650b8"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage.oembed.json",
+      "sha256": "41f699871737576db4b59eefcd01e68fc304f3f86a45a31c1c01cc8d246dbbaf"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage.png",
+      "sha256": "a8f48d51390e72d3dfcb42dcf7e51094f1bc8eba94a6e87ed514afa7791f13f9"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/board.html",
+      "sha256": "c10f752b1b2b5144e998f84476df32d6747a895e88ffbe1eda96bf47364454f7"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/board.png",
+      "sha256": "6001b5ea5c61cbd0a062e9be654df847c8c51578909083f062d54c7f0b023ea6"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/report.html",
+      "sha256": "9af62fc7c808c9f6bc7f479bd8f450789e5bad3876d286383bd88ccf8a198b8c"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/report.png",
+      "sha256": "4f58b6e18277596f85823cabe286d8431374ee38cfacd4bb7cba0bf3a3739b94"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/search.html",
+      "sha256": "2a29a983ed7a31a33fd14479b3604d9d48af1d1fd1929ad88e8b7c41c4995d38"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/search.png",
+      "sha256": "9ec13b1e5d3be89991d505278f0a56be757542b028c9d75a1cd7cd6098476e59"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/skill.html",
+      "sha256": "1a86f4b89f6de55d22cffef43cae7cea3ea29ac454b8f2e4bf391424e80bf745"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/skill.png",
+      "sha256": "3bea2e94fcfb04a03b32a60490bf916e5d2ba0a1d9b0b1eaf8daacb1a4cf9de1"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/sort.html",
+      "sha256": "cbddb825c9693decd815bfa6e8b535900b83abc005b9a14537eed05fef4bff81"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/sort.png",
+      "sha256": "3c8c03c3387130d13ab2c91a61c9d019bc820eb48b9994c81975b7649a4275bc"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/stuck.html",
+      "sha256": "112df8c57284c8acd170fa0204c3ab8997f47f7d64a988a3f547fee2c212006a"
+    },
+    {
+      "path": "/projects/poppy/poppy-coverage/stuck.png",
+      "sha256": "02cb4f6a2d2cac03154eac6595c05b23fcd49fdcf94b763c627ef660873c68c0"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery.embed.json",
+      "sha256": "c70ea9ff4b02f57f9506c979d5fc807f915964e21ecdbfdd5ea4dadef8c99542"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery.html",
+      "sha256": "21620ecacfeedf82c7b717b2f184226357f704609899ebea2eb88b1958375c61"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery.json",
+      "sha256": "c61503be18e9a6e06550c6052b32ac5dda7096d934f3bd284613b995c3363ef1"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery.oembed.json",
+      "sha256": "2254ea1b9e2b7d4dab8a1fc6de544e7c7eeb82b3b975cb72250ab0879d81ff05"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery.png",
+      "sha256": "bd5b4eb5522f7a1763a9d70aa1dad4aef5ce86f1c2bb0506392b71e71e00ab51"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/claim.html",
+      "sha256": "aa7ead955e1eb850bbc974beb065f9cb3249e8773f6e21792503eea3503b9395"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/claim.png",
+      "sha256": "58d6b9e6b2dfce7cd1ad6dc2a9ac53c8e188dfa6f874526ec3006d898044b52e"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/copy.html",
+      "sha256": "3eda275d5189f4f45d103351990100612b053fa6e26cad77f07aac908d382690"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/copy.png",
+      "sha256": "f2dfd7f823ad0365683e4e7a5be3f0731ed87a69e6467aead7c8aaafe014f601"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/handshake.html",
+      "sha256": "59bf3ad951451e25e32219f34031d10b853ac60adf6648d1e6f090ddd0653d07"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/handshake.png",
+      "sha256": "121523d943701add61d7b135687fd484c8e3b85d708a0acf661929465320cf08"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/no-issuer.html",
+      "sha256": "290b6dfe82d5f4764d046514f4771ecca42cec0dccd40f829f1dad996837b80a"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/no-issuer.png",
+      "sha256": "394b1a065f7cafd709e4b02cd0526b8be05bc8a7bf6510cde50cbf96d91b988f"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/one-company.html",
+      "sha256": "1a9a68928365c276d8fb75f3c481586baf50c60e7e38772ace5a249563e021d8"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/one-company.png",
+      "sha256": "00ef00c46a529ec0e0768d20ab12bdbc4db89fcd547b6b0d2cfbaf491200f722"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/outage.html",
+      "sha256": "0886560fa8e3c15ac80f76d7f9deb95fd5eb6c16469ddd431793401df712ed91"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/outage.png",
+      "sha256": "7e3b30f51ce7a08aa4280924ba90f30c69f07a70f0bef8829420eac23994fc63"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/read.html",
+      "sha256": "13f53bb90ca033ee579a904aba0ccfbb7cd2074309790bdb0276daf74e6bad29"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/read.png",
+      "sha256": "0a2a14fadc1d83cfcac3c39620bc753406e650fa1e162e974342a92c15782a5f"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/stranger.html",
+      "sha256": "aa5b7cc50f2ddd69c4a072654907f6d751d1edb1bc09873559ea3ab3d02e0588"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/stranger.png",
+      "sha256": "6118bed2a9fe4a3f22bfa21c0ad68335b47c2b0a77e3a018d11f1da6338f3ed9"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/upload.html",
+      "sha256": "485ac1384faba45c2ca6d945eb89da834d14e0c6d8d5b459ec0d71571fae8c20"
+    },
+    {
+      "path": "/projects/poppy/poppy-discovery/upload.png",
+      "sha256": "77f31f026665bf5c0003b1b4d84fa4faae3e62e6a0562b26381c6a2a5d68b8f5"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals.embed.json",
+      "sha256": "ff9bda8a137e33f80e78060c6035778b3acf2a5d30cd8e9504f54065fb3ca20c"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals.html",
+      "sha256": "54630b2c105e84f3b8a4d3b4dbc450e0408cf068638f4257bb42ce6555016525"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals.json",
+      "sha256": "004405a9fa0c4d70426d7c276f6fecfbdf38d949d8ece585cc8d79543eb3cb39"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals.oembed.json",
+      "sha256": "9dbab18fa60d26cb75dbce563496ff1184f14fede05a87ec4885cfb0c0f91af3"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals.png",
+      "sha256": "2ac602f36be4116f4e5dc6f3e5a1a52efedd4a0db253a830ee0aa9c9fcf310eb"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/ended.html",
+      "sha256": "94cddfe8fe844b3a710254bd277535a1b6bd908fc8d87bd97e93dc979ad432b8"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/ended.png",
+      "sha256": "1d037616686208d3e0d79a92882ea8e207323f991ea685356471777bce15b822"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/one-door.html",
+      "sha256": "6e2ff0d57d83d75908508740fafad351b43174291637cb9fed441a73bc2453de"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/one-door.png",
+      "sha256": "d4f9aa13363dbe1096e6fd5da421d0900c8399293b0d9338f531b0ca1cac7784"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/pace.html",
+      "sha256": "bf0e81f1e6d7d77196887ae98bd24e5d872cee777a01a2bddfdd8f2846a54fb4"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/pace.png",
+      "sha256": "09c73a40eda1b7addb05315ad761bf28e856a4dcf6393b15ef19dcdef10601af"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/scope.html",
+      "sha256": "874ac8bbdc4938024b69379a621eeec9a0e8f9b14bf3fdaf992361d5e2484970"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/scope.png",
+      "sha256": "32008ad097bac574854575fb994b6492c50d751adcaa0aca1b901b3aebc9335b"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/seal.html",
+      "sha256": "5da76c18dea95caf751978b6339d3787c7bf164a9d7c5fe6d5960bdc278a30d3"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/seal.png",
+      "sha256": "f1e22c7d51745c46988c5d86ee6c9a5a0800c21a6a081b5f39db61b42db81f63"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/slip.html",
+      "sha256": "dc79edf7d5bcfac88a01fe5e118d470ace9073636db794030b428258a7f32e89"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/slip.png",
+      "sha256": "9bb30900025c81ce06cc5e8e462bdd0437805f909ec906e6a0ab4fba23c9e3e3"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/turned-back.html",
+      "sha256": "edb6e8bb941ba6f81e546db09fcc4fdcebac4845d33299b19cabae19908e0be7"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/turned-back.png",
+      "sha256": "8b31ab5bba106f18164a6a32a7d1704fc736a0b903181e138cf898461fc7894e"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/version.html",
+      "sha256": "bf5df74a01c68a459aba8bf7e7c43e07ee8d43e8c84c3685519a0f0e7facd2a2"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/version.png",
+      "sha256": "3476993000f716c928dd305f4ca7da5d420864b07363ffb5c3a9e992e6996574"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/why-400.html",
+      "sha256": "d7b01970f5d9d8b8672c0d49310ae66144cfbf8f8edba614d8e195da453920f3"
+    },
+    {
+      "path": "/projects/poppy/poppy-refusals/why-400.png",
+      "sha256": "51d15032693fd6da69298e2d374a7e4ff8a5dfcca286e673e612988a9bf2f502"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions.embed.json",
+      "sha256": "8e828b5af2ad096f6ae3cb064154e2b31899e04b0704d9e6f85d3939d4680221"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions.html",
+      "sha256": "fbc6a2b8b64b3a856eb457bbd01c8ca12448e9dab5b41fb3d2e7e1efd3fa3d7f"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions.json",
+      "sha256": "e8dc5c06dfb228cf9354c5f8080f2165261630b3ff90919f1eb523b8a4a2a099"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions.oembed.json",
+      "sha256": "71b5d457bc2172ac85b1d2075eaf37f26b486a770894c71a095ec9234b28bdcc"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions.png",
+      "sha256": "a7614b7304a9d8353df9a178bee7fa76ad1ef9e70a31f6397ae3229385114517"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/address.html",
+      "sha256": "84b5c8514d3df8a1688837f31473f1e548246c6bd2daa33e77694dd6f3ea2947"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/address.png",
+      "sha256": "dc2ee3125ed654431ce2e2edb1107bfb9efb240b3f279d4ff5d68124e6f7b9f9"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/clock.html",
+      "sha256": "f0eb6cb063b35bfd47af30da8ba130f07cf6b7b2d80a45d264d2f636b5dcc8fe"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/clock.png",
+      "sha256": "1a3dcffaedd4ff7ffb46ca4c273fca78dd1e012e04d336b853b2ad218c28a71e"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/delegation.html",
+      "sha256": "9e38731e9d8f822acb92bd73e845f06126d88cb9db1abd7ba95479f5488401df"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/delegation.png",
+      "sha256": "b4379b9f499eadfda8da5fbd678bf1f35bd806557be2f54f21ac308089e9ac90"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/moved.html",
+      "sha256": "ba80041666f1d2f90539bcfe556f4e1f9a241d272f007a976a21158d9a01b35a"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/moved.png",
+      "sha256": "9fc8358e3cba502c000bb3e3982774a79d0e24e13d047fb5d116b7d7347dcb2e"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/one-user.html",
+      "sha256": "1d801dfab61e2bc4771674311d410f606af7801ec2d6b91d9b36df13b8f2daa7"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/one-user.png",
+      "sha256": "95333aaea0b7c86d1ea0279474a124360a3b95e86e23c8394a4676add05428f7"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/send.html",
+      "sha256": "43563e2b320b1584e10488c0dbc88e90685e07d96ca0c203dd384e40f0ce4510"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/send.png",
+      "sha256": "1d3cf0e49236de4645b044642caa7b88afedfabee0871442b1bdaf94a80ab46e"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/signer.html",
+      "sha256": "73821610d8786c66c7dde55d036c6193bf1a8ed1a60ce16feab2f6d7512d8b2d"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/signer.png",
+      "sha256": "9f9a761e09c6fac7bafa1ac29324b47091b0d329f0bc7e7a6bc0f56177241c40"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/stranger.html",
+      "sha256": "981e522503d72da4447d3eeb08114c7276ad7689fdc8b9c230399e1ff9d421b9"
+    },
+    {
+      "path": "/projects/poppy/poppy-sessions/stranger.png",
+      "sha256": "80e62595b7d146e3defb559ca0f3c57fbc399d7a05aa8aa206110238c8b552b7"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in.embed.json",
+      "sha256": "963a72c2b4f4ab491e98cdb0b34b01e444dd7ef4b9a77db70b7327e8d616ccce"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in.html",
+      "sha256": "f45523516435449a6290594d175e0af83f64ea08c9d53b9480afc808ab8073df"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in.json",
+      "sha256": "ca3dd8b5badebd464c960c2bd89c8881d7947037b13b5d0c71091e7110df6b6e"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in.oembed.json",
+      "sha256": "e2293f201cdbf4b83f4d26fb51fe1041c1e0c8b611a850de53dc3d38d27be507"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in.png",
+      "sha256": "6714f8d9be9b163310e8c95a80873aaa37193456728319ae6bfa6e8136bfa0f5"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/approve.html",
+      "sha256": "6655ec2a511b16442ecdd997289eb36c260f0f7e7377c87dcf7fb49460acc423"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/approve.png",
+      "sha256": "f8e6a4cff1c01552771a086d7a72c284bbddfbf088a4c0abbe6b9e0ebb2eece7"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/ask.html",
+      "sha256": "a44a027f0d85e580682c586aaf0aa492a3e14713b9d3dbaae44ab8082c327405"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/ask.png",
+      "sha256": "c6dc1f446cf8ec0cd0622d09cc29d7a905b3f07759b8c5f7a326673d25225030"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/check.html",
+      "sha256": "0289e09a8863d4897ba5a553bf3e70d4a3a6a9a055237f507e10a6a1fc7675da"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/check.png",
+      "sha256": "a7e5e3040a1b88d4fb38fb5f4e5e98bd16080b78ca7ea996256d6175d6c0d09d"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/key.html",
+      "sha256": "5f3a5355e4cd6df5dd66a7f9e6c0b408a1d148914097bc90ce432e2fbb08d53e"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/key.png",
+      "sha256": "266178e9932f318230085c8f9c6be6f7722eafc6184f54328c584006075e0093"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/password.html",
+      "sha256": "dc486694029cda9d1504d34d59fc8bd2a0b26becc8401e404d401c599d33ad63"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/password.png",
+      "sha256": "d61e40e62ad1f05e5b313930c4f7820d311b1f8ea643b3b34da21a22fe18ca3b"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/reask.html",
+      "sha256": "1745a20139e7fb7d81edcd7d39091f52708751bc204f59ffa7a7531c2fd35606"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/reask.png",
+      "sha256": "78ae9a8f29aa861c51a3925eac1395d70ef507009ea30deffbd56cb42e67a422"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/replace.html",
+      "sha256": "af2a06e3486665037318b3093e7d6ae2c169f3d1a1dcf7733eee6fecd571cdd6"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/replace.png",
+      "sha256": "86925ed0b9d21f98686f569c4c02896f3e719528e54523bb9987737ece4e9738"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/sign-out.html",
+      "sha256": "0219145fe93ee0109063282a053149b2b7a0a2f52fd86f06232d0a7d6be2061d"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/sign-out.png",
+      "sha256": "65ccda65d41396b903da57906b386222bcd36cb809a31bc40b3dd4af5fdb4f0c"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/thief.html",
+      "sha256": "c7cdb40e03aa70ca580f3eb4d4dd430fdf2e503740e5dfa45617b5ca6562221d"
+    },
+    {
+      "path": "/projects/poppy/poppy-sign-in/thief.png",
+      "sha256": "a0048137d6fa3b1869b25472ddcf444685d204bd3a4cf28726e75673fb130b55"
+    },
+    {
+      "path": "/projects/poppy/poppy.embed.json",
+      "sha256": "75970c18d741b24dcb39de0e18e28d8473a1c893e8056e8e12531bbb08c7c00b"
+    },
+    {
+      "path": "/projects/poppy/poppy.html",
+      "sha256": "65f923c9eca266d2ca78e9d2134af27990e412f429c6f4c989d3d3c19a888961"
+    },
+    {
+      "path": "/projects/poppy/poppy.json",
+      "sha256": "3db6e922489ca81164c5be0affdcdb87001567e82d02133db14c7b2faa3595c2"
+    },
+    {
+      "path": "/projects/poppy/poppy.oembed.json",
+      "sha256": "cb894236d5873b5ae9f9bb0892f42dc089c69fdc7782e308d65c7eccb78a5137"
+    },
+    {
+      "path": "/projects/poppy/poppy.png",
+      "sha256": "3bf217918af4084b19136c6ae5484fea7846b743efb0281052a045916164f90a"
+    },
+    {
+      "path": "/projects/poppy/poppy/approve.html",
+      "sha256": "f1bf5d75c9cdaa42b169d75675f8a88718bcbe3572f047c4d9a8a6e1d1971ae4"
+    },
+    {
+      "path": "/projects/poppy/poppy/approve.png",
+      "sha256": "201345543cb83e0273c8391b142cf0f0360862c03eb9ef307ab53f4c4bf39f07"
+    },
+    {
+      "path": "/projects/poppy/poppy/both.html",
+      "sha256": "13ce26d1980d94bf1a69d2e2308fffdee67e815b3db39db45393b29692613632"
+    },
+    {
+      "path": "/projects/poppy/poppy/both.png",
+      "sha256": "15b46fc2e3adfd33da25a49c9481b0cc3fe293421a13a42ffb42d93b126b0acf"
+    },
+    {
+      "path": "/projects/poppy/poppy/challenge.html",
+      "sha256": "6f77ab894b8765cafb2f3e652c17012dd5aeb9e23bff947a320b1ef69557e9fc"
+    },
+    {
+      "path": "/projects/poppy/poppy/challenge.png",
+      "sha256": "abf01858a681c20fa87a75572078779ad9cc5d52ab7d64951d1a7c472555ef58"
+    },
+    {
+      "path": "/projects/poppy/poppy/discover.html",
+      "sha256": "f79de08ab6d734e3a4b431346e944f7ec7b5d657f21e5194e37c162343008851"
+    },
+    {
+      "path": "/projects/poppy/poppy/discover.png",
+      "sha256": "8849365827d66b8d92f385044681d122ba6d9d628b729a0caba7f5c07645a8bd"
+    },
+    {
+      "path": "/projects/poppy/poppy/errand.html",
+      "sha256": "9779d54df8334c24a5d51fe4f424fda76e7ef9fa6bc39a4b2369c9243db57f9a"
+    },
+    {
+      "path": "/projects/poppy/poppy/errand.png",
+      "sha256": "a7c2682c0afbf6a93f26fb37335a98a6aaa83cb1b3ce278cb3415b522a608ac4"
+    },
+    {
+      "path": "/projects/poppy/poppy/lanes.html",
+      "sha256": "2c198d4831e366a86be36611193caaa07cb155db3a3e37810a6e6b2946a22a18"
+    },
+    {
+      "path": "/projects/poppy/poppy/lanes.png",
+      "sha256": "ec91850c3b2344c9c5448302b0970f7e53365e14d2cff9c54d2c6681134e65bd"
+    },
+    {
+      "path": "/projects/poppy/poppy/seal.html",
+      "sha256": "5dd9c7649267ca7b434e313a1da368c2979d0671746451cefe97a9f76ab100e6"
+    },
+    {
+      "path": "/projects/poppy/poppy/seal.png",
+      "sha256": "fe8459a66902ee34e28211dd8d1865a06df4df8bba4b2ba68bb80b5173e406bb"
+    },
+    {
+      "path": "/projects/poppy/poppy/sign-out.html",
+      "sha256": "58cdaa1896d087432bffef2b40ec87b3ea50260da6e454312c371cd38d7e0dab"
+    },
+    {
+      "path": "/projects/poppy/poppy/sign-out.png",
+      "sha256": "2a32042ded10a092ef4e469223ef080f5b8d9267b97ab17fd46429dcab2f2163"
+    },
+    {
+      "path": "/projects/poppy/poppy/thief.html",
+      "sha256": "a9660dd490fb71132c84c51596dfaa6de2c64da2ea698d1b9e3c14087497ea73"
+    },
+    {
+      "path": "/projects/poppy/poppy/thief.png",
+      "sha256": "8c1133c543c36505bbb9a77ade0706710d47c9ab102d10cec6a49c6afb4932f0"
+    }
+  ],
+  "host": {
+    "generator": "tools/sync-poppy.mjs",
+    "sha256": "78e44390908117609518ecd1a93929ea0161c3a6efabc2cb8e43ad141f3a74de"
+  }
+}
