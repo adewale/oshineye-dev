@@ -22,6 +22,9 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     expect(once).not.toContain('<dt>Readers</dt>');
     expect(once).not.toContain('<dt>Cases</dt>');
     expect(once).toContain('<dt>Requires</dt><dd>Node 24 and Chromium.</dd>');
+    // npm's rayner is an older release, so the install fact points at the clone route, never at npm.
+    expect(once).not.toContain('npm install --save-dev rayner');
+    expect(once).toContain('Build both packages from a clone of the repository. <a href="https://github.com/adewale/rayner#quick-start">See the quick start</a>.');
     expect(once).toContain('Cache hit &amp; miss');
     expect(once).toContain('/projects/rayner/engine"><img src="/projects/rayner/engine.png"');
     expect(once).toContain('/projects/rayner/cache"><img src="/projects/rayner/cache.png"');
@@ -110,5 +113,23 @@ test('the site derives Rayner copy, cards and counts from the export, repeats cl
     writeFileSync(catalog, JSON.stringify(data));
     expect(run().status).not.toBe(0);
     expect(readFileSync(page, 'utf8')).toBe(selected);
+  } finally { rmSync(root, { recursive: true, force: true }); }
+});
+
+test('an export that carries its own install line and guide is quoted, not the fallback', () => {
+  const root = mkdtempSync(join(tmpdir(), 'rayner-install-'));
+  try {
+    mkdirSync(join(root, 'tools'));
+    mkdirSync(join(root, 'site/projects/rayner'), { recursive: true });
+    copyFileSync(new URL('../tools/sync-rayner.mjs', import.meta.url), join(root, 'tools/sync-rayner.mjs'));
+    const page = join(root, 'site/projects/rayner.html');
+    writeFileSync(page, '<meta name="description" content="Old"><div class="project-copy">Old</div><aside></aside><div class="example-grid">Old</div><section class="section reveal" aria-labelledby="install"></section>');
+    writeFileSync(join(root, 'site/index.html'), '<a href="/projects/rayner" class="repo-title">rayner</a><p class="repo-desc">Old</p>');
+    writeFileSync(join(root, 'site/projects/rayner/deployment.json'), JSON.stringify({ files: [] }));
+    const product = { summary: 'S.', audience: 'A.', description: 'D.', requirements: 'R.', tutorial: 'https://example.org/t', reference: 'https://example.org/r', skill: 'https://example.org/s',
+      install: 'Build it from a clone & install the archives.', installGuide: 'https://example.org/quick-start', entry: { id: 'cache', step: 'begin', label: 'Start' } };
+    writeFileSync(join(root, 'site/projects/rayner/catalog.json'), JSON.stringify({ version: 2, product, totals: { explainers: 1, scenarios: 1 }, scenes: [{ id: 'cache', title: 'Cache', step: 'begin', lang: 'en', group: 'topic', scenarios: 1 }] }));
+    expect(spawnSync('node', [join(root, 'tools/sync-rayner.mjs')], { encoding: 'utf8' }).status).toBe(0);
+    expect(readFileSync(page, 'utf8')).toContain('<dt>Install</dt><dd>Build it from a clone &amp; install the archives. <a href="https://example.org/quick-start">See the quick start</a>.</dd>');
   } finally { rmSync(root, { recursive: true, force: true }); }
 });

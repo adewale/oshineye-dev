@@ -40,6 +40,12 @@ html = html.replace(/<div class="project-copy">[\s\S]*?<\/div>(?=\s*<aside)/, co
 // The panel follows the other project pages: the project's artwork, then facts an author can
 // act on. The explainers themselves are one scroll down, so the panel does not repeat one.
 const art = '/img/repo/generated/vfinal-approved-stills/rayner';
+// npm has rayner 0.1.0, an older single-package release whose init writes a different starter, and no
+// rayner-cli, so the install fact points at Rayner's quick start, which builds both packages from a
+// clone. Exports from Rayner #106 on carry this line as product.install; older ones fall back to the
+// README's own wording.
+const installGuide = product.installGuide ?? 'https://github.com/adewale/rayner#quick-start';
+const install = product.install ?? 'Rayner 0.2.0 is not on npm yet: npm’s rayner 0.1.0 is an earlier, single-package release. Build both packages from a clone of the repository.';
 const panel = `<aside class="project-panel" aria-labelledby="project-facts-title">
                     <a class="project-motion-frame" href="https://github.com/adewale/rayner" target="_blank" rel="noopener" aria-label="View Rayner on GitHub">
                         <img class="project-panel-image" src="${art}/colour.jpg" alt="Generated project artwork for Rayner" loading="lazy" width="400" height="300">
@@ -49,7 +55,7 @@ const panel = `<aside class="project-panel" aria-labelledby="project-facts-title
                     </a>
                     <h3 id="project-facts-title">Project facts</h3>
                     <dl class="project-facts">
-                        <div><dt>Package</dt><dd><code>npm install --save-dev rayner</code></dd></div>
+                        <div><dt>Install</dt><dd>${escape(install)} <a href="${escape(installGuide)}">See the quick start</a>.</dd></div>
                         <div><dt>Requires</dt><dd>${escape(product.requirements)}</dd></div>
                         <div><dt>Publishes</dt><dd>A portable HTML page with a transcript</dd></div>
                         <div><dt>Repository</dt><dd><a href="https://github.com/adewale/rayner" target="_blank" rel="noopener"><code>adewale/rayner</code></a></dd></div>
