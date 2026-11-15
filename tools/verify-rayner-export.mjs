@@ -1,4 +1,10 @@
 // Verify the bytes that the host will deploy, rather than trusting a regenerated manifest.
+// Each Rayner export (the Rayner collection, and the Poppy chapters) owns its subtree under
+// /projects/<name>/ and one marked section in each of the two files the collections share at the
+// site root, _headers and llms.txt. Its deployment.json (version 2) pins the subtree's files by
+// digest and each section by the digest of its text, from its begin line to the newline after its
+// end line. The rest of those two files belongs to the host and the other collection. Rayner's
+// docs/PUBLISHING.md ("The deployment manifest") defines the format.
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { dirname, join, relative, resolve, sep } from 'node:path';
@@ -6,49 +12,70 @@ import { fileURLToPath } from 'node:url';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const validDigest = value => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
-// Each Rayner export (the Rayner collection, and the Poppy chapters) owns one subtree, its branded
-// page, and its rules in the shared _headers file.
-const ownedBy = name => path => path === '/_headers' || path === `/projects/${name}.html` || new RegExp(`^/projects/${name}/(?!\\.)[a-zA-Z0-9_./-]+$`).test(path);
+const SHARED = ['/_headers', '/llms.txt'];
 
-export const verifyRaynerExport = root => verifyExport(root, 'rayner', 'tools/sync-rayner.mjs');
-export const verifyPoppyExport = root => verifyExport(root, 'poppy', 'tools/sync-poppy.mjs');
+export const verifyRaynerExport = root => verifyExport(root, 'rayner');
+export const verifyPoppyExport = root => verifyExport(root, 'poppy');
 
-export async function verifyExport(root, name, expectedGenerator) {
+/** The text of one marked section: its begin line, which must appear once, to the newline after the next end line (as Rayner's ownedSection reads it). */
+export function sectionText(text, begin, end) {
+  const lines = text.split('\n');
+  const start = lines.indexOf(begin);
+  if (start < 0 || lines.indexOf(begin, start + 1) >= 0) throw new Error(`section "${begin}" must appear once`);
+  const stop = lines.indexOf(end, start + 1);
+  if (stop < 0) throw new Error(`section "${begin}" has no end line`);
+  return lines.slice(start, stop + 1).join('\n') + '\n';
+}
+
+export async function verifyExport(root, name) {
   root = resolve(root);
-  const owned = ownedBy(name);
+  const path = `/projects/${name}`;
   const subtree = join(root, 'projects', name);
   const manifest = JSON.parse(await readFile(join(subtree, 'deployment.json'), 'utf8'));
-  if (manifest.version !== 1 || !Array.isArray(manifest.files) || !manifest.files.length)
-    throw new Error('Invalid Rayner deployment manifest');
+  if (manifest.version !== 2 || manifest.path !== path || !Array.isArray(manifest.files) || !manifest.files.length || !Array.isArray(manifest.sections))
+    throw new Error(`Invalid ${name} deployment manifest: expected version 2 for ${path}`);
   const listed = new Set();
-  for (const { path, sha256 } of manifest.files) {
-    if (!owned(path) || path.split('/').includes('..') || path.includes('//') || path.endsWith('/'))
-      throw new Error(`invalid manifest path: ${path}`);
-    if (!validDigest(sha256) || listed.has(path)) throw new Error(`invalid or duplicate manifest entry: ${path}`);
-    listed.add(path);
-    const file = resolve(root, '.' + path);
-    if (file !== root && !file.startsWith(root + sep)) throw new Error(`invalid manifest path: ${path}`);
-    const bytes = await readFile(file).catch(error => {
-      if (error.code === 'ENOENT') throw new Error(`${path} is missing`);
+  for (const { path: file, sha256 } of manifest.files) {
+    if (typeof file !== 'string' || !new RegExp(`^${path}/(?!\\.)[a-zA-Z0-9_./-]+$`).test(file) || file.split('/').includes('..') || file.includes('//') || file.endsWith('/'))
+      throw new Error(`invalid manifest path: ${file}`);
+    if (!validDigest(sha256) || listed.has(file)) throw new Error(`invalid or duplicate manifest entry: ${file}`);
+    listed.add(file);
+    const at = resolve(root, '.' + file);
+    if (!at.startsWith(subtree + sep)) throw new Error(`invalid manifest path: ${file}`);
+    const bytes = await readFile(at).catch(error => {
+      if (error.code === 'ENOENT') throw new Error(`${file} is missing`);
       throw error;
     });
-    if (digest(bytes) !== sha256) throw new Error(`${path} has a different digest`);
+    if (digest(bytes) !== sha256) throw new Error(`${file} has a different digest`);
   }
-  if (!listed.has('/_headers') || !listed.has(`/projects/${name}.html`) || !listed.has(`/projects/${name}/index.html`))
-    throw new Error('Rayner response headers or branded pages are missing from the manifest');
+  // With --index none the export writes no gallery, and the host page outside the subtree serves the path.
+  if (listed.has(`${path}/index.html`)) throw new Error(`${path}/index.html is the export's gallery; export with --index none`);
   for (const entry of await readdir(subtree, { recursive: true, withFileTypes: true })) {
-    const path = `/projects/${name}/` + relative(subtree, join(entry.parentPath, entry.name)).replaceAll('\\', '/');
-    if (entry.isSymbolicLink()) throw new Error(`unlisted symlink: ${path}`);
-    if (entry.isFile() && entry.name !== 'deployment.json' && !listed.has(path)) throw new Error(`unlisted Rayner file: ${path}`);
+    const file = `${path}/` + relative(subtree, join(entry.parentPath, entry.name)).replaceAll('\\', '/');
+    if (entry.isSymbolicLink()) throw new Error(`unlisted symlink: ${file}`);
+    if (entry.isFile() && entry.name !== 'deployment.json' && !listed.has(file)) throw new Error(`unlisted ${name} file: ${file}`);
   }
-  const generator = manifest.host?.generator;
-  if (generator !== expectedGenerator || !validDigest(manifest.host.sha256)) throw new Error('Invalid Rayner host generator');
-  if (digest(await readFile(join(dirname(root), generator))) !== manifest.host.sha256) throw new Error('Rayner generator has a different digest');
-  return listed.size;
+  const sections = new Map(manifest.sections.map(section => [section.path, section]));
+  if (sections.size !== SHARED.length || !SHARED.every(file => sections.has(file)))
+    throw new Error(`the ${name} manifest must pin exactly its sections of ${SHARED.join(' and ')}`);
+  for (const { path: file, begin, end, sha256 } of manifest.sections) {
+    // A section must be this collection's own: its marker lines name its path.
+    const own = file === '/_headers'
+      ? begin === `# Rayner explainers at ${path}: generated by \`npm run site:export\`; regenerate rather than edit.` && end === `# End of Rayner explainers at ${path}.`
+      : begin === `<!-- rayner:begin ${path} -->` && end === `<!-- rayner:end ${path} -->`;
+    if (!own || !validDigest(sha256)) throw new Error(`invalid ${file} section in the ${name} manifest`);
+    const text = await readFile(join(root, '.' + file), 'utf8').catch(error => {
+      if (error.code === 'ENOENT') throw new Error(`${file} is missing`);
+      throw error;
+    });
+    if (digest(sectionText(text, begin, end)) !== sha256) throw new Error(`${file}'s ${name} section has a different digest`);
+  }
+  try { await readFile(join(root, 'projects', `${name}.html`)); } catch { throw new Error(`the host page ${path}.html is missing`); }
+  return listed.size + manifest.sections.length;
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '../site');
-  console.log(`Verified ${await verifyRaynerExport(root)} Rayner deployment files`);
-  console.log(`Verified ${await verifyPoppyExport(root)} Poppy deployment files`);
+  console.log(`Verified ${await verifyRaynerExport(root)} Rayner deployment files and sections`);
+  console.log(`Verified ${await verifyPoppyExport(root)} Poppy deployment files and sections`);
 }

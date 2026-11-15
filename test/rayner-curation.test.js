@@ -43,19 +43,40 @@ test('the full reviewed collection is published and catalog tiers select its rec
     expect(existsSync(new URL(`projects/rayner/${scene.id}.json`, site))).toBe(true);
     expect(existsSync(new URL(`projects/rayner/${scene.id}.png`, site))).toBe(true);
   }
-  expect(landing).toBe(read('projects/rayner/index.html'));
-  expect(landing).toContain('<dt>Requires</dt><dd>' + catalog.product.requirements + '</dd>');
+  // Exported with --index none: the host page outside the subtree serves /projects/rayner.
+  expect(existsSync(new URL('projects/rayner/index.html', site))).toBe(false);
+  expect(catalog.facts).toBeDefined();
+  expect(landing).toContain('<dt>Requires</dt><dd>' + catalog.facts.requirements + '</dd>');
+  expect(landing).toContain('<dt>License</dt><dd>' + catalog.facts.license + '</dd>');
   expect(landing).not.toContain('<dt>Readers</dt>');
   expect(landing).not.toContain('<dt>Cases</dt>');
   expect(landing).toContain(`data-src="/projects/rayner/${catalog.product.entry.id}"`);
-  expect(landing).toContain('Feature tour: recipe, then result');
   expect(landing).toContain('docs/TUTORIAL.md');
-  expect(landing).toContain('docs/FEATURE-TOUR.md');
+  expect(landing).not.toContain('feature-tour');
+  expect(landing).not.toContain('FEATURE-TOUR');
   expect(landing).not.toContain('aria-labelledby="by-example"');
   expect(landing).not.toContain('hello-world');
   const allowedFile = new RegExp(`^/projects/rayner/(?:${catalog.scenes.map(scene => scene.id).join('|')})(?:[./]|$)`);
   expect(existsSync(new URL('projects/rayner/embed-lab.html', site))).toBe(true);
-  const common = new Set(['/_headers', '/projects/rayner.html', '/projects/rayner/index.html', '/projects/rayner/loader.js', '/projects/rayner/catalog.json', '/projects/rayner/evidence.json', '/projects/rayner/embed-lab.html']);
+  const common = new Set(['/projects/rayner/loader.js', '/projects/rayner/catalog.json', '/projects/rayner/evidence.json', '/projects/rayner/embed-lab.html']);
+  expect(manifest.version).toBe(2);
   for (const { path } of manifest.files)
     expect(common.has(path) || allowedFile.test(path)).toBe(true);
+  expect(manifest.sections.map(section => section.path).sort()).toEqual(['/_headers', '/llms.txt']);
+});
+
+test('the Poppy chapters are their own collection, with their own page and llms.txt section', () => {
+  const catalog = JSON.parse(read('projects/poppy/catalog.json'));
+  const llms = read('llms.txt');
+  const page = read('projects/poppy.html');
+  expect(catalog.scenes[0].id).toBe('poppy');
+  expect(existsSync(new URL('projects/poppy/index.html', site))).toBe(false);
+  // The export writes the section under the heading it was given, once, between its markers.
+  const section = llms.match(/<!-- rayner:begin \/projects\/poppy -->([\s\S]*?)<!-- rayner:end \/projects\/poppy -->/)?.[1];
+  expect(section).toBeDefined();
+  expect(section).toContain('## Poppy, explained');
+  expect(llms.split('## Poppy, explained').length - 1).toBe(1);
+  const listed = [...section.matchAll(/^[-] \[[^\n]+\]\(https:\/\/oshineye\.dev\/projects\/poppy\/([a-z0-9-]+)\)/gm)].map(match => match[1]);
+  expect(ids(listed)).toEqual(ids(catalog.scenes.map(scene => scene.id)));
+  expect(ids(tiles(page.replaceAll('/projects/poppy/', '/projects/rayner/')))).toEqual(ids(catalog.scenes.map(scene => scene.id)));
 });
