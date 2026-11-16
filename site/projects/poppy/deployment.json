@@ -274,7 +274,7 @@
       },
       {
         "file": "scenes/explainers/catalog.ts",
-        "sha256": "163e785bfd2d2ad9a0f59e9e4ed3c6067161458f6f7b4747aa5c5cea1a2d6624"
+        "sha256": "19194cdee56223d9c21733c08a39990587eb2da89f940a8777b6bab0bdcaa754"
       },
       {
         "file": "src/animation.ts",
@@ -597,12 +597,12 @@
         "sha256": "fd3340c177298bbd2a5ce010cfefa27c26d491132fb319f7538a2b49ec8b0f71"
       }
     ],
-    "hash": "43e90250b20f2ac80eb909994683ba177a072b860bbcc4b6e9ac89354cde6003"
+    "hash": "ef5fc3f336e39d0b3e71a091ba77b53df09ac779b8cab4272fb437d0ac6add22"
   },
   "files": [
     {
       "path": "/projects/poppy/catalog.json",
-      "sha256": "6a66ee9a1196725bc7fd1a7df8b57b863116c784246246f6e9a5cf4d1abfedfd"
+      "sha256": "f2cca304ddc1d073c653740f8b703ea7c9a685f172ff80a232cd9df7e702e71e"
     },
     {
       "path": "/projects/poppy/evidence.json",
