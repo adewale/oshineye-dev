@@ -59,7 +59,7 @@ jobs:
         run: bun run build
 
       - name: Validate the site and exported Rayner bytes
-        run: bun run typecheck && bun run test && bun run check:rayner-export
+        run: bun run typecheck && bun run test && bun run check:rayner-export && bun run check:cloudflare
 
       - name: Deploy redesign Preview
         if: ${{ !inputs.production }}

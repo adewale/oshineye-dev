@@ -3,6 +3,7 @@ site/oshineye-config.js
 site/oshineye-config.js.map
 site/garten.js
 .wrangler/
+.cloudflare-assets/
 .claude/
 test-results/
 test-artifacts/

@@ -28,3 +28,5 @@ jobs:
       # Pins TZ=Pacific/Auckland so local-vs-UTC date bugs fail.
       - run: bun run test
       - run: bun run check:rayner-export
+      # Validate the upload artifact with the same static-assets handler as production.
+      - run: bun run build && bun run check:cloudflare
