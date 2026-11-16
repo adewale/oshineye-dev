@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Answer: it throws InvalidStateError · Why does send() throw on a new WebSocket but not after close()?</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/state-machine?step=answer">
+<meta name="description" content="send() sends only in OPEN: before open it throws InvalidStateError, and after close() it quietly sends nothing. Here the server has not accepted the handshake, so readyState is still CONNECTING, and…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Answer: it throws InvalidStateError · Why does send() throw on a new WebSocket but not after close()?">
+<meta property="og:description" content="send() sends only in OPEN: before open it throws InvalidStateError, and after close() it quietly sends nothing. Here the server has not accepted the handshake, so readyState is still CONNECTING, and…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/state-machine/answer">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/state-machine/answer.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="State diagram: 4 states, 3 transitions; Code, 16 lines; 4 labelled values; A ring around CONNECTING, the readyState the socket is in; A red box around the throw in send(): readyState is CONNECTING. Run: 5: throw new DOMException(; 6: &quot;Sent before connected.&quot;; 7: &quot;InvalidStateError&quot;); marked: Result: throws InvalidStateError.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Answer: it throws InvalidStateError · Why does send() throw on a new…">
+<meta name="twitter:description" content="send() sends only in OPEN: before open it throws InvalidStateError, and after close() it quietly sends nothing. Here the server has not accepted the handshake, so readyState is still CONNECTING, and…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/state-machine/answer.png">
+<meta name="twitter:image:alt" content="State diagram: 4 states, 3 transitions; Code, 16 lines; 4 labelled values; A ring around CONNECTING, the readyState the socket is in; A red box around the throw in send(): readyState is CONNECTING. Run: 5: throw new DOMException(; 6: &quot;Sent before connected.&quot;; 7: &quot;InvalidStateError&quot;); marked: Result: throws InvalidStateError.">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/state-machine?step=answer">
+</head><body><p><a href="/projects/rayner/state-machine?step=answer">Answer: it throws InvalidStateError · Why does send() throw on a new WebSocket but not after close()?</a></p></body></html>

@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "provider_name": "Rayner",
+  "provider_url": "https://github.com/adewale/rayner",
+  "title": "When two agents talk, who is a person and who is an AI?",
+  "thumbnail_url": "https://oshineye.dev/projects/poppy/poppy-conversations.png",
+  "thumbnail_width": 960,
+  "thumbnail_height": 540,
+  "width": 640,
+  "height": 1076,
+  "html": "<iframe src=\"https://oshineye.dev/projects/poppy/poppy-conversations.html?theme=light\" title=\"When two agents talk, who is a person and who is an AI?\" width=\"640\" height=\"1076\" style=\"border:0;border-radius:12px;display:block;max-width:100%\" allow=\"fullscreen\" loading=\"lazy\"></iframe>",
+  "cache_age": 86400
+}

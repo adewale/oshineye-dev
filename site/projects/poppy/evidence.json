@@ -1,0 +1,870 @@
+{
+  "version": 2,
+  "checked": true,
+  "totals": {
+    "explainers": 8,
+    "scenarios": 14,
+    "diagrams": 0,
+    "styles": 0,
+    "families": 0
+  },
+  "scenes": [
+    {
+      "id": "poppy",
+      "title": "How does Poppy work?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "approve": "read-write"
+        },
+        {
+          "approve": "read-only"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "approve": "read-write"
+          },
+          "steps": [
+            {
+              "step": "errand",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "discover",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "seal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "lanes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "challenge",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "approve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "both",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "thief",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sign-out",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "approve": "read-only"
+          },
+          "steps": [
+            {
+              "step": "errand",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "discover",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "seal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "lanes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "challenge",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "approve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "both",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "thief",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sign-out",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "errand",
+        "settings": {
+          "approve": "read-write"
+        }
+      },
+      "sourceHash": "4ea8373e35c22fd175761e1be4accc4aae37dad378d38ac3534e4e8961b1dbad",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-discovery",
+      "title": "How does an agent know a poppy.json speaks for the shop?",
+      "lang": "en",
+      "scenarios": [
+        {}
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {},
+          "steps": [
+            {
+              "step": "stranger",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "handshake",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "copy",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "claim",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "upload",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "no-issuer",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "outage",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "one-company",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "stranger",
+        "settings": {}
+      },
+      "sourceHash": "88e22020386c617f588753259b71f6252afd226db8fe217152aea2e4283a177a",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-sessions",
+      "title": "What is inside the seal?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "company": "remembers"
+        },
+        {
+          "company": "required"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "company": "remembers"
+          },
+          "steps": [
+            {
+              "step": "stranger",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "address",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "delegation",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "send",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "moved",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "signer",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "clock",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "one-user",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "first-use",
+              "reviewed": false,
+              "reason": "detail-step"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "company": "required"
+          },
+          "steps": [
+            {
+              "step": "stranger",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "address",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "delegation",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "send",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "moved",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "signer",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "clock",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "one-user",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "stranger",
+        "settings": {
+          "company": "remembers"
+        }
+      },
+      "sourceHash": "52346d497d35e3b07bc2d354a72d4a4c0c4381642f9759279a0304657d734180",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-sign-in",
+      "title": "How do you give your agent a key without giving it your password?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "flow": "direct"
+        },
+        {
+          "flow": "device"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "flow": "direct"
+          },
+          "steps": [
+            {
+              "step": "password",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ask",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "approve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "check",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "key",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reask",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "replace",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "thief",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sign-out",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "flow": "device"
+          },
+          "steps": [
+            {
+              "step": "password",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ask",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "approve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "key",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "check",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reask",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "replace",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "thief",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sign-out",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "password",
+        "settings": {
+          "flow": "direct"
+        }
+      },
+      "sourceHash": "d79413aca10a77c37e93df084ad18727ce8944303442ec8bf3f54814a73169d8",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-browser",
+      "title": "How does the agent's browser join the Session without ever carrying the key?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "signin": "signed-in"
+        },
+        {
+          "signin": "signed-out"
+        },
+        {
+          "signin": "no-scope"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "signin": "signed-in"
+          },
+          "steps": [
+            {
+              "step": "fetch",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "load",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "authorize",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "submit",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "browse",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "logins",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "forge",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "phish",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "signin": "signed-out"
+          },
+          "steps": [
+            {
+              "step": "fetch",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "load",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "authorize",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "submit",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "browse",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "logins",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "forge",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "phish",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "signin": "no-scope"
+          },
+          "steps": [
+            {
+              "step": "fetch",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "load",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "authorize",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "submit",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "browse",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "logins",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "forge",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "phish",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "fetch",
+        "settings": {
+          "signin": "signed-in"
+        }
+      },
+      "sourceHash": "a44676d9d2db2c4ad562d0e23831e0f2945c9e041dbc5355bd806a3f7d9604ee",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-refusals",
+      "title": "What does your agent do when the Company says no?",
+      "lang": "en",
+      "scenarios": [
+        {}
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {},
+          "steps": [
+            {
+              "step": "turned-back",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "slip",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "scope",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "seal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why-400",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ended",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "version",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "one-door",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "pace",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "turned-back",
+        "settings": {}
+      },
+      "sourceHash": "f92a286c21985bc96c0355c6b3ac56077c97e9c2cf865564d564d49572019196",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-conversations",
+      "title": "When two agents talk, who is a person and who is an AI?",
+      "lang": "en",
+      "scenarios": [
+        {}
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {},
+          "steps": [
+            {
+              "step": "open",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "person",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "invite",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "direct",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "words",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "owner",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "close",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "open",
+        "settings": {}
+      },
+      "sourceHash": "a13d4fbd79bcf3e115dc84f416ebe6cc3b06b79bfe34bfdcec2cbab6674104d3",
+      "snapshotHashes": []
+    },
+    {
+      "id": "poppy-coverage",
+      "title": "What can a Company tell your agent, and what must your agent refuse to be told?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "company": "hostile"
+        },
+        {
+          "company": "honest"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "company": "hostile"
+          },
+          "steps": [
+            {
+              "step": "search",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "board",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stuck",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "report",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sort",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "skill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "company": "honest"
+          },
+          "steps": [
+            {
+              "step": "search",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "board",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stuck",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "report",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sort",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "skill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "search",
+        "settings": {
+          "company": "hostile"
+        }
+      },
+      "sourceHash": "4a699dbd5f8d248f0c5652d0269526f71be804c375bcd2b70b3bcfa916b5923c",
+      "snapshotHashes": []
+    }
+  ]
+}

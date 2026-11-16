@@ -1,8 +1,11 @@
-// Run after Rayner's site:export. Product copy, titles and counts come from that export.
-import { readFile, writeFile, copyFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
+// Run after Rayner's site:export with --index none:
+//   npm run site:export -- <this repo>/site --path /projects/rayner --origin https://oshineye.dev --index none --only <ids> --from out/main
+// Product copy, facts, titles and counts come from that export. The export pins its own files and its
+// sections of _headers and llms.txt in deployment.json; this page lives outside its subtree, so the
+// export never touches it and this script never touches the manifest.
+import { readFile, writeFile } from 'node:fs/promises';
 const file = new URL('../site/projects/rayner.html', import.meta.url);
-const { version, product, totals, scenes } = JSON.parse(await readFile(new URL('../site/projects/rayner/catalog.json', import.meta.url), 'utf8'));
+const { version, product, totals, scenes, facts } = JSON.parse(await readFile(new URL('../site/projects/rayner/catalog.json', import.meta.url), 'utf8'));
 if (version !== 2 || scenes.length !== totals.explainers || scenes.reduce((n, scene) => n + scene.scenarios, 0) !== totals.scenarios)
   throw new Error('Rayner catalog version or counts are inconsistent');
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
@@ -11,18 +14,12 @@ if (!entry || !scenes.some(scene => scene.id === entry.id) || !entry.step || !en
   throw new Error('Rayner catalog needs a valid introductory entry');
 const entryUrl = `/projects/rayner/${encodeURIComponent(entry.id)}?${new URLSearchParams({step: entry.step, ...entry.settings})}`;
 const visible = scenes.filter(scene => scene.tier !== 'coverage');
-const selected = new Set(visible.map(scene => scene.id));
 const subjects = visible.filter(scene => scene.group === 'topic');
 // Older exports had no tiers. Preserve their gallery while using the source
 // catalog's selection for new exports, rather than maintaining a host-side list.
 const leaders = subjects.filter(scene => (scene.tier ?? 'showcase') === 'showcase');
 const more = subjects.filter(scene => scene.tier === 'gallery');
-// Authoring examples are titled by what an author gets from them, in the README's terms.
-const TOOL_TITLES = { 'feature-tour': 'Feature tour: recipe, then result' };
-const authoring = [
-  selected.has('feature-tour') && `The <a href="https://github.com/adewale/rayner/blob/main/docs/FEATURE-TOUR.md">feature guide</a> shows the code an author writes for each feature, then its result.`,
-].filter(Boolean).join(' ');
-const toolIntro = `These are for authors, not subject lessons. ${authoring ? authoring + ' ' : ''}For the whole path, read <a href="${escape(product.tutorial)}">the tutorial</a>, the <a href="${escape(product.reference)}">authoring reference</a> or the <a href="${escape(product.skill)}">agent authoring skill</a>.`;
+const toolIntro = `These are for authors, not subject lessons. For the whole path, read <a href="${escape(product.tutorial)}">the tutorial</a>, the <a href="${escape(product.reference)}">authoring reference</a> or the <a href="${escape(product.skill)}">agent authoring skill</a>.`;
 let html = await readFile(file, 'utf8');
 // Retired examples may remain in an old exported page; remove them on every sync.
 html = html.replace(/<section class="section reveal" aria-labelledby="by-example">[\s\S]*?<\/section>\s*/, '');
@@ -40,6 +37,17 @@ html = html.replace(/<div class="project-copy">[\s\S]*?<\/div>(?=\s*<aside)/, co
 // The panel follows the other project pages: the project's artwork, then facts an author can
 // act on. The explainers themselves are one scroll down, so the panel does not repeat one.
 const art = '/img/repo/generated/vfinal-approved-stills/rayner';
+// Exports from Rayner #107 on carry every fact the panel shows in catalog.json's facts, taken from
+// Rayner's package.json and PRODUCT. An older catalog has none, so each fact falls back to the
+// product copy or to what this page said before: npm has rayner 0.1.0, an older single-package
+// release, so the install fact points at the quick start, which builds both packages from a clone.
+const installGuide = facts?.installGuide ?? product.installGuide ?? 'https://github.com/adewale/rayner#quick-start';
+const install = facts?.install ?? product.install ?? 'Rayner 0.2.0 is not on npm yet: npm’s rayner 0.1.0 is an earlier, single-package release. Build both packages from a clone of the repository.';
+const requirements = facts?.requirements ?? product.requirements;
+const publishes = facts?.publishes ?? 'A portable HTML page with a transcript';
+const repository = facts?.repository ?? 'https://github.com/adewale/rayner';
+const license = facts?.license ?? 'MIT';
+const repositoryName = new URL(repository).pathname.replace(/^\//, '');
 const panel = `<aside class="project-panel" aria-labelledby="project-facts-title">
                     <a class="project-motion-frame" href="https://github.com/adewale/rayner" target="_blank" rel="noopener" aria-label="View Rayner on GitHub">
                         <img class="project-panel-image" src="${art}/colour.jpg" alt="Generated project artwork for Rayner" loading="lazy" width="400" height="300">
@@ -49,11 +57,11 @@ const panel = `<aside class="project-panel" aria-labelledby="project-facts-title
                     </a>
                     <h3 id="project-facts-title">Project facts</h3>
                     <dl class="project-facts">
-                        <div><dt>Package</dt><dd><code>npm install --save-dev rayner</code></dd></div>
-                        <div><dt>Requires</dt><dd>${escape(product.requirements)}</dd></div>
-                        <div><dt>Publishes</dt><dd>A portable HTML page with a transcript</dd></div>
-                        <div><dt>Repository</dt><dd><a href="https://github.com/adewale/rayner" target="_blank" rel="noopener"><code>adewale/rayner</code></a></dd></div>
-                        <div><dt>License</dt><dd>MIT</dd></div>
+                        <div><dt>Install</dt><dd>${escape(install)} <a href="${escape(installGuide)}">See the quick start</a>.</dd></div>
+                        <div><dt>Requires</dt><dd>${escape(requirements)}</dd></div>
+                        <div><dt>Publishes</dt><dd>${escape(publishes)}</dd></div>
+                        <div><dt>Repository</dt><dd><a href="${escape(repository)}" target="_blank" rel="noopener"><code>${escape(repositoryName)}</code></a></dd></div>
+                        <div><dt>License</dt><dd>${escape(license)}</dd></div>
                     </dl>
                 </aside>`;
 const besideCopy = /(<div class="project-copy">[\s\S]*?<\/div>\s*)<aside[\s\S]*?<\/aside>/;
@@ -79,7 +87,7 @@ if (hasToolchain)
 if (!hasToolchain) html = html.replace(/\s*<section class="section reveal" aria-labelledby="toolchain">[\s\S]*?<\/section>/, '');
 let group = 0;
 const cards = entries => entries.map(s =>
-  `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(TOOL_TITLES[s.id] ?? s.title)}</h3></a></article>`
+  `                <article class="example-card explainer-tile"><a href="/projects/rayner/${escape(s.id)}"><img src="/projects/rayner/${escape(s.id)}.png" alt="" loading="lazy" width="960" height="540"><h3${s.lang === 'en' ? '' : ` lang="${escape(s.lang)}"`}>${escape(s.title)}</h3></a></article>`
 ).join('\n');
 html = html.replace(/<div class="example-grid">[\s\S]*?<\/div>/g, () => {
   const category = ['topic', 'toolchain'][group++];
@@ -95,19 +103,8 @@ npm ci
 npx playwright-core install chromium
 npm run demos:build
 npm run demos:serve</code></pre>`);
-html = html.replace(/<p class="section-intro">You need Node[^<]+<\/p>/, `<p class="section-intro">${escape(product.requirements)} Diagrams are captured at build time with <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a>; the engine is forked from Ivar Vong’s <a href="https://github.com/ivarvong/lantern">Lantern</a>.</p>`);
+html = html.replace(/<p class="section-intro">You need Node[^<]+<\/p>/, `<p class="section-intro">${escape(requirements)} Diagrams are captured at build time with <a href="https://github.com/adewale/agentic-mermaid">Agentic Mermaid</a>; the engine is forked from Ivar Vong’s <a href="https://github.com/ivarvong/lantern">Lantern</a>.</p>`);
 await writeFile(file, html);
-// Both clean-URL spellings must serve the branded page, not competing indexes.
-await copyFile(file, new URL('../site/projects/rayner/index.html', import.meta.url));
-const manifestFile = new URL('../site/projects/rayner/deployment.json', import.meta.url);
-const manifest = JSON.parse(await readFile(manifestFile, 'utf8'));
-const paths = ['/projects/rayner.html', '/projects/rayner/index.html'];
-manifest.files = manifest.files.filter(entry => !paths.includes(entry.path));
-const digest = value => createHash('sha256').update(value).digest('hex');
-manifest.files.push(...paths.map(path => ({ path, sha256: digest(html) })));
-manifest.files.sort((a, b) => a.path.localeCompare(b.path));
-manifest.host = { generator: 'tools/sync-rayner.mjs', sha256: digest(await readFile(new URL('./sync-rayner.mjs', import.meta.url))) };
-await writeFile(manifestFile, JSON.stringify(manifest, null, 2) + '\n');
 
 const index = new URL('../site/index.html', import.meta.url);
 let home = await readFile(index, 'utf8');
