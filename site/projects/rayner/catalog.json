@@ -2,13 +2,16 @@
   "version": 2,
   "product": {
     "home": "https://github.com/adewale/rayner",
-    "summary": "Interactive explanations of protocols, algorithms and code changes.",
-    "audience": "For engineers and technical educators who write TypeScript.",
-    "description": "Step through a picture at your own pace, or change a setting to follow another scenario. The model computes the numbers, diagrams and captions. Publish a portable HTML page with a transcript and no runtime network requests.",
-    "requirements": "Node 24 or later and Chromium. Authoring targets Ubuntu and macOS.",
+    "summary": "Rayner makes an explanation of what this version of this system does, drawn from a model checked against that system where it can be, with a short receipt the person who commissioned it can review.",
+    "audience": "It is for the person who commissions an explainer of a protocol, an algorithm or a data structure, and for the agent or person who writes it.",
+    "description": "The writer models the system in TypeScript and tests the model against the real system where it can: run live, recorded once, or read from its specification. Every picture on the page is checked against the model’s state, and the receipt says what the model was checked against and how. The result is one HTML page of steps and a transcript, with no runtime network requests.",
+    "publishes": "One HTML page of steps and a transcript, with no runtime network requests.",
+    "requirements": "Node 24 or later to write, check and build. Chromium for rayner review and screenshots, and to capture Mermaid diagrams. Authoring targets Ubuntu and macOS.",
     "tutorial": "https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md",
     "reference": "https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md",
     "skill": "https://github.com/adewale/rayner/blob/main/skills/rayner-explainers/SKILL.md",
+    "install": "Rayner 0.2.0, which these guides describe, is not on npm yet: npm has rayner 0.1.0, an earlier single-package release, and no rayner-cli. Build both packages from the repository, as the quick start shows.",
+    "installGuide": "https://github.com/adewale/rayner#quick-start",
     "entry": {
       "id": "bloom-filter",
       "step": "question",
@@ -18,29 +21,24 @@
       "label": "See why a Bloom filter answers “maybe”"
     }
   },
+  "facts": {
+    "name": "rayner",
+    "version": "0.2.0",
+    "install": "Rayner 0.2.0, which these guides describe, is not on npm yet: npm has rayner 0.1.0, an earlier single-package release, and no rayner-cli. Build both packages from the repository, as the quick start shows.",
+    "installGuide": "https://github.com/adewale/rayner#quick-start",
+    "requirements": "Node 24 or later to write, check and build. Chromium for rayner review and screenshots, and to capture Mermaid diagrams. Authoring targets Ubuntu and macOS.",
+    "publishes": "One HTML page of steps and a transcript, with no runtime network requests.",
+    "repository": "https://github.com/adewale/rayner",
+    "license": "MIT"
+  },
   "totals": {
-    "explainers": 41,
-    "scenarios": 197,
-    "diagrams": 155,
-    "styles": 9,
+    "explainers": 44,
+    "scenarios": 174,
+    "diagrams": 154,
+    "styles": 8,
     "families": 15
   },
   "scenes": [
-    {
-      "id": "periodic-groups",
-      "step": "stack",
-      "group": "topic",
-      "tier": "showcase",
-      "title": "Why does the periodic table have this shape?",
-      "lang": "en",
-      "scenarios": 5,
-      "entry": {
-        "step": "column",
-        "settings": {
-          "element": "na"
-        }
-      }
-    },
     {
       "id": "python-dict",
       "step": "marker",
@@ -54,6 +52,10 @@
         "settings": {
           "key": "8"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: CPython 3.12’s dict storage, read from memory"
       }
     },
     {
@@ -69,6 +71,10 @@
         "settings": {
           "bits": "16"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: an independent FNV-1a hash in CPython 3.12; the filter is a teaching model, not a production one"
       }
     },
     {
@@ -84,6 +90,146 @@
         "settings": {
           "history": "diverged"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Git, run by the model’s tests"
+      }
+    },
+    {
+      "id": "pg-page",
+      "step": "swap",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Why can int4 and int8 rows take the same space?",
+      "lang": "en",
+      "scenarios": 3,
+      "entry": {
+        "step": "page",
+        "settings": {
+          "column": "int4"
+        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: a Postgres 18.6 server, measured on 2026-10-25"
+      }
+    },
+    {
+      "id": "trust-proxy",
+      "step": "read",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Which address should Express call the client?",
+      "lang": "en",
+      "scenarios": 12,
+      "entry": {
+        "step": "paths",
+        "settings": {
+          "trust": "2",
+          "request": "direct"
+        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: Express 5.3.0, run once over a real HTTP connection"
+      }
+    },
+    {
+      "id": "send-sync",
+      "step": "arc-cell",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Can this Rust value cross a thread boundary?",
+      "lang": "en",
+      "scenarios": 9,
+      "entry": {
+        "step": "spawn",
+        "settings": {
+          "wrapper": "arc-mutex",
+          "inner": "cell"
+        }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: rustc, compiling the model’s claims; the table is rustc 1.99.1’s"
+      }
+    },
+    {
+      "id": "ext4-space",
+      "step": "reserve",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Where does an empty ext4 filesystem’s space go?",
+      "lang": "en",
+      "scenarios": 9,
+      "entry": {
+        "step": "df",
+        "settings": {
+          "size": "1t",
+          "reserve": "5"
+        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: mkfs.ext4 1.47.3 on Linux 6.8.0, 22 filesystems"
+      }
+    },
+    {
+      "id": "token-bucket",
+      "step": "later",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "How does a token bucket let a burst through but refuse a flood?",
+      "lang": "en",
+      "scenarios": 3,
+      "entry": {
+        "step": "balance",
+        "settings": {
+          "rate": "2"
+        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: Go’s golang.org/x/time/rate v0.15.0"
+      }
+    },
+    {
+      "id": "float-sum",
+      "step": "round",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Why is 0.1 + 0.2 not 0.3?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "surprise",
+        "settings": {
+          "sum": "two-tenths"
+        }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: CPython's float and this machine's JavaScript numbers, run by the model's tests"
+      }
+    },
+    {
+      "id": "unified-diff",
+      "step": "search",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Why does a patch still apply after the file has changed?",
+      "lang": "en",
+      "scenarios": 2,
+      "entry": {
+        "step": "patch",
+        "settings": {
+          "copy": "moved"
+        }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Git's own apply and diff (2.43.0 when written), run by the model's tests"
       }
     },
     {
@@ -99,13 +245,17 @@
         "settings": {
           "order": "new-first"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: JavaScript promises resolved in chosen orders, through the handler the page prints"
       }
     },
     {
       "id": "monty-hall",
       "step": "worlds",
       "group": "topic",
-      "tier": "showcase",
+      "tier": "gallery",
       "title": "Why does the host’s rule change the odds of switching?",
       "lang": "en",
       "scenarios": 2,
@@ -114,6 +264,10 @@
         "settings": {
           "host": "informed"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
@@ -129,13 +283,34 @@
         "settings": {
           "people": "23"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: an independent CPython 3.12 script and an exhaustive count of small rooms"
+      }
+    },
+    {
+      "id": "galton-board",
+      "step": "pile",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "Why do balls dropped through pegs pile up in a bell shape?",
+      "lang": "en",
+      "scenarios": 1,
+      "entry": {
+        "step": "drop",
+        "settings": {}
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Python's math.comb and statistics.NormalDist, run by the model's tests"
       }
     },
     {
       "id": "melody-rhythm",
       "step": "bar",
       "group": "topic",
-      "tier": "showcase",
+      "tier": "gallery",
       "title": "Why does one version of a tune sound off the beat?",
       "lang": "en",
       "scenarios": 2,
@@ -144,13 +319,17 @@
         "settings": {
           "timing": "syncopated"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
       "id": "seasons",
       "step": "latitude",
       "group": "topic",
-      "tier": "showcase",
+      "tier": "gallery",
       "title": "Why does the north have summer when Earth is farthest from the Sun?",
       "lang": "en",
       "scenarios": 4,
@@ -159,6 +338,10 @@
         "settings": {
           "place": "london"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
@@ -172,8 +355,12 @@
       "entry": {
         "step": "street",
         "settings": {
-          "street": "manhattan"
+          "place": "manhattan"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: Skyfield 1.55 with JPL’s DE440s, and ERFA’s horizon coordinates (pyerfa 2.0.1.5)"
       }
     },
     {
@@ -189,6 +376,10 @@
         "settings": {
           "second": "madrid"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: GeographicLib 2.0’s geodesic solver"
       }
     },
     {
@@ -204,6 +395,10 @@
         "settings": {
           "attacker": "yes"
         }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: RFC 7636 and RFC 6749, with real SHA-256; no authorization server is run"
       }
     },
     {
@@ -219,21 +414,10 @@
         "settings": {
           "change": "add"
         }
-      }
-    },
-    {
-      "id": "token-bucket",
-      "step": "later",
-      "group": "topic",
-      "tier": "gallery",
-      "title": "How does a token bucket let a burst through but refuse a flood?",
-      "lang": "en",
-      "scenarios": 3,
-      "entry": {
-        "step": "balance",
-        "settings": {
-          "rate": "2"
-        }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Git, run by the model’s tests"
       }
     },
     {
@@ -249,21 +433,29 @@
         "settings": {
           "request": "hit"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: git diff, run on the before and after code"
       }
     },
     {
       "id": "state-machine",
-      "step": "reader-reject",
+      "step": "answer",
       "group": "topic",
-      "tier": "coverage",
-      "title": "Which events can change this session?",
+      "tier": "gallery",
+      "title": "Why does send() throw on a new WebSocket but not after close()?",
       "lang": "en",
       "scenarios": 2,
       "entry": {
-        "step": "reader-path",
+        "step": "ask",
         "settings": {
-          "events": "success"
+          "when": "connecting"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Node's own WebSocket, against a local server (undici 7.30.1 in Node 24.22.1 when written)"
       }
     },
     {
@@ -277,6 +469,10 @@
       "entry": {
         "step": "machine",
         "settings": {}
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: XState 5.33.3"
       }
     },
     {
@@ -292,6 +488,10 @@
         "settings": {
           "operations": "wrap"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
@@ -305,6 +505,10 @@
       "entry": {
         "step": "ask",
         "settings": {}
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: kitlangton/2password’s code at commit e011177, ported, and the answers its tests assert"
       }
     },
     {
@@ -318,6 +522,10 @@
       "entry": {
         "step": "reader-pipeline",
         "settings": {}
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
@@ -334,6 +542,10 @@
           "lifetime": "160h",
           "rule": "fixed30"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: Certbot 5.8.0 and Boulder test vectors, and Let’s Encrypt’s renewal windows on 2026-10-25"
       }
     },
     {
@@ -350,22 +562,10 @@
           "enfants": "1",
           "revenu": "65673.88"
         }
-      }
-    },
-    {
-      "id": "send-sync",
-      "step": "arc-cell",
-      "group": "topic",
-      "tier": "gallery",
-      "title": "Can this Rust value cross a thread boundary?",
-      "lang": "en",
-      "scenarios": 9,
-      "entry": {
-        "step": "spawn",
-        "settings": {
-          "wrapper": "arc-mutex",
-          "inner": "cell"
-        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: openfisca-france 176.1.3 et ses vecteurs de test LexImpact 2024"
       }
     },
     {
@@ -382,21 +582,10 @@
           "date": "2007-06-04",
           "stop": "airport"
         }
-      }
-    },
-    {
-      "id": "pg-page",
-      "step": "swap",
-      "group": "topic",
-      "tier": "gallery",
-      "title": "Why can int4 and int8 rows take the same space?",
-      "lang": "en",
-      "scenarios": 3,
-      "entry": {
-        "step": "page",
-        "settings": {
-          "column": "int4"
-        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: the GTFS reference at commit 3c9e7b9, Google’s sample feed and gtfs-kit 13.0.1"
       }
     },
     {
@@ -413,6 +602,10 @@
           "policy": "local",
           "pods": "3-1-0"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: kube-proxy’s code and tests at Kubernetes v1.37.1"
       }
     },
     {
@@ -429,6 +622,46 @@
           "char": "super",
           "guard": "isdigit"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: CPython 3.15.1’s answers and Unicode 17.0.0’s data files"
+      }
+    },
+    {
+      "id": "string-length",
+      "step": "characters",
+      "group": "topic",
+      "tier": "gallery",
+      "title": "Why does one word have three lengths?",
+      "lang": "en",
+      "scenarios": 1,
+      "entry": {
+        "step": "question",
+        "settings": {}
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Node's Intl.Segmenter and TextEncoder (Unicode 17.0) and CPython's str, run by the model's tests"
+      }
+    },
+    {
+      "id": "periodic-groups",
+      "step": "stack",
+      "group": "topic",
+      "tier": "showcase",
+      "title": "Why does the periodic table have this shape?",
+      "lang": "en",
+      "scenarios": 5,
+      "entry": {
+        "step": "column",
+        "settings": {
+          "element": "na"
+        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: NIST Atomic Spectra Database ground configurations for elements 1 to 108"
       }
     },
     {
@@ -445,38 +678,10 @@
           "change": "skip",
           "copy": "guest"
         }
-      }
-    },
-    {
-      "id": "ext4-space",
-      "step": "reserve",
-      "group": "topic",
-      "tier": "gallery",
-      "title": "Where does an empty ext4 filesystem’s space go?",
-      "lang": "en",
-      "scenarios": 9,
-      "entry": {
-        "step": "df",
-        "settings": {
-          "size": "1t",
-          "reserve": "5"
-        }
-      }
-    },
-    {
-      "id": "trust-proxy",
-      "step": "read",
-      "group": "topic",
-      "tier": "gallery",
-      "title": "Which address should Express call the client?",
-      "lang": "en",
-      "scenarios": 12,
-      "entry": {
-        "step": "paths",
-        "settings": {
-          "trust": "2",
-          "request": "direct"
-        }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: sabre/vobject 4.5.7 and a Baïkal 0.10.1 server"
       }
     },
     {
@@ -493,6 +698,10 @@
           "shade": "500",
           "screen": "srgb"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: Color.js 0.7.1 on tailwindcss 4.3.3’s colours"
       }
     },
     {
@@ -508,6 +717,10 @@
         "settings": {
           "participant": "P1"
         }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: GNOME’s 2024 usability report, transcribed by hand"
       }
     },
     {
@@ -524,21 +737,10 @@
           "level": "AA",
           "guideline": "2.4"
         }
-      }
-    },
-    {
-      "id": "feature-tour",
-      "step": "result",
-      "group": "toolchain",
-      "tier": "gallery",
-      "title": "How do I write that in Rayner?",
-      "lang": "en",
-      "scenarios": 29,
-      "entry": {
-        "step": "recipe",
-        "settings": {
-          "feature": "animation"
-        }
+      },
+      "grounding": {
+        "grade": "read",
+        "label": "Read, not run: the WCAG Recommendations and the w3c/wcag repository at WCAG22-20241212"
       }
     },
     {
@@ -554,6 +756,10 @@
         "settings": {
           "motion": "nudge"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: Rayner’s own engine, run by the scene and its tests"
       }
     },
     {
@@ -567,6 +773,10 @@
       "entry": {
         "step": "sentence",
         "settings": {}
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: golang.org/x/time/rate v0.15.0, through the token bucket’s model, and Lantern’s source at commit 2c7bad5"
       }
     },
     {
@@ -582,6 +792,10 @@
         "settings": {
           "edit": "swapped"
         }
+      },
+      "grounding": {
+        "grade": "live",
+        "label": "Run live: agentic-mermaid 0.5.1’s verifier"
       }
     },
     {
@@ -597,6 +811,10 @@
         "settings": {
           "font": "sans"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
@@ -612,6 +830,10 @@
         "settings": {
           "widths": "natural"
         }
+      },
+      "grounding": {
+        "grade": "recorded",
+        "label": "Recorded: HarfBuzz measurements of EB Garamond 5.3.0’s original font files"
       }
     },
     {
@@ -627,6 +849,10 @@
         "settings": {
           "direction": "rtl"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     },
     {
@@ -642,6 +868,10 @@
         "settings": {
           "hand": "second"
         }
+      },
+      "grounding": {
+        "grade": "none",
+        "label": "Nothing external"
       }
     }
   ]

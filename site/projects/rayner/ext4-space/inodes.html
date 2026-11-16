@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Inode tables are 93.3% of the metadata · Where does an empty ext4 filesystem’s space go?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/ext4-space?step=inodes">
-<meta name="description" content="This pie’s whole is the 4,495,258 metadata blocks. An inode records one file, so mke2fs sets aside a fixed number up front, by the disk’s size type: one inode per 16 KiB of disk for the default…">
+<meta name="description" content="This pie’s whole is the 4,495,258 metadata blocks. An inode records one file, so mke2fs sets aside a fixed number, by the disk’s size type: one inode per 16 KiB for the default type, 512 MiB to…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inode tables are 93.3% of the metadata · Where does an empty ext4 filesystem’s space go?">
-<meta property="og:description" content="This pie’s whole is the 4,495,258 metadata blocks. An inode records one file, so mke2fs sets aside a fixed number up front, by the disk’s size type: one inode per 16 KiB of disk for the default…">
+<meta property="og:description" content="This pie’s whole is the 4,495,258 metadata blocks. An inode records one file, so mke2fs sets aside a fixed number, by the disk’s size type: one inode per 16 KiB for the default type, 512 MiB to…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/ext4-space/inodes">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/ext4-space/inodes.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Pie chart “The 4,495,258 metadata blocks”: 3 slices; “Inode tables”, 6 labelled values. This step: Inode tables: 93.3%.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Inode tables are 93.3% of the metadata · Where does an empty ext4…">
-<meta name="twitter:description" content="This pie’s whole is the 4,495,258 metadata blocks. An inode records one file, so mke2fs sets aside a fixed number up front, by the disk’s size type: one inode per 16 KiB of disk for the default…">
+<meta name="twitter:description" content="This pie’s whole is the 4,495,258 metadata blocks. An inode records one file, so mke2fs sets aside a fixed number, by the disk’s size type: one inode per 16 KiB for the default type, 512 MiB to…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/ext4-space/inodes.png">
 <meta name="twitter:image:alt" content="Pie chart “The 4,495,258 metadata blocks”: 3 slices; “Inode tables”, 6 labelled values. This step: Inode tables: 93.3%.">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/ext4-space?step=inodes">

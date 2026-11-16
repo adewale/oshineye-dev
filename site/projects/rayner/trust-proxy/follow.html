@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Answer: 1.2.3.4, an address the attacker wrote · Which address should Express call the client?</title>
 <link rel="canonical" href="https://oshineye.dev/projects/rayner/trust-proxy?step=follow">
-<meta name="description" content="Express’s own connection comes from the load balancer, 10.0.0.5. All it learns about the machines before that comes from the X-Forwarded-For header: each proxy here appends the address its…">
+<meta name="description" content="Each proxy here appends to X-Forwarded-For the address its connection came from. A sender can write its own entries first, so the header is a reported chain, not proof. The attacker sends…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Answer: 1.2.3.4, an address the attacker wrote · Which address should Express call the client?">
-<meta property="og:description" content="Express’s own connection comes from the load balancer, 10.0.0.5. All it learns about the machines before that comes from the X-Forwarded-For header: each proxy here appends the address its…">
+<meta property="og:description" content="Each proxy here appends to X-Forwarded-For the address its connection came from. A sender can write its own entries first, so the header is a reported chain, not proof. The attacker sends…">
 <meta property="og:url" content="https://oshineye.dev/projects/rayner/trust-proxy/follow">
 <meta property="og:image" content="https://oshineye.dev/projects/rayner/trust-proxy/follow.png">
 <meta property="og:image:width" content="1080">
@@ -13,7 +13,7 @@
 <meta property="og:image:alt" content="Architecture diagram: 5 services, 5 edges; “X-Forwarded-For at each machine”, 3 labelled values. Travelled: Attacker → Load balancer; Load balancer → Express. New in this step: “X-Forwarded-For at each machine”, 3 labelled values.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Answer: 1.2.3.4, an address the attacker wrote · Which address…">
-<meta name="twitter:description" content="Express’s own connection comes from the load balancer, 10.0.0.5. All it learns about the machines before that comes from the X-Forwarded-For header: each proxy here appends the address its…">
+<meta name="twitter:description" content="Each proxy here appends to X-Forwarded-For the address its connection came from. A sender can write its own entries first, so the header is a reported chain, not proof. The attacker sends…">
 <meta name="twitter:image" content="https://oshineye.dev/projects/rayner/trust-proxy/follow.png">
 <meta name="twitter:image:alt" content="Architecture diagram: 5 services, 5 edges; “X-Forwarded-For at each machine”, 3 labelled values. Travelled: Attacker → Load balancer; Load balancer → Express. New in this step: “X-Forwarded-For at each machine”, 3 labelled values.">
 <meta http-equiv="refresh" content="0; url=/projects/rayner/trust-proxy?step=follow">

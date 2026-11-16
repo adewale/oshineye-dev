@@ -1,349 +1,14 @@
 {
   "version": 2,
-  "checked": false,
+  "checked": true,
   "totals": {
-    "explainers": 41,
-    "scenarios": 197,
-    "diagrams": 155,
-    "styles": 9,
+    "explainers": 44,
+    "scenarios": 174,
+    "diagrams": 154,
+    "styles": 8,
     "families": 15
   },
   "scenes": [
-    {
-      "id": "periodic-groups",
-      "title": "Why does the periodic table have this shape?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "element": "na"
-        },
-        {
-          "element": "cl"
-        },
-        {
-          "element": "fe"
-        },
-        {
-          "element": "cu"
-        },
-        {
-          "element": "he"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "element": "na"
-          },
-          "steps": [
-            {
-              "step": "column",
-              "reviewed": true,
-              "targets": [
-                "periodic-family-comparison"
-              ],
-              "labels": [
-                "Group 1: elements from top to bottom",
-                "H",
-                "1",
-                "Li",
-                "3",
-                "+2",
-                "Na",
-                "11",
-                "+8",
-                "K",
-                "19",
-                "+8",
-                "Rb",
-                "37",
-                "+18",
-                "Cs",
-                "55",
-                "+18",
-                "Fr",
-                "87",
-                "+32",
-                "Group 1",
-                "in the 118-cell table"
-              ]
-            },
-            {
-              "step": "fill",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "stack",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "names",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "blocks",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "family",
-              "reviewed": false,
-              "reason": "detail-step"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "element": "cl"
-          },
-          "steps": [
-            {
-              "step": "column",
-              "reviewed": true,
-              "targets": [
-                "periodic-family-comparison"
-              ],
-              "labels": [
-                "Group 17: elements from top to bottom",
-                "F",
-                "9",
-                "Cl",
-                "17",
-                "+8",
-                "Br",
-                "35",
-                "+18",
-                "I",
-                "53",
-                "+18",
-                "At",
-                "85",
-                "+32",
-                "Ts",
-                "117",
-                "+32",
-                "Group 17",
-                "in the 118-cell table"
-              ]
-            },
-            {
-              "step": "fill",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "stack",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "names",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "blocks",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "family",
-              "reviewed": false,
-              "reason": "detail-step"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "element": "fe"
-          },
-          "steps": [
-            {
-              "step": "column",
-              "reviewed": true,
-              "targets": [
-                "periodic-family-comparison"
-              ],
-              "labels": [
-                "Group 8: elements from top to bottom",
-                "Fe",
-                "26",
-                "Ru",
-                "44",
-                "+18",
-                "Os",
-                "76",
-                "+32",
-                "Hs",
-                "108",
-                "+32",
-                "Group 8",
-                "in the 118-cell table"
-              ]
-            },
-            {
-              "step": "fill",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "stack",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "names",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "blocks",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "family",
-              "reviewed": false,
-              "reason": "detail-step"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "element": "cu"
-          },
-          "steps": [
-            {
-              "step": "column",
-              "reviewed": true,
-              "targets": [
-                "periodic-family-comparison"
-              ],
-              "labels": [
-                "Group 11: elements from top to bottom",
-                "Cu",
-                "29",
-                "Ag",
-                "47",
-                "+18",
-                "Au",
-                "79",
-                "+32",
-                "Rg",
-                "111",
-                "+32",
-                "Group 11",
-                "in the 118-cell table"
-              ]
-            },
-            {
-              "step": "fill",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "stack",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "names",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "blocks",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "family",
-              "reviewed": false,
-              "reason": "detail-step"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "element": "he"
-          },
-          "steps": [
-            {
-              "step": "column",
-              "reviewed": true,
-              "targets": [
-                "periodic-family-comparison"
-              ],
-              "labels": [
-                "Group 18: elements from top to bottom",
-                "He",
-                "2",
-                "Ne",
-                "10",
-                "+8",
-                "Ar",
-                "18",
-                "+8",
-                "Kr",
-                "36",
-                "+18",
-                "Xe",
-                "54",
-                "+18",
-                "Rn",
-                "86",
-                "+32",
-                "Og",
-                "118",
-                "+32",
-                "Group 18",
-                "in the 118-cell table"
-              ]
-            },
-            {
-              "step": "fill",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "stack",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "names",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "blocks",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "family",
-              "reviewed": false,
-              "reason": "detail-step"
-            }
-          ]
-        }
-      ],
-      "diagrams": 0,
-      "styles": [],
-      "families": [],
-      "entry": {
-        "step": "column",
-        "settings": {
-          "element": "na"
-        }
-      },
-      "sourceHash": "72edf43b3860d7cca49abbb5e2c0843c7175b2493c2b6bf05a7249986168a02c",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
-      "snapshotHashes": []
-    },
     {
       "id": "python-dict",
       "title": "Why does a deleted dictionary slot need a marker?",
@@ -715,8 +380,7 @@
           "key": "8"
         }
       },
-      "sourceHash": "cd53b2d3cc371741422690182fda12a32ed5758ba1e06b2fb86f44057901d21f",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "8d8ff819ff019770d1db89f17be16186940301c205a4834b347c2577186b17e2",
       "snapshotHashes": []
     },
     {
@@ -1122,6 +786,56 @@
                 "10 more",
                 "Set bits: 5 after 2 names, 12 after 7, 16 after 12",
                 "Every lookup says maybe, owl included"
+              ]
+            },
+            {
+              "step": "try",
+              "reviewed": true,
+              "targets": [
+                "bloom-bits",
+                "bloom-taken",
+                "bloom-query",
+                "bloom-answer"
+              ],
+              "labels": [
+                "0",
+                "1",
+                "1",
+                "1",
+                "2",
+                "0",
+                "3",
+                "0",
+                "4",
+                "1",
+                "5",
+                "0",
+                "6",
+                "1",
+                "7",
+                "1",
+                "8",
+                "0",
+                "9",
+                "0",
+                "10",
+                "0",
+                "11",
+                "0",
+                "12",
+                "0",
+                "13",
+                "0",
+                "14",
+                "0",
+                "15",
+                "1",
+                "Taken:",
+                "cat",
+                "dog",
+                "eel",
+                "Take a name, or check one",
+                "Fill: who set the bit. The filter keeps only the 1"
               ]
             }
           ]
@@ -1773,6 +1487,88 @@
                 "Set bits: 6 after 2 names, 27 after 24, 32 after 45",
                 "Every lookup says maybe, owl included"
               ]
+            },
+            {
+              "step": "try",
+              "reviewed": true,
+              "targets": [
+                "bloom-bits",
+                "bloom-taken",
+                "bloom-query",
+                "bloom-answer"
+              ],
+              "labels": [
+                "0",
+                "0",
+                "1",
+                "1",
+                "2",
+                "0",
+                "3",
+                "0",
+                "4",
+                "0",
+                "5",
+                "0",
+                "6",
+                "0",
+                "7",
+                "1",
+                "8",
+                "0",
+                "9",
+                "0",
+                "10",
+                "0",
+                "11",
+                "0",
+                "12",
+                "0",
+                "13",
+                "0",
+                "14",
+                "0",
+                "15",
+                "1",
+                "16",
+                "1",
+                "17",
+                "1",
+                "18",
+                "0",
+                "19",
+                "0",
+                "20",
+                "1",
+                "21",
+                "0",
+                "22",
+                "1",
+                "23",
+                "1",
+                "24",
+                "0",
+                "25",
+                "0",
+                "26",
+                "0",
+                "27",
+                "0",
+                "28",
+                "0",
+                "29",
+                "0",
+                "30",
+                "0",
+                "31",
+                "0",
+                "Taken:",
+                "cat",
+                "dog",
+                "eel",
+                "Take a name, or check one",
+                "Fill: who set the bit. The filter keeps only the 1"
+              ]
             }
           ]
         }
@@ -1786,8 +1582,7 @@
           "bits": "16"
         }
       },
-      "sourceHash": "c134068d675cfadc15133abd97475adb43f403f0cef4eed0df5e474eeca2c249",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "7f37a06af6ab7548013d5348c59384fec2ce2132b79140995d1880c536c6efeb",
       "snapshotHashes": []
     },
     {
@@ -1989,8 +1784,2511 @@
           "history": "diverged"
         }
       },
-      "sourceHash": "080b2b1a72072ab23852748640f7d4d47aa7efb14f2268c7861572dd4987cc44",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "f414e86c21c21f85c05356628ddac1fc28bbbeb0566b4bf45ecbab31754e6e61",
+      "snapshotHashes": []
+    },
+    {
+      "id": "pg-page",
+      "title": "Why can int4 and int8 rows take the same space?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "column": "int4"
+        },
+        {
+          "column": "int8"
+        },
+        {
+          "column": "int4-text"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "column": "int4"
+          },
+          "steps": [
+            {
+              "step": "page",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "row",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "swap",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "full",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "compare",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "column": "int8"
+          },
+          "steps": [
+            {
+              "step": "page",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "row",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "swap",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "full",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "compare",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "column": "int4-text"
+          },
+          "steps": [
+            {
+              "step": "page",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "row",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "swap",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "full",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "compare",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 3,
+      "styles": [
+        "pen-and-ink"
+      ],
+      "families": [
+        "pie"
+      ],
+      "entry": {
+        "step": "page",
+        "settings": {
+          "column": "int4"
+        }
+      },
+      "sourceHash": "fc7b6faabf818a2fb7837a955f6174d814d09e02a969dc4973a2c483544ece98",
+      "snapshotHashes": [
+        "4a7a5b053ff641045163a856d33724ceb7af1403050bf1ad89d20a56717b137c",
+        "8b73d0769ce4554bceb1e02be4468214a79215da07d201fe55064162e8963746",
+        "7771c50ce5a4c3e074ea0252de20e494b459c77cad9a03e3129315f030179433"
+      ]
+    },
+    {
+      "id": "trust-proxy",
+      "title": "Which address should Express call the client?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "trust": "true",
+          "request": "client"
+        },
+        {
+          "trust": "true",
+          "request": "forged"
+        },
+        {
+          "trust": "true",
+          "request": "direct"
+        },
+        {
+          "trust": "1",
+          "request": "client"
+        },
+        {
+          "trust": "1",
+          "request": "forged"
+        },
+        {
+          "trust": "1",
+          "request": "direct"
+        },
+        {
+          "trust": "2",
+          "request": "client"
+        },
+        {
+          "trust": "2",
+          "request": "forged"
+        },
+        {
+          "trust": "2",
+          "request": "direct"
+        },
+        {
+          "trust": "list",
+          "request": "client"
+        },
+        {
+          "trust": "list",
+          "request": "forged"
+        },
+        {
+          "trust": "list",
+          "request": "direct"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "trust": "true",
+            "request": "client"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "1.2.3.4, made up",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "true",
+            "request": "forged"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "1.2.3.4, made up",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "true",
+            "request": "direct"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "1.2.3.4, made up",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "1",
+            "request": "client"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "Load balancer",
+                "CDN edge",
+                "Load balancer",
+                "Attacker"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "1",
+            "request": "forged"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "Load balancer",
+                "CDN edge",
+                "Load balancer",
+                "Attacker"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "1",
+            "request": "direct"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "Load balancer",
+                "CDN edge",
+                "Load balancer",
+                "Attacker"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "2",
+            "request": "client"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "2",
+            "request": "forged"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "2",
+            "request": "direct"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "list",
+            "request": "client"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "list",
+            "request": "forged"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "trust": "list",
+            "request": "direct"
+          },
+          "steps": [
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "follow",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "read",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "routes",
+              "reviewed": true,
+              "targets": [
+                "routes-positions"
+              ],
+              "labels": [
+                "1",
+                "2",
+                "3",
+                "Load balancer",
+                "CDN edge",
+                "Attacker",
+                "Load balancer",
+                "Attacker",
+                "1.2.3.4, made up"
+              ]
+            },
+            {
+              "step": "code",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "requests",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "why",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "ranges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 1,
+      "styles": [
+        "pen-and-ink"
+      ],
+      "families": [
+        "architecture"
+      ],
+      "entry": {
+        "step": "paths",
+        "settings": {
+          "trust": "2",
+          "request": "direct"
+        }
+      },
+      "sourceHash": "ff183119e7161c62650078ae2b08a836a3cae9721603806a8fa6e1fc9c5cc8b5",
+      "snapshotHashes": [
+        "531da6aa3462ca4d4061911c955fb611db90f0d1c5bba55dea074af1ed603322"
+      ]
+    },
+    {
+      "id": "send-sync",
+      "title": "Can this Rust value cross a thread boundary?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "wrapper": "arc",
+          "inner": "i32"
+        },
+        {
+          "wrapper": "arc",
+          "inner": "cell"
+        },
+        {
+          "wrapper": "arc",
+          "inner": "rc"
+        },
+        {
+          "wrapper": "mutex",
+          "inner": "i32"
+        },
+        {
+          "wrapper": "mutex",
+          "inner": "cell"
+        },
+        {
+          "wrapper": "mutex",
+          "inner": "rc"
+        },
+        {
+          "wrapper": "arc-mutex",
+          "inner": "i32"
+        },
+        {
+          "wrapper": "arc-mutex",
+          "inner": "cell"
+        },
+        {
+          "wrapper": "arc-mutex",
+          "inner": "rc"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "wrapper": "arc",
+            "inner": "i32"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-arc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "arc",
+            "inner": "cell"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-arc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "arc",
+            "inner": "rc"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-arc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "mutex",
+            "inner": "i32"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-mutex",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "mutex",
+            "inner": "cell"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-mutex",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "mutex",
+            "inner": "rc"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-mutex",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "arc-mutex",
+            "inner": "i32"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-mutex",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-arc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "arc-mutex",
+            "inner": "cell"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-mutex",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-arc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "wrapper": "arc-mutex",
+            "inner": "rc"
+          },
+          "steps": [
+            {
+              "step": "spawn",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "questions",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "arc-cell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "i32",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "guard",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "rules",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-mutex",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrap-arc",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "threads",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 15,
+      "styles": [
+        "hand-drawn"
+      ],
+      "families": [
+        "quadrant"
+      ],
+      "entry": {
+        "step": "spawn",
+        "settings": {
+          "wrapper": "arc-mutex",
+          "inner": "cell"
+        }
+      },
+      "sourceHash": "41b39a7d23620c5a9903e4d90416aa63b1d9edb9a311e5903142e972d97d7b19",
+      "snapshotHashes": [
+        "4fd158cb4f772bf2d135dfb1011f9a4d479c182b138529ed458c1b4b190684a2",
+        "78a9a729c6f84191533fec58a4e090f1f84a0bb9dee934816e4765b4e8c81db6",
+        "9478caa087dca31d8a72428e25b9204134504b3c8286748aa39f338bd75f8016",
+        "1a92d8011105fc96b76798dd11b1ac160d9a183c4868cf1bdeefbc42cafb2023",
+        "8d94550f2af1e01baf1cadb77f20353e442093834c4291df8ee1e6d83bcd47ca",
+        "c523437e8ac2f26112b49dea6995f8165d5e69319ccb0298a584de0c23534fd1",
+        "770062c12bf517047cbdc4b757fe76183d5686b45dc3c6dc1bd8c8d8cd9bfd5f",
+        "767090004a94a4ac53258009da6771c1b50395bac803c68bbec26a22d6ee2c49",
+        "9a5f3269ec96df8e69242a8131e1dc7677118cf00bc0d77f916af5fae38d6ced",
+        "c1da7e370cda0f0ccbe1ee03d0c924076e05bf059912fd110de489b8acf7744f",
+        "7fdae0eb9b48aae59bb166cc34964e788f2465f01a99014ccc30bec344951353",
+        "6afd4fde2b96111fe256ffcf8d317a766d96f309691b441c6ee8a40f63bb1964",
+        "144ad0507197af1e2d3a45b472ffba1e462e35446d0dc73462d82a68c1921cd9",
+        "81bd2e7ee040f74d0ab66ba052bd13d1258c93e11e5d6100ee6a3fc840abee74",
+        "4e6807c8c9a88b4aa2abcc5911e82a66e67391f8f6be59c9a868f6f20133d78b"
+      ]
+    },
+    {
+      "id": "ext4-space",
+      "title": "Where does an empty ext4 filesystem’s space go?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "size": "1g",
+          "reserve": "5"
+        },
+        {
+          "size": "1g",
+          "reserve": "1"
+        },
+        {
+          "size": "1g",
+          "reserve": "0"
+        },
+        {
+          "size": "1t",
+          "reserve": "5"
+        },
+        {
+          "size": "1t",
+          "reserve": "1"
+        },
+        {
+          "size": "1t",
+          "reserve": "0"
+        },
+        {
+          "size": "20t",
+          "reserve": "5"
+        },
+        {
+          "size": "20t",
+          "reserve": "1"
+        },
+        {
+          "size": "20t",
+          "reserve": "0"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "size": "1g",
+            "reserve": "5"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "1g",
+            "reserve": "1"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "chosen",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "1g",
+            "reserve": "0"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "chosen",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "1t",
+            "reserve": "5"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "1t",
+            "reserve": "1"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "chosen",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "1t",
+            "reserve": "0"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "chosen",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "20t",
+            "reserve": "5"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "20t",
+            "reserve": "1"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "chosen",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "size": "20t",
+            "reserve": "0"
+          },
+          "steps": [
+            {
+              "step": "df",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "reserve",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "inodes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "journal",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "other",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "chosen",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "sizes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 15,
+      "styles": [
+        "github-light"
+      ],
+      "families": [
+        "pie"
+      ],
+      "entry": {
+        "step": "df",
+        "settings": {
+          "size": "1t",
+          "reserve": "5"
+        }
+      },
+      "sourceHash": "0ae5ad770cfc88a689ad1c185adc87f387485f8c3e3541f510f4c66ae8459ec5",
+      "snapshotHashes": [
+        "5a679262dc398f39cfbb6dbd07f94b54c74da143265e740d55724695d3ac6c8f",
+        "cb6cbbf5261f137ce46ebb2777281f2570e1ca3482a39654a29b396241836670",
+        "0e0e9310c768dec4baee87cabacbd4e5724b13e8626e4b86b92d4129bfcb28af",
+        "a8731c688c06b676f81cc31d8907031d38317175f04ab3b1fe1a2fb4ccb09734",
+        "df9d5bae5d497e8daca297c5c35ece9d06f2fc1d79fe9234b9c1c0a18522aadf",
+        "cffc64d904a3e26a040fe5791072fcc503613343f1d9a687c3e1b043bd64161b",
+        "224c02248a99121f7c0bd73672546ab1ace26e1891c6761146f55a31aa10154c",
+        "36a957460721b0a2d4b901f2c7c827f3752a6dde3d34126729f007f127881ae0",
+        "8e57968ae9739ed2513df4f5bdb05b53c4d022fe54fca6666238eec7ee382f76",
+        "55783d577472eac14a244850fd7a62a1bebd5ee20d548f8c317dc0317288e0e4",
+        "962606caf2fa59403b1ce47dd0a7300dfb417901e2564b23ee779088407a277a",
+        "19bc799e2cbe033e3eaa7024828c4415f6fcdd23eaa19f917d70e2fff39b7229",
+        "ed411e76c7a120f91c3d4a57ff12ed58c5e9596b681b66f3ea58ee5a7761683d",
+        "7c9b64c6a60f4e567d31c2641ebcfa8dd5de3ff17e091102aaaa8c88f4bbebfb",
+        "6344acffe966fd8cc84667b77ad9e1aeea9e26befc865dd0395b49102496cf4e"
+      ]
+    },
+    {
+      "id": "token-bucket",
+      "title": "How does a token bucket let a burst through but refuse a flood?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "rate": "1"
+        },
+        {
+          "rate": "2"
+        },
+        {
+          "rate": "4"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "rate": "1"
+          },
+          "steps": [
+            {
+              "step": "balance",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "burst",
+              "reviewed": true,
+              "targets": [
+                "request:R5",
+                "request:R6"
+              ],
+              "labels": [
+                "200",
+                "429"
+              ]
+            },
+            {
+              "step": "refill",
+              "reviewed": true,
+              "targets": [
+                "balance:found:R7",
+                "balance:found:R7:value"
+              ],
+              "labels": [
+                "R7: 0.5"
+              ]
+            },
+            {
+              "step": "later",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "trace",
+              "reviewed": true,
+              "targets": [
+                "1 / s",
+                "2 / s",
+                "4 / s",
+                "result:1:R6:429",
+                "result:1:R7:429",
+                "result:1:R9:429",
+                "result:2:R6:429",
+                "result:2:R9:429",
+                "result:4:R6:429"
+              ],
+              "labels": [
+                "1 / s",
+                "2 / s",
+                "4 / s"
+              ]
+            }
+          ]
+        },
+        {
+          "settings": {
+            "rate": "2"
+          },
+          "steps": [
+            {
+              "step": "balance",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "burst",
+              "reviewed": true,
+              "targets": [
+                "request:R5",
+                "request:R6"
+              ],
+              "labels": [
+                "200",
+                "429"
+              ]
+            },
+            {
+              "step": "refill",
+              "reviewed": true,
+              "targets": [
+                "balance:found:R7",
+                "balance:found:R7:value"
+              ],
+              "labels": [
+                "R7: 1.0"
+              ]
+            },
+            {
+              "step": "later",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "trace",
+              "reviewed": true,
+              "targets": [
+                "1 / s",
+                "2 / s",
+                "4 / s",
+                "result:1:R6:429",
+                "result:1:R7:429",
+                "result:1:R9:429",
+                "result:2:R6:429",
+                "result:2:R9:429",
+                "result:4:R6:429"
+              ],
+              "labels": [
+                "1 / s",
+                "2 / s",
+                "4 / s"
+              ]
+            }
+          ]
+        },
+        {
+          "settings": {
+            "rate": "4"
+          },
+          "steps": [
+            {
+              "step": "balance",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "burst",
+              "reviewed": true,
+              "targets": [
+                "request:R5",
+                "request:R6"
+              ],
+              "labels": [
+                "200",
+                "429"
+              ]
+            },
+            {
+              "step": "refill",
+              "reviewed": true,
+              "targets": [
+                "balance:found:R7",
+                "balance:found:R7:value"
+              ],
+              "labels": [
+                "R7: 2.0"
+              ]
+            },
+            {
+              "step": "later",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "trace",
+              "reviewed": true,
+              "targets": [
+                "1 / s",
+                "2 / s",
+                "4 / s",
+                "result:1:R6:429",
+                "result:1:R7:429",
+                "result:1:R9:429",
+                "result:2:R6:429",
+                "result:2:R9:429",
+                "result:4:R6:429"
+              ],
+              "labels": [
+                "1 / s",
+                "2 / s",
+                "4 / s"
+              ]
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "balance",
+        "settings": {
+          "rate": "2"
+        }
+      },
+      "sourceHash": "543664a20727dc217b1a7c197a8f64debd7ae4dbbcd068a1f9a49a5643376224",
+      "snapshotHashes": []
+    },
+    {
+      "id": "float-sum",
+      "title": "Why is 0.1 + 0.2 not 0.3?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "sum": "two-tenths"
+        },
+        {
+          "sum": "three-tenths"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "sum": "two-tenths"
+          },
+          "steps": [
+            {
+              "step": "surprise",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stored",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "line",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "predict",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "round",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "print",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "others",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "sum": "three-tenths"
+          },
+          "steps": [
+            {
+              "step": "surprise",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stored",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "line",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "predict",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "round",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "print",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "others",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "surprise",
+        "settings": {
+          "sum": "two-tenths"
+        }
+      },
+      "sourceHash": "6585999c2422fa63b7a2d986434a27fe32fe7d4f3576cd18f511059bd72cacd2",
+      "snapshotHashes": []
+    },
+    {
+      "id": "unified-diff",
+      "title": "Why does a patch still apply after the file has changed?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "copy": "moved"
+        },
+        {
+          "copy": "edited"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "copy": "moved"
+          },
+          "steps": [
+            {
+              "step": "patch",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "header",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "apply",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "yours",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "search",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "result",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrong",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "copy": "edited"
+          },
+          "steps": [
+            {
+              "step": "patch",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "header",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "apply",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "yours",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "search",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "result",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "wrong",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "patch",
+        "settings": {
+          "copy": "moved"
+        }
+      },
+      "sourceHash": "9e56c2c592a7fe86dcdc46d02e386e260d8307bf487471a0da16d5e3aaf494b6",
       "snapshotHashes": []
     },
     {
@@ -2283,8 +4581,7 @@
           "order": "new-first"
         }
       },
-      "sourceHash": "5b2747f03f884fe35656be20279a6ceabd98de3bd418782cbe56457387dabf9e",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "ff75dabbf1258e5f3de01b5d71260cd6247441871a5cc17396001e01fd60241d",
       "snapshotHashes": []
     },
     {
@@ -2608,8 +4905,7 @@
           "host": "informed"
         }
       },
-      "sourceHash": "57ff1948ea4fdafd029cfc1b5aa2adec6f1317f0db8934b21e1b0e187e9ece0e",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "f0dbea946bd697638c7deb12938cbefd000e96312d0bd5c28f40aca91d7dcdcb",
       "snapshotHashes": []
     },
     {
@@ -2985,8 +5281,61 @@
           "people": "23"
         }
       },
-      "sourceHash": "28a2a6421865c4518e21ea96b19e2b66521c72b26372468cd34d5b04ddff4ecc",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "3805041576601d6fabae3ed7c59bc33b414b8728ca118b46a656a5c85ae9ee70",
+      "snapshotHashes": []
+    },
+    {
+      "id": "galton-board",
+      "title": "Why do balls dropped through pegs pile up in a bell shape?",
+      "lang": "en",
+      "scenarios": [
+        {}
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {},
+          "steps": [
+            {
+              "step": "drop",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "predict",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "pile",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "paths",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "bell",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "edges",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "drop",
+        "settings": {}
+      },
+      "sourceHash": "eabfdcf2cefa60be53c8c6cfd046037218d01b98838e43a0c57485846cd4af3a",
       "snapshotHashes": []
     },
     {
@@ -3306,8 +5655,7 @@
           "timing": "syncopated"
         }
       },
-      "sourceHash": "8188791934cf986711b4dfca4edd99373afb828ac1711dd33f6a9abe420c4bb3",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "abf6082a872651dd95ec1292034c779ffa862d322030ff6f8c2caea6591b903d",
       "snapshotHashes": []
     },
     {
@@ -3601,8 +5949,7 @@
           "place": "london"
         }
       },
-      "sourceHash": "5a9a99cff65f11d1c9a103852dc5c6743e098a7a1860e119a181dc5c31a1f08e",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "f1755633c01dff25b8baf3dc08358d75ef013e3f58f29ded5b96d2cf4b2b6863",
       "snapshotHashes": []
     },
     {
@@ -3611,26 +5958,46 @@
       "lang": "en",
       "scenarios": [
         {
-          "street": "manhattan"
+          "place": "manhattan"
         },
         {
-          "street": "west"
+          "place": "chicago"
         }
       ],
       "narrowOpenings": [
         {
           "settings": {
-            "street": "manhattan"
+            "place": "manhattan"
           },
           "steps": [
             {
               "step": "street",
               "reviewed": true,
               "targets": [
-                "henge-street"
+                "henge-view-window:0",
+                "henge-view-name:aligned",
+                "henge-view-legend"
               ],
               "labels": [
-                "42nd Street: about 29° north of west"
+                "25 May",
+                "Half Sun, 25 May 2026, 8:14 pm EDT"
+              ]
+            },
+            {
+              "step": "evenings",
+              "reviewed": true,
+              "targets": [
+                "henge-view-window:0",
+                "henge-view-name:before",
+                "henge-view-name:aligned",
+                "henge-view-name:after",
+                "henge-view-aside"
+              ],
+              "labels": [
+                "18 May",
+                "25 May",
+                "1 June",
+                "18 March: 29.4° left"
               ]
             },
             {
@@ -3644,9 +6011,28 @@
               ],
               "labels": [
                 "Sunset",
-                "29.1° north of west",
+                "29.0° north of west",
                 "Sunrise",
-                "29.1° north of east"
+                "29.0° north of east"
+              ]
+            },
+            {
+              "step": "globe",
+              "reviewed": true,
+              "targets": [
+                "henge-globe:seen",
+                "henge-globe-here",
+                "henge-globe-sun:aligned",
+                "henge-globe-key"
+              ],
+              "labels": [
+                "New York",
+                "25 May",
+                "Red: the street,",
+                "carried on",
+                "Gold: Sun overhead",
+                "at each half Sun",
+                "Meeting at 21.2° N"
               ]
             },
             {
@@ -3697,20 +6083,21 @@
               "reviewed": true,
               "targets": [
                 "henge-annual",
-                "May",
-                "July"
+                "25 May",
+                "16 July",
+                "henge-annual-street"
               ],
               "labels": [
-                "Street: 29° N of west",
-                "Yellow: sunset direction",
+                "Gold: the half Sun’s direction, 2026",
                 "due west",
-                "Mar",
-                "Jun",
-                "Sep",
+                "Jan",
+                "Apr",
+                "Jul",
+                "Oct",
                 "Dec",
-                "Mar",
-                "May",
-                "July"
+                "42nd Street",
+                "25 May",
+                "16 July"
               ]
             },
             {
@@ -3732,17 +6119,37 @@
         },
         {
           "settings": {
-            "street": "west"
+            "place": "chicago"
           },
           "steps": [
             {
               "step": "street",
               "reviewed": true,
               "targets": [
-                "henge-street"
+                "henge-view-window:0",
+                "henge-view-name:aligned",
+                "henge-view-legend"
               ],
               "labels": [
-                "A street pointing due west"
+                "18 March",
+                "Half Sun, 18 March 2026, 6:59 pm CDT"
+              ]
+            },
+            {
+              "step": "evenings",
+              "reviewed": true,
+              "targets": [
+                "henge-view-window:0",
+                "henge-view-name:before",
+                "henge-view-name:aligned",
+                "henge-view-name:after",
+                "henge-view-aside"
+              ],
+              "labels": [
+                "11 March",
+                "18 March",
+                "25 March",
+                "25 May: 29.7° right"
               ]
             },
             {
@@ -3756,9 +6163,28 @@
               ],
               "labels": [
                 "Sunset",
-                "due west",
+                "0.2° south of west",
                 "Sunrise",
-                "due east"
+                "0.2° south of east"
+              ]
+            },
+            {
+              "step": "globe",
+              "reviewed": true,
+              "targets": [
+                "henge-globe:seen",
+                "henge-globe-here",
+                "henge-globe-sun:aligned",
+                "henge-globe-key"
+              ],
+              "labels": [
+                "Chicago",
+                "18 March",
+                "Red: the street,",
+                "carried on",
+                "Gold: Sun overhead",
+                "at each half Sun",
+                "Meeting at 0.5° S"
               ]
             },
             {
@@ -3781,7 +6207,7 @@
                 "June",
                 "Street",
                 "Pole",
-                "New York’s horizon"
+                "Chicago’s horizon"
               ]
             },
             {
@@ -3809,19 +6235,21 @@
               "reviewed": true,
               "targets": [
                 "henge-annual",
-                "March",
-                "September"
+                "18 March",
+                "23 September",
+                "henge-annual-street"
               ],
               "labels": [
-                "Street: due west",
-                "Yellow: sunset direction",
-                "Mar",
-                "Jun",
-                "Sep",
+                "Gold: the half Sun’s direction, 2026",
+                "Jan",
+                "Apr",
+                "Jul",
+                "Oct",
                 "Dec",
-                "Mar",
-                "March",
-                "September"
+                "Randolph Street",
+                "0.2° south of west",
+                "18 March",
+                "23 September"
               ]
             },
             {
@@ -3848,11 +6276,10 @@
       "entry": {
         "step": "street",
         "settings": {
-          "street": "manhattan"
+          "place": "manhattan"
         }
       },
-      "sourceHash": "2888fbd446b469fc505e5166c2da529fcec55e9152fd3481493a328b86e3cee4",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "731bd438c9d177cf8ac842f03e9c93f72b9a491e02c0db90fbca53354d4811d6",
       "snapshotHashes": []
     },
     {
@@ -4122,8 +6549,7 @@
           "second": "madrid"
         }
       },
-      "sourceHash": "78660be5d8d3d0847e923a9648234e99c8c7fb8dd2160f29dcbdbca75899b4a3",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "050bebfddee0ccb6c8b13d5b060b30c3dca94e0a1524985e7ff7cc72569b9f9c",
       "snapshotHashes": []
     },
     {
@@ -4310,8 +6736,7 @@
           "attacker": "yes"
         }
       },
-      "sourceHash": "b655d7fe2d76851a4e666142ebc9f1b9b4782f91432ecc1b45d9f8bf28bef203",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "2f172e466c574aa8c378cbe8e32df6fc4e919a3b20edd008bd94134fea84f622",
       "snapshotHashes": [
         "1b2e5e13445daa61a54f7d801e3534dfc7b939d1127ca679d03b5df3ba9c1adc",
         "c827eb230c8650a45d898695fd57fcc69495c871be6b23d07f3730a07b4d9e82",
@@ -4420,8 +6845,7 @@
           "change": "add"
         }
       },
-      "sourceHash": "b19addda539ff2d5b65e74acc618734f9c3b26a8c566a2f568374c0e81cf9f85",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "039e9db57dbf15c62f19cf49a68226cd03259e136dfd494bc13961362a48c41a",
       "snapshotHashes": [
         "093f0f768a6ad6fd8e08825a122ac9d134e4ff9165db183d55e86eb943c01958",
         "8f34fbddeebbc2b4c7a5e0e794342bac45c750370dabd4ae359db1c9710b70d2",
@@ -4430,216 +6854,6 @@
         "1874644c18791eba41b52f2d49d5d4e73e2e07994d77d2f89786bc04af03ae26",
         "2338cb0ab8744bd645473f53a8c5809a95584be295c6ae8a660ee332b3fff938"
       ]
-    },
-    {
-      "id": "token-bucket",
-      "title": "How does a token bucket let a burst through but refuse a flood?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "rate": "1"
-        },
-        {
-          "rate": "2"
-        },
-        {
-          "rate": "4"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "rate": "1"
-          },
-          "steps": [
-            {
-              "step": "balance",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "burst",
-              "reviewed": true,
-              "targets": [
-                "request:R5",
-                "request:R6"
-              ],
-              "labels": [
-                "200",
-                "429"
-              ]
-            },
-            {
-              "step": "refill",
-              "reviewed": true,
-              "targets": [
-                "balance:found:R7",
-                "balance:found:R7:value"
-              ],
-              "labels": [
-                "R7: 0.5"
-              ]
-            },
-            {
-              "step": "later",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "trace",
-              "reviewed": true,
-              "targets": [
-                "1 / s",
-                "2 / s",
-                "4 / s",
-                "result:1:R6:429",
-                "result:1:R7:429",
-                "result:1:R9:429",
-                "result:2:R6:429",
-                "result:2:R9:429",
-                "result:4:R6:429"
-              ],
-              "labels": [
-                "1 / s",
-                "2 / s",
-                "4 / s"
-              ]
-            }
-          ]
-        },
-        {
-          "settings": {
-            "rate": "2"
-          },
-          "steps": [
-            {
-              "step": "balance",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "burst",
-              "reviewed": true,
-              "targets": [
-                "request:R5",
-                "request:R6"
-              ],
-              "labels": [
-                "200",
-                "429"
-              ]
-            },
-            {
-              "step": "refill",
-              "reviewed": true,
-              "targets": [
-                "balance:found:R7",
-                "balance:found:R7:value"
-              ],
-              "labels": [
-                "R7: 1.0"
-              ]
-            },
-            {
-              "step": "later",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "trace",
-              "reviewed": true,
-              "targets": [
-                "1 / s",
-                "2 / s",
-                "4 / s",
-                "result:1:R6:429",
-                "result:1:R7:429",
-                "result:1:R9:429",
-                "result:2:R6:429",
-                "result:2:R9:429",
-                "result:4:R6:429"
-              ],
-              "labels": [
-                "1 / s",
-                "2 / s",
-                "4 / s"
-              ]
-            }
-          ]
-        },
-        {
-          "settings": {
-            "rate": "4"
-          },
-          "steps": [
-            {
-              "step": "balance",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "burst",
-              "reviewed": true,
-              "targets": [
-                "request:R5",
-                "request:R6"
-              ],
-              "labels": [
-                "200",
-                "429"
-              ]
-            },
-            {
-              "step": "refill",
-              "reviewed": true,
-              "targets": [
-                "balance:found:R7",
-                "balance:found:R7:value"
-              ],
-              "labels": [
-                "R7: 2.0"
-              ]
-            },
-            {
-              "step": "later",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "trace",
-              "reviewed": true,
-              "targets": [
-                "1 / s",
-                "2 / s",
-                "4 / s",
-                "result:1:R6:429",
-                "result:1:R7:429",
-                "result:1:R9:429",
-                "result:2:R6:429",
-                "result:2:R9:429",
-                "result:4:R6:429"
-              ],
-              "labels": [
-                "1 / s",
-                "2 / s",
-                "4 / s"
-              ]
-            }
-          ]
-        }
-      ],
-      "diagrams": 0,
-      "styles": [],
-      "families": [],
-      "entry": {
-        "step": "balance",
-        "settings": {
-          "rate": "2"
-        }
-      },
-      "sourceHash": "c0c279e348f6b3ba8c6f018a293d187998f3fce7090e207e054cab631961a4b5",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
-      "snapshotHashes": []
     },
     {
       "id": "mr-cache",
@@ -4783,8 +6997,7 @@
           "request": "hit"
         }
       },
-      "sourceHash": "d92c56155923b5f57dd5edda2850b4058aec6f5753db087b897ab4a59244a032",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "6ac198e34c6fd169cbd8563d0ff51d6a9ea3da1fc02f4d49ae1c6f61df86774e",
       "snapshotHashes": [
         "f3bbe8eb3c68b12b9d66737ad6998a55a1bd7334bb2fc56f1af7845c3598c3c4",
         "24e90ff416ca93074780137bb8736298faf7ba1af64ddde42124fadd232d2a8a"
@@ -4792,145 +7005,77 @@
     },
     {
       "id": "state-machine",
-      "title": "Which events can change this session?",
+      "title": "Why does send() throw on a new WebSocket but not after close()?",
       "lang": "en",
       "scenarios": [
         {
-          "events": "success"
+          "when": "connecting"
         },
         {
-          "events": "failure"
+          "when": "closing"
         }
       ],
       "narrowOpenings": [
         {
           "settings": {
-            "events": "success"
+            "when": "connecting"
           },
           "steps": [
             {
-              "step": "reader-path",
+              "step": "ask",
               "reviewed": true,
               "targets": [
-                "reader-picture",
-                "idle",
-                "connecting",
-                "CONNECT"
+                "ws.send(\"hi\");",
+                "The server has not answered yet"
               ],
               "labels": [
-                "idle",
-                "connecting",
-                "open",
-                "CONNECT",
-                "OPENED",
-                "Current state + event → next state"
+                "ws.send(\"hi\");",
+                "The server has not answered yet"
               ]
             },
             {
-              "step": "reader-reject",
-              "reviewed": true,
-              "targets": [
-                "reader-picture",
-                "InvalidTransition",
-                "State stays closed"
-              ],
-              "labels": [
-                "CLOSE → closed",
-                "closed",
-                "OPENED",
-                "closed",
-                "×",
-                "InvalidTransition",
-                "State stays closed"
-              ]
+              "step": "answer",
+              "reviewed": false,
+              "reason": "no-opening-subject"
             },
             {
-              "step": "machine",
+              "step": "open",
               "reviewed": false,
-              "reason": "detail-step"
+              "reason": "no-opening-subject"
             },
             {
-              "step": "connect",
+              "step": "send",
               "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "opened",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "close",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "terminal",
-              "reviewed": false,
-              "reason": "detail-step"
+              "reason": "no-opening-subject"
             }
           ]
         },
         {
           "settings": {
-            "events": "failure"
+            "when": "closing"
           },
           "steps": [
             {
-              "step": "reader-path",
+              "step": "ask",
               "reviewed": true,
               "targets": [
-                "reader-picture",
-                "idle",
-                "connecting",
-                "CONNECT"
+                "  ws.send(\"bye\");",
+                "The server accepted, so open fired"
               ],
               "labels": [
-                "idle",
-                "connecting",
-                "closed",
-                "CONNECT",
-                "ERROR",
-                "Current state + event → next state"
+                "  ws.send(\"bye\");",
+                "The server accepted, so open fired"
               ]
             },
             {
-              "step": "reader-reject",
-              "reviewed": true,
-              "targets": [
-                "reader-picture",
-                "InvalidTransition",
-                "State stays closed"
-              ],
-              "labels": [
-                "ERROR → closed",
-                "closed",
-                "OPENED",
-                "closed",
-                "×",
-                "InvalidTransition",
-                "State stays closed"
-              ]
+              "step": "answer",
+              "reviewed": false,
+              "reason": "no-opening-subject"
             },
             {
-              "step": "machine",
+              "step": "closed",
               "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "connect",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "error",
-              "reviewed": false,
-              "reason": "detail-step"
-            },
-            {
-              "step": "terminal",
-              "reviewed": false,
-              "reason": "detail-step"
+              "reason": "no-opening-subject"
             }
           ]
         }
@@ -4943,15 +7088,14 @@
         "state"
       ],
       "entry": {
-        "step": "reader-path",
+        "step": "ask",
         "settings": {
-          "events": "success"
+          "when": "connecting"
         }
       },
-      "sourceHash": "c2ebe04645394177479f897da792ccd66abaea1b8d6125148dcd231077f64871",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "5a1eff66a09cc5223a665d176b43e4502f7931b242c4a60636f1e6693bdd741e",
       "snapshotHashes": [
-        "40fd77cc3b29a01ae14943f8f12db52fbcfd866345a177f61199424e990ace10"
+        "5d43a118110726d4df95bf8d05695e66bfa6bc24d285c638942bafd1c1de611d"
       ]
     },
     {
@@ -5015,8 +7159,7 @@
         "step": "machine",
         "settings": {}
       },
-      "sourceHash": "9767caa7b21338f8f69a30c4b0b7d47c84d11ebf165a8bdca37362faab6ebf7e",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "36e677325ecec320fb1c02803a95c740532c3bc0dbfcc381bee335ce7dbb28df",
       "snapshotHashes": []
     },
     {
@@ -5156,8 +7299,7 @@
           "operations": "wrap"
         }
       },
-      "sourceHash": "3a7cf252665c4750df870ed0f4a8c69d3bdbf23e66677a1e406f0904d7a1660c",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "f69beb4cf7c66a6b866e3f6cbe7984aa7d19238eb5c6cde9c6c3a1b87ef9b88f",
       "snapshotHashes": []
     },
     {
@@ -5245,8 +7387,7 @@
         "step": "ask",
         "settings": {}
       },
-      "sourceHash": "72f952cae460fd81a320daf405d6ffe962b2af739823b5f35506d97a66aa3a69",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "5778726957ad41f7842c0f5b6e84ef423aac8d362fee0e9f0639251a0cdbe204",
       "snapshotHashes": [
         "dee24d0d24b0b781ba42c174c77f6e5a19e48982796919f302547b555b4a08f9",
         "eebc13cc82e0c901f40745955240a99181de6d61f32da2cae1f4d8f95c704840"
@@ -5354,8 +7495,7 @@
         "step": "reader-pipeline",
         "settings": {}
       },
-      "sourceHash": "16ae39fd3c64f1f429c2859879a2c6e76879868cde7826aa83a22252fd8547d9",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "2ea4d72ea0e4698e27ffc70339443ab155c4449e7d5f76b21b95948d8fa87fc0",
       "snapshotHashes": [
         "1941585925df6de6dd5826ae4b186913e4827ee5e20ce9f4266de21646f4acb0",
         "32a59a4f029b9cb2f626bd798a53fcccc6914a95a4b9f83745c7007ad294b945",
@@ -5956,8 +8096,7 @@
           "rule": "fixed30"
         }
       },
-      "sourceHash": "02f12dc423e5e34b891ebed678f0d38795408cace93c836f339bced6ea0327a1",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "46af3cb9da4c59c1ddffbe784cebc6d4c5c9dd4a47850e1fc9156d8d9acfc4ae",
       "snapshotHashes": [
         "bf218aacad5f636db137d2a1ead19529d90ecc03a84675cda2d7eff62bec07c9",
         "2c1f4321718a5408d86ba02c07ab422a6b068d963649e0402b2403a1e9d7b539",
@@ -6927,8 +9066,7 @@
           "revenu": "65673.88"
         }
       },
-      "sourceHash": "34b1c909a5f2cb855c7bc2fbb1e09d33ab2b8fd50b64d36d0f0d631b77f34268",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "9a99bb9753c9097413defaba9257fb9bb2db3432d18413a4ac8c880e41bd2141",
       "snapshotHashes": [
         "79f7488fbe87f7f683091f4a30123e736bed90cf16358d6ee8b1f4399fc8b117",
         "34c19424b0365d49643b2115b62683895ac6794801fd4c1509ef385deeb5b46d",
@@ -6956,621 +9094,6 @@
         "e9bd111b02380e51ed53b4a1cd94b639c60e4125d3241c58cc5786a6194a8e23",
         "58e20cc625b440f5610b715388f05702b04f6b1baa4ab8538f8d6024f20dad57",
         "1cd21162827e3a72cc0320ef75b030766afb06d9e975363fd11f401b568fed2c"
-      ]
-    },
-    {
-      "id": "send-sync",
-      "title": "Can this Rust value cross a thread boundary?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "wrapper": "arc",
-          "inner": "i32"
-        },
-        {
-          "wrapper": "arc",
-          "inner": "cell"
-        },
-        {
-          "wrapper": "arc",
-          "inner": "rc"
-        },
-        {
-          "wrapper": "mutex",
-          "inner": "i32"
-        },
-        {
-          "wrapper": "mutex",
-          "inner": "cell"
-        },
-        {
-          "wrapper": "mutex",
-          "inner": "rc"
-        },
-        {
-          "wrapper": "arc-mutex",
-          "inner": "i32"
-        },
-        {
-          "wrapper": "arc-mutex",
-          "inner": "cell"
-        },
-        {
-          "wrapper": "arc-mutex",
-          "inner": "rc"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "wrapper": "arc",
-            "inner": "i32"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-arc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "arc",
-            "inner": "cell"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-arc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "arc",
-            "inner": "rc"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-arc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "mutex",
-            "inner": "i32"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-mutex",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "mutex",
-            "inner": "cell"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-mutex",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "mutex",
-            "inner": "rc"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-mutex",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "arc-mutex",
-            "inner": "i32"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-mutex",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-arc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "arc-mutex",
-            "inner": "cell"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-mutex",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-arc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "wrapper": "arc-mutex",
-            "inner": "rc"
-          },
-          "steps": [
-            {
-              "step": "spawn",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "questions",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "arc-cell",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "i32",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "guard",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "rules",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-mutex",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "wrap-arc",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "threads",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        }
-      ],
-      "diagrams": 15,
-      "styles": [
-        "hand-drawn"
-      ],
-      "families": [
-        "quadrant"
-      ],
-      "entry": {
-        "step": "spawn",
-        "settings": {
-          "wrapper": "arc-mutex",
-          "inner": "cell"
-        }
-      },
-      "sourceHash": "2ba0449952a5da4495ca1bd4c3350a4c0055fd2d1b8fc7c4c6fcf86851da374b",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
-      "snapshotHashes": [
-        "4fd158cb4f772bf2d135dfb1011f9a4d479c182b138529ed458c1b4b190684a2",
-        "78a9a729c6f84191533fec58a4e090f1f84a0bb9dee934816e4765b4e8c81db6",
-        "9478caa087dca31d8a72428e25b9204134504b3c8286748aa39f338bd75f8016",
-        "1a92d8011105fc96b76798dd11b1ac160d9a183c4868cf1bdeefbc42cafb2023",
-        "8d94550f2af1e01baf1cadb77f20353e442093834c4291df8ee1e6d83bcd47ca",
-        "c523437e8ac2f26112b49dea6995f8165d5e69319ccb0298a584de0c23534fd1",
-        "770062c12bf517047cbdc4b757fe76183d5686b45dc3c6dc1bd8c8d8cd9bfd5f",
-        "767090004a94a4ac53258009da6771c1b50395bac803c68bbec26a22d6ee2c49",
-        "9a5f3269ec96df8e69242a8131e1dc7677118cf00bc0d77f916af5fae38d6ced",
-        "c1da7e370cda0f0ccbe1ee03d0c924076e05bf059912fd110de489b8acf7744f",
-        "7fdae0eb9b48aae59bb166cc34964e788f2465f01a99014ccc30bec344951353",
-        "6afd4fde2b96111fe256ffcf8d317a766d96f309691b441c6ee8a40f63bb1964",
-        "144ad0507197af1e2d3a45b472ffba1e462e35446d0dc73462d82a68c1921cd9",
-        "81bd2e7ee040f74d0ab66ba052bd13d1258c93e11e5d6100ee6a3fc840abee74",
-        "4e6807c8c9a88b4aa2abcc5911e82a66e67391f8f6be59c9a868f6f20133d78b"
       ]
     },
     {
@@ -7964,162 +9487,12 @@
           "stop": "airport"
         }
       },
-      "sourceHash": "125b361329d5d47c68a54fda8f21190081e0d6e2b00a635ec50aff00c291f6cf",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "9edc7d26ef54269a55c0935f34937b6cc107344e7e054e6b5e63bca79374ef7a",
       "snapshotHashes": [
         "cd71f0b575846a3fe61b9503ef486dd33e1705d4d5bd75dc7323aaf1dd9fcb11",
         "05d4ce296d9dfad6be335223138150d91599e26f9c0d4b0eccb40e584d1cb3c1",
         "da4ab5f6a030b98909ab0a1dc7546b83cbaa46dee71e91d75bd145f6d418f53e",
         "f859b3da9526b13da423f4fb15b9631fb8daaf932b22988d29f6f9bc898e304e"
-      ]
-    },
-    {
-      "id": "pg-page",
-      "title": "Why can int4 and int8 rows take the same space?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "column": "int4"
-        },
-        {
-          "column": "int8"
-        },
-        {
-          "column": "int4-text"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "column": "int4"
-          },
-          "steps": [
-            {
-              "step": "page",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "row",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "swap",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "full",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "compare",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "column": "int8"
-          },
-          "steps": [
-            {
-              "step": "page",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "row",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "swap",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "full",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "compare",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "column": "int4-text"
-          },
-          "steps": [
-            {
-              "step": "page",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "row",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "swap",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "full",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "compare",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        }
-      ],
-      "diagrams": 3,
-      "styles": [
-        "pen-and-ink"
-      ],
-      "families": [
-        "pie"
-      ],
-      "entry": {
-        "step": "page",
-        "settings": {
-          "column": "int4"
-        }
-      },
-      "sourceHash": "f73795a7dc100c7ab516e6cf20153ee9567d0a878a3777418fc6f2ce4c549478",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
-      "snapshotHashes": [
-        "4a7a5b053ff641045163a856d33724ceb7af1403050bf1ad89d20a56717b137c",
-        "8b73d0769ce4554bceb1e02be4468214a79215da07d201fe55064162e8963746",
-        "7771c50ce5a4c3e074ea0252de20e494b459c77cad9a03e3129315f030179433"
       ]
     },
     {
@@ -8565,8 +9938,7 @@
           "pods": "3-1-0"
         }
       },
-      "sourceHash": "c10b04ce97f2eaeaad0006068c3454c189259e3821f31cb9823335d1a8ee5f20",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "5d6d92df4754527bd0562af409c77430dbc3a1268e3a758ea98cafa9ed09216e",
       "snapshotHashes": [
         "adaa1c2e5fdf84d606811cd570f88d9b5f183dc80c21e817e7e9fb5f2af9f695",
         "5c866852560a077e3cb74ee88a9731e4521ec9b06fa5e52e2553e008cace4cf5",
@@ -9224,8 +10596,405 @@
           "guard": "isdigit"
         }
       },
-      "sourceHash": "4bb549d2d5cf252c4476830a36b65662354589161d9a6dc4d10e77f052b59cbd",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "c81552f4620e313932f4c536838a70f4fc4d97da494fc31d6222dd0ddd080415",
+      "snapshotHashes": []
+    },
+    {
+      "id": "string-length",
+      "title": "Why does one word have three lengths?",
+      "lang": "en",
+      "scenarios": [
+        {}
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {},
+          "steps": [
+            {
+              "step": "question",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "points",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "bytes",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "characters",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "predict",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "hebrew",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "table",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "cut",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "question",
+        "settings": {}
+      },
+      "sourceHash": "b021902bba800778e80bb27d48102a124c718b88462e28bcde58e0d3c145cc52",
+      "snapshotHashes": []
+    },
+    {
+      "id": "periodic-groups",
+      "title": "Why does the periodic table have this shape?",
+      "lang": "en",
+      "scenarios": [
+        {
+          "element": "na"
+        },
+        {
+          "element": "cl"
+        },
+        {
+          "element": "fe"
+        },
+        {
+          "element": "cu"
+        },
+        {
+          "element": "he"
+        }
+      ],
+      "narrowOpenings": [
+        {
+          "settings": {
+            "element": "na"
+          },
+          "steps": [
+            {
+              "step": "column",
+              "reviewed": true,
+              "targets": [
+                "periodic-family-comparison"
+              ],
+              "labels": [
+                "Group 1: elements from top to bottom",
+                "H",
+                "1",
+                "Li",
+                "3",
+                "+2",
+                "Na",
+                "11",
+                "+8",
+                "K",
+                "19",
+                "+8",
+                "Rb",
+                "37",
+                "+18",
+                "Cs",
+                "55",
+                "+18",
+                "Fr",
+                "87",
+                "+32",
+                "Group 1",
+                "in the 118-cell table"
+              ]
+            },
+            {
+              "step": "fill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stack",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "names",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "blocks",
+              "reviewed": false,
+              "reason": "detail-step"
+            },
+            {
+              "step": "family",
+              "reviewed": false,
+              "reason": "detail-step"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "element": "cl"
+          },
+          "steps": [
+            {
+              "step": "column",
+              "reviewed": true,
+              "targets": [
+                "periodic-family-comparison"
+              ],
+              "labels": [
+                "Group 17: elements from top to bottom",
+                "F",
+                "9",
+                "Cl",
+                "17",
+                "+8",
+                "Br",
+                "35",
+                "+18",
+                "I",
+                "53",
+                "+18",
+                "At",
+                "85",
+                "+32",
+                "Ts",
+                "117",
+                "+32",
+                "Group 17",
+                "in the 118-cell table"
+              ]
+            },
+            {
+              "step": "fill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stack",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "names",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "blocks",
+              "reviewed": false,
+              "reason": "detail-step"
+            },
+            {
+              "step": "family",
+              "reviewed": false,
+              "reason": "detail-step"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "element": "fe"
+          },
+          "steps": [
+            {
+              "step": "column",
+              "reviewed": true,
+              "targets": [
+                "periodic-family-comparison"
+              ],
+              "labels": [
+                "Group 8: elements from top to bottom",
+                "Fe",
+                "26",
+                "Ru",
+                "44",
+                "+18",
+                "Os",
+                "76",
+                "+32",
+                "Hs",
+                "108",
+                "+32",
+                "Group 8",
+                "in the 118-cell table"
+              ]
+            },
+            {
+              "step": "fill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stack",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "names",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "blocks",
+              "reviewed": false,
+              "reason": "detail-step"
+            },
+            {
+              "step": "family",
+              "reviewed": false,
+              "reason": "detail-step"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "element": "cu"
+          },
+          "steps": [
+            {
+              "step": "column",
+              "reviewed": true,
+              "targets": [
+                "periodic-family-comparison"
+              ],
+              "labels": [
+                "Group 11: elements from top to bottom",
+                "Cu",
+                "29",
+                "Ag",
+                "47",
+                "+18",
+                "Au",
+                "79",
+                "+32",
+                "Rg",
+                "111",
+                "+32",
+                "Group 11",
+                "in the 118-cell table"
+              ]
+            },
+            {
+              "step": "fill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stack",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "names",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "blocks",
+              "reviewed": false,
+              "reason": "detail-step"
+            },
+            {
+              "step": "family",
+              "reviewed": false,
+              "reason": "detail-step"
+            }
+          ]
+        },
+        {
+          "settings": {
+            "element": "he"
+          },
+          "steps": [
+            {
+              "step": "column",
+              "reviewed": true,
+              "targets": [
+                "periodic-family-comparison"
+              ],
+              "labels": [
+                "Group 18: elements from top to bottom",
+                "He",
+                "2",
+                "Ne",
+                "10",
+                "+8",
+                "Ar",
+                "18",
+                "+8",
+                "Kr",
+                "36",
+                "+18",
+                "Xe",
+                "54",
+                "+18",
+                "Rn",
+                "86",
+                "+32",
+                "Og",
+                "118",
+                "+32",
+                "Group 18",
+                "in the 118-cell table"
+              ]
+            },
+            {
+              "step": "fill",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "stack",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "names",
+              "reviewed": false,
+              "reason": "no-opening-subject"
+            },
+            {
+              "step": "blocks",
+              "reviewed": false,
+              "reason": "detail-step"
+            },
+            {
+              "step": "family",
+              "reviewed": false,
+              "reason": "detail-step"
+            }
+          ]
+        }
+      ],
+      "diagrams": 0,
+      "styles": [],
+      "families": [],
+      "entry": {
+        "step": "column",
+        "settings": {
+          "element": "na"
+        }
+      },
+      "sourceHash": "eb1dff041eda555986459224c55ef45ab603c76a4cafca984e516cc4e1cf94d5",
       "snapshotHashes": []
     },
     {
@@ -9658,1326 +11427,10 @@
           "copy": "guest"
         }
       },
-      "sourceHash": "97b0730c14fb016985e0079c53c089580d8d2ddfc006f94ed3baba4788d00b0b",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "2bd1c3d35e3d84d78107a1d6613c4e5b3dab57abc3bb3dbdcec2aa848b48f764",
       "snapshotHashes": [
         "6ee51f5fec3cf6ca7e13ded45430d81d3b5335a046f2a874ac010af69a24493e",
         "08885a881c39104de05f596db33706eb3d4d38777dd15692513d09f97881ad4a"
-      ]
-    },
-    {
-      "id": "ext4-space",
-      "title": "Where does an empty ext4 filesystem’s space go?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "size": "1g",
-          "reserve": "5"
-        },
-        {
-          "size": "1g",
-          "reserve": "1"
-        },
-        {
-          "size": "1g",
-          "reserve": "0"
-        },
-        {
-          "size": "1t",
-          "reserve": "5"
-        },
-        {
-          "size": "1t",
-          "reserve": "1"
-        },
-        {
-          "size": "1t",
-          "reserve": "0"
-        },
-        {
-          "size": "20t",
-          "reserve": "5"
-        },
-        {
-          "size": "20t",
-          "reserve": "1"
-        },
-        {
-          "size": "20t",
-          "reserve": "0"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "size": "1g",
-            "reserve": "5"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "1g",
-            "reserve": "1"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "chosen",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "1g",
-            "reserve": "0"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "chosen",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "1t",
-            "reserve": "5"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "1t",
-            "reserve": "1"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "chosen",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "1t",
-            "reserve": "0"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "chosen",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "20t",
-            "reserve": "5"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "20t",
-            "reserve": "1"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "chosen",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "size": "20t",
-            "reserve": "0"
-          },
-          "steps": [
-            {
-              "step": "df",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "reserve",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "inodes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "journal",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "other",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "chosen",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "sizes",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        }
-      ],
-      "diagrams": 15,
-      "styles": [
-        "github-light"
-      ],
-      "families": [
-        "pie"
-      ],
-      "entry": {
-        "step": "df",
-        "settings": {
-          "size": "1t",
-          "reserve": "5"
-        }
-      },
-      "sourceHash": "706805f133d4bdeb91a16ed4d34cf70f9ae437ad9c03ee17a9a150e76ffb2d41",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
-      "snapshotHashes": [
-        "5a679262dc398f39cfbb6dbd07f94b54c74da143265e740d55724695d3ac6c8f",
-        "cb6cbbf5261f137ce46ebb2777281f2570e1ca3482a39654a29b396241836670",
-        "0e0e9310c768dec4baee87cabacbd4e5724b13e8626e4b86b92d4129bfcb28af",
-        "a8731c688c06b676f81cc31d8907031d38317175f04ab3b1fe1a2fb4ccb09734",
-        "df9d5bae5d497e8daca297c5c35ece9d06f2fc1d79fe9234b9c1c0a18522aadf",
-        "cffc64d904a3e26a040fe5791072fcc503613343f1d9a687c3e1b043bd64161b",
-        "224c02248a99121f7c0bd73672546ab1ace26e1891c6761146f55a31aa10154c",
-        "36a957460721b0a2d4b901f2c7c827f3752a6dde3d34126729f007f127881ae0",
-        "8e57968ae9739ed2513df4f5bdb05b53c4d022fe54fca6666238eec7ee382f76",
-        "55783d577472eac14a244850fd7a62a1bebd5ee20d548f8c317dc0317288e0e4",
-        "962606caf2fa59403b1ce47dd0a7300dfb417901e2564b23ee779088407a277a",
-        "19bc799e2cbe033e3eaa7024828c4415f6fcdd23eaa19f917d70e2fff39b7229",
-        "ed411e76c7a120f91c3d4a57ff12ed58c5e9596b681b66f3ea58ee5a7761683d",
-        "7c9b64c6a60f4e567d31c2641ebcfa8dd5de3ff17e091102aaaa8c88f4bbebfb",
-        "6344acffe966fd8cc84667b77ad9e1aeea9e26befc865dd0395b49102496cf4e"
-      ]
-    },
-    {
-      "id": "trust-proxy",
-      "title": "Which address should Express call the client?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "trust": "true",
-          "request": "client"
-        },
-        {
-          "trust": "true",
-          "request": "forged"
-        },
-        {
-          "trust": "true",
-          "request": "direct"
-        },
-        {
-          "trust": "1",
-          "request": "client"
-        },
-        {
-          "trust": "1",
-          "request": "forged"
-        },
-        {
-          "trust": "1",
-          "request": "direct"
-        },
-        {
-          "trust": "2",
-          "request": "client"
-        },
-        {
-          "trust": "2",
-          "request": "forged"
-        },
-        {
-          "trust": "2",
-          "request": "direct"
-        },
-        {
-          "trust": "list",
-          "request": "client"
-        },
-        {
-          "trust": "list",
-          "request": "forged"
-        },
-        {
-          "trust": "list",
-          "request": "direct"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "trust": "true",
-            "request": "client"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "4",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "1.2.3.4, made up",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "true",
-            "request": "forged"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "4",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "1.2.3.4, made up",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "true",
-            "request": "direct"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "4",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "1.2.3.4, made up",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "1",
-            "request": "client"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "Load balancer",
-                "CDN edge",
-                "Load balancer",
-                "Attacker"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "1",
-            "request": "forged"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "Load balancer",
-                "CDN edge",
-                "Load balancer",
-                "Attacker"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "1",
-            "request": "direct"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "Load balancer",
-                "CDN edge",
-                "Load balancer",
-                "Attacker"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "2",
-            "request": "client"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "2",
-            "request": "forged"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "2",
-            "request": "direct"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "list",
-            "request": "client"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "list",
-            "request": "forged"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "trust": "list",
-            "request": "direct"
-          },
-          "steps": [
-            {
-              "step": "paths",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "follow",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "read",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "routes",
-              "reviewed": true,
-              "targets": [
-                "routes-positions"
-              ],
-              "labels": [
-                "1",
-                "2",
-                "3",
-                "Load balancer",
-                "CDN edge",
-                "Attacker",
-                "Load balancer",
-                "Attacker",
-                "1.2.3.4, made up"
-              ]
-            },
-            {
-              "step": "code",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "requests",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "why",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "ranges",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "table",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        }
-      ],
-      "diagrams": 1,
-      "styles": [
-        "pen-and-ink"
-      ],
-      "families": [
-        "architecture"
-      ],
-      "entry": {
-        "step": "paths",
-        "settings": {
-          "trust": "2",
-          "request": "direct"
-        }
-      },
-      "sourceHash": "a6e095cafe3a30b06c5f17058740420b5be7c4f9ce5ce70c7ce728b718db8299",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
-      "snapshotHashes": [
-        "531da6aa3462ca4d4061911c955fb611db90f0d1c5bba55dea074af1ed603322"
       ]
     },
     {
@@ -11332,8 +11785,7 @@
           "screen": "srgb"
         }
       },
-      "sourceHash": "20570b2c840bcf9c78ede07506584bf24b57fc920e5eb2a1b623c9d733d4377c",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "2d85d32d88aa8f22096c1ec142b038fe45bc7218a4e554578e6620d32039d839",
       "snapshotHashes": [
         "7058dd7a9b9a617abcf241e149ecf0129b49c0687417b37ec04ca206016bc64c",
         "aa0968c3a68d72db7f25df300ca6923dc61da5373fbed1b391c09a196fee570d",
@@ -12008,8 +12460,7 @@
           "participant": "P1"
         }
       },
-      "sourceHash": "a5458bdb2b6ceca9de31e0a2d40dac48f31fd857bc3d819f5a4563152bec4ee5",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "a9b2344da9020afb9684e3d0a974ab6943815a1f8407fe0cf9ce41e0379c4f91",
       "snapshotHashes": [
         "4c7e46195eb12006a43edf10a442ae4f17ef802e0997787ace5b9e6077199fae",
         "1170583b2ba309940ed8059b0e7799e8e4c9e81f13658c91cca2c8ea99764374",
@@ -13409,8 +13860,7 @@
           "guideline": "2.4"
         }
       },
-      "sourceHash": "751afbfbfff894da7258b232e00d684bf6ac965c77a45e0541aa1607bcd00ff8",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "301f08f2d121b2256baa38b86f103c58dbf37458e9fe62d0a87b6d0d47710a80",
       "snapshotHashes": [
         "d3a72b3ee613d950a3c39dc1843e3e3de7489baf05c5e61238f880d6917ffc40",
         "fddd549e08092916914257decac471c3c45787d369ce63a3014d57634bb50a80",
@@ -13432,613 +13882,6 @@
         "b485badc546a2cb916ab902f0deecda8a594426aea5d74fa01d4b2fada34fd95",
         "3109c98ce7861e5e21bde39cf2dd9bfad9de17e08476369f15b5500bd8057d8c",
         "863c6df3705b43f93d97256f3db465b98985e93472ca884cd80addb6bf40470e"
-      ]
-    },
-    {
-      "id": "feature-tour",
-      "title": "How do I write that in Rayner?",
-      "lang": "en",
-      "scenarios": [
-        {
-          "feature": "steps"
-        },
-        {
-          "feature": "settings"
-        },
-        {
-          "feature": "diagram"
-        },
-        {
-          "feature": "code"
-        },
-        {
-          "feature": "code-diff"
-        },
-        {
-          "feature": "diff"
-        },
-        {
-          "feature": "animation"
-        },
-        {
-          "feature": "matching"
-        },
-        {
-          "feature": "keys"
-        },
-        {
-          "feature": "copy"
-        },
-        {
-          "feature": "restore"
-        },
-        {
-          "feature": "write"
-        },
-        {
-          "feature": "arc"
-        },
-        {
-          "feature": "rates"
-        },
-        {
-          "feature": "emphasis"
-        },
-        {
-          "feature": "underline"
-        },
-        {
-          "feature": "brace"
-        },
-        {
-          "feature": "camera"
-        },
-        {
-          "feature": "chart"
-        },
-        {
-          "feature": "number-line"
-        },
-        {
-          "feature": "bars"
-        },
-        {
-          "feature": "decimal"
-        },
-        {
-          "feature": "state"
-        },
-        {
-          "feature": "annotations"
-        },
-        {
-          "feature": "direction"
-        },
-        {
-          "feature": "palette"
-        },
-        {
-          "feature": "math"
-        },
-        {
-          "feature": "drawing"
-        },
-        {
-          "feature": "globe"
-        }
-      ],
-      "narrowOpenings": [
-        {
-          "settings": {
-            "feature": "steps"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "settings"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "diagram"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "code"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "code-diff"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "diff"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "animation"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "matching"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "keys"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "copy"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "restore"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "write"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "arc"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "rates"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "emphasis"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "underline"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "brace"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "camera"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "chart"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "number-line"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "bars"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "decimal"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "state"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "annotations"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "direction"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "palette"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "math"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "drawing"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        },
-        {
-          "settings": {
-            "feature": "globe"
-          },
-          "steps": [
-            {
-              "step": "recipe",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            },
-            {
-              "step": "result",
-              "reviewed": false,
-              "reason": "no-opening-subject"
-            }
-          ]
-        }
-      ],
-      "diagrams": 1,
-      "styles": [
-        "github-dark"
-      ],
-      "families": [
-        "flowchart"
-      ],
-      "entry": {
-        "step": "recipe",
-        "settings": {
-          "feature": "animation"
-        }
-      },
-      "sourceHash": "11fd0e37745abdf6b3e8c15ae3466936b1420a724cd717ca8a056470b3ab1cac",
-      "engineHash": "4b7b638c5581925be5f8e65e2424bc001fa10e9b23e59e08a1ddfb4157054582",
-      "snapshotHashes": [
-        "237678fe558c7dfae631f04e6ee0fca658ccb01fdd6a5ba06673bce1e1efd6ab"
       ]
     },
     {
@@ -14161,8 +14004,7 @@
           "motion": "nudge"
         }
       },
-      "sourceHash": "ad3d321400f8606ab0bb0554a0ab1b7e6076033e8fd8c3d7a1ec4745e4f8accc",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "802a839d6377f2736676f0ebb72477b602a264fcae8a102f02c5351693879c24",
       "snapshotHashes": [
         "d843c98d79e56d55761833c25333e8ba509bf6c5f5f2adfe9b6739313097aedb",
         "31e568fd2c08b0427d447deb389951dad9ad22930f8bd4bf696fb136259349c3"
@@ -14261,8 +14103,7 @@
         "step": "sentence",
         "settings": {}
       },
-      "sourceHash": "e7571270467b145f6a6606b0257fb0b590fd7a00af321f8f44e86e057cee41d3",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "2f4e97d81be3de25be61abbd125bb6a11f5f230ab8222b4d8276a9f6d1f80274",
       "snapshotHashes": [
         "4f2130d3f926402baeace68ba8b784f4ae8634023534a84ae8ee44605c8837ef",
         "d2646452ff0ea6f902171efe483ef301073d8e2fb98be4f188ba51c5f835211a"
@@ -14444,8 +14285,7 @@
           "edit": "swapped"
         }
       },
-      "sourceHash": "d998d4400eede66f621e7844d9b1b9f6566a3124bf2629c2b8c970c4c6eb9b86",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "35c629eea9c0cb8359733fae8ef75799d797234690bac35d6f390f554a31eacc",
       "snapshotHashes": [
         "56c34fd9457dc2ab5e1bbd3647f71f681e3658907ee3e7cee8c641386f05b6ba",
         "db72eefcb0a465164e6f24ae10eb1fb6e97af20316637f819cea2c9c2d26792b",
@@ -14580,8 +14420,7 @@
           "font": "sans"
         }
       },
-      "sourceHash": "35eef4f17b853599d0b685a35aa2d4fa6da1b1c7a94618ea031d6e41ed8ab379",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "e704a6070c5e76cd90f608ec7cff3c743b1874da1e2dcb83f05b4f13598ed333",
       "snapshotHashes": []
     },
     {
@@ -14781,10 +14620,9 @@
           "widths": "natural"
         }
       },
-      "sourceHash": "e721bf836721928df3a8be67d706e2a65b1d05ccc52216ced99cc3eefa209720",
-      "engineHash": "4b7b638c5581925be5f8e65e2424bc001fa10e9b23e59e08a1ddfb4157054582",
+      "sourceHash": "94044b0c5304bfb6d13a214b1396f054cb6352f61b499b8ed794610a8e4463b4",
       "snapshotHashes": [
-        "81bc85b22d92e36884f23e2c9ae7f7eeb9ae783c496660d9fae98c1ff36e548a",
+        "410692b63a8be8da5ac82e74a64bc3cfa66512c55e60d988e70f8194a9cd0df0",
         "af185e69c714634e28757d6cecc2932f7f3a18f6a5cca79ad55345bf8eaec7c0"
       ]
     },
@@ -14930,8 +14768,7 @@
           "direction": "rtl"
         }
       },
-      "sourceHash": "8e6366fff75e3935e68f124ff9b960d1669fa70ca5deeab33b225ee6a0e59f4f",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "5e51eaeb41974e8d83bcec6ee2f8f5f70bf868c23aa535ec29ab9dc7acb9c970",
       "snapshotHashes": []
     },
     {
@@ -15071,8 +14908,7 @@
           "hand": "second"
         }
       },
-      "sourceHash": "1f91abc83f21c04b3ddaab2f26411ac6cfa53e5ba4840e5c075c7acb1455db37",
-      "engineHash": "9d21bc4e309f37ea313000d1d88efe3b3b6e175a806a6b171e55ce30f45168b8",
+      "sourceHash": "819c26d7de713c632970bf11f0da88e4a5caf98b2b295bd828f85f7d7fdf8f97",
       "snapshotHashes": [
         "f7f0a3e7e82f8c628d87060a4b662fa942499fe223ff880c07c6c0fd982b7e4b"
       ]

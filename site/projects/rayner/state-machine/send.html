@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The same send(), now sent · Why does send() throw on a new WebSocket but not after close()?</title>
+<link rel="canonical" href="https://oshineye.dev/projects/rayner/state-machine?step=send">
+<meta name="description" content="In OPEN the same send() passes both checks and queues the message, and the server gets it. So send from the open handler, or check ws.readyState === WebSocket.OPEN first. Press close(), then send()…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The same send(), now sent · Why does send() throw on a new WebSocket but not after close()?">
+<meta property="og:description" content="In OPEN the same send() passes both checks and queues the message, and the server gets it. So send from the open handler, or check ws.readyState === WebSocket.OPEN first. Press close(), then send()…">
+<meta property="og:url" content="https://oshineye.dev/projects/rayner/state-machine/send">
+<meta property="og:image" content="https://oshineye.dev/projects/rayner/state-machine/send.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="540">
+<meta property="og:image:alt" content="State diagram: 4 states, 3 transitions; Code, 16 lines; 4 labelled values; A ring around OPEN, the readyState the socket is in; A box around the line that queues the message: readyState is OPEN. Marked: Result: sends the message; travelled: CONNECTING → OPEN: accepted; run: 16: this.#sendQueue.add(buffer, () =&gt; {. New in this step: Event: send(); Server got: 1 message; A box around the line that queues the message…">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The same send(), now sent · Why does send() throw on a new WebSocket…">
+<meta name="twitter:description" content="In OPEN the same send() passes both checks and queues the message, and the server gets it. So send from the open handler, or check ws.readyState === WebSocket.OPEN first. Press close(), then send()…">
+<meta name="twitter:image" content="https://oshineye.dev/projects/rayner/state-machine/send.png">
+<meta name="twitter:image:alt" content="State diagram: 4 states, 3 transitions; Code, 16 lines; 4 labelled values; A ring around OPEN, the readyState the socket is in; A box around the line that queues the message: readyState is OPEN. Marked: Result: sends the message; travelled: CONNECTING → OPEN: accepted; run: 16: this.#sendQueue.add(buffer, () =&gt; {. New in this step: Event: send(); Server got: 1 message; A box around the line that queues the message…">
+<meta http-equiv="refresh" content="0; url=/projects/rayner/state-machine?step=send">
+</head><body><p><a href="/projects/rayner/state-machine?step=send">The same send(), now sent · Why does send() throw on a new WebSocket but not after close()?</a></p></body></html>

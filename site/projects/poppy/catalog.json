@@ -2,9 +2,10 @@
   "version": 2,
   "product": {
     "home": "https://github.com/adewale/rayner",
-    "summary": "Rayner makes a verified explanation of what this version of this system really does, with a short receipt the person who commissioned it can review.",
+    "summary": "Rayner makes an explanation of what this version of this system does, drawn from a model checked against that system where it can be, with a short receipt the person who commissioned it can review.",
     "audience": "It is for the person who commissions an explainer of a protocol, an algorithm or a data structure, and for the agent or person who writes it.",
     "description": "The writer models the system in TypeScript and tests the model against the real system where it can: run live, recorded once, or read from its specification. Every picture on the page is checked against the model’s state, and the receipt says what the model was checked against and how. The result is one HTML page of steps and a transcript, with no runtime network requests.",
+    "publishes": "One HTML page of steps and a transcript, with no runtime network requests.",
     "requirements": "Node 24 or later to write, check and build. Chromium for rayner review and screenshots, and to capture Mermaid diagrams. Authoring targets Ubuntu and macOS.",
     "tutorial": "https://github.com/adewale/rayner/blob/main/docs/TUTORIAL.md",
     "reference": "https://github.com/adewale/rayner/blob/main/docs/REFERENCE.md",
@@ -19,6 +20,16 @@
       },
       "label": "How does Poppy work?"
     }
+  },
+  "facts": {
+    "name": "rayner",
+    "version": "0.2.0",
+    "install": "Rayner 0.2.0, which these guides describe, is not on npm yet: npm has rayner 0.1.0, an earlier single-package release, and no rayner-cli. Build both packages from the repository, as the quick start shows.",
+    "installGuide": "https://github.com/adewale/rayner#quick-start",
+    "requirements": "Node 24 or later to write, check and build. Chromium for rayner review and screenshots, and to capture Mermaid diagrams. Authoring targets Ubuntu and macOS.",
+    "publishes": "One HTML page of steps and a transcript, with no runtime network requests.",
+    "repository": "https://github.com/adewale/rayner",
+    "license": "MIT"
   },
   "totals": {
     "explainers": 8,

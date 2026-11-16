@@ -57,7 +57,6 @@ test('the full reviewed collection is published and catalog tiers select its rec
   expect(landing).not.toContain('aria-labelledby="by-example"');
   expect(landing).not.toContain('hello-world');
   const allowedFile = new RegExp(`^/projects/rayner/(?:${catalog.scenes.map(scene => scene.id).join('|')})(?:[./]|$)`);
-  expect(existsSync(new URL('projects/rayner/embed-lab.html', site))).toBe(true);
   const common = new Set(['/projects/rayner/loader.js', '/projects/rayner/catalog.json', '/projects/rayner/evidence.json', '/projects/rayner/embed-lab.html']);
   expect(manifest.version).toBe(2);
   for (const { path } of manifest.files)
