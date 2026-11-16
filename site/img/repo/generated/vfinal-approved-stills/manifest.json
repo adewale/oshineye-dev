@@ -238,7 +238,7 @@
       "slug": "rayner",
       "repo": "adewale/rayner",
       "title": "rayner",
-      "subtitle": "Explainers written as TypeScript scenes that a reader steps through at their own pace, with diagrams drawn by Agentic Mermaid at build time",
+      "subtitle": "Rayner makes an explanation of what this version of this system does, drawn from a model checked against that system where it can be, with a short receipt the person who commissioned it can review.",
       "colour": "rayner/colour.jpg",
       "animation": "rayner/animation.mp4"
     },
